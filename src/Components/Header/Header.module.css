@@ -1,0 +1,145 @@
+.header {
+  width: 100%;
+  margin-bottom: 13px;
+}
+
+.container {
+  padding: 31px 0 31px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  column-gap: 4px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 38px;
+  height: 30px;
+  user-select: none;
+}
+
+.label {
+  margin: 0;
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: -2px;
+  width: 59px;
+  height: 25px;
+  background-image: linear-gradient(90deg, #ffffff, #00000002);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  user-select: none;
+  -webkit-text-stroke: 0.2px #000;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  column-gap: 64px;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: #d1d1d1;
+  display: inline-block;
+  font-weight: 300;
+  padding: 10px 0 10px 0;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #ffffff;
+}
+
+.link:active {
+  color: #ffffff;
+}
+
+.spoiler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  background-image: url('src/assets/expand-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background: transparent;
+  border: none;
+  outline: none;
+  position: relative;
+}
+
+.arrow::after {
+  content: url('../../assets/arrowDown.svg');
+  position: absolute;
+  top: -8px;
+  left: -2px;
+  cursor: pointer;
+}
+
+.button {
+  cursor: pointer;
+  width: 126px;
+  height: 52px;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  border: none;
+  padding: 0;
+  outline: none;
+  background-color: transparent;
+  color: #d1d1d1;
+  border: 1px solid white;
+  position: relative;
+  border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
+  border-width: 1px;
+  border-style: solid;
+  user-select: none;
+  transition: color 0.3s ease;
+  overflow: hidden;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.button:hover::before {
+  opacity: 1;
+}
+
+.button:hover {
+  color: white;
+}
+
+@media screen and (max-width: 1215px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

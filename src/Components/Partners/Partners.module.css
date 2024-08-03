@@ -1,0 +1,144 @@
+.partners {
+  margin-bottom: 150px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subtitle {
+  margin: 0;
+  margin-bottom: 12px;
+  display: inline-block;
+  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 58px;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -0.5%;
+  font-weight: 600;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.imageContainer::before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 20%;
+  width: 60%;
+  height: 40%;
+  background: linear-gradient(90deg, #0cbcf1c9 -30%, #e95ce9c5 100%);
+  filter: blur(100px);
+  border-radius: 10% 20% 100% 40%;
+  transform: rotate(-20deg);
+  z-index: -1;
+}
+
+
+.circle {
+  background-image: url('../../assets/logo-background.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 102px;
+  height: 102px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circleOne {
+  position: absolute;
+  bottom: 30%;
+  left: 2.5%;
+  animation: scale 1s ease-in-out infinite alternate;
+  animation-delay: 0.1s;
+}
+
+.circleTwo {
+  position: absolute;
+  bottom: 58%;
+  left: 10%;
+  animation: scale 1s ease-in-out infinite alternate;
+  animation-delay: 0.3s;
+}
+
+.circleThree {
+  position: absolute;
+  bottom: 76%;
+  left: 25%;
+  animation: scale 1s ease-in-out infinite alternate;
+  animation-delay: 0.5s;
+}
+
+.circleFour {
+  position: absolute;
+  bottom: 84%;
+  left: 45.5%;
+  animation: scale 1s ease-in-out infinite alternate;
+  animation-delay: 0.7s;
+}
+
+.circleFive {
+  position: absolute;
+  bottom: 76%;
+  right: 25%;
+  animation: scale 1s ease-in-out infinite alternate;
+  animation-delay: 0.9s;
+}
+
+.circleSix {
+  position: absolute;
+  bottom: 58%;
+  right: 10%;
+  animation: scale 1s ease-in-out infinite alternate;
+  animation-delay: 0.11s;
+}
+
+.circleSeven {
+  position: absolute;
+  bottom: 30%;
+  right: 2.5%;
+  animation: scale 1s ease-in-out infinite alternate;
+  animation-delay: 0.12s;
+}
+
+.logo {
+  width: 80px;
+  height: 20px;
+}
+
+.halfCircle {
+  max-width: 100%;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
