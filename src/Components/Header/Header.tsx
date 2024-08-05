@@ -9,7 +9,7 @@ const Header = () => {
           <img src={logo} alt={'logo'} className={styles.logo} />
           <p className={styles.label}>VRNas</p>
         </div>
-        <nav>
+        <nav className={styles.navigationContainer}>
           <ul className={styles.menu}>
             <li className={styles.menuElement}>
               <a href="#" className={styles.link}>
@@ -44,7 +44,9 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <button className={styles.button}>Contact us</button>
+        <div className={styles.buttonContainer}>
+          <button className={styles.button}>Contact us</button>
+        </div>
       </div>
     </header>
   );

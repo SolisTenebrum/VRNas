@@ -1,6 +1,4 @@
 .header {
-  display: flex;
-  align-items: center;
   margin-bottom: 13px;
   position: relative;
 }
@@ -22,7 +20,8 @@
   padding: 31px 0 31px 0;
   display: flex;
   align-items: center;
-  column-gap: 230px;
+  justify-content: space-between;
+  column-gap: 20px;
 }
 
 .logoContainer {
@@ -31,6 +30,7 @@
   align-items: center;
   column-gap: 4px;
   cursor: pointer;
+  flex: 1;
 }
 
 .logo {
@@ -64,6 +64,7 @@
   line-height: 28px;
   font-weight: 300;
   align-items: center;
+  flex: 1;
 }
 
 .link {
@@ -107,6 +108,12 @@
   top: -8px;
   left: -2px;
   cursor: pointer;
+}
+
+.buttonContainer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .button {
