@@ -1,10 +1,10 @@
 import styles from './Articles.module.css';
-import imageOne from '../../assets/article-image.png';
-import cardImageOne from '../../assets/article-image-one.png';
-import cardImageTwo from '../../assets/article-image-two.png';
-import cardImageThree from '../../assets/article-image-three.png';
-import cardImageFour from '../../assets/article-image-four.png';
-import arrowRight from '../../assets/arrow-thin-right.svg';
+import bigImageOne from '../../assets/article-images/article-image-big-one.png';
+import cardImageOne from '../../assets/article-images/article-image-one.png';
+import cardImageTwo from '../../assets/article-images/article-image-two.png';
+import cardImageThree from '../../assets/article-images/article-image-three.png';
+import cardImageFour from '../../assets/article-images/article-image-four.png';
+import arrowRight from '../../assets/icons/arrow-thin-right.svg';
 import { useEffect, useRef } from 'react';
 
 const Articles = () => {
@@ -47,7 +47,7 @@ const Articles = () => {
             <div className={styles.firstColumn}>
               <h4 className={styles.subsubtitle}>Popular Article</h4>
               <div className={styles.articleFullImageContainer}>
-                <img src={imageOne} />
+                <img src={bigImageOne} />
                 <div className={styles.articleFullImageInfo}>
                   <span className={styles.articleFullImageSpan}>VR Games</span>
                   <h4 className={styles.articleFullImageTitle}>Entertainment Goes Virtual: The Rise of VR Gaming</h4>

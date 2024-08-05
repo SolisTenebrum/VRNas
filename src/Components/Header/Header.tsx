@@ -1,13 +1,12 @@
 import styles from './Header.module.css';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logos/vrnas-full-logo.svg';
 
 const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logoContainer}>
-          <img src={logo} alt={'logo'} className={styles.logo} />
-          <p className={styles.label}>VRNas</p>
+          <img src={logo} alt={'vrnas-logo'} className={styles.logo} />
         </div>
         <nav className={styles.navigationContainer}>
           <ul className={styles.menu}>

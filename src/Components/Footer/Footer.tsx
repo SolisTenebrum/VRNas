@@ -3,7 +3,7 @@ import twitterIcon from '../../assets/logos/logo-twitter.svg';
 import facebookIcon from '../../assets/logos/logo-fb.svg';
 import instagramIcon from '../../assets/logos/logo-instagram.svg';
 import githubIcon from '../../assets/logos/logo-github.svg';
-import mainLogo from '../../assets/vrnas-full-logo.svg';
+import mainLogo from '../../assets/logos/vrnas-full-logo.svg';
 import locationIcon from '../../assets/icons/location-icon.svg';
 import messageIcon from '../../assets/icons/message-icon.svg';
 import callIcon from '../../assets/icons/call-icon.svg';

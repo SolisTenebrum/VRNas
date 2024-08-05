@@ -1,5 +1,5 @@
 import styles from './About.module.css';
-import vrperson2 from '../../assets/vrperson2.png';
+import vrperson2 from '../../assets/vrperson/vrperson2.png';
 
 const About = () => {
   return (

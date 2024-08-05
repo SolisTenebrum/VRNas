@@ -1,5 +1,5 @@
 import styles from './Hero.module.css';
-import vrPerson from '../../assets/vrperson1.png';
+import vrPerson from '../../assets/vrperson/vrperson1.png';
 import clientOne from '../../assets/clients/Client01.png';
 import clientTwo from '../../assets/clients/Client02.png';
 import clientThree from '../../assets/clients/Client03.png';

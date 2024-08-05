@@ -6,7 +6,7 @@
 .header::before {
   position: absolute;
   content: '';
-  background-image: url('../../assets/topWaves.svg');
+  background-image: url('../../assets/site-background/topWaves.svg');
   right: 0;
   top: 0;
   width: 736px;
@@ -34,7 +34,7 @@
 }
 
 .logo {
-  width: 38px;
+  width: 101px;
   height: 30px;
   user-select: none;
 }
@@ -93,7 +93,7 @@
 }
 
 .arrow {
-  background-image: url('src/assets/expand-arrow.svg');
+  background-image: url('src/assets/icons/expand-arrow.svg');
   background-repeat: no-repeat;
   background-position: bottom;
   background: transparent;
@@ -103,7 +103,7 @@
 }
 
 .arrow::after {
-  content: url('../../assets/arrowDown.svg');
+  content: url('../../assets/icons/arrowDown.svg');
   position: absolute;
   top: -8px;
   left: -2px;

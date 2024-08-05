@@ -61,7 +61,7 @@
 
 .video::after {
   content: '';
-  background-image: url('../../assets/play-button.svg');
+  background-image: url('../../assets/icons/play-button.svg');
   position: absolute;
   top: 50%;
   left: 50%;
@@ -79,7 +79,7 @@
 .videoImage {
   width: 100%;
   height: 100%;
-  background-image: url('../../assets/video-image2.png');
+  background-image: url('../../assets/video-images/video-image2.png');
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;

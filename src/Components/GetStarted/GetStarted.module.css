@@ -64,7 +64,7 @@
 
 .video::after {
   content: '';
-  background-image: url('../../assets/play-button-big.svg');
+  background-image: url('../../assets/icons/play-button-big.svg');
   position: absolute;
   top: 50%;
   left: 50%;
@@ -82,7 +82,7 @@
 .videoImage {
   width: 100%;
   height: 100%;
-  background-image: url('../../assets/video-image4.png');
+  background-image: url('../../assets/video-images/video-image4.png');
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
@@ -144,7 +144,7 @@
 }
 
 .playSmall {
-  background-image: url('../../assets/play-button-small.svg');
+  background-image: url('../../assets/icons/play-button-small.svg');
   background-repeat: no-repeat;
   width: 16px;
   height: 16px;

@@ -1,6 +1,6 @@
 import styles from './Pricing.module.css';
 import cloudIcon from '../../assets/icons/cloud-icon.svg';
-import vrperson from '../../assets/vrperson4.png'
+import vrperson from '../../assets/vrperson/vrperson4.png'
 
 const Pricing = () => {
   return (

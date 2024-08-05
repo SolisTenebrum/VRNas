@@ -66,7 +66,7 @@
 }
 
 .button::after {
-  content: url('../../assets/arrowDown.svg');
+  content: url('../../assets/icons/arrowDown.svg');
   position: absolute;
   right: 0;
   bottom: 50%;
@@ -126,7 +126,7 @@
 
 .video::after {
   content: '';
-  background-image: url('../../assets/play-button.svg');
+  background-image: url('../../assets/icons/play-button.svg');
   position: absolute;
   top: 50%;
   left: 50%;
@@ -144,7 +144,7 @@
 .videoImage {
   width: 100%;
   height: 100%;
-  background-image: url('../../assets/video-image3.png');
+  background-image: url('../../assets/video-images/video-image3.png');
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;

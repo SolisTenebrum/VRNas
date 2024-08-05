@@ -4,7 +4,7 @@
 .hero::before {
   position: absolute;
   content: '';
-  background-image: url('../../assets/net.svg');
+  background-image: url('../../assets/site-background/net.svg');
   background-repeat: no-repeat;
   left: 0;
   top: 16%;
@@ -131,7 +131,7 @@
 
 .clientCaptionAccent::after {
   content: '';
-  background-image: url('../../assets/underline.svg');
+  background-image: url('../../assets/icons/underline.svg');
   background-position: center;
   background-repeat: no-repeat;
   width: 48px;
@@ -152,7 +152,7 @@
 
 .video::after {
   content: '';
-  background-image: url('../../assets/play-button.svg');
+  background-image: url('../../assets/icons/play-button.svg');
   position: absolute;
   top: 50%;
   left: 50%;
@@ -170,7 +170,7 @@
 .videoImage {
   width: 100%;
   height: 100%;
-  background-image: url('../../assets/video-image1.png');
+  background-image: url('../../assets/video-images/video-image1.png');
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;

@@ -6,7 +6,7 @@
 .footer:before {
   position: absolute;
   content: '';
-  background-image: url('../../assets/bottomWaves.svg');
+  background-image: url('../../assets/site-background/bottomWaves.svg');
   bottom: -30px;
   left: 0;
   width: 1011px;
@@ -52,7 +52,7 @@
 }
 
 .logoBackground {
-  background-image: url('../../assets/social-bg.svg');
+  background-image: url('../../assets/backgrounds/social-bg.svg');
   background-repeat: no-repeat;
   width: 46px;
   height: 46px;

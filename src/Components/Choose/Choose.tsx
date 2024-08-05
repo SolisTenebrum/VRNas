@@ -1,5 +1,5 @@
 import styles from './Choose.module.css';
-import vrPerson from '../../assets/vrperson3.png';
+import vrPerson from '../../assets/vrperson/vrperson3.png';
 import { useState } from 'react';
 
 const Choose = () => {
