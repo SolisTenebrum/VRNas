@@ -1,7 +1,21 @@
 .hero {
 }
 
+.hero::before {
+  position: absolute;
+  content: '';
+  background-image: url('../../assets/net.svg');
+  background-repeat: no-repeat;
+  left: 0;
+  top: 16%;
+  width: 1100px;
+  height: 721px;
+  z-index: -2;
+}
+
 .container {
+  margin: 0 auto;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
 }

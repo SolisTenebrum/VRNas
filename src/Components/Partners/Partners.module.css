@@ -2,6 +2,11 @@
   margin-bottom: 150px;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
 .textContainer {
   display: flex;
   flex-direction: column;

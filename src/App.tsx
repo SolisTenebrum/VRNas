@@ -8,10 +8,6 @@ function App() {
     <div className={styles.App}>
       <Header />
       <Main />
-      <div className={styles.topWave} />
-      <div className={styles.topNet} />
-      <div className={styles.bottomNet} />
-      <div className={styles.bottomWave} />
       <Footer />
     </div>
   );

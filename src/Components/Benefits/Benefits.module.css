@@ -1,6 +1,10 @@
 .benefits {
-  width: 100%;
   margin-bottom: 120px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .content {

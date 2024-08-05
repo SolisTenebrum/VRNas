@@ -8,13 +8,15 @@
   content: '';
   background-image: url('../../assets/bottomWaves.svg');
   bottom: -30px;
-  left: -360px;
+  left: 0;
   width: 1011px;
   height: 498px;
-  z-index: -1;
+  z-index: -2;
 }
 
 .container {
+  margin: 0 auto;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
 }
