@@ -1,7 +1,15 @@
 import styles from './Header.module.css';
 import logo from '../../assets/logos/vrnas-full-logo.svg';
+import { useState } from 'react';
+import { clsx as cn } from 'clsx';
 
 const Header = () => {
+  const [open, setIsOpen] = useState(false);
+
+  const handleMenuClick = () => {
+    setIsOpen(!open);
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -30,7 +38,7 @@ const Header = () => {
                 <a href="#" className={styles.link}>
                   Page
                 </a>
-                <button className={styles.arrow}></button>
+                <button className={cn(styles.arrow, `${open ? styles.opened : ''}`)} onClick={() => handleMenuClick()}></button>
               </div>
             </li>
             <li className={styles.menuElement}>
@@ -38,7 +46,7 @@ const Header = () => {
                 <a href="#" className={styles.link}>
                   Blog
                 </a>
-                <button className={styles.arrow}></button>
+                <button className={cn(styles.arrow, `${open ? styles.opened : ''}`)} onClick={() => handleMenuClick()}></button>
               </div>
             </li>
           </ul>

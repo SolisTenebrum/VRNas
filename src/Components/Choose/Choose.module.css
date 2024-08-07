@@ -66,12 +66,23 @@
 }
 
 .button::after {
-  content: url('../../assets/icons/arrowDown.svg');
+  content: '';
+  background-image: url('../../assets/icons/arrowDown.svg');
+  background-position: center;
   position: absolute;
   right: 0;
   bottom: 50%;
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
+  transition: transform 0.3s ease;
+}
+
+.opened::after {
+  content: '';
+  position: absolute;
+  cursor: pointer;
+  transform: rotate(-180deg);
+  transition: transform 0.3s ease;
 }
 
 .description {
@@ -83,12 +94,12 @@
   color: #d1d1d1;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.7s ease-in-out;
+  transition: max-height 0.7s ease;
 }
 
 .descriptionVisible {
   display: block;
-  max-height: 150px;
+  max-height: 200px;
 }
 
 .vrpersonContainer {
