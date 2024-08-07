@@ -17,6 +17,16 @@ import facebookIcon from './assets/logos/logo-fb.svg';
 import instagramIcon from './assets/logos/logo-instagram.svg';
 import githubIcon from './assets/logos/logo-github.svg';
 
+// Article images
+import articleBigImageOne from './assets/article-images/article-image-big-one.png';
+import articleBigImageTwo from './assets/article-images/article-image-big-two.png';
+import articleBigImageThree from './assets/article-images/article-image-big-three.png';
+import articleBigImageFour from './assets/article-images/article-image-big-four.png';
+import articleSmallImageOne from './assets/article-images/article-image-small-one.png';
+import articleSmallImageTwo from './assets/article-images/article-image-small-two.png';
+import articleSmallImageThree from './assets/article-images/article-image-small-three.png';
+import articleSmallImageFour from './assets/article-images/article-image-small-four.png';
+
 // Service section cards
 const serviceCards = [
   {
@@ -145,4 +155,51 @@ const contactLinks = [
   },
 ];
 
-export { serviceCards, quickLinks, supportLinks, contactLinks, socialLogos };
+// Article section cards
+const smallArticles = [
+  {
+    image: articleSmallImageOne,
+    span: 'VR Education',
+    title: 'The Future of Education: How VR is Revolutionizing the Classroom',
+  },
+  {
+    image: articleSmallImageTwo,
+    span: 'VR Architecture',
+    title: 'Bringing Designs to Life: How VR is Changing Architecture',
+  },
+  {
+    image: articleSmallImageThree,
+    span: 'VR Entertainment',
+    title: 'Making Events Memorable: The Power of VR for Corporate and Special Occasions',
+  },
+  {
+    image: articleSmallImageFour,
+    span: 'VR Event',
+    title: 'Exploring New Worlds: The Benefits of VR Travel',
+  },
+];
+
+const bigArticles = [
+  {
+    image: articleBigImageOne,
+    span: 'VR Games',
+    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+  },
+  // {
+  //   image: articleBigImageTwo,
+  //   span: 'VR Event',
+  //   title: 'Making Events Memorable: The Power of VR for Corporate and Special Occasions',
+  // },
+  // {
+  //   image: articleBigImageThree,
+  //   span: 'VR Games',
+  //   title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+  // },
+  // {
+  //   image: articleBigImageFour,
+  //   span: 'VR Education',
+  //   title: 'The Future of Education: How VR is Revolutionizing the Classroom',
+  // },
+]
+
+export { serviceCards, quickLinks, supportLinks, contactLinks, socialLogos, smallArticles, bigArticles };

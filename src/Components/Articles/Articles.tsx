@@ -1,34 +1,31 @@
 import styles from './Articles.module.css';
-import bigImageOne from '../../assets/article-images/article-image-big-one.png';
-import cardImageOne from '../../assets/article-images/article-image-one.png';
-import cardImageTwo from '../../assets/article-images/article-image-two.png';
-import cardImageThree from '../../assets/article-images/article-image-three.png';
-import cardImageFour from '../../assets/article-images/article-image-four.png';
-import arrowRight from '../../assets/icons/arrow-thin-right.svg';
 import { useEffect, useRef } from 'react';
+import ArticleSmallCard from './ArticleSmallCard';
+import ArticleBigCard from './ArticleBigCard';
+import { smallArticles, bigArticles } from '../../constants';
 
 const Articles = () => {
-  const articleContainerRef = useRef<HTMLDivElement>(null);
+  const articlesContainerRef = useRef<HTMLDivElement>(null);
   const scrollBarIndicatorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const articleContainer = articleContainerRef.current;
+    const articlesContainer = articlesContainerRef.current;
     const scrollBarIndicator = scrollBarIndicatorRef.current;
 
     const handleScroll = () => {
-      if (!articleContainer || !scrollBarIndicator) return;
-      const scrollTop = articleContainer.scrollTop;
-      const scrollHeight = articleContainer.scrollHeight - articleContainer.clientHeight;
+      if (!articlesContainer || !scrollBarIndicator) return;
+      const scrollTop = articlesContainer.scrollTop;
+      const scrollHeight = articlesContainer.scrollHeight - articlesContainer.clientHeight;
       const scrollRatio = scrollTop / scrollHeight;
 
       scrollBarIndicator.style.transform = `translateY(${scrollRatio * 252}%)`;
     };
 
-    if (!articleContainer || !scrollBarIndicator) return;
-    articleContainer.addEventListener('scroll', handleScroll);
+    if (!articlesContainer || !scrollBarIndicator) return;
+    articlesContainer.addEventListener('scroll', handleScroll);
 
     return () => {
-      articleContainer.removeEventListener('scroll', handleScroll);
+      articlesContainer.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -46,16 +43,9 @@ const Articles = () => {
           <div className={styles.content}>
             <div className={styles.firstColumn}>
               <h4 className={styles.subsubtitle}>Popular Article</h4>
-              <div className={styles.articleFullImageContainer}>
-                <img src={bigImageOne} />
-                <div className={styles.articleFullImageInfo}>
-                  <span className={styles.articleFullImageSpan}>VR Games</span>
-                  <h4 className={styles.articleFullImageTitle}>Entertainment Goes Virtual: The Rise of VR Gaming</h4>
-                </div>
-                <button className={styles.goButton}>
-                  <img src={arrowRight} className={styles.arrowRight} />
-                </button>
-              </div>
+              {bigArticles.map((article, index) => (
+                <ArticleBigCard key={index} image={article.image} title={article.title} span={article.span} />
+              ))}
               <div className={styles.indicators}>
                 <div className={styles.indicator}></div>
                 <div className={styles.indicator}></div>
@@ -65,89 +55,10 @@ const Articles = () => {
             </div>
             <div className={styles.secondColumn}>
               <h4 className={styles.subsubtitle}>Recent Article</h4>
-              <div className={styles.articleContainer} ref={articleContainerRef}>
-                <div className={styles.articleCard}>
-                  <img src={cardImageOne} className={styles.articleCardImage} />
-                  <div className={styles.articleCardInfo}>
-                    <span className={styles.articleCardSpan}>VR Education</span>
-                    <h4 className={styles.articleCardTitle}>
-                      The Future of Education: How VR is Revolutionizing the Classroom
-                    </h4>
-                  </div>
-                  <button className={styles.articleCardGoButton}>
-                    <img src={arrowRight} className={styles.arrowRight} />
-                  </button>
-                </div>
-                <div className={styles.articleCard}>
-                  <img src={cardImageTwo} className={styles.articleCardImage} />
-                  <div className={styles.articleCardInfo}>
-                    <span className={styles.articleCardSpan}>VR Architecture</span>
-                    <h4 className={styles.articleCardTitle}>
-                      Bringing Designs to Life: How VR is Changing Architecture
-                    </h4>
-                  </div>
-                  <button className={styles.articleCardGoButton}>
-                    <img src={arrowRight} className={styles.arrowRight} />
-                  </button>
-                </div>
-                <div className={styles.articleCard}>
-                  <img src={cardImageThree} className={styles.articleCardImage} />
-                  <div className={styles.articleCardInfo}>
-                    <span className={styles.articleCardSpan}>VR Entertainment </span>
-                    <h4 className={styles.articleCardTitle}>
-                      Making Events Memorable: The Power of VR for Corporate and Special Occasions
-                    </h4>
-                  </div>
-                  <button className={styles.articleCardGoButton}>
-                    <img src={arrowRight} className={styles.arrowRight} />
-                  </button>
-                </div>
-                <div className={styles.articleCard}>
-                  <img src={cardImageFour} className={styles.articleCardImage} />
-                  <div className={styles.articleCardInfo}>
-                    <span className={styles.articleCardSpan}>VR Event</span>
-                    <h4 className={styles.articleCardTitle}>Exploring New Worlds: The Benefits of VR Travel</h4>
-                  </div>
-                  <button className={styles.articleCardGoButton}>
-                    <img src={arrowRight} className={styles.arrowRight} />
-                  </button>
-                </div>
-                <div className={styles.articleCard}>
-                  <img src={cardImageOne} className={styles.articleCardImage} />
-                  <div className={styles.articleCardInfo}>
-                    <span className={styles.articleCardSpan}>VR Education</span>
-                    <h4 className={styles.articleCardTitle}>
-                      The Future of Education: How VR is Revolutionizing the Classroom
-                    </h4>
-                  </div>
-                  <button className={styles.articleCardGoButton}>
-                    <img src={arrowRight} className={styles.arrowRight} />
-                  </button>
-                </div>
-                <div className={styles.articleCard}>
-                  <img src={cardImageTwo} className={styles.articleCardImage} />
-                  <div className={styles.articleCardInfo}>
-                    <span className={styles.articleCardSpan}>VR Architecture</span>
-                    <h4 className={styles.articleCardTitle}>
-                      Bringing Designs to Life: How VR is Changing Architecture
-                    </h4>
-                  </div>
-                  <button className={styles.articleCardGoButton}>
-                    <img src={arrowRight} className={styles.arrowRight} />
-                  </button>
-                </div>
-                <div className={styles.articleCard}>
-                  <img src={cardImageThree} className={styles.articleCardImage} />
-                  <div className={styles.articleCardInfo}>
-                    <span className={styles.articleCardSpan}>VR Entertainment </span>
-                    <h4 className={styles.articleCardTitle}>
-                      Making Events Memorable: The Power of VR for Corporate and Special Occasions
-                    </h4>
-                  </div>
-                  <button className={styles.articleCardGoButton}>
-                    <img src={arrowRight} className={styles.arrowRight} />
-                  </button>
-                </div>
+              <div className={styles.articlesContainer} ref={articlesContainerRef}>
+                {smallArticles.map((article, index) => (
+                  <ArticleSmallCard key={index} image={article.image} title={article.title} span={article.span} />
+                ))}
               </div>
               <div className={styles.scrollBar}>
                 <div className={styles.scrollBarIndicator} ref={scrollBarIndicatorRef}></div>
