@@ -19,9 +19,9 @@ import githubIcon from './assets/logos/logo-github.svg';
 
 // Article images
 import articleBigImageOne from './assets/article-images/article-image-big-one.png';
-import articleBigImageTwo from './assets/article-images/article-image-big-two.png';
-import articleBigImageThree from './assets/article-images/article-image-big-three.png';
-import articleBigImageFour from './assets/article-images/article-image-big-four.png';
+// import articleBigImageTwo from './assets/article-images/article-image-big-two.png';
+// import articleBigImageThree from './assets/article-images/article-image-big-three.png';
+// import articleBigImageFour from './assets/article-images/article-image-big-four.png';
 import articleSmallImageOne from './assets/article-images/article-image-small-one.png';
 import articleSmallImageTwo from './assets/article-images/article-image-small-two.png';
 import articleSmallImageThree from './assets/article-images/article-image-small-three.png';
