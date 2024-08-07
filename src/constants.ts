@@ -70,6 +70,99 @@ const serviceCards = [
   },
 ];
 
+// Choose us section paragraphs
+const chooseUsSpoilerItems = [
+  {
+    title: 'Passionate and Experienced Team',
+    description: `We are proud of our team of VR experts who are passionate about VR and dedicated to delivering the
+     highest quality work. Our team consists of experienced VR developers, designers, and technicians who
+     have a proven track record of creating immersive and engaging VR experiences.`,
+  },
+  {
+    title: 'Customized Solutions',
+    description: `Integer a ante augue. Ut nec odio scelerisque, consequat eros sed, egestas ante. Phasellus fringilla 
+    tincidunt malesuada. Donec facilisis arcu eget iaculis lacinia. Phasellus enim est, bibendum
+     vel dapibus eget, tristique ac nulla. Quisque semper, elit sit amet volutpat venenatis, lectus erat egestas lorem, 
+     at tincidunt nisl sem dictum risus. Integer et enim sed sapien tempor cursus id nec mauris. Aliquam vulputate sapien 
+     sit amet velit convallis faucibus. `,
+  },
+  {
+    title: 'Exceptional Customer Service',
+    description: `Mauris sit amet pellentesque magna. Nunc pharetra tellus vel eros aliquet, et feugiat ante vehicula. 
+     Duis semper tincidunt arcu, vitae posuere metus convallis ut. Praesent eu ante at arcu iaculis gravida. Duis in congue nulla, 
+     sed luctus urna. Nullam tincidunt elit mi, ac porta dolor mattis id. `,
+  },
+];
+
+// Pricing section cards
+const serviceBenefits = [
+  {
+    title: 'Customizable Packages',
+    text: `We understand that each project is unique, so we offer customizable packages to ensure that you get
+     the services you need at a price that works for you. Our team will work with you to create a package
+     that meets your specific goals and budget.`,
+  },
+  {
+    title: 'Flexible Payment Options',
+    text: `We offer flexible payment options to make it easy for you to get started with our services. We accept
+     various payment methods, including credit cards, bank transfers, and PayPal, and we can also work with
+     you to create a payment plan that suits your needs.`,
+  },
+  {
+    title: 'Satisfaction Guarantee',
+    text: `We stand behind our services and are committed to ensuring that you are completely satisfied with the
+     final product. If for any reason you are not happy with our services, we will work with you to make it
+     right or provide a full refund.`,
+  },
+];
+
+// Article section cards
+const smallArticles = [
+  {
+    image: articleSmallImageOne,
+    span: 'VR Education',
+    title: 'The Future of Education: How VR is Revolutionizing the Classroom',
+  },
+  {
+    image: articleSmallImageTwo,
+    span: 'VR Architecture',
+    title: 'Bringing Designs to Life: How VR is Changing Architecture',
+  },
+  {
+    image: articleSmallImageThree,
+    span: 'VR Entertainment',
+    title: 'Making Events Memorable: The Power of VR for Corporate and Special Occasions',
+  },
+  {
+    image: articleSmallImageFour,
+    span: 'VR Event',
+    title: 'Exploring New Worlds: The Benefits of VR Travel',
+  },
+];
+
+const bigArticles = [
+  {
+    image: articleBigImageOne,
+    span: 'VR Games',
+    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+  },
+  // {
+  //   image: articleBigImageTwo,
+  //   span: 'VR Event',
+  //   title: 'Making Events Memorable: The Power of VR for Corporate and Special Occasions',
+  // },
+  // {
+  //   image: articleBigImageThree,
+  //   span: 'VR Games',
+  //   title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+  // },
+  // {
+  //   image: articleBigImageFour,
+  //   span: 'VR Education',
+  //   title: 'The Future of Education: How VR is Revolutionizing the Classroom',
+  // },
+];
+
 // Footer social icons
 const socialLogos = [
   {
@@ -155,51 +248,14 @@ const contactLinks = [
   },
 ];
 
-// Article section cards
-const smallArticles = [
-  {
-    image: articleSmallImageOne,
-    span: 'VR Education',
-    title: 'The Future of Education: How VR is Revolutionizing the Classroom',
-  },
-  {
-    image: articleSmallImageTwo,
-    span: 'VR Architecture',
-    title: 'Bringing Designs to Life: How VR is Changing Architecture',
-  },
-  {
-    image: articleSmallImageThree,
-    span: 'VR Entertainment',
-    title: 'Making Events Memorable: The Power of VR for Corporate and Special Occasions',
-  },
-  {
-    image: articleSmallImageFour,
-    span: 'VR Event',
-    title: 'Exploring New Worlds: The Benefits of VR Travel',
-  },
-];
-
-const bigArticles = [
-  {
-    image: articleBigImageOne,
-    span: 'VR Games',
-    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
-  },
-  // {
-  //   image: articleBigImageTwo,
-  //   span: 'VR Event',
-  //   title: 'Making Events Memorable: The Power of VR for Corporate and Special Occasions',
-  // },
-  // {
-  //   image: articleBigImageThree,
-  //   span: 'VR Games',
-  //   title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
-  // },
-  // {
-  //   image: articleBigImageFour,
-  //   span: 'VR Education',
-  //   title: 'The Future of Education: How VR is Revolutionizing the Classroom',
-  // },
-]
-
-export { serviceCards, quickLinks, supportLinks, contactLinks, socialLogos, smallArticles, bigArticles };
+export {
+  serviceCards,
+  quickLinks,
+  supportLinks,
+  contactLinks,
+  socialLogos,
+  smallArticles,
+  bigArticles,
+  chooseUsSpoilerItems,
+  serviceBenefits
+};
