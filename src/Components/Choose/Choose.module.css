@@ -9,13 +9,14 @@
   column-gap: 100px;
 }
 
-.column {
+.column:first-of-type {
+  display: flex;
 }
 
 .textContainer {
-  padding-top: 94px;
   max-width: 548px;
   flex: 1;
+  align-self: center;
 }
 
 .subtitle {
