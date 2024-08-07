@@ -14,7 +14,9 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.top}>
           <div className={styles.logosContainer}>
-            <img src={mainLogo} className={styles.mainLogo} />
+            <img src={mainLogo} className={styles.mainLogo} onClick={() => {
+              window.scrollTo({top: 0, behavior: 'smooth'});
+            }}/>
             <div className={styles.socialLogos}>
               <div className={styles.logoBackground}>
                 <img src={twitterIcon} className={styles.socialLogo} />
@@ -55,15 +57,15 @@ const Footer = () => {
               <p className={styles.linksTitle}>Need Help?</p>
               <ul className={styles.linksList}>
                 <li className={styles.link}>
-                  <img src={locationIcon} />
+                  <img src={locationIcon} className={styles.linkIcon}/>
                   Tanjung Sari Street no.48, Pontianak City
                 </li>
                 <li className={styles.link}>
-                  <img src={messageIcon} />
+                  <img src={messageIcon} className={styles.linkIcon}/>
                   Support@VRNas.com
                 </li>
                 <li className={styles.link}>
-                  <img src={callIcon} />
+                  <img src={callIcon} className={styles.linkIcon}/>
                   +123 456 7890
                 </li>
               </ul>

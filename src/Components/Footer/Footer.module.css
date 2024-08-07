@@ -108,6 +108,22 @@
   display: flex;
   column-gap: 8px;
   align-items: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  transition: color 0.3s ease;
+  color: #ffffff;
+}
+
+.link:hover .linkIcon {
+  transition: transform 0.3s ease;
+  transform: scale(1.2)
+}
+
+.linkIcon {
+  transition: transform 0.3s ease;
 }
 
 .bottom {

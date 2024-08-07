@@ -1,3 +1,4 @@
+// Service section icons
 import serviceIconOne from './assets/icons/4.svg';
 import serviceIconTwo from './assets/icons/5.svg';
 import serviceIconThree from './assets/icons/6.svg';
