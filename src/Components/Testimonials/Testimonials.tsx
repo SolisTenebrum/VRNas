@@ -19,8 +19,6 @@ const Testimonials = () => {
     if (visibleIndex === index) {
       setVisibleIndex(null);
     }
-
-    console.log('click');
   };
 
   return (

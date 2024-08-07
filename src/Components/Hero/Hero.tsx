@@ -16,13 +16,19 @@ const Hero = () => {
             </p>
             <button className={styles.button}>DISCOVER MORE</button>
           </div>
-          <div className={styles.nonameContainer}>
+          <div className={styles.clientsContainer}>
             <div className={styles.clients}>
-              <div className={styles.clientImages}>
-                <img src={clientOne} alt="client" className={styles.clientImage}></img>
-                <img src={clientTwo} alt="client" className={styles.clientImage}></img>
-                <img src={clientThree} alt="client" className={styles.clientImage}></img>
-              </div>
+              <ul className={styles.clientImages}>
+                <li className={styles.clientImageContainer}>
+                  <img src={clientOne} alt="client" className={styles.clientImage}/>
+                </li>
+                <li className={styles.clientImageContainer}>
+                  <img src={clientTwo} alt="client" className={styles.clientImage}/>
+                </li>
+                <li className={styles.clientImageContainer}>
+                  <img src={clientThree} alt="client" className={styles.clientImage}/>
+                </li>
+              </ul>
               <p className={styles.clientCaption}>
                 <span className={styles.clientCaptionAccent}>32k+ </span>Happy Client
               </p>

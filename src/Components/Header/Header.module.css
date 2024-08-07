@@ -54,7 +54,7 @@
   -webkit-text-stroke: 0.2px #000;
 }
 
-.menu {
+.navigation {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -65,6 +65,10 @@
   font-weight: 300;
   align-items: center;
   flex: 1;
+}
+
+.navigationElement {
+  position: relative;
 }
 
 .link {
@@ -94,7 +98,7 @@
 
 .arrow {
   padding-left: 4px;
-  background: none; 
+  background: none;
   border: none;
   outline: none;
   position: relative;
@@ -107,13 +111,13 @@
   position: absolute;
   height: 15px;
   width: 15px;
-  top: -6px;
+  top: -4.5px;
   left: 2px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-.opened::after {
+.active::after {
   content: '';
   background-image: url('../../assets/icons/arrowDown.svg');
   background-position: center;
@@ -125,6 +129,42 @@
   cursor: pointer;
   transform: rotate(-180deg);
   transition: transform 0.3s ease;
+}
+
+.menu {
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+  width: 180px;
+  top: 100%;
+  left: 0;
+  z-index: 4;
+  padding-left: 15px;
+  list-style-type: none;
+  transition: height 0.2s ease;
+  background: linear-gradient(#252532, #252532) 50% 50% / calc(100% - 2px) calc(100% - 2px) no-repeat,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0, transparent 100%);
+}
+
+.menuElement {
+  padding-top: 3px;
+  cursor: pointer;
+  color: #b0b0b2;
+  transition: color 0.4s ease-in-out;
+}
+
+.menuElement:hover {
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+}
+
+.menuElement:last-of-type {
+  padding-bottom: 3px;
+}
+
+.menuActive {
+  height: 127px;
+  transition: height 0.4s ease-in-out;
 }
 
 .buttonContainer {
