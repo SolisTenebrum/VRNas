@@ -43,21 +43,28 @@ const Header = () => {
     }
   };
 
-const changeHeader = () => {
-      if (window.scrollY > 0) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+  const changeHeader = () => {
+    if (window.scrollY > 0) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => setOpenedMenus([]));
+
+    return () => {
+      window.removeEventListener('scroll', () => setOpenedMenus([]));
+    }
+  }, [scrolled]);
 
   useEffect(() => {
     window.addEventListener('scroll', changeHeader);
 
-    return() => {
+    return () => {
       window.removeEventListener('scroll', changeHeader);
-    }
-    
+    };
   }, []);
 
   useEffect(() => {
