@@ -19,9 +19,9 @@ import githubIcon from './assets/logos/logo-github.svg';
 
 // Article images
 import articleBigImageOne from './assets/article-images/article-image-big-one.png';
-// import articleBigImageTwo from './assets/article-images/article-image-big-two.png';
-// import articleBigImageThree from './assets/article-images/article-image-big-three.png';
-// import articleBigImageFour from './assets/article-images/article-image-big-four.png';
+import articleBigImageTwo from './assets/article-images/article-image-big-two.png';
+import articleBigImageThree from './assets/article-images/article-image-big-three.png';
+import articleBigImageFour from './assets/article-images/article-image-big-four.png';
 import articleSmallImageOne from './assets/article-images/article-image-small-one.png';
 import articleSmallImageTwo from './assets/article-images/article-image-small-two.png';
 import articleSmallImageThree from './assets/article-images/article-image-small-three.png';
@@ -146,21 +146,21 @@ const bigArticles = [
     span: 'VR Games',
     title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
   },
-  // {
-  //   image: articleBigImageTwo,
-  //   span: 'VR Event',
-  //   title: 'Making Events Memorable: The Power of VR for Corporate and Special Occasions',
-  // },
-  // {
-  //   image: articleBigImageThree,
-  //   span: 'VR Games',
-  //   title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
-  // },
-  // {
-  //   image: articleBigImageFour,
-  //   span: 'VR Education',
-  //   title: 'The Future of Education: How VR is Revolutionizing the Classroom',
-  // },
+  {
+    image: articleBigImageTwo,
+    span: 'VR Event',
+    title: 'Making Events Memorable: The Power of VR for Corporate and Special Occasions',
+  },
+  {
+    image: articleBigImageThree,
+    span: 'VR Games',
+    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+  },
+  {
+    image: articleBigImageFour,
+    span: 'VR Education',
+    title: 'The Future of Education: How VR is Revolutionizing the Classroom',
+  },
 ];
 
 // Footer social icons

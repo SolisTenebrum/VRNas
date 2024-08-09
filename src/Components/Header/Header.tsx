@@ -16,7 +16,7 @@ const NavigationItem = ({ href, navName }: { href: string; navName: string }) =>
 const Header = () => {
   const [openedMenus, setOpenedMenus] = useState<number[]>([]);
   const menuRefs = useRef<HTMLUListElement[]>([]);
-  const buttonRefs = useRef<HTMLButtonElement[]>([])
+  const buttonRefs = useRef<HTMLButtonElement[]>([]);
 
   const handleMenuClick = (index: number) => {
     setOpenedMenus((prevState) => {
@@ -32,25 +32,23 @@ const Header = () => {
     const target = event.target;
 
     if (buttonRefs.current.some((button) => button && button.contains(target as Node))) {
-      return
+      return;
     }
 
-    const clickedOutside = menuRefs.current.every(
-      (ref) => ref && !ref.contains(event.target as Node)
-    )
+    const clickedOutside = menuRefs.current.every((ref) => ref && !ref.contains(event.target as Node));
 
     if (clickedOutside) {
       setOpenedMenus([]);
     }
-  }
+  };
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
-    }
-  })
+    };
+  }, []);
 
   return (
     <header className={styles.header}>
@@ -70,11 +68,20 @@ const Header = () => {
                 </a>
                 <button
                   className={cn(styles.arrow, `${openedMenus.includes(0) ? styles.active : ''}`)}
-                  onClick={() => handleMenuClick(0)} ref={(element) => {if(element) (buttonRefs.current[0] = element)}}
+                  onClick={() => handleMenuClick(0)}
+                  ref={(element) => {
+                    if (element) buttonRefs.current[0] = element;
+                  }}
                 ></button>
               </div>
-              <ul className={cn(styles.menu, `${openedMenus.includes(0) ? styles.menuActive : ''}`)} ref={(element) => {
-                if (element) {(menuRefs.current[0] = element)}}}>
+              <ul
+                className={cn(styles.menu, `${openedMenus.includes(0) ? styles.menuActive : ''}`)}
+                ref={(element) => {
+                  if (element) {
+                    menuRefs.current[0] = element;
+                  }
+                }}
+              >
                 <li className={styles.menuElement}>First</li>
                 <li className={styles.menuElement}>Second</li>
                 <li className={styles.menuElement}>Third</li>
@@ -88,11 +95,20 @@ const Header = () => {
                 </a>
                 <button
                   className={cn(styles.arrow, `${openedMenus.includes(1) ? styles.active : ''}`)}
-                  onClick={() => handleMenuClick(1)} ref={(element) => {if(element) (buttonRefs.current[1] = element)}}
+                  onClick={() => handleMenuClick(1)}
+                  ref={(element) => {
+                    if (element) buttonRefs.current[1] = element;
+                  }}
                 ></button>
               </div>
-              <ul className={cn(styles.menu, `${openedMenus.includes(1) ? styles.menuActive : ''}`)} ref={(element) => {
-                if (element) {(menuRefs.current[1] = element)}}}>
+              <ul
+                className={cn(styles.menu, `${openedMenus.includes(1) ? styles.menuActive : ''}`)}
+                ref={(element) => {
+                  if (element) {
+                    menuRefs.current[1] = element;
+                  }
+                }}
+              >
                 <li className={styles.menuElement}>First</li>
                 <li className={styles.menuElement}>Second</li>
                 <li className={styles.menuElement}>Third</li>

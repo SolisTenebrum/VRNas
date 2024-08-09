@@ -1,8 +1,11 @@
 import styles from './Articles.module.css';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import ArticleSmallCard from './ArticleSmallCard';
 import ArticleBigCard from './ArticleBigCard';
 import { smallArticles, bigArticles } from '../../constants';
+import { motion, AnimatePresence } from 'framer-motion';
+import { clsx as cn } from 'clsx';
+import ArticleSlider from './ArticleSlider';
 
 const Articles = () => {
   const articlesContainerRef = useRef<HTMLDivElement>(null);
@@ -43,14 +46,8 @@ const Articles = () => {
           <div className={styles.content}>
             <div className={styles.firstColumn}>
               <h4 className={styles.subsubtitle}>Popular Article</h4>
-              {bigArticles.map((article, index) => (
-                <ArticleBigCard key={index} image={article.image} title={article.title} span={article.span} />
-              ))}
-              <div className={styles.indicators}>
-                <div className={styles.indicator}></div>
-                <div className={styles.indicator}></div>
-                <div className={styles.indicator}></div>
-                <div className={styles.indicator}></div>
+              <div className={styles.sliderContainer}>
+                <ArticleSlider articles={bigArticles} />
               </div>
             </div>
             <div className={styles.secondColumn}>
@@ -72,3 +69,4 @@ const Articles = () => {
 };
 
 export default Articles;
+

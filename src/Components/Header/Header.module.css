@@ -133,6 +133,7 @@
 
 .menu {
   position: absolute;
+  padding: 0px;
   height: 0;
   overflow: hidden;
   width: 180px;
@@ -141,7 +142,7 @@
   z-index: 4;
   padding-left: 15px;
   list-style-type: none;
-  transition: height 0.2s ease;
+  transition: height 0.2s ease, padding 0.2s ease;
   background: linear-gradient(#252532, #252532) 50% 50% / calc(100% - 2px) calc(100% - 2px) no-repeat,
     linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0, transparent 100%);
 }
@@ -164,7 +165,8 @@
 
 .menuActive {
   height: 127px;
-  transition: height 0.4s ease-in-out;
+  padding: 20px;
+  transition: height 0.2s ease, padding 0.2s ease;
 }
 
 .buttonContainer {
