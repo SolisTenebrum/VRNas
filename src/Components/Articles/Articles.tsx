@@ -1,10 +1,7 @@
 import styles from './Articles.module.css';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import ArticleSmallCard from './ArticleSmallCard';
-import ArticleBigCard from './ArticleBigCard';
 import { smallArticles, bigArticles } from '../../constants';
-import { motion, AnimatePresence } from 'framer-motion';
-import { clsx as cn } from 'clsx';
 import ArticleSlider from './ArticleSlider';
 
 const Articles = () => {
