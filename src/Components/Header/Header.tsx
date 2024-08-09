@@ -15,6 +15,7 @@ const NavigationItem = ({ href, navName }: { href: string; navName: string }) =>
 
 const Header = () => {
   const [openedMenus, setOpenedMenus] = useState<number[]>([]);
+  const [scrolled, setScrolled] = useState(false);
   const menuRefs = useRef<HTMLUListElement[]>([]);
   const buttonRefs = useRef<HTMLButtonElement[]>([]);
 
@@ -42,6 +43,23 @@ const Header = () => {
     }
   };
 
+const changeHeader = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeHeader);
+
+    return() => {
+      window.removeEventListener('scroll', changeHeader);
+    }
+    
+  }, []);
+
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
 
@@ -51,8 +69,8 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={styles.header}>
-      <div className={styles.container}>
+    <header className={cn(styles.header, `${scrolled && styles.fixedHeader}`)}>
+      <div className={cn(styles.container, `${scrolled && styles.fixedContainer}`)}>
         <div className={styles.logoContainer}>
           <img src={logo} alt={'vrnas-logo'} className={styles.logo} />
         </div>

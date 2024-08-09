@@ -1,4 +1,16 @@
 .hero {
+  padding-top: 114px;
+}
+
+.hero::after {
+  position: absolute;
+  content: '';
+  background-image: url('../../assets/site-background/topWaves.svg');
+  right: 0;
+  top: 0;
+  width: 736px;
+  height: 353.2px;
+  z-index: -2;
 }
 
 .hero::before {
