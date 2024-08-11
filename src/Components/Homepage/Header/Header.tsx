@@ -10,12 +10,16 @@ const NavigationItem = ({ href, navName }: { href: string; navName: string }) =>
       top: 0,
       left: 0,
       behavior: 'smooth',
-    })
-  }
+    });
+  };
 
   return (
     <li className={styles.navigationElement}>
-      <NavLink to={href} className={({ isActive }: { isActive: boolean }) => (cn(styles.link, isActive && styles.linkActive))} onClick={() => scroll()}>
+      <NavLink
+        to={href}
+        className={({ isActive }: { isActive: boolean }) => cn(styles.link, isActive && styles.linkActive)}
+        onClick={() => scroll()}
+      >
         {navName}
       </NavLink>
     </li>
@@ -116,10 +120,36 @@ const Header = () => {
                   }
                 }}
               >
-                <li className={styles.menuElement}>First</li>
-                <li className={styles.menuElement}>Second</li>
-                <li className={styles.menuElement}>Third</li>
-                <li className={styles.menuElement}>Fourth</li>
+                <li>
+                  <NavLink className={styles.menuElement} to={'/detail-service'}>
+                    Detail Service
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className={styles.menuElement} to={'/'}>
+                    Pricing Plan
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className={styles.menuElement} to={'/'}>
+                    Our Team
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className={styles.menuElement} to={'/'}>
+                    FAQ
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className={styles.menuElement} to={'/'}>
+                    Terms &amp; Conditions
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className={styles.menuElement} to={'/'}>
+                    Privacy Policy
+                  </NavLink>
+                </li>
               </ul>
             </li>
             <li className={styles.navigationElement}>
@@ -143,10 +173,26 @@ const Header = () => {
                   }
                 }}
               >
-                <li className={styles.menuElement}>First</li>
-                <li className={styles.menuElement}>Second</li>
-                <li className={styles.menuElement}>Third</li>
-                <li className={styles.menuElement}>Fourth</li>
+                <li>
+                  <NavLink className={styles.menuElement} to={'/'}>
+                    One
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className={styles.menuElement} to={'/'}>
+                    Two
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className={styles.menuElement} to={'/'}>
+                    Three
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className={styles.menuElement} to={'/'}>
+                    Four
+                  </NavLink>
+                </li>
               </ul>
             </li>
           </ul>

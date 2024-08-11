@@ -18,11 +18,11 @@ const Homepage = () => {
       <Hero />
       <Benefits variant="" />
       <About />
-      <Service />
+      <Service variant=''/>
       <Choose variant="" />
-      <GetStarted />
+      <GetStarted variant=''/>
       <Testimonials />
-      <Pricing />
+      <Pricing variant=''/>
       <Partners />
       <Articles />
       <Subscribe />

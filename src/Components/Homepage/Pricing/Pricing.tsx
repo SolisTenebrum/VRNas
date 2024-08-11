@@ -8,7 +8,7 @@ const Pricing = ({ variant }: { variant: string }) => {
   return (
     <section className={styles.pricing}>
       <div className={cn(styles.container, variant === 'our-service-page' ? styles.container_ourservice : '')}>
-        <div className={styles.textContainer}>
+        <div className={cn(styles.textContainer, variant === 'detail-service-page' ? styles.textContainer_detailservice : '')}>
           <h3 className={styles.subtitle}>OUR PRICING</h3>
           <h2 className={styles.title}>Affordable VR Services for Everyone</h2>
           <p className={styles.text}>

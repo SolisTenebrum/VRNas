@@ -26,6 +26,13 @@
   margin-bottom: 40px;
 }
 
+.textContainer_detailservice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .subtitle {
   margin: 0;
   margin-bottom: 12px;

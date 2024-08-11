@@ -52,6 +52,10 @@
   text-align: center;
 }
 
+.title_detailservice {
+  max-width: 880px;
+}
+
 .video {
   margin-left: 0;
   margin-bottom: 48px;
@@ -89,6 +93,10 @@
   top: 0;
   left: 0;
   transition: transform 0.5s ease;
+}
+
+.videoImage_detailservice {
+  background-image: url('../../../assets/video-images/video-image5.png');
 }
 
 .videoImage:after {

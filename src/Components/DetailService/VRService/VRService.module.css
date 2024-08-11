@@ -1,0 +1,249 @@
+.vrService {
+  margin-bottom: 400px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.circlesBackground {
+  background-image: url('../../../assets/backgrounds/detail-service-circle.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1055px;
+  width: 1055px;
+  z-index: 1;
+}
+
+.circles {
+}
+
+.circle {
+  background-image: url('../../../assets/backgrounds/detail-service-bg-inactive.svg');
+  background-repeat: no-repeat;
+  width: 102px;
+  height: 102px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transition: background-image 0.3s ease-in-out;
+}
+
+.circle:hover {
+  background-image: url('../../../assets/backgrounds/detail-service-bg-active.svg');
+  background-repeat: no-repeat;
+  width: 102px;
+  height: 102px;
+  z-index: 2;
+  transition: background-image 0.3s ease-in-out;
+}
+
+.circleActive {
+  background-image: url('../../../assets/backgrounds/detail-service-bg-active.svg');
+}
+
+.circleText {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  width: 80px;
+  text-align: center;
+}
+
+.circleOne {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+}
+
+.circleTwo {
+  position: absolute;
+  top: 29%;
+  left: 13%;
+  transform: translateY(-50%);
+}
+
+.circleThree {
+  position: absolute;
+  top: 8%;
+  left: 27%;
+}
+
+.circleFour {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circleFive {
+  position: absolute;
+  top: 8%;
+  right: 27%;
+}
+
+.circleSix {
+  position: absolute;
+  top: 29%;
+  right: 13%;
+  transform: translateY(-50%);
+  display: flex;
+}
+
+.circleSeven {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-50%);
+}
+
+.textContainer {
+  width: 627px;
+  position: absolute;
+  top: 22.5%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.subtitle {
+  margin: 0;
+  margin-bottom: 12px;
+  display: inline-block;
+  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 16px;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -0.5%;
+  font-weight: 600;
+  max-width: 708px;
+}
+
+.text {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  color: #d1d1d1;
+}
+
+.text:first-of-type {
+}
+
+.text:nth-of-type(2) {
+  margin-bottom: 52px;
+}
+
+.text:nth-of-type(3) {
+}
+
+.text:last-of-type {
+  margin-bottom: 32px;
+}
+
+.listContainer {
+  margin-bottom: 32px;
+  border-image: linear-gradient(90deg, #585858 0%, #7e7e7e13 100%) 1;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #252532b0;
+}
+
+.listTitle {
+  margin: 0;
+  padding-left: 32px;
+  padding-right: 59px;
+  padding-top: 30px;
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.list {
+  margin: 0;
+  list-style-type: none;
+  padding-left: 32px;
+  padding-right: 59px;
+  padding-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+
+.listItem {
+  margin: 0;
+  padding-left: 30px;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  position: relative;
+}
+
+.listItem::before {
+  position: absolute;
+  content: url('../../../assets/icons/checkbox.svg');
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+}
+
+.button {
+  width: 174px;
+  height: 50px;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  background-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%);
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  line-height: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+}
+
+.button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.3s ease 0s;
+  z-index: -1;
+}
+
+.button:hover:before {
+  opacity: 1;
+}

@@ -3,6 +3,10 @@
   margin-bottom: 150px;
 }
 
+.pageTitle_detailservice {
+  margin-bottom: 62px;
+}
+
 .pageTitle:before {
   position: absolute;
   content: '';
