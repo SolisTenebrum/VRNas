@@ -19,7 +19,9 @@ const PageTitle = ({ variant }: { variant: string }) => {
         </h1>
         <p className={styles.path}>
           <span className={styles.pathSpan}>Home</span>
-          <img src={arrow} className={styles.arrow} /> About us
+          <img src={arrow} className={styles.arrow} /> 
+          {variant === 'about-us-page' && 'About us'}
+          {variant === 'our-service-page' && 'Our Service'}
         </p>
       </div>
     </section>
