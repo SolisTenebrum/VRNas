@@ -1,6 +1,7 @@
 import Subscribe from '../Homepage/Subscribe/Subscribe';
 import styles from './NotFoundPage.module.css';
 import notFoundPageImage from '../../assets/notfoundpage-image.png';
+import { NavLink } from 'react-router-dom';
 
 const NotFoundPage = () => {
   return (
@@ -34,7 +35,9 @@ const NotFoundPage = () => {
                   our contact page.
                 </p>
               </div>
-              <button className={styles.button}>BACK HOME</button>
+              <NavLink to="/">
+                <button className={styles.button}>BACK HOME</button>
+              </NavLink>
             </div>
           </div>
           <div className={styles.column}>
