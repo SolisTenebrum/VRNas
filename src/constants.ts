@@ -248,6 +248,46 @@ const contactLinks = [
   },
 ];
 
+// FAQ Cards
+const faqCards = [
+  {
+    title: 'What is virtual reality?',
+    text: `Virtual reality (VR) is a technology that uses
+     headsets or other devices to create a simulated environment. 
+     Users can interact with this environment as if it were real, 
+     allowing for immersive experiences in gaming, education, 
+     training, and more.`,
+  },
+  {
+    title: 'What types of VR services do you offer?',
+    text: `Aliquam nisi lacus, tempor ut orci dapibus, 
+    cursus aliquam eros. Vestibulum molestie sem vitae 
+    porta lacinia. Suspendisse quis libero vitae velit
+     convallis lacinia. Etiam commodo pharetra orci auctor
+      gravida.`,
+  },
+  {
+    title: 'How much does your VR services cost?',
+    text: `Duis lectus lorem, dignissim et ultrices vel, 
+    finibus sit amet est. Fusce semper ac quam ut convallis.
+     Cras justo nisl, tempor et lacus eget, bibendum maximus
+      ipsum. Donec quis faucibus tellus, placerat suscipit urna. `,
+  },
+  {
+    title: 'What equipment do I need to use your VR services?',
+    text: `Morbi pretium velit sit amet orci condimentum viverra.
+     Donec quis diam vitae turpis tristique commodo. Curabitur ut 
+     congue diam. Mauris ac dignissim felis, id elementum lacus.
+      In vitae sem maximus urna semper placerat sit amet sed magna.`,
+  },
+  {
+    title: 'Can I try out your VR services before I commit?',
+    text: `Duis eu molestie diam. Curabitur non risus non libero 
+    lobortis gravida non eget est. Duis volutpat sapien vitae metus 
+    pellentesque fringilla. Vivamus pellentesque tincidunt tristique.`,
+  },
+];
+
 export {
   serviceCards,
   quickLinks,
@@ -257,5 +297,6 @@ export {
   smallArticles,
   bigArticles,
   chooseUsSpoilerItems,
-  serviceBenefits
+  serviceBenefits,
+  faqCards
 };

@@ -1,0 +1,157 @@
+.faq {
+  margin-bottom: 150px;
+  position: relative;
+}
+
+.faq::before {
+  position: absolute;
+  content: '';
+  top: 13%;
+  right: 20%;
+  width: 20%;
+  height: 15%;
+  background: linear-gradient(90deg, #0cbcf1c9 -30%, #e95ce9c5 100%);
+  filter: blur(80px);
+  border-radius: 10% 20% 100% 40%;
+  transform: rotate(-10deg);
+  z-index: -1;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 790px;
+  position: relative;
+}
+
+.container::before {
+}
+
+.row {
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subtitle {
+  margin: 0;
+  margin-bottom: 12px;
+  display: inline-block;
+  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -0.5%;
+  font-weight: 600;
+  max-width: 708px;
+}
+
+.text {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  color: #d1d1d1;
+  max-width: 764px;
+  text-align: center;
+}
+
+.faqCard {
+  margin-bottom: 24px;
+  border-image: linear-gradient(90deg, #585858 0%, #7e7e7e13 100%) 1;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #252532;
+  padding: 24px 24px 24px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.faqCard:hover {
+  border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
+  border-width: 1px;
+  border-style: solid;
+  transition: all 0.3s ease-in-out;
+}
+
+.faqCardActive {
+  border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
+  border-width: 1px;
+  border-style: solid;
+  transition: all 0.3s ease-in-out;
+}
+
+.faqCardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  border: none;
+  padding: 0;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  transition: padding 0.3s ease-in-out;
+}
+
+.faqCardTitleActive {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ffffff32;
+  transition: padding 0.3s ease-in-out;
+}
+
+.faqCardTitle::after {
+  content: '';
+  background-image: url('../../../assets/icons/arrowDown.svg');
+  background-position: center;
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  width: 15px;
+  height: 15px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(50%);
+}
+
+.faqCardText {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #d1d1d1;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.textVisible {
+  padding-top: 12px;
+  display: block;
+  max-height: 500px;
+  opacity: 1;
+  transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.opened::after {
+  content: '';
+  position: absolute;
+  cursor: pointer;
+  transform: rotate(-180deg);
+  transition: transform 0.3s ease;
+}

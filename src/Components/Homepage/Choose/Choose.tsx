@@ -1,9 +1,11 @@
 import styles from './Choose.module.css';
 import vrPerson from '../../../assets/vrperson/vrperson3.png';
+import vrPerson2 from '../../../assets/vrperson/vrperson5.png';
 import { chooseUsSpoilerItems } from '../../../constants';
 import { useState } from 'react';
+import cn from 'classnames';
 
-const Choose = () => {
+const Choose = ({ variant }: { variant: string }) => {
   const [visibleIndexes, setVisibleIndexes] = useState<number[]>([]);
 
   const toggleVisibility = (index: number) => {
@@ -14,7 +16,7 @@ const Choose = () => {
 
   return (
     <section className={styles.choose}>
-      <div className={styles.container}>
+      <div className={cn(styles.container, variant === 'about-us-page' ? styles.container_aboutus : '')}>
         <div className={styles.column}>
           <div className={styles.textContainer}>
             <h3 className={styles.subtitle}>WHY CHOOSE US</h3>
@@ -42,10 +44,10 @@ const Choose = () => {
         </div>
         <div className={styles.column}>
           <div className={styles.vrpersonContainer}>
-            <div className={styles.background}></div>
-            <img src={vrPerson} className={styles.vrperson} />
-            <div className={styles.video}>
-              <div className={styles.videoImage}></div>
+            <div className={cn(styles.background, variant === 'about-us-page' ? styles.background_aboutus : '')}></div>
+            <img src={cn( variant === 'about-us-page' ? vrPerson2 : vrPerson)} className={styles.vrperson} />
+            <div className={cn(styles.video, variant === 'about-us-page' ? styles.video_aboutus : '')}>
+              <div className={cn(styles.videoImage, variant === 'about-us-page' ? styles.videoImage_aboutus : '')}></div>
             </div>
           </div>
         </div>

@@ -2,10 +2,11 @@ import styles from './Benefits.module.css';
 import iconOne from '../../../assets/icons/1.svg';
 import iconTwo from '../../../assets/icons/2.svg';
 import iconThree from '../../../assets/icons/3.svg';
+import cn from 'classnames';
 
-const Benefits = () => {
+const Benefits = ({ variant }: { variant: string }) => {
   return (
-    <section className={styles.benefits}>
+    <section className={cn(styles.benefits, variant === 'about-us-page' ? styles.benefits_aboutus : '')}>
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.column}>

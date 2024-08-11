@@ -2,13 +2,14 @@ import styles from './Header.module.css';
 import logo from '../../../assets/logos/vrnas-full-logo.svg';
 import { useState, useRef, useEffect } from 'react';
 import { clsx as cn } from 'clsx';
+import { NavLink } from 'react-router-dom';
 
 const NavigationItem = ({ href, navName }: { href: string; navName: string }) => {
   return (
-    <li className={styles.menuElement}>
-      <a href={href} className={styles.link}>
+    <li className={styles.navigationElement}>
+      <NavLink to={href} className={({ isActive }: { isActive: boolean }) => (cn(styles.link, isActive && styles.linkActive))}>
         {navName}
-      </a>
+      </NavLink>
     </li>
   );
 };
@@ -83,12 +84,12 @@ const Header = () => {
         </div>
         <nav className={styles.navigationContainer}>
           <ul className={styles.navigation}>
-            <NavigationItem href={'#home'} navName={'Home'} />
-            <NavigationItem href={'#about'} navName={'About us'} />
-            <NavigationItem href={'#service'} navName={'Service'} />
+            <NavigationItem href={'/'} navName={'Home'} />
+            <NavigationItem href={'/about'} navName={'About us'} />
+            <NavigationItem href={'/service'} navName={'Service'} />
             <li className={styles.navigationElement}>
               <div className={styles.spoiler}>
-                <a href="#page" className={styles.link}>
+                <a href="/page" className={styles.link}>
                   Page
                 </a>
                 <button
@@ -115,7 +116,7 @@ const Header = () => {
             </li>
             <li className={styles.navigationElement}>
               <div className={styles.spoiler}>
-                <a href="#blog" className={styles.link}>
+                <a href="/blog" className={styles.link}>
                   Blog
                 </a>
                 <button

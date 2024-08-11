@@ -1,26 +1,20 @@
-.choose {
-  margin-bottom: 200px;
+.about {
+  margin-bottom: 150px;
 }
 
 .container {
   margin: 0 auto;
   max-width: 1200px;
   display: flex;
-  column-gap: 100px;
+  justify-content: space-between;
+  column-gap: 92px;
 }
 
-.container_aboutus {
-  flex-direction: row-reverse;
-}
-
-.column:first-of-type {
-  display: flex;
+.column {
 }
 
 .textContainer {
-  max-width: 548px;
-  flex: 1;
-  align-self: center;
+  padding-top: 40px;
 }
 
 .subtitle {
@@ -39,72 +33,32 @@
 
 .title {
   margin: 0;
-  margin-bottom: 32px;
-  font-size: 47px;
+  margin-bottom: 18px;
+  font-size: 48px;
   line-height: 58px;
   letter-spacing: -0.5%;
   font-weight: 600;
+  max-width: 708px;
 }
 
-.spoilers {
-  display: flex;
-  flex-direction: column;
-  row-gap: 48px;
-}
-
-.spoilerItem {
-}
-
-.button {
-  font-size: 20px;
-  font-weight: 500;
-  color: #ffffff;
-  border: none;
-  padding: 0;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #ffffff32;
-  background: none;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  position: relative;
-}
-
-.button::after {
-  content: '';
-  background-image: url('../../../assets/icons/arrowDown.svg');
-  background-position: center;
-  position: absolute;
-  right: 0;
-  bottom: 50%;
-  width: 15px;
-  height: 15px;
-  transition: transform 0.3s ease;
-}
-
-.opened::after {
-  content: '';
-  position: absolute;
-  cursor: pointer;
-  transform: rotate(-180deg);
-  transition: transform 0.3s ease;
-}
-
-.description {
+.text {
   margin: 0;
-  margin-top: 12px;
+  margin-bottom: 24px;
   font-size: 16px;
   line-height: 28px;
-  font-weight: 400;
+  font-weight: 300;
   color: #d1d1d1;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.7s ease;
+  max-width: 625px;
 }
 
-.descriptionVisible {
-  display: block;
-  max-height: 200px;
+.background {
+  position: absolute;
+  background-color: #252532;
+  width: 100%;
+  height: 86%;
+  z-index: -2;
+  bottom: 0;
+  left: 10px;
 }
 
 .vrpersonContainer {
@@ -127,6 +81,8 @@
 }
 
 .vrperson {
+  height: 574px;
+  width: 399px;
 }
 
 .video {
@@ -136,13 +92,8 @@
   position: absolute;
   margin-left: 0;
   overflow: hidden;
-  bottom: -37px;
-  right: 85px;
-}
-
-.video_aboutus {
-  right: 15px;
-  bottom: -50px;
+  bottom: -25px;
+  left: -75px;
 }
 
 .video::after {
@@ -165,7 +116,7 @@
 .videoImage {
   width: 100%;
   height: 100%;
-  background-image: url('../../../assets/video-images/video-image3.png');
+  background-image: url('../../../assets/video-images/video-image1.png');
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
@@ -174,26 +125,6 @@
   transition: transform 0.5s ease;
 }
 
-.videoImage_aboutus {
-  background-image: url('../../../assets/video-images/video-image2.png');
-}
-
 .video:hover .videoImage {
   transform: scale(1.1);
-}
-
-.background {
-  position: absolute;
-  background-color: #252532;
-  width: 70%;
-  height: 76%;
-  z-index: -2;
-  bottom: 0;
-  left: 65px;
-}
-
-.background_aboutus {
-  width: 79%;
-  height: 86%;
-  left: 20px;
 }

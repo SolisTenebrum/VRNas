@@ -1,29 +1,15 @@
-import Hero from '../Hero/Hero';
-import Benefits from '../Benefits/Benefits';
-import About from '../About/About';
-import Service from '../Service/Service';
-import Choose from '../Choose/Choose';
-import GetStarted from '../GetStarted/GetStarted';
-import Testimonials from '../Testimonials/Testimonials';
-import Pricing from '../Pricing/Pricing';
-import Partners from '../Partners/Partners';
-import Articles from '../Articles/Articles';
-import Subscribe from '../Subscribe/Subscribe';
+import { Route } from 'react-router-dom';
+import Homepage from '../Homepage';
+import { Routes } from 'react-router-dom';
+import AboutUs from '../../AboutUs/AboutUs';
 
 const Main = () => {
   return (
     <main>
-      <Hero />
-      <Benefits />
-      <About />
-      <Service />
-      <Choose />
-      <GetStarted />
-      <Testimonials />
-      <Pricing />
-      <Partners />
-      <Articles />
-      <Subscribe />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about" element={<AboutUs />} />
+      </Routes>
     </main>
   );
 };

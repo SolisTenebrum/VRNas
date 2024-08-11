@@ -4,7 +4,7 @@ import { quickLinks, supportLinks, contactLinks, socialLogos } from '../../../co
 
 const Footer = () => {
   return (
-    <section className={styles.footer}>
+    <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.top}>
           <div className={styles.logosContainer}>
@@ -61,7 +61,7 @@ const Footer = () => {
           <p className={styles.copyright}>© Copyright 2023, All Rights Reserved</p>
         </div>
       </div>
-    </section>
+    </footer>
   );
 };
 

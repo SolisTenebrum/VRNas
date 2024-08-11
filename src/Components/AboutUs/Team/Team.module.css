@@ -1,0 +1,168 @@
+.team {
+  margin-bottom: 152px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.row:first-of-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.subtitle {
+  margin: 0;
+  margin-bottom: 12px;
+  display: inline-block;
+  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.title {
+  margin: 0;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -0.5%;
+  font-weight: 600;
+}
+
+.button {
+  cursor: pointer;
+  width: 140px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border: none;
+  padding: 0;
+  outline: none;
+  background-color: #262628;
+  color: #d1d1d1;
+  border: 1px solid white;
+  position: relative;
+  border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
+  border-width: 1px;
+  border-style: solid;
+  user-select: none;
+  transition: color 0.3s ease;
+  overflow: hidden;
+  align-self: flex-end;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.button:hover::before {
+  opacity: 1;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.row:last-of-type {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  justify-content: space-around;
+}
+
+.card {
+  width: 293px;
+  height: 389px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #262628;
+  border-image: linear-gradient(90deg, #585858 0%, #7e7e7e13 100%) 1;
+  border-width: 1px;
+  border-style: solid;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  flex-basis: 293px;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  width: 274px;
+  height: 370px;
+  background-image: url('../../../assets/backgrounds/team-member-bg.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card:hover {
+  border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
+  border-width: 1px;
+  border-style: solid;
+  transition: all 0.3s ease-in-out;
+}
+
+.cardImage {
+  width: 274px;
+  height: 371px;
+  position: relative;
+}
+
+.cardText {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  user-select: none;
+  z-index: 1;
+}
+
+.cardName {
+  margin: 0;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+}
+
+.cardJobTitle {
+  margin: 0;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #b0b0b2;
+  text-align: center;
+}
