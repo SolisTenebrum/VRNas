@@ -101,7 +101,7 @@ const Header = () => {
             <NavigationItem href={'/service'} navName={'Service'} />
             <li className={styles.navigationElement}>
               <div className={styles.spoiler}>
-                <a href="/page" className={styles.link}>
+                <a href="/" className={styles.link}>
                   Page
                 </a>
                 <button
@@ -154,7 +154,7 @@ const Header = () => {
             </li>
             <li className={styles.navigationElement}>
               <div className={styles.spoiler}>
-                <a href="/blog" className={styles.link}>
+                <a href="/" className={styles.link}>
                   Blog
                 </a>
                 <button
