@@ -5,9 +5,17 @@ import { clsx as cn } from 'clsx';
 import { NavLink } from 'react-router-dom';
 
 const NavigationItem = ({ href, navName }: { href: string; navName: string }) => {
+  const scroll = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <li className={styles.navigationElement}>
-      <NavLink to={href} className={({ isActive }: { isActive: boolean }) => (cn(styles.link, isActive && styles.linkActive))}>
+      <NavLink to={href} className={({ isActive }: { isActive: boolean }) => (cn(styles.link, isActive && styles.linkActive))} onClick={() => scroll()}>
         {navName}
       </NavLink>
     </li>
