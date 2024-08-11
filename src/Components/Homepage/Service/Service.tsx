@@ -1,11 +1,12 @@
 import styles from './Service.module.css';
 import ServiceCard from './ServiceCard';
 import { serviceCards } from '../../../constants';
+import { clsx as cn } from 'clsx';
 
-const Service = () => {
+const Service = ({ variant }: { variant: string }) => {
   return (
     <section className={styles.service}>
-      <div className={styles.container}>
+      <div className={cn(styles.container, variant === 'our-service-page' ? styles.container_ourservice : '')}>
         <div className={styles.row}>
           <div className={styles.column}>
             <h3 className={styles.subtitle}>OUR SERVICE</h3>

@@ -2,11 +2,12 @@ import styles from './Pricing.module.css';
 import cloudIcon from '../../../assets/icons/cloud-icon.svg';
 import vrperson from '../../../assets/vrperson/vrperson4.png';
 import { serviceBenefits } from '../../../constants';
+import { clsx as cn } from 'clsx';
 
-const Pricing = () => {
+const Pricing = ({ variant }: { variant: string }) => {
   return (
     <section className={styles.pricing}>
-      <div className={styles.container}>
+      <div className={cn(styles.container, variant === 'our-service-page' ? styles.container_ourservice : '')}>
         <div className={styles.textContainer}>
           <h3 className={styles.subtitle}>OUR PRICING</h3>
           <h2 className={styles.title}>Affordable VR Services for Everyone</h2>

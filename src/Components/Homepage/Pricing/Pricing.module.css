@@ -1,10 +1,25 @@
 .pricing {
-  margin-bottom: 150px;
+  margin-bottom: 200px;
 }
 
 .container {
   margin: 0 auto;
   max-width: 1200px;
+  position: relative;
+}
+
+.container_ourservice::after {
+  position: absolute;
+  content: '';
+  left: -5%;
+  top: -7%;
+  width: 20%;
+  height: 50%;
+  background: linear-gradient(90deg, #0cbcf1c9 -30%, #e95ce9c5 100%);
+  filter: blur(80px);
+  border-radius: 10% 20% 100% 40%;
+  transform: rotate(-90deg);
+  z-index: -1;
 }
 
 .textContainer {
