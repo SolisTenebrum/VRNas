@@ -1,6 +1,5 @@
 import styles from './Choose2.module.css';
 import Benefits from '../../Homepage/Benefits/Benefits';
-import cn from 'classnames';
 
 interface Choose2Props {
   variant: string;

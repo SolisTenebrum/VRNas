@@ -14,10 +14,10 @@ const Homepage = () => {
   return (
     <>
       <Hero />
-      <Benefits />
+      <Benefits variant=""/>
       <About />
       <Service />
-      <Choose />
+      <Choose variant=""/>
       <GetStarted />
       <Testimonials />
       <Pricing />
