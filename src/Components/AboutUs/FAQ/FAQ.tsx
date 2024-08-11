@@ -13,16 +13,14 @@ interface FAQProps {
 
 const FAQCard = ({ title, text, index, toggleVisibility, faqCardsOpened }: FAQProps) => {
   return (
-    <div className={cn(styles.faqCard, faqCardsOpened.includes(index) ? styles.faqCardActive : '')}>
-      <button
+    <div className={cn(styles.faqCard, faqCardsOpened.includes(index) ? styles.faqCardActive : '')} onClick={() => toggleVisibility(index)}>
+      <div
         className={cn(
           styles.faqCardTitle,
-          faqCardsOpened.includes(index) ? `${styles.opened} ${styles.faqCardTitleActive}` : ''
-        )}
-        onClick={() => toggleVisibility(index)}
-      >
+          faqCardsOpened.includes(index) ? `${styles.opened} ${styles.faqCardTitleActive}` : '')}
+        >
         {title}
-      </button>
+      </div>
       <div className={cn(styles.faqCardText, faqCardsOpened.includes(index) ? styles.textVisible : '')}>{text}</div>
     </div>
   );
