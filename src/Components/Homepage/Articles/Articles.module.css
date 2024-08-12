@@ -1,6 +1,7 @@
 .articles {
   margin-bottom: 150px;
   position: relative;
+  overflow: hidden;
 }
 
 .articles::before {
