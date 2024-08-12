@@ -2,7 +2,7 @@ import styles from './Header.module.css';
 import logo from '../../../assets/logos/vrnas-full-logo.svg';
 import { useState, useRef, useEffect } from 'react';
 import { clsx as cn } from 'clsx';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const NavigationItem = ({ href, navName }: { href: string; navName: string }) => {
   const scroll = () => {
@@ -31,6 +31,15 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const menuRefs = useRef<HTMLUListElement[]>([]);
   const buttonRefs = useRef<HTMLButtonElement[]>([]);
+
+  const location = useLocation();
+  const isPageActive =
+    location.pathname.startsWith('/detail-service') ||
+    location.pathname.startsWith('/pricing-plan') ||
+    location.pathname.startsWith('/our-team') ||
+    location.pathname.startsWith('/faq') ||
+    location.pathname.startsWith('/terms-and-conditions') ||
+    location.pathname.startsWith('/privacy-policy');
 
   const handleMenuClick = (index: number) => {
     setOpenedMenus((prevState) => {
@@ -104,9 +113,7 @@ const Header = () => {
             <NavigationItem href={'/service'} navName={'Service'} />
             <li className={styles.navigationElement}>
               <div className={styles.spoiler}>
-                <a href="/" className={styles.link}>
-                  Page
-                </a>
+                <div className={cn(styles.link, `${isPageActive && styles.linkActive}`)}>Page</div>
                 <button
                   className={cn(styles.arrow, `${openedMenus.includes(0) ? styles.active : ''}`)}
                   onClick={() => handleMenuClick(0)}
@@ -157,9 +164,9 @@ const Header = () => {
             </li>
             <li className={styles.navigationElement}>
               <div className={styles.spoiler}>
-                <a href="/" className={styles.link}>
+                <NavLink to="/blog" className={styles.link}>
                   Blog
-                </a>
+                </NavLink>
                 <button
                   className={cn(styles.arrow, `${openedMenus.includes(1) ? styles.active : ''}`)}
                   onClick={() => handleMenuClick(1)}
