@@ -85,7 +85,6 @@
   outline: none;
   background-color: #262628;
   color: #d1d1d1;
-  border: 1px solid white;
   position: relative;
   border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
   border-width: 1px;

@@ -63,19 +63,17 @@
   border-width: 1px;
   border-style: solid;
   cursor: pointer;
-  transition: border-image 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .pricingCard:hover {
   border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
-  opacity: 1;
-  transition: border-image 0.3s ease-in-out;
 }
 
-.pricingCard:hover .cardButton {
-  background-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%);
+.pricingCard:hover .cardButton::before {
   color: #ffffff;
-  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .cardContent {
@@ -146,8 +144,8 @@
   cursor: pointer;
   width: 292px;
   height: 55px;
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 14px;
+  line-height: 14px;
   font-weight: 700;
   letter-spacing: 1.5px;
   border: none;
@@ -175,13 +173,13 @@
   bottom: 0;
   background-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%);
   opacity: 0;
-  transition: opacity 0.3s ease-in-out, background-image 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   z-index: -1;
 }
 
 .cardButton:hover::before {
   opacity: 1;
-  transition: opacity 0.3s ease-in-out, background-image 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .cardButton:hover {
