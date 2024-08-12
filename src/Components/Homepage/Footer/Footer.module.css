@@ -110,6 +110,7 @@
   align-items: center;
   cursor: pointer;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .link:hover {

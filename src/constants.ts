@@ -191,42 +191,42 @@ const quickLinks = [
   },
   {
     linkText: 'Pricing plan',
-    link: '/',
+    link: '/pricing-plan',
   },
   {
     linkText: 'Service',
-    link: '/',
+    link: '/service',
   },
   {
     linkText: 'Blog',
-    link: '/',
+    link: '/blog',
   },
   {
     linkText: 'Our team',
-    link: '/',
+    link: '/our-team',
   },
 ];
 
 const supportLinks = [
   {
     linkText: 'About us',
-    link: '/',
+    link: '/about-us',
   },
   {
     linkText: 'Contact us',
-    link: '/',
+    link: '/contact-us',
   },
   {
     linkText: 'FAQ',
-    link: '/',
+    link: '/faq',
   },
   {
     linkText: 'Terms & Conditions',
-    link: '/',
+    link: '/terms-and-conditions',
   },
   {
     linkText: 'Privacy Policy',
-    link: '/',
+    link: '/privacy-policy',
   },
 ];
 
