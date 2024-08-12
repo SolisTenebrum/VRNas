@@ -9,7 +9,7 @@ import imageSix from '../../../assets/blog-images/blog-image-six.png';
 import imageSeven from '../../../assets/blog-images/blog-image-seven.png';
 import imageEight from '../../../assets/blog-images/blog-image-eight.png';
 import imageNine from '../../../assets/blog-images/blog-image-nine.png';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 const blogCards = [
   {
