@@ -148,11 +148,11 @@
 .secondColumn::before {
   content: '';
   position: absolute;
-  width: 961px;
+  width: 500%;
   height: 605px;
   background-color: #252532;
   top: -34px;
-  right: -360px;
+  left: -100px;
   border-image: linear-gradient(90deg, #585858 0%, #7e7e7e13 100%) 1;
   border-width: 1px;
   border-style: solid;
