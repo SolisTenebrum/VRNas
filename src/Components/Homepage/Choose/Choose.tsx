@@ -16,7 +16,13 @@ const Choose = ({ variant }: { variant: string }) => {
 
   return (
     <section className={styles.choose}>
-      <div className={cn(styles.container, variant === 'about-us-page' ? styles.container_aboutus : '')}>
+      <div
+        className={cn(
+          styles.container,
+          variant === 'about-us-page' ? styles.container_aboutus : '',
+          variant === 'pricing-plan-page' ? styles.container_pricingplan : ''
+        )}
+      >
         <div className={styles.column}>
           <div className={styles.textContainer}>
             <h3 className={styles.subtitle}>WHY CHOOSE US</h3>
@@ -44,10 +50,28 @@ const Choose = ({ variant }: { variant: string }) => {
         </div>
         <div className={styles.column}>
           <div className={styles.vrpersonContainer}>
-            <div className={cn(styles.background, variant === 'about-us-page' ? styles.background_aboutus : '')}></div>
-            <img src={cn( variant === 'about-us-page' ? vrPerson2 : vrPerson)} className={styles.vrperson} />
-            <div className={cn(styles.video, variant === 'about-us-page' ? styles.video_aboutus : '')}>
-              <div className={cn(styles.videoImage, variant === 'about-us-page' ? styles.videoImage_aboutus : '')}></div>
+            <div
+              className={cn(
+                styles.background,
+                variant === 'about-us-page' ? styles.background_aboutus : '',
+                variant === 'pricing-plan-page' ? styles.background_pricingplan : ''
+              )}
+            ></div>
+            <img src={(variant === 'about-us-page') || (variant === 'pricing-plan-page') ? vrPerson2 : vrPerson} className={styles.vrperson} />
+            <div
+              className={cn(
+                styles.video,
+                variant === 'about-us-page' ? styles.video_aboutus : '',
+                variant === 'pricing-plan-page' ? styles.video_pricingplan : ''
+              )}
+            >
+              <div
+                className={cn(
+                  styles.videoImage,
+                  variant === 'about-us-page' ? styles.videoImage_aboutus : '',
+                  variant === 'pricing-plan-page' ? styles.videoImage_pricingplan : ''
+                )}
+              ></div>
             </div>
           </div>
         </div>

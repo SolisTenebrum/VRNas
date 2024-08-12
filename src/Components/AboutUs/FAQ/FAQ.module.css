@@ -17,6 +17,10 @@
   z-index: -1;
 }
 
+.faq_pricingplan::before {
+  content: none;
+}
+
 .container {
   margin: 0 auto;
   max-width: 790px;

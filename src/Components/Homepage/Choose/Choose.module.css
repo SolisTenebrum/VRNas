@@ -13,6 +13,10 @@
   flex-direction: row-reverse;
 }
 
+.container_pricingplan {
+  flex-direction: row-reverse;
+}
+
 .column:first-of-type {
   display: flex;
 }
@@ -145,6 +149,11 @@
   bottom: -50px;
 }
 
+.video_pricingplan {
+  right: 15px;
+  bottom: -50px;
+}
+
 .video::after {
   content: '';
   background-image: url('../../../assets/icons/play-button.svg');
@@ -178,6 +187,10 @@
   background-image: url('../../../assets/video-images/video-image2.png');
 }
 
+.videoImage_pricingplan {
+  background-image: url('../../../assets/video-images/video-image2.png');
+}
+
 .video:hover .videoImage {
   transform: scale(1.1);
 }
@@ -193,6 +206,12 @@
 }
 
 .background_aboutus {
+  width: 79%;
+  height: 86%;
+  left: 20px;
+}
+
+.background_pricingplan {
   width: 79%;
   height: 86%;
   left: 20px;

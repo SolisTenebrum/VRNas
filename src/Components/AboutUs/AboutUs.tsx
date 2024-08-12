@@ -12,13 +12,13 @@ const AboutUs = () => {
   return (
     <>
       <ScrollToTop />
-      <PageTitle variant={'about-us-page'}/>
+      <PageTitle variant='about-us-page'/>
       <About />
-      <Choose2 variant={'about-us-page'} />
-      <Choose variant={'about-us-page'} />
+      <Choose2 variant='about-us-page' />
+      <Choose variant='about-us-page' />
       <Team />
       <Partners />
-      <FAQ />
+      <FAQ variant='about-us-page'/>
       <Subscribe />
     </>
   );

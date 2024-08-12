@@ -288,6 +288,46 @@ const faqCards = [
   },
 ];
 
+// Pricing cards
+const pricingCardsList = [
+  {
+    title: 'Basic Plan',
+    price: '$99',
+    text: 'All the basic features to boost your freelance career',
+    list: [
+      'Access to a selection of VR games and experiences',
+      'Limited access to educational content',
+      'Limited access to architecture and design tools',
+      'No access to exclusive events or promotions',
+    ],
+    buttonText: 'GET 14 DAYS FREE TRIAL',
+  },
+  {
+    title: 'Standard Plan',
+    price: '$149',
+    text: 'All the basic features to boost your freelance career',
+    list: [
+      'Access to a selection of VR games and experiences',
+      'Limited access to educational content',
+      'Limited access to architecture and design tools',
+      'No access to exclusive events or promotions',
+    ],
+    buttonText: 'GET 14 DAYS FREE TRIAL',
+  },
+  {
+    title: 'Premium Plan',
+    price: '$200',
+    text: 'All features to boost your freelance career',
+    list: [
+      'Access to all of VR games and experiences',
+      'Unlimited access to educational content',
+      'Unlimited access to architecture and design tools',
+      'Access to exclusive events or promotions',
+    ],
+    buttonText: 'GET 14 DAYS FREE TRIAL',
+  },
+];
+
 export {
   serviceCards,
   quickLinks,
@@ -298,5 +338,6 @@ export {
   bigArticles,
   chooseUsSpoilerItems,
   serviceBenefits,
-  faqCards
+  faqCards,
+  pricingCardsList
 };

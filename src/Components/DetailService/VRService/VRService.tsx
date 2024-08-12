@@ -221,43 +221,43 @@ const VRService = () => {
         <div className={styles.circlesBackground}>
           <div className={styles.circles}>
             <div
-              className={cn(styles.circle, styles.circleOne, { [styles.circleActive]: activeService === 0 })}
+              className={cn(styles.circle, styles.circleOne, activeService === 0 && styles.circleActive )}
               onClick={() => setActiveService(0)}
             >
               <p className={styles.circleText}>VR Development</p>
             </div>
             <div
-              className={cn(styles.circle, styles.circleTwo, { [styles.circleActive]: activeService === 1 })}
+              className={cn(styles.circle, styles.circleTwo, activeService === 1 && styles.circleActive)}
               onClick={() => setActiveService(1)}
             >
               <p className={styles.circleText}>VR Games</p>
             </div>
             <div
-              className={cn(styles.circle, styles.circleThree, { [styles.circleActive]: activeService === 2 })}
+              className={cn(styles.circle, styles.circleThree, activeService === 2 && styles.circleActive)}
               onClick={() => setActiveService(2)}
             >
               <p className={styles.circleText}>VR Events</p>
             </div>
             <div
-              className={cn(styles.circle, styles.circleFour, { [styles.circleActive]: activeService === 3 })}
+              className={cn(styles.circle, styles.circleFour, activeService === 3 && styles.circleActive)}
               onClick={() => setActiveService(3)}
             >
               <p className={styles.circleText}>VR Design</p>
             </div>
             <div
-              className={cn(styles.circle, styles.circleFive, { [styles.circleActive]: activeService === 4 })}
+              className={cn(styles.circle, styles.circleFive, activeService === 4 && styles.circleActive)}
               onClick={() => setActiveService(4)}
             >
               <p className={styles.circleText}>VR Consulting</p>
             </div>
             <div
-              className={cn(styles.circle, styles.circleSix, { [styles.circleActive]: activeService === 5 })}
+              className={cn(styles.circle, styles.circleSix, activeService === 5 && styles.circleActive)}
               onClick={() => setActiveService(5)}
             >
               <p className={styles.circleText}>VR Entertainment</p>
             </div>
             <div
-              className={cn(styles.circle, styles.circleSeven, { [styles.circleActive]: activeService === 6 })}
+              className={cn(styles.circle, styles.circleSeven, activeService === 6 && styles.circleActive)}
               onClick={() => setActiveService(6)}
             >
               <p className={styles.circleText}>Client Testimony</p>

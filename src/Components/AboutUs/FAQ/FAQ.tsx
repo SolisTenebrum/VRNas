@@ -26,7 +26,7 @@ const FAQCard = ({ title, text, index, toggleVisibility, faqCardsOpened }: FAQPr
   );
 };
 
-const FAQ = () => {
+const FAQ = ({variant} : {variant: string}) => {
   const [faqCardsOpened, setFaqCardsOpened] = useState<number[]>([]);
 
   const toggleVisibility = (index: number) => {
@@ -36,7 +36,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className={styles.faq}>
+    <section className={cn(styles.faq, variant === 'pricing-plan-page' ? styles.faq_pricingplan : '')}>
       <div className={styles.container}>
         <div className={styles.row}>
           <div className={styles.textContainer}>

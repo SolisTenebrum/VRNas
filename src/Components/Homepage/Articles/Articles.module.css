@@ -91,7 +91,7 @@
   border-width: 1px;
   border-style: solid;
   user-select: none;
-  transition: color 0.3s ease;
+  transition: background-color 0.3s ease;
   overflow: hidden;
   align-self: flex-end;
 }
@@ -114,6 +114,7 @@
 }
 
 .button:hover {
+  transition: background-color 0.3s ease;
   background-color: transparent;
   color: white;
 }
