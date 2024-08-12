@@ -1,10 +1,19 @@
 import styles from './PageTitle.module.css';
 import arrow from '../../../assets/icons/arrowDown.svg';
-import {clsx as cn} from 'clsx';
+import { clsx as cn } from 'clsx';
 
 const PageTitle = ({ variant }: { variant: string }) => {
   return (
-    <section className={cn(styles.pageTitle, variant === 'detail-service-page' ? styles.pageTitle_detailservice : '')}>
+    <section
+      className={cn(
+        styles.pageTitle,
+        variant === 'detail-service-page'
+          ? styles.pageTitle_detailservice
+          : variant === 'blog-page'
+          ? styles.pageTitle_blog
+          : ''
+      )}
+    >
       <div className={styles.container}>
         <h1 className={styles.title}>
           {variant === 'about-us-page' && 'About Us'}
@@ -20,7 +29,7 @@ const PageTitle = ({ variant }: { variant: string }) => {
         </h1>
         <p className={styles.path}>
           <span className={styles.pathSpan}>Home</span>
-          <img src={arrow} className={styles.arrow} /> 
+          <img src={arrow} className={styles.arrow} />
           {variant === 'about-us-page' && 'About us'}
           {variant === 'our-service-page' && 'Our Service'}
           {variant === 'detail-service-page' && 'Detail Service'}

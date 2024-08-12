@@ -7,6 +7,10 @@
   margin-bottom: 62px;
 }
 
+.pageTitle_blog {
+  margin-bottom: 95px;
+}
+
 .pageTitle:before {
   position: absolute;
   content: '';

@@ -9,7 +9,7 @@ import imageSix from '../../../assets/blog-images/blog-image-six.png';
 import imageSeven from '../../../assets/blog-images/blog-image-seven.png';
 import imageEight from '../../../assets/blog-images/blog-image-eight.png';
 import imageNine from '../../../assets/blog-images/blog-image-nine.png';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 const blogCards = [
   {
@@ -212,7 +212,14 @@ const BlogArticles = () => {
   const currentCards = blogCards.slice(indexOfFirstCard, indexOfLastCard);
 
   const paginate = (pageNumber: number) => {
-    return setCurrentPage(pageNumber);
+    setCurrentPage(pageNumber);
+
+    window.scrollTo({
+      top: 400,
+      behavior: 'smooth',
+    })
+
+    
   };
 
   return (
