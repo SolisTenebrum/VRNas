@@ -9,6 +9,7 @@ import imageSix from '../../../assets/blog-images/blog-image-six.png';
 import imageSeven from '../../../assets/blog-images/blog-image-seven.png';
 import imageEight from '../../../assets/blog-images/blog-image-eight.png';
 import imageNine from '../../../assets/blog-images/blog-image-nine.png';
+import { useState } from 'react';
 
 const blogCards = [
   {
@@ -65,6 +66,114 @@ const blogCards = [
     title: 'The Future of Education: How VR is Revolutionizing the Classroom',
     span: 'READ MORE',
   },
+  {
+    image: imageFour,
+    subtitle: 'VR Event',
+    title: 'Exploring New Worlds: The Benefits of VR Travel',
+    span: 'READ MORE',
+  },
+  {
+    image: imageEight,
+    subtitle: 'VR Games',
+    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+    span: 'READ MORE',
+  },
+  {
+    image: imageTwo,
+    subtitle: 'VR Games',
+    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+    span: 'READ MORE',
+  },
+  {
+    image: imageThree,
+    subtitle: 'VR Entertainment',
+    title: 'Making Events Memorable: The Power of VR for Corporate and Special Occasions',
+    span: 'READ MORE',
+  },
+  {
+    image: imageSix,
+    subtitle: 'VR Games',
+    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+    span: 'READ MORE',
+  },
+  {
+    image: imageOne,
+    subtitle: 'VR Games',
+    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+    span: 'READ MORE',
+  },
+  {
+    image: imageNine,
+    subtitle: 'VR Education',
+    title: 'The Future of Education: How VR is Revolutionizing the Classroom',
+    span: 'READ MORE',
+  },
+  {
+    image: imageFive,
+    subtitle: 'VR Architecture',
+    title: 'Bringing Designs to Life: How VR is Changing Architecture',
+    span: 'READ MORE',
+  },
+  {
+    image: imageSeven,
+    subtitle: 'VR Games',
+    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+    span: 'READ MORE',
+  },
+  {
+    image: imageNine,
+    subtitle: 'VR Education',
+    title: 'The Future of Education: How VR is Revolutionizing the Classroom',
+    span: 'READ MORE',
+  },
+  {
+    image: imageFive,
+    subtitle: 'VR Architecture',
+    title: 'Bringing Designs to Life: How VR is Changing Architecture',
+    span: 'READ MORE',
+  },
+  {
+    image: imageSix,
+    subtitle: 'VR Games',
+    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+    span: 'READ MORE',
+  },
+  {
+    image: imageEight,
+    subtitle: 'VR Games',
+    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+    span: 'READ MORE',
+  },
+  {
+    image: imageOne,
+    subtitle: 'VR Games',
+    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+    span: 'READ MORE',
+  },
+  {
+    image: imageFour,
+    subtitle: 'VR Event',
+    title: 'Exploring New Worlds: The Benefits of VR Travel',
+    span: 'READ MORE',
+  },
+  {
+    image: imageTwo,
+    subtitle: 'VR Games',
+    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+    span: 'READ MORE',
+  },
+  {
+    image: imageSeven,
+    subtitle: 'VR Games',
+    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+    span: 'READ MORE',
+  },
+  {
+    image: imageThree,
+    subtitle: 'VR Entertainment',
+    title: 'Making Events Memorable: The Power of VR for Corporate and Special Occasions',
+    span: 'READ MORE',
+  },
 ];
 
 const BlogArticleCard = ({
@@ -93,10 +202,23 @@ const BlogArticleCard = ({
 };
 
 const BlogArticles = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const cardsPerPage = 9;
+
+  const totalPages = Math.ceil(blogCards.length / cardsPerPage);
+
+  const indexOfLastCard = currentPage * cardsPerPage;
+  const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+  const currentCards = blogCards.slice(indexOfFirstCard, indexOfLastCard);
+
+  const paginate = (pageNumber: number) => {
+    return setCurrentPage(pageNumber);
+  };
+
   return (
     <section className={styles.blogArticles}>
       <div className={styles.container}>
-        {blogCards.map((card, index) => (
+        {currentCards.map((card, index) => (
           <BlogArticleCard
             key={index}
             image={card.image}
@@ -107,9 +229,17 @@ const BlogArticles = () => {
         ))}
       </div>
       <div className={styles.pagination}>
-        <button className={cn(styles.paginationButton, styles.paginationButtonActive)}>1</button>
-        <button className={styles.paginationButton}>2</button>
-        <button className={styles.paginationButton}>3</button>
+        {Array.from({ length: totalPages }, (_, index) => {
+          return (
+            <button
+              key={index}
+              className={cn(styles.paginationButton, currentPage === index + 1 ? styles.paginationButtonActive : '')}
+              onClick={() => paginate(index + 1)}
+            >
+              {index + 1}
+            </button>
+          );
+        })}
       </div>
     </section>
   );
