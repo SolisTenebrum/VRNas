@@ -119,12 +119,13 @@
 }
 
 .link:hover .linkIcon {
-  transition: transform 0.3s ease;
-  transform: scale(1.2)
+  transition: transform 0.3s ease, filter 0.3s ease;
+  transform: scale(1.2);
+  filter: brightness(0) invert(1);
 }
 
 .linkIcon {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .bottom {
