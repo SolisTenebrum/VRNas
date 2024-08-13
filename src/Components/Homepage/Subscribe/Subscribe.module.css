@@ -60,7 +60,7 @@
 .form::before {
   content: '';
   position: absolute;
-  background-image: url('../../../assets/icons/email-icon.svg');
+  background-image: url('../../../assets/icons/email-icon-white.svg');
   top: 50%;
   transform: translateY(-50%);
   left: 15px;
