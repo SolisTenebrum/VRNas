@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './FAQ.module.css';
 import { clsx as cn } from 'clsx';
 import { faqCardsAll, faqCardsAboutUs, faqCardsPricingPlan } from '../../../constants';
@@ -35,8 +35,8 @@ const FAQ = ({ variant }: { variant: string }) => {
   const [faqCardsOpened, setFaqCardsOpened] = useState<number[]>([]);
 
   const [faqList, setFaqList] = useState<{ title: string; text: string }[]>(faqCardsAll);
-  const [activeButtons, setActiveButtons] = useState<number[]>([]);
-  const [currentButton, setCurrentButton] = useState<number | null>(null);
+  const [activeButtons, setActiveButtons] = useState<number[]>([0]);
+  const [currentButton, setCurrentButton] = useState<number | null>(0);
 
   const handleClick = (list: { title: string; text: string }[], index: number) => {
     setCurrentButton(index);
