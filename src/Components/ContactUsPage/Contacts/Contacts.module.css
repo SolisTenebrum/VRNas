@@ -1,0 +1,71 @@
+.contacts {
+  margin-bottom: 200px;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  column-gap: 32px;
+}
+
+.card {
+  border-image: linear-gradient(90deg, #585858 0%, #7e7e7e13 100%) 1;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgba(37, 37, 50, 0.6);
+}
+
+.content {
+  padding: 55px 65px 58px 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 248px;
+}
+
+.iconContainer {
+  background-image: url('../../../assets/backgrounds/contact-bg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subtitle {
+  margin: 0;
+  margin-bottom: 8px;
+  display: inline-block;
+  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}

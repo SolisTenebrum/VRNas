@@ -4,22 +4,24 @@ import { quickLinks, supportLinks, contactLinks, socialLogos } from '../../../co
 import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+  };
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.top}>
           <div className={styles.logosContainer}>
-            <img
-              src={mainLogo}
-              className={styles.mainLogo}
-              onClick={() => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-            />
+            <NavLink to="/" className={styles.link}>
+              <img
+                src={mainLogo}
+                className={styles.mainLogo}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+              />
+            </NavLink>
+
             <div className={styles.socialLogos}>
               {socialLogos.map((item, index) => (
                 <div className={styles.logoBackground} key={index}>
@@ -33,8 +35,10 @@ const Footer = () => {
               <p className={styles.linksTitle}>Quicklinks</p>
               <ul className={styles.linksList}>
                 {quickLinks.map((link, index) => (
-                  <li key={index} >
-                    <NavLink to={link.link} className={styles.link} onClick={() => scrollToTop()}>{link.linkText}</NavLink>
+                  <li key={index}>
+                    <NavLink to={link.link} className={styles.link} onClick={() => scrollToTop()}>
+                      {link.linkText}
+                    </NavLink>
                   </li>
                 ))}
               </ul>
@@ -44,7 +48,9 @@ const Footer = () => {
               <ul className={styles.linksList}>
                 {supportLinks.map((link, index) => (
                   <li key={index}>
-                    <NavLink to={link.link} className={styles.link} onClick={() => scrollToTop()}>{link.linkText}</NavLink>
+                    <NavLink to={link.link} className={styles.link} onClick={() => scrollToTop()}>
+                      {link.linkText}
+                    </NavLink>
                   </li>
                 ))}
               </ul>

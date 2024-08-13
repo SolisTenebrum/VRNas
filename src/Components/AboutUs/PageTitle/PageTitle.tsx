@@ -11,6 +11,8 @@ const PageTitle = ({ variant }: { variant: string }) => {
           ? styles.pageTitle_detailservice
           : variant === 'blog-page'
           ? styles.pageTitle_blog
+          : variant === 'contact-us-page'
+          ? styles.pageTitle_contactus
           : ''
       )}
     >
@@ -36,6 +38,7 @@ const PageTitle = ({ variant }: { variant: string }) => {
           {variant === 'pricing-plan-page' && 'Pricing Plan'}
           {variant === 'blog-page' && 'Blog'}
           {variant === 'our-team-page' && 'Our Team'}
+          {variant === 'contact-us-page' && 'Contact Us'}
         </p>
       </div>
     </section>

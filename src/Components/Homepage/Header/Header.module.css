@@ -208,7 +208,7 @@
   border-width: 1px;
   border-style: solid;
   user-select: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, scale 0.1s ease;
   overflow: hidden;
 }
 
@@ -231,6 +231,11 @@
 
 .button:hover {
   color: white;
+}
+
+.button:active {
+  scale: 0.95;
+  transition: scale 0.1s ease;
 }
 
 @media screen and (max-width: 1215px) {

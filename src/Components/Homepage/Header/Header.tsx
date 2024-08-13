@@ -208,7 +208,9 @@ const Header = () => {
           </ul>
         </nav>
         <div className={styles.buttonContainer}>
-          <button className={styles.button}>Contact us</button>
+          <NavLink to={'/contact-us'}>
+            <button className={styles.button}>Contact us</button>
+          </NavLink>
         </div>
       </div>
     </header>

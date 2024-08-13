@@ -1,0 +1,50 @@
+.map {
+  margin-bottom: 77px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mapContainer {
+  position: relative;
+}
+
+.mapImage {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.marker {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+
+.marker:hover {
+    transform: scale(5);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

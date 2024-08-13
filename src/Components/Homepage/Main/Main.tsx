@@ -8,6 +8,7 @@ import NotFoundPage from '../../NotFoundPage/NotFoundPage';
 import PricingPlan from '../../PricingPlan/PricingPlan';
 import BlogMainPage from '../../BlogMainPage/BlogMainPage';
 import TeamPage from '../../TeamPage/TeamPage';
+import ContactUsPage from '../../ContactUsPage/ContactUsPage';
 
 const Main = () => {
   return (
@@ -20,6 +21,7 @@ const Main = () => {
         <Route path='/pricing-plan' element={<PricingPlan />} />
         <Route path='/blog' element={<BlogMainPage />} />
         <Route path='/our-team' element={<TeamPage />} />
+        <Route path='/contact-us' element={<ContactUsPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </main>

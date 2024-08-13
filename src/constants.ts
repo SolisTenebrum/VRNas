@@ -7,9 +7,9 @@ import serviceIconFive from './assets/icons/8.svg';
 import serviceIconSix from './assets/icons/9.svg';
 
 // Footer contact icons
-import locationIcon from './assets/icons/location-icon.svg';
-import messageIcon from './assets/icons/message-icon.svg';
-import callIcon from './assets/icons/call-icon.svg';
+import locationIcon from './assets/icons/location-icon-grey.svg';
+import messageIcon from './assets/icons/message-icon-grey.svg';
+import callIcon from './assets/icons/call-icon-grey.svg';
 
 // Footer social icons
 import twitterIcon from './assets/logos/logo-twitter.svg';
