@@ -1,6 +1,5 @@
-import { Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Homepage from '../Homepage';
-import { Routes } from 'react-router-dom';
 import AboutUs from '../../AboutUs/AboutUs';
 import OurService from '../../OurService/OurService';
 import DetailService from '../../DetailService/DetailService';
@@ -9,6 +8,7 @@ import PricingPlan from '../../PricingPlan/PricingPlan';
 import BlogMainPage from '../../BlogMainPage/BlogMainPage';
 import TeamPage from '../../TeamPage/TeamPage';
 import ContactUsPage from '../../ContactUsPage/ContactUsPage';
+import FAQPage from '../../FAQPage/FAQPage';
 
 const Main = () => {
   return (
@@ -16,12 +16,15 @@ const Main = () => {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path='service' element={<OurService />} />
-        <Route path='/detail-service' element={<DetailService />} />
-        <Route path='/pricing-plan' element={<PricingPlan />} />
-        <Route path='/blog' element={<BlogMainPage />} />
-        <Route path='/our-team' element={<TeamPage />} />
-        <Route path='/contact-us' element={<ContactUsPage />} />
+        <Route path="service" element={<OurService />} />
+        <Route path="/detail-service" element={<DetailService />} />
+        <Route path="/pricing-plan" element={<PricingPlan />} />
+        <Route path="/blog" element={<BlogMainPage />} />
+        <Route path="/our-team" element={<TeamPage />} />
+        <Route path="/contact-us" element={<ContactUsPage />} />
+        <Route path="/faq" element={<FAQPage />} />
+        {/* <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} /> */}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </main>

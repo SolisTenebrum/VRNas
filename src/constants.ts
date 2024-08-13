@@ -249,42 +249,163 @@ const contactLinks = [
 ];
 
 // FAQ Cards
-const faqCards = [
+const faqCardsAboutUs = [
   {
     title: 'What is virtual reality?',
-    text: `Virtual reality (VR) is a technology that uses
-     headsets or other devices to create a simulated environment. 
-     Users can interact with this environment as if it were real, 
-     allowing for immersive experiences in gaming, education, 
-     training, and more.`,
+    text: `Virtual reality (VR) is a technology that immerses users in a
+     simulated digital environment using headsets and other devices. 
+     This allows users to interact with the virtual world as if they
+     were physically present, providing engaging experiences in fields 
+     such as gaming, education, and training.`,
   },
   {
     title: 'What types of VR services do you offer?',
-    text: `Aliquam nisi lacus, tempor ut orci dapibus, 
-    cursus aliquam eros. Vestibulum molestie sem vitae 
-    porta lacinia. Suspendisse quis libero vitae velit
-     convallis lacinia. Etiam commodo pharetra orci auctor
-      gravida.`,
+    text: `We offer a variety of VR services, including VR gaming 
+    experiences, educational simulations, training modules for 
+    professionals, and virtual tours. Our services are designed to 
+    cater to different industries and personal needs, providing 
+    immersive and interactive experiences for all users.`,
   },
   {
     title: 'How much does your VR services cost?',
-    text: `Duis lectus lorem, dignissim et ultrices vel, 
-    finibus sit amet est. Fusce semper ac quam ut convallis.
-     Cras justo nisl, tempor et lacus eget, bibendum maximus
-      ipsum. Donec quis faucibus tellus, placerat suscipit urna. `,
+    text: `Our VR services are priced based on the type and scope of the 
+    experience you choose. We offer flexible pricing plans to suit 
+    different needs and budgets. For detailed information on pricing,
+    please visit our pricing page or contact our support team for a 
+    personalized quote.`,
   },
   {
     title: 'What equipment do I need to use your VR services?',
-    text: `Morbi pretium velit sit amet orci condimentum viverra.
-     Donec quis diam vitae turpis tristique commodo. Curabitur ut 
-     congue diam. Mauris ac dignissim felis, id elementum lacus.
-      In vitae sem maximus urna semper placerat sit amet sed magna.`,
+    text: `To use our VR services, you will need a VR headset that is 
+    compatible with our platform, such as an Oculus Quest, HTC Vive, 
+    or similar device. Some experiences may require additional 
+    accessories like motion controllers for full interactivity. Our 
+    team can help you determine the right equipment for your needs.`,
   },
   {
     title: 'Can I try out your VR services before I commit?',
-    text: `Duis eu molestie diam. Curabitur non risus non libero 
-    lobortis gravida non eget est. Duis volutpat sapien vitae metus 
-    pellentesque fringilla. Vivamus pellentesque tincidunt tristique.`,
+    text: `Yes, we offer a free trial for new users to experience our 
+    VR services. This trial provides access to a selection of our 
+    offerings so you can explore and enjoy the immersive environments 
+    before deciding on a subscription plan. Sign up on our website to 
+    get started.`,
+  },
+];
+
+const faqCardsPricingPlan = [
+  {
+    title: 'What are your pricing tiers?',
+    text: `Our pricing tiers are designed to fit various needs and budgets.
+    We offer several plans ranging from basic to premium, each providing
+    different levels of access and features. You can choose the plan that
+    best suits your requirements.`,
+  },
+  {
+    title: 'Do you offer discounts for annual subscriptions?',
+    text: `Yes, we offer discounts for customers who choose annual 
+    subscriptions. Opting for an annual plan can save you a significant
+    amount compared to the monthly payment option. This allows you to 
+    enjoy our services at a lower cost over the year.`,
+  },
+  {
+    title: 'Is there a free trial available?',
+    text: `We provide a free trial for our services, allowing you to 
+    explore and understand the value we offer. During the trial period,
+    you can access most features without any cost. This is a great 
+    opportunity to experience our services before making a commitment.`,
+  },
+  {
+    title: 'Are there any setup fees?',
+    text: `We do not charge any setup fees for our services. Our goal is 
+    to make it as easy as possible for you to get started without any 
+    hidden costs. You can start using our services with a simple 
+    subscription plan.`,
+  },
+  {
+    title: 'Can I upgrade or downgrade my plan at any time?',
+    text: `Yes, our plans are flexible, allowing you to upgrade or 
+    downgrade at any time to better fit your needs. If you find that your
+    current plan no longer suits you, simply contact our support team, and
+    they will assist you with the transition.`,
+  },
+];
+
+const faqCardsAll = [
+  {
+    title: 'What is virtual reality?',
+    text: `Virtual reality (VR) is a technology that immerses users in a
+     simulated digital environment using headsets and other devices. 
+     This allows users to interact with the virtual world as if they
+     were physically present, providing engaging experiences in fields 
+     such as gaming, education, and training.`,
+  },
+  {
+    title: 'What types of VR services do you offer?',
+    text: `We offer a variety of VR services, including VR gaming 
+    experiences, educational simulations, training modules for 
+    professionals, and virtual tours. Our services are designed to 
+    cater to different industries and personal needs, providing 
+    immersive and interactive experiences for all users.`,
+  },
+  {
+    title: 'How much does your VR services cost?',
+    text: `Our VR services are priced based on the type and scope of the 
+    experience you choose. We offer flexible pricing plans to suit 
+    different needs and budgets. For detailed information on pricing,
+    please visit our pricing page or contact our support team for a 
+    personalized quote.`,
+  },
+  {
+    title: 'What equipment do I need to use your VR services?',
+    text: `To use our VR services, you will need a VR headset that is 
+    compatible with our platform, such as an Oculus Quest, HTC Vive, 
+    or similar device. Some experiences may require additional 
+    accessories like motion controllers for full interactivity. Our 
+    team can help you determine the right equipment for your needs.`,
+  },
+  {
+    title: 'Can I try out your VR services before I commit?',
+    text: `Yes, we offer a free trial for new users to experience our 
+    VR services. This trial provides access to a selection of our 
+    offerings so you can explore and enjoy the immersive environments 
+    before deciding on a subscription plan. Sign up on our website to 
+    get started.`,
+  },
+
+  {
+    title: 'What are your pricing tiers?',
+    text: `Our pricing tiers are designed to fit various needs and budgets.
+    We offer several plans ranging from basic to premium, each providing
+    different levels of access and features. You can choose the plan that
+    best suits your requirements.`,
+  },
+  {
+    title: 'Do you offer discounts for annual subscriptions?',
+    text: `Yes, we offer discounts for customers who choose annual 
+    subscriptions. Opting for an annual plan can save you a significant
+    amount compared to the monthly payment option. This allows you to 
+    enjoy our services at a lower cost over the year.`,
+  },
+  {
+    title: 'Is there a free trial available?',
+    text: `We provide a free trial for our services, allowing you to 
+    explore and understand the value we offer. During the trial period,
+    you can access most features without any cost. This is a great 
+    opportunity to experience our services before making a commitment.`,
+  },
+  {
+    title: 'Are there any setup fees?',
+    text: `We do not charge any setup fees for our services. Our goal is 
+    to make it as easy as possible for you to get started without any 
+    hidden costs. You can start using our services with a simple 
+    subscription plan.`,
+  },
+  {
+    title: 'Can I upgrade or downgrade my plan at any time?',
+    text: `Yes, our plans are flexible, allowing you to upgrade or 
+    downgrade at any time to better fit your needs. If you find that your
+    current plan no longer suits you, simply contact our support team, and
+    they will assist you with the transition.`,
   },
 ];
 
@@ -338,6 +459,8 @@ export {
   bigArticles,
   chooseUsSpoilerItems,
   serviceBenefits,
-  faqCards,
-  pricingCardsList
+  pricingCardsList,
+  faqCardsAll,
+  faqCardsAboutUs,
+  faqCardsPricingPlan,
 };

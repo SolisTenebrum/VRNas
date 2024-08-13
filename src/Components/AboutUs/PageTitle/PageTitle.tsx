@@ -39,6 +39,7 @@ const PageTitle = ({ variant }: { variant: string }) => {
           {variant === 'blog-page' && 'Blog'}
           {variant === 'our-team-page' && 'Our Team'}
           {variant === 'contact-us-page' && 'Contact Us'}
+          {variant === 'faq-page' && 'FAQ'}
         </p>
       </div>
     </section>

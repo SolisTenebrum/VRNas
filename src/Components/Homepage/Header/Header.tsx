@@ -146,17 +146,17 @@ const Header = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className={styles.menuElement} to={'/'}>
+                  <NavLink className={styles.menuElement} to={'/faq'}>
                     FAQ
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className={styles.menuElement} to={'/'}>
+                  <NavLink className={styles.menuElement} to={'/terms-and-conditions'}>
                     Terms &amp; Conditions
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className={styles.menuElement} to={'/'}>
+                  <NavLink className={styles.menuElement} to={'/privacy-policy'}>
                     Privacy Policy
                   </NavLink>
                 </li>

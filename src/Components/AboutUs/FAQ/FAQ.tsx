@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import styles from './FAQ.module.css';
 import { clsx as cn } from 'clsx';
-import { faqCards } from '../../../constants';
+import { faqCardsAll, faqCardsAboutUs, faqCardsPricingPlan } from '../../../constants';
+import vrperson from '../../../assets/vrperson/vrperson4.png';
 
 interface FAQProps {
   title: string;
@@ -13,12 +14,16 @@ interface FAQProps {
 
 const FAQCard = ({ title, text, index, toggleVisibility, faqCardsOpened }: FAQProps) => {
   return (
-    <div className={cn(styles.faqCard, faqCardsOpened.includes(index) ? styles.faqCardActive : '')} onClick={() => toggleVisibility(index)}>
+    <div
+      className={cn(styles.faqCard, faqCardsOpened.includes(index) ? styles.faqCardActive : '')}
+      onClick={() => toggleVisibility(index)}
+    >
       <div
         className={cn(
           styles.faqCardTitle,
-          faqCardsOpened.includes(index) ? `${styles.opened} ${styles.faqCardTitleActive}` : '')}
-        >
+          faqCardsOpened.includes(index) ? `${styles.opened} ${styles.faqCardTitleActive}` : ''
+        )}
+      >
         {title}
       </div>
       <div className={cn(styles.faqCardText, faqCardsOpened.includes(index) ? styles.textVisible : '')}>{text}</div>
@@ -26,8 +31,29 @@ const FAQCard = ({ title, text, index, toggleVisibility, faqCardsOpened }: FAQPr
   );
 };
 
-const FAQ = ({variant} : {variant: string}) => {
+const FAQ = ({ variant }: { variant: string }) => {
   const [faqCardsOpened, setFaqCardsOpened] = useState<number[]>([]);
+
+  const [faqList, setFaqList] = useState<{ title: string; text: string }[]>(faqCardsAll);
+  const [activeButtons, setActiveButtons] = useState<number[]>([]);
+  const [currentButton, setCurrentButton] = useState<number | null>(null);
+
+  const handleClick = (list: { title: string; text: string }[], index: number) => {
+    setCurrentButton(index);
+    setFaqList(list);
+
+    if (index === currentButton) {
+      return;
+    }
+
+    setActiveButtons((prevIndexes) =>
+      prevIndexes.includes(index) ? prevIndexes.filter((i) => i !== index) : [...prevIndexes, index]
+    );
+
+    if (!activeButtons.includes(index)) {
+      setActiveButtons([index]);
+    }
+  };
 
   const toggleVisibility = (index: number) => {
     setFaqCardsOpened((prevIndexes) =>
@@ -36,7 +62,18 @@ const FAQ = ({variant} : {variant: string}) => {
   };
 
   return (
-    <section className={cn(styles.faq, variant === 'pricing-plan-page' ? styles.faq_pricingplan : '')}>
+    <section
+      className={cn(
+        styles.faq,
+        variant === 'pricing-plan-page' ? styles.faq_pricingplan : variant === 'faq-page' ? styles.faq_faqpage : ''
+      )}
+    >
+      {variant === 'faq-page' && (
+        <div className={styles.vrpersonContainer}>
+          <img src={vrperson} className={styles.vrperson} />
+          <img src={vrperson} className={styles.vrperson} />
+        </div>
+      )}
       <div className={styles.container}>
         <div className={styles.row}>
           <div className={styles.textContainer}>
@@ -48,8 +85,35 @@ const FAQ = ({variant} : {variant: string}) => {
             </p>
           </div>
         </div>
+        {variant === 'faq-page' && (
+          <div className={styles.buttons}>
+            <button
+              className={cn(styles.button, activeButtons.includes(0) ? styles.buttonActive : '')}
+              onClick={() => handleClick(faqCardsAll, 0)}
+            >
+              All
+            </button>
+            <button
+              className={cn(styles.button, activeButtons.includes(1) ? styles.buttonActive : '')}
+              onClick={() => handleClick(faqCardsAboutUs, 1)}
+            >
+              VR Service
+            </button>
+            <button
+              className={cn(styles.button, activeButtons.includes(2) ? styles.buttonActive : '')}
+              onClick={() => handleClick(faqCardsPricingPlan, 2)}
+            >
+              Pricing
+            </button>
+          </div>
+        )}
         <div className={styles.row}>
-          {faqCards.map((card, index) => {
+          {(variant === 'pricing-plan-page'
+            ? faqCardsPricingPlan
+            : variant === 'about-us-page'
+            ? faqCardsAboutUs
+            : faqList
+          ).map((card, index) => {
             return (
               <FAQCard
                 key={index}
