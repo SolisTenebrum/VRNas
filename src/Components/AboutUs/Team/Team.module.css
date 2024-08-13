@@ -12,15 +12,23 @@
 
 .row:first-of-type {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   margin-bottom: 45px;
+}
+
+.row_ourteam:first-of-type {
+  justify-content: center;
+  margin-bottom: 48px;
 }
 
 .textContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.textContainer_ourteam {
+  align-items: center;
 }
 
 .subtitle {
@@ -98,6 +106,13 @@
   justify-content: space-around;
 }
 
+.row_ourteam:last-of-type {
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 31px;
+  row-gap: 32px;
+}
+
 .card {
   width: 293px;
   height: 389px;
@@ -115,23 +130,39 @@
   flex-basis: 293px;
 }
 
-.card::after {
-  content: '';
-  position: absolute;
-  bottom: 8px;
-  left: 8px;
-  width: 274px;
-  height: 370px;
-  background-image: url('../../../assets/backgrounds/team-member-bg.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .card:hover {
   border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
   border-width: 1px;
   border-style: solid;
   transition: all 0.3s ease-in-out;
+}
+
+.card:hover  .socials {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, left 0.3s ease-in-out;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
+.imageContainer {
+  height: 370px;
+  width: 275px;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../../assets/backgrounds/team-member-bg.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
 }
 
 .cardImage {
@@ -165,4 +196,38 @@
   font-weight: 400;
   color: #b0b0b2;
   text-align: center;
+}
+
+.socials {
+  position: absolute;
+  display: flex;
+  column-gap: 12px;
+  bottom: 18%;
+  left: -50%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, left 0.3s ease-in-out;
+  z-index: 3;
+}
+
+.socialIconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../../assets/backgrounds/team-member-soical-bg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 46px;
+  height: 46px;
+  scale: 0.9;
+  transition: scale 0.3s ease-in-out;
+}
+
+.socialIconContainer:hover {
+  transition: scale 0.3s ease-in-out;
+  scale: 1.1;
+}
+
+.socialIcon {
+  width: 22px;
+  height: 22px;
 }

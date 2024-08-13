@@ -7,6 +7,7 @@ import DetailService from '../../DetailService/DetailService';
 import NotFoundPage from '../../NotFoundPage/NotFoundPage';
 import PricingPlan from '../../PricingPlan/PricingPlan';
 import BlogMainPage from '../../BlogMainPage/BlogMainPage';
+import TeamPage from '../../TeamPage/TeamPage';
 
 const Main = () => {
   return (
@@ -18,6 +19,7 @@ const Main = () => {
         <Route path='/detail-service' element={<DetailService />} />
         <Route path='/pricing-plan' element={<PricingPlan />} />
         <Route path='/blog' element={<BlogMainPage />} />
+        <Route path='/our-team' element={<TeamPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </main>

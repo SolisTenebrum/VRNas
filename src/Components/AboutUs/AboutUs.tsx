@@ -16,7 +16,7 @@ const AboutUs = () => {
       <About />
       <Choose2 variant='about-us-page' />
       <Choose variant='about-us-page' />
-      <Team />
+      <Team variant=''/>
       <Partners />
       <FAQ variant='about-us-page'/>
       <Subscribe />

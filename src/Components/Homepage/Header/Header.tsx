@@ -141,7 +141,7 @@ const Header = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className={styles.menuElement} to={'/'}>
+                  <NavLink className={styles.menuElement} to={'/our-team'}>
                     Our Team
                   </NavLink>
                 </li>
