@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from './FAQ.module.css';
 import { clsx as cn } from 'clsx';
 import { faqCardsAll, faqCardsAboutUs, faqCardsPricingPlan } from '../../../constants';
