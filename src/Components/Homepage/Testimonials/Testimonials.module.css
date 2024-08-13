@@ -1,7 +1,7 @@
 .testimonials {
   margin: 0 auto;
   margin-bottom: 150px;
-  
+  overflow: hidden;
 }
 
 .container {
