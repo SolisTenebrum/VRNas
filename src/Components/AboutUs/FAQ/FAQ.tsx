@@ -41,6 +41,7 @@ const FAQ = ({ variant }: { variant: string }) => {
   const handleClick = (list: { title: string; text: string }[], index: number) => {
     setCurrentButton(index);
     setFaqList(list);
+    setFaqCardsOpened([])
 
     if (index === currentButton) {
       return;
