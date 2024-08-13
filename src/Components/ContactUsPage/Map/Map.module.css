@@ -33,10 +33,6 @@
   animation: pulse 2s infinite;
 }
 
-.marker:hover {
-    transform: scale(5);
-}
-
 @keyframes pulse {
   0% {
     transform: scale(1);
