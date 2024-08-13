@@ -41,6 +41,7 @@ const PageTitle = ({ variant }: { variant: string }) => {
           {variant === 'contact-us-page' && 'Contact Us'}
           {variant === 'faq-page' && 'FAQ'}
           {variant === 'terms-and-conditions-page' && 'Terms & Conditions'}
+          {variant === 'privacy-policy-page' && 'Privacy Policy'}
         </p>
       </div>
     </section>
