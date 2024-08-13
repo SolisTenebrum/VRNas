@@ -12,7 +12,7 @@ body {
 }
 
 section {
-  animation: fadeIn 1s ease-in-out forwards;
+  animation: fadeIn 0.4s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
