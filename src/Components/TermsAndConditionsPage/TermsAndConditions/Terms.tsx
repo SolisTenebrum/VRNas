@@ -1,13 +1,6 @@
 import styles from './Terms.module.css';
 import vrperson from '../../../assets/vrperson/vrperson4.png';
 
-const termsList = [
-  {
-    subsubtitle: '',
-    paragraph: '',
-  },
-];
-
 const Terms = () => {
   return (
     <section className={styles.terms}>
