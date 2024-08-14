@@ -11,6 +11,7 @@ import ContactUsPage from '../../ContactUsPage/ContactUsPage';
 import FAQPage from '../../FAQPage/FAQPage';
 import TermsAndConditions from '../../TermsAndConditionsPage/TermsAndConditionsPage';
 import PrivacyPolicy from '../../PrivacyPolicy/PrivacyPolicy';
+import ArticlePage from '../../ArticlePage/ArticlePage';
 
 const Main = () => {
   return (
@@ -27,6 +28,7 @@ const Main = () => {
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path='/article-page' element={<ArticlePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </main>
