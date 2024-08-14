@@ -190,7 +190,7 @@ const BlogArticleCard = ({
   return (
     <div className={styles.card}>
       <div className={styles.imageContainer}>
-        <img className={styles.image} src={image} />
+          <img className={styles.image} src={image} />
       </div>
       <div className={styles.textContainer}>
         <h4 className={styles.subtitle}>{subtitle}</h4>
@@ -217,9 +217,7 @@ const BlogArticles = () => {
     window.scrollTo({
       top: 400,
       behavior: 'smooth',
-    })
-
-    
+    });
   };
 
   return (

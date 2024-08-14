@@ -4,7 +4,7 @@ import ArticleSmallCard from './ArticleSmallCard';
 import { smallArticles, bigArticles } from '../../../constants';
 import ArticleSlider from './ArticleSlider';
 
-const Articles = () => {
+const Articles = ({variant}: {variant: string}) => {
   const articlesContainerRef = useRef<HTMLDivElement>(null);
   const scrollBarIndicatorRef = useRef<HTMLDivElement>(null);
 
@@ -51,7 +51,7 @@ const Articles = () => {
               <h4 className={styles.subsubtitle}>Recent Article</h4>
               <div className={styles.articlesContainer} ref={articlesContainerRef}>
                 {smallArticles.map((article, index) => (
-                  <ArticleSmallCard key={index} image={article.image} title={article.title} span={article.span} />
+                  <ArticleSmallCard key={index} image={article.image} title={article.title} span={article.span} variant={variant} />
                 ))}
               </div>
               <div className={styles.scrollBar}>
