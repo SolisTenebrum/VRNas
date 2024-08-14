@@ -24,7 +24,7 @@ const Homepage = () => {
       <Testimonials />
       <Pricing variant=''/>
       <Partners />
-      <Articles />
+      <Articles variant=''/>
       <Subscribe />
     </>
   );
