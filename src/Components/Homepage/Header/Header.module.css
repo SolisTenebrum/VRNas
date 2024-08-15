@@ -117,6 +117,7 @@
 .arrow::after {
   content: '';
   background-image: url('../../../assets/icons/arrowDown.svg');
+  background-repeat: no-repeat;
   background-position: center;
   position: absolute;
   height: 15px;
@@ -129,12 +130,9 @@
 
 .active::after {
   content: '';
-  background-image: url('../../../assets/icons/arrowDown.svg');
   background-position: center;
   position: absolute;
-  height: 15px;
-  width: 15px;
-  top: -6px;
+  top: -4.5px;
   left: 2px;
   cursor: pointer;
   transform: rotate(-180deg);
