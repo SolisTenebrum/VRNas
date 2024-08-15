@@ -1,0 +1,131 @@
+.about {
+  margin-bottom: 150px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 92px;
+}
+
+.column {
+}
+
+.textContainer {
+  padding-top: 40px;
+}
+
+.subtitle {
+  margin: 0;
+  margin-bottom: 12px;
+  display: inline-block;
+  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 18px;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -0.5%;
+  font-weight: 600;
+  max-width: 708px;
+}
+
+.text {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  color: #d1d1d1;
+  max-width: 625px;
+}
+
+.background {
+  position: absolute;
+  background-color: #252532;
+  width: 100%;
+  height: 86%;
+  z-index: -2;
+  bottom: 0;
+  left: 10px;
+}
+
+.vrpersonContainer {
+  position: relative;
+  display: flex;
+}
+
+.vrpersonContainer::before {
+  position: absolute;
+  content: '';
+  top: 40%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(90deg, #0cbcf1c9 -30%, #e95ce9c5 100%);
+  filter: blur(100px);
+  border-radius: 10% 20% 100% 40%;
+  transform: rotate(-20deg);
+  z-index: -1;
+}
+
+.vrperson {
+  height: 574px;
+  width: 399px;
+}
+
+.video {
+  width: 196px;
+  height: 128px;
+  background-color: #21232e;
+  position: absolute;
+  margin-left: 0;
+  overflow: hidden;
+  bottom: -25px;
+  left: -75px;
+}
+
+.video::after {
+  content: '';
+  background-image: url('../../assets/icons/play-button.svg');
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.video:hover::after {
+  transform: scale(1.2);
+}
+
+.videoImage {
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/background-elements/video-image1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease;
+}
+
+.video:hover .videoImage {
+  transform: scale(1.1);
+}

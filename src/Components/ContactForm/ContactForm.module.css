@@ -1,0 +1,225 @@
+.contactForm {
+  margin-bottom: 200px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: grid;
+  position: relative;
+}
+
+.imageContainer {
+  position: absolute;
+  left: -20%;
+  top: -5%;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.socialIconContainer {
+  background-image: url('../../assets/background-elements/social-bg.svg');
+  background-repeat: no-repeat;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+}
+
+.socialIcon {
+  transition: transform 0.3s ease;
+  width: 22px;
+  height: 22px;
+}
+
+.socialIconContainer:hover .socialIcon {
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+
+.instagramIcon {
+  bottom: -8%;
+  left: 23%;
+}
+
+.facebookIcon {
+  top: 70%;
+  left: 11%;
+}
+
+.twitterIcon {
+  top: 20%;
+  left: 15%;
+}
+
+.githubIcon {
+  bottom: 12%;
+  right: 39%;
+}
+
+.column:last-of-type {
+  justify-self: flex-end;
+  max-width: 645px;
+  z-index: 1;
+}
+
+.textContainer {
+  margin-bottom: 32px;
+}
+
+.subtitle {
+  margin: 0;
+  margin-bottom: 12px;
+  display: inline-block;
+  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -0.5%;
+  font-weight: 600;
+}
+
+.text {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  color: #d1d1d1;
+}
+
+.form {
+  display: grid;
+  grid-template-areas:
+    'name lastname'
+    'email phone'
+    'message message'
+    'button .';
+  column-gap: 33px;
+  row-gap: 24px;
+}
+
+.input {
+  border-image: linear-gradient(90deg, #585858 0%, #7e7e7e13 100%) 1;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgba(37, 37, 50, 50%);
+  padding: 11px;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.input::placeholder {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  color: #ffffff;
+  opacity: 70%;
+}
+
+.input:focus {
+  outline: 1px solid #ffffff;
+}
+
+.name {
+  grid-area: name;
+}
+
+.lastname {
+  grid-area: lastname;
+}
+
+.email {
+  grid-area: email;
+}
+
+.phone {
+  grid-area: phone;
+}
+
+.message {
+  grid-area: message;
+  border-image: linear-gradient(90deg, #585858 0%, #7e7e7e13 100%) 1 round;
+  border-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgba(37, 37, 50, 60%);
+  padding: 11px;
+  min-height: 137px;
+  max-height: 137px;
+  max-width: 645px;
+  resize: none;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.message::placeholder {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  color: #ffffff;
+  opacity: 70%;
+}
+
+.message:focus {
+  outline: 1px solid #ffffff;
+}
+
+.button {
+  grid-area: button;
+  width: 206px;
+  height: 50px;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  background-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%);
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  line-height: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+}
+
+.button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.3s ease 0s;
+  z-index: -1;
+}
+
+.button:hover:before {
+  opacity: 1;
+}
+
+.button:focus::before {
+  opacity: 1;
+}

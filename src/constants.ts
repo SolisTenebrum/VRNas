@@ -13,24 +13,25 @@ import serviceIconSix from './assets/icons/9.svg';
 
 // Footer contact icons
 import locationIcon from './assets/icons/location-icon-grey.svg';
-import messageIcon from './assets/icons/message-icon-grey.svg';
+import messageIcon from './assets/icons/email-icon-grey.svg';
 import callIcon from './assets/icons/call-icon-grey.svg';
 
 // Footer social icons
-import twitterIcon from './assets/logos/logo-twitter.svg';
+import xIcon from './assets/logos/logo-x.svg';
 import facebookIcon from './assets/logos/logo-fb.svg';
 import instagramIcon from './assets/logos/logo-instagram.svg';
 import githubIcon from './assets/logos/logo-github.svg';
 
 // Article images
-import articleBigImageOne from './assets/article-images/article-image-big-one.png';
-import articleBigImageTwo from './assets/article-images/article-image-big-two.png';
-import articleBigImageThree from './assets/article-images/article-image-big-three.png';
-import articleBigImageFour from './assets/article-images/article-image-big-four.png';
-import articleSmallImageOne from './assets/article-images/article-image-small-one.png';
-import articleSmallImageTwo from './assets/article-images/article-image-small-two.png';
-import articleSmallImageThree from './assets/article-images/article-image-small-three.png';
-import articleSmallImageFour from './assets/article-images/article-image-small-four.png';
+import articleImage1 from './assets/article-images/1.png';
+import articleImage2 from './assets/article-images/2.png';
+import articleImage3 from './assets/article-images/3.png';
+import articleImage4 from './assets/article-images/4.png';
+import articleImage5 from './assets/article-images/5.png';
+import articleImage6 from './assets/article-images/6.png';
+import articleImage7 from './assets/article-images/7.png';
+import articleImage8 from './assets/article-images/8.jpg';
+import articleImage9 from './assets/article-images/9.png';
 
 // Team member images
 import memberOne from './assets/people/Member1.png';
@@ -40,29 +41,13 @@ import memberFive from './assets/people/Member4.png';
 import memberFour from './assets/people/Member5.png';
 import memberSix from './assets/people/Member6.png';
 
-// Article page images
-import articleImageFullOne from './assets/article-images/article-image-huge-one.png';
-import articleImageOne from './assets/article-images/article-sub-image-one.png';
-import articleImageTwo from './assets/article-images/article-sub-image-two.png';
-
-// Blog images
-import blogImageOne from './assets/blog-images/blog-image-one.png';
-import blogImageTwo from './assets/blog-images/blog-image-two.png';
-import blogImageThree from './assets/blog-images/blog-image-three.png';
-import blogImageFour from './assets/blog-images/blog-image-four.png';
-import blogImageFive from './assets/blog-images/blog-image-five.png';
-import blogImageSix from './assets/blog-images/blog-image-six.png';
-import blogImageSeven from './assets/blog-images/blog-image-seven.png';
-import blogImageEight from './assets/blog-images/blog-image-eight.png';
-import blogImageNine from './assets/blog-images/blog-image-nine.png';
-
 // Client images
-import clientImageOne from './assets/clients/Client01.png';
-import clientImageTwo from './assets/clients/Client02.png';
-import clientImageThree from './assets/clients/Client03.png';
-import clientImageFour from './assets/clients/Client04.png';
-import clientImageFive from './assets/clients/Client05.png';
-import clientImageSix from './assets/clients/Client06.png';
+import clientImageOne from './assets/people/Client1.png';
+import clientImageTwo from './assets/people/Client2.png';
+import clientImageThree from './assets/people/Client3.png';
+import clientImageFour from './assets/people/Client4.png';
+import clientImageFive from './assets/people/Client5.png';
+import clientImageSix from './assets/people/Client6.png';
 
 // Benefits cards
 const benefitsCards = [
@@ -178,22 +163,22 @@ const serviceBenefits = [
 // Article section cards
 const smallArticles = [
   {
-    image: articleSmallImageOne,
+    image: articleImage1,
     span: 'VR Education',
     title: 'The Future of Education: How VR is Revolutionizing the Classroom',
   },
   {
-    image: articleSmallImageTwo,
+    image: articleImage5,
     span: 'VR Architecture',
     title: 'Bringing Designs to Life: How VR is Changing Architecture',
   },
   {
-    image: articleSmallImageThree,
+    image: articleImage3,
     span: 'VR Entertainment',
     title: 'Making Events Memorable: The Power of VR for Corporate and Special Occasions',
   },
   {
-    image: articleSmallImageFour,
+    image: articleImage4,
     span: 'VR Event',
     title: 'Exploring New Worlds: The Benefits of VR Travel',
   },
@@ -201,22 +186,22 @@ const smallArticles = [
 
 const bigArticles = [
   {
-    image: articleBigImageOne,
+    image: articleImage1,
     span: 'VR Games',
     title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
   },
   {
-    image: articleBigImageTwo,
+    image: articleImage3,
     span: 'VR Event',
     title: 'Making Events Memorable: The Power of VR for Corporate and Special Occasions',
   },
   {
-    image: articleBigImageThree,
+    image: articleImage7,
     span: 'VR Games',
     title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
   },
   {
-    image: articleBigImageFour,
+    image: articleImage2,
     span: 'VR Education',
     title: 'The Future of Education: How VR is Revolutionizing the Classroom',
   },
@@ -225,7 +210,7 @@ const bigArticles = [
 // Footer social icons
 const socialLogos = [
   {
-    icon: twitterIcon,
+    icon: xIcon,
     link: '/',
   },
   {
@@ -551,7 +536,7 @@ const articleContent = [
     title: 'Bringing Designs to Life: How VR is Changing Architecture',
     author: 'Nasyiya Ulfa',
     date: '25 Nov 2022',
-    mainImage: articleImageFullOne,
+    mainImage: articleImage5,
     paragraphs: [
       `Architecture is an art and science that is constantly evolving with technology. The industry has gone through
         various transformations over the years, from pencil and paper sketches to computer-aided design (CAD) software.
@@ -576,7 +561,7 @@ const articleContent = [
         better communication and understanding with clients. As the technology becomes more advanced and widespread, we
         can expect to see more innovative designs and better-designed buildings in the future.`,
     ],
-    articleImages: [articleImageOne, articleImageTwo],
+    articleImages: [articleImage6, articleImage9],
     postTags: `#VRDesign #ArchitectureInnovation #VirtualRealityArchitecture #BringingDesignsToLife #DesignVisualization
         #ArchitecturalVisualization #RevolutionizingArchitecture #BuildingInVR #DesignThinking #VRInArchitecture`,
   },
@@ -586,7 +571,7 @@ const articleContent = [
     title: 'Bringing Designs to Life: How VR is Changing Architecture',
     author: 'Nasyiya Ulfa',
     date: '25 Nov 2022',
-    mainImage: articleImageFullOne,
+    mainImage: articleImage1,
     paragraphs: [
       `Architecture is an art and science that is constantly evolving with technology. The industry has gone through
         various transformations over the years, from pencil and paper sketches to computer-aided design (CAD) software.
@@ -611,7 +596,7 @@ const articleContent = [
         better communication and understanding with clients. As the technology becomes more advanced and widespread, we
         can expect to see more innovative designs and better-designed buildings in the future.`,
     ],
-    articleImages: [articleImageOne, articleImageTwo],
+    articleImages: [articleImage1, articleImage1],
     postTags: `#VRDesign #ArchitectureInnovation #VirtualRealityArchitecture #BringingDesignsToLife #DesignVisualization
         #ArchitecturalVisualization #RevolutionizingArchitecture #BuildingInVR #DesignThinking #VRInArchitecture`,
   },
@@ -620,165 +605,165 @@ const articleContent = [
 // Blog cards
 const blogCards = [
   {
-    image: blogImageOne,
+    image: articleImage1,
     subtitle: 'VR Games',
     title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
     span: 'READ MORE',
   },
   {
-    image: blogImageTwo,
+    image: articleImage2,
     subtitle: 'VR Games',
     title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
     span: 'READ MORE',
   },
   {
-    image: blogImageThree,
+    image: articleImage3,
     subtitle: 'VR Entertainment',
     title: 'Making Events Memorable: The Power of VR for Corporate and Special Occasions',
     span: 'READ MORE',
   },
   {
-    image: blogImageFour,
+    image: articleImage4,
     subtitle: 'VR Event',
     title: 'Exploring New Worlds: The Benefits of VR Travel',
     span: 'READ MORE',
   },
   {
-    image: blogImageFive,
+    image: articleImage5,
     subtitle: 'VR Architecture',
     title: 'Bringing Designs to Life: How VR is Changing Architecture',
     span: 'READ MORE',
   },
   {
-    image: blogImageSix,
+    image: articleImage6,
     subtitle: 'VR Games',
     title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
     span: 'READ MORE',
   },
   {
-    image: blogImageSeven,
+    image: articleImage7,
     subtitle: 'VR Games',
     title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
     span: 'READ MORE',
   },
   {
-    image: blogImageEight,
+    image: articleImage8,
     subtitle: 'VR Games',
     title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
     span: 'READ MORE',
   },
   {
-    image: blogImageNine,
+    image: articleImage9,
     subtitle: 'VR Education',
     title: 'The Future of Education: How VR is Revolutionizing the Classroom',
     span: 'READ MORE',
   },
   {
-    image: blogImageFour,
-    subtitle: 'VR Event',
-    title: 'Exploring New Worlds: The Benefits of VR Travel',
-    span: 'READ MORE',
-  },
-  {
-    image: blogImageEight,
-    subtitle: 'VR Games',
-    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
-    span: 'READ MORE',
-  },
-  {
-    image: blogImageTwo,
-    subtitle: 'VR Games',
-    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
-    span: 'READ MORE',
-  },
-  {
-    image: blogImageThree,
+    image: articleImage3,
     subtitle: 'VR Entertainment',
     title: 'Making Events Memorable: The Power of VR for Corporate and Special Occasions',
     span: 'READ MORE',
   },
   {
-    image: blogImageSix,
-    subtitle: 'VR Games',
-    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
-    span: 'READ MORE',
-  },
-  {
-    image: blogImageOne,
-    subtitle: 'VR Games',
-    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
-    span: 'READ MORE',
-  },
-  {
-    image: blogImageNine,
-    subtitle: 'VR Education',
-    title: 'The Future of Education: How VR is Revolutionizing the Classroom',
-    span: 'READ MORE',
-  },
-  {
-    image: blogImageFive,
+    image: articleImage5,
     subtitle: 'VR Architecture',
     title: 'Bringing Designs to Life: How VR is Changing Architecture',
     span: 'READ MORE',
   },
   {
-    image: blogImageSeven,
+    image: articleImage7,
     subtitle: 'VR Games',
     title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
     span: 'READ MORE',
   },
   {
-    image: blogImageNine,
-    subtitle: 'VR Education',
-    title: 'The Future of Education: How VR is Revolutionizing the Classroom',
-    span: 'READ MORE',
-  },
-  {
-    image: blogImageFive,
-    subtitle: 'VR Architecture',
-    title: 'Bringing Designs to Life: How VR is Changing Architecture',
-    span: 'READ MORE',
-  },
-  {
-    image: blogImageSix,
+    image: articleImage2,
     subtitle: 'VR Games',
     title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
     span: 'READ MORE',
   },
   {
-    image: blogImageEight,
-    subtitle: 'VR Games',
-    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
-    span: 'READ MORE',
-  },
-  {
-    image: blogImageOne,
-    subtitle: 'VR Games',
-    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
-    span: 'READ MORE',
-  },
-  {
-    image: blogImageFour,
+    image: articleImage4,
     subtitle: 'VR Event',
     title: 'Exploring New Worlds: The Benefits of VR Travel',
     span: 'READ MORE',
   },
   {
-    image: blogImageTwo,
+    image: articleImage6,
     subtitle: 'VR Games',
     title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
     span: 'READ MORE',
   },
   {
-    image: blogImageSeven,
+    image: articleImage8,
     subtitle: 'VR Games',
     title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
     span: 'READ MORE',
   },
   {
-    image: blogImageThree,
+    image: articleImage1,
+    subtitle: 'VR Games',
+    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+    span: 'READ MORE',
+  },
+  {
+    image: articleImage9,
+    subtitle: 'VR Education',
+    title: 'The Future of Education: How VR is Revolutionizing the Classroom',
+    span: 'READ MORE',
+  },
+  {
+    image: articleImage1,
+    subtitle: 'VR Games',
+    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+    span: 'READ MORE',
+  },
+  {
+    image: articleImage4,
+    subtitle: 'VR Event',
+    title: 'Exploring New Worlds: The Benefits of VR Travel',
+    span: 'READ MORE',
+  },
+  {
+    image: articleImage6,
+    subtitle: 'VR Games',
+    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+    span: 'READ MORE',
+  },
+  {
+    image: articleImage9,
+    subtitle: 'VR Education',
+    title: 'The Future of Education: How VR is Revolutionizing the Classroom',
+    span: 'READ MORE',
+  },
+  {
+    image: articleImage3,
     subtitle: 'VR Entertainment',
     title: 'Making Events Memorable: The Power of VR for Corporate and Special Occasions',
+    span: 'READ MORE',
+  },
+  {
+    image: articleImage8,
+    subtitle: 'VR Games',
+    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+    span: 'READ MORE',
+  },
+  {
+    image: articleImage2,
+    subtitle: 'VR Games',
+    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+    span: 'READ MORE',
+  },
+  {
+    image: articleImage7,
+    subtitle: 'VR Games',
+    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
+    span: 'READ MORE',
+  },
+  {
+    image: articleImage5,
+    subtitle: 'VR Architecture',
+    title: 'Bringing Designs to Life: How VR is Changing Architecture',
     span: 'READ MORE',
   },
 ];

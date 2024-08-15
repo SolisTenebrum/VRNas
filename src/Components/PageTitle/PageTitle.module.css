@@ -1,0 +1,85 @@
+.pageTitle {
+  padding-top: calc(114px + 13px + 80px);
+  margin-bottom: 150px;
+}
+
+.pageTitle_detailservice {
+  margin-bottom: 62px;
+}
+
+.pageTitle_blog {
+  margin-bottom: 95px;
+}
+
+.pageTitle_contactus {
+  margin-bottom: 64px;
+}
+
+.pageTitle:before {
+  position: absolute;
+  content: '';
+  background-image: url('../../assets/background-elements/topWaves.svg');
+  right: 0;
+  top: 0;
+  width: 736px;
+  height: 353.2px;
+  z-index: -2;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 70px;
+  border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
+  border-width: 1px;
+  border-style: solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  position: relative;
+}
+
+.container:before {
+  position: absolute;
+  content: '';
+  top: 40%;
+  left: 50%;
+  width: 30%;
+  height: 80%;
+  background: linear-gradient(90deg, #0cbcf1c9 -30%, #e95ce9c5 100%);
+  filter: blur(50px);
+  border-radius: 10% 20% 100% 40%;
+  transform: translateX(-50%) translateY(-50%) rotate(-10deg);
+  z-index: -1;
+}
+
+.title {
+  font-size: 64px;
+  letter-spacing: 0.008px;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 28.5px;
+}
+
+.path {
+  font-size: 16px;
+  font-weight: 300;
+  color: #d1d1d1;
+  line-height: 28px;
+  margin: 0;
+  display: flex;
+}
+
+.pathSpan {
+  font-weight: 600;
+  color: #ffffff;
+  line-height: auto;
+}
+
+.arrow {
+  transform: rotate(-90deg);
+}

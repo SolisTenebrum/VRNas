@@ -1,0 +1,234 @@
+.team {
+  margin-bottom: 152px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.row:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+
+.row_ourteam:first-of-type {
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.textContainer_ourteam {
+  align-items: center;
+}
+
+.subtitle {
+  margin: 0;
+  margin-bottom: 12px;
+  display: inline-block;
+  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -0.5%;
+  font-weight: 600;
+}
+
+.button {
+  cursor: pointer;
+  width: 140px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border: none;
+  padding: 0;
+  outline: none;
+  background-color: #262628;
+  color: #d1d1d1;
+  border: 1px solid white;
+  position: relative;
+  border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
+  border-width: 1px;
+  border-style: solid;
+  user-select: none;
+  transition: color 0.3s ease;
+  overflow: hidden;
+  align-self: flex-end;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.button:hover::before {
+  opacity: 1;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.row:last-of-type {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  justify-content: space-around;
+}
+
+.row_ourteam:last-of-type {
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 31px;
+  row-gap: 32px;
+}
+
+.card {
+  width: 293px;
+  height: 389px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #262628;
+  border-image: linear-gradient(90deg, #585858 0%, #7e7e7e13 100%) 1;
+  border-width: 1px;
+  border-style: solid;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  flex-basis: 293px;
+}
+
+.card:hover {
+  border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
+  border-width: 1px;
+  border-style: solid;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover  .socials {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, left 0.3s ease-in-out;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
+.imageContainer {
+  height: 370px;
+  width: 275px;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../assets/background-elements/team-member-bg.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.cardImage {
+  width: 274px;
+  height: 371px;
+  position: relative;
+}
+
+.cardText {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  user-select: none;
+  z-index: 1;
+}
+
+.cardName {
+  margin: 0;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+}
+
+.cardJobTitle {
+  margin: 0;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #b0b0b2;
+  text-align: center;
+}
+
+.socials {
+  position: absolute;
+  display: flex;
+  column-gap: 12px;
+  bottom: 18%;
+  left: -50%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, left 0.3s ease-in-out;
+  z-index: 3;
+}
+
+.socialIconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../assets/background-elements/team-member-soical-bg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 46px;
+  height: 46px;
+  scale: 0.9;
+  transition: scale 0.3s ease-in-out;
+}
+
+.socialIconContainer:hover {
+  transition: scale 0.3s ease-in-out;
+  scale: 1.1;
+}
+
+.socialIcon {
+  width: 22px;
+  height: 22px;
+}
