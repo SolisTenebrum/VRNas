@@ -34,7 +34,7 @@ const Articles = ({variant}: {variant: string}) => {
       <div className={styles.container}>
         <div className={styles.containerTop}>
           <div className={styles.textContainer}>
-            <h3 className={styles.subtitle}>OUR ARTICLES</h3>
+            <h3 className={styles.subtitle}>Our Articles</h3>
             <h2 className={styles.title}>Stay Up-to-Date with Our VR Insights</h2>
           </div>
           <button className={styles.button}>SEE ALL</button>

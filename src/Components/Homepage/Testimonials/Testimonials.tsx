@@ -25,7 +25,7 @@ const Testimonials = () => {
     <section className={styles.testimonials}>
       <div className={styles.container}>
         <div className={styles.textContainer}>
-          <h3 className={styles.subtitle}>TESTIMONIAL</h3>
+          <h3 className={styles.subtitle}>Testimonial</h3>
           <h2 className={styles.title}>What Our Clients Are Saying</h2>
         </div>
         <div className={styles.imageContainer}>

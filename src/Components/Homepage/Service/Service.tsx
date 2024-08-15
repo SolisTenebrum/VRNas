@@ -9,7 +9,7 @@ const Service = ({ variant }: { variant: string }) => {
       <div className={cn(styles.container, variant === 'our-service-page' ? styles.container_ourservice : '')}>
         <div className={styles.row}>
           <div className={styles.column}>
-            <h3 className={styles.subtitle}>OUR SERVICE</h3>
+            <h3 className={styles.subtitle}>Our Service</h3>
             <h2 className={styles.title}>Our Service</h2>
           </div>
           <div className={styles.column}>

@@ -15,7 +15,7 @@ const About = () => {
           </div>
         </div>
         <div className={styles.column}>
-          <h3 className={styles.subtitle}>ABOUT US</h3>
+          <h3 className={styles.subtitle}>About Us</h3>
           <h2 className={styles.title}>Bring your events to life like never before with our VR services.</h2>
           <p className={styles.text}>
             VRNas is a leading provider of VR services for education, entertainment, architecture, and events. Our

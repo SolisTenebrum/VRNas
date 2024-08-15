@@ -15,7 +15,7 @@ const Partners = () => {
     <section className={styles.partners}>
       <div className={styles.container}>
         <div className={styles.textContainer}>
-          <h3 className={styles.subtitle}>OUR TRUSTED PARTNERS</h3>
+          <h3 className={styles.subtitle}>Our Trusted Partners</h3>
           <h2 className={styles.title}>Discover the Companies We Work With</h2>
         </div>
         <div className={styles.content}>

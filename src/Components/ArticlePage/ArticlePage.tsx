@@ -23,7 +23,7 @@ const ArticlePage = () => {
           <div className={styles.column}>
             <span className={styles.articleSpan}>VR Architecture</span>
             <h2 className={styles.articleTitle}>Bringing Designs to Life: How VR is Changing Architecture</h2>
-            <h3 className={styles.articleSubtitle}>NASYIYA ULFA | 25 NOV 2022</h3>
+            <h3 className={styles.articleSubtitle}>Nasyiya Ulfa | 25 Nov 2022</h3>
             <img className={styles.articleMainImage} src={articleImageFullOne} />
             <p className={styles.articleText}>
               Architecture is an art and science that is constantly evolving with technology. The industry has gone

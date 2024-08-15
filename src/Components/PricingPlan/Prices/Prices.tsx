@@ -38,7 +38,7 @@ const Prices = () => {
       <div className={styles.container}>
         <div className={styles.row}>
           <div className={styles.textContainer}>
-            <h3 className={styles.subtitle}>PRICING</h3>
+            <h3 className={styles.subtitle}>Pricing</h3>
             <h2 className={styles.title}>Pricing Plans</h2>
             <p className={styles.text}>
               Choose the pricing plan that fits your needs and budget. All plans come with a free trial period so you

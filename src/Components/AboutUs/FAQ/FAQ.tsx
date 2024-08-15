@@ -78,7 +78,7 @@ const FAQ = ({ variant }: { variant: string }) => {
       <div className={styles.container}>
         <div className={styles.row}>
           <div className={styles.textContainer}>
-            <h3 className={styles.subtitle}>FAQ</h3>
+            <h3 className={styles.subtitle}>Faq</h3>
             <h2 className={styles.title}>Frequently Asked Questions</h2>
             <p className={styles.text}>
               At VRNas, we want to make sure that you have all the information you need to make informed decisions about

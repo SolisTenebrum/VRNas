@@ -10,7 +10,7 @@ const NotFoundPage = () => {
         <div className={styles.container}>
           <div className={styles.column}>
             <div className={styles.textContainer}>
-              <h3 className={styles.subtitle}>404 ERROR</h3>
+              <h3 className={styles.subtitle}>404 Error</h3>
               <h2 className={styles.title}>Page Not Found</h2>
               <div className={styles.text}>
                 <p className={styles.textParagraph}>
