@@ -1,6 +1,18 @@
 .articlePage {
   padding-top: 165px;
   margin-bottom: 150px;
+  position: relative;
+}
+
+.articlePage::before {
+  position: absolute;
+  content: '';
+  background-image: url('../../assets/site-background/topWaves.svg');
+  right: 0;
+  top: 0;
+  width: 736px;
+  height: 353.2px;
+  z-index: -2;
 }
 
 .container {
@@ -12,6 +24,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 52px;
+  position: relative;
 }
 
 .pathText {
