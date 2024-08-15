@@ -215,53 +215,34 @@ const ServiceText = ({ subtitle, title, text, listTitle, listItems }: ServiceTex
 const VRService = () => {
   const [activeService, setActiveService] = useState<number>(3);
 
+  const serviceCircles = [
+    { id: 0, text: 'VR Development' },
+    { id: 1, text: 'VR Games' },
+    { id: 2, text: 'VR Events' },
+    { id: 3, text: 'VR Design' },
+    { id: 4, text: 'VR Consulting' },
+    { id: 5, text: 'VR Entertainment' },
+    { id: 6, text: 'Client Testimony' },
+  ];
+
   return (
     <section className={styles.vrService}>
       <div className={styles.container}>
         <div className={styles.circlesBackground}>
           <div className={styles.circles}>
-            <div
-              className={cn(styles.circle, styles.circleOne, activeService === 0 && styles.circleActive )}
-              onClick={() => setActiveService(0)}
-            >
-              <p className={styles.circleText}>VR Development</p>
-            </div>
-            <div
-              className={cn(styles.circle, styles.circleTwo, activeService === 1 && styles.circleActive)}
-              onClick={() => setActiveService(1)}
-            >
-              <p className={styles.circleText}>VR Games</p>
-            </div>
-            <div
-              className={cn(styles.circle, styles.circleThree, activeService === 2 && styles.circleActive)}
-              onClick={() => setActiveService(2)}
-            >
-              <p className={styles.circleText}>VR Events</p>
-            </div>
-            <div
-              className={cn(styles.circle, styles.circleFour, activeService === 3 && styles.circleActive)}
-              onClick={() => setActiveService(3)}
-            >
-              <p className={styles.circleText}>VR Design</p>
-            </div>
-            <div
-              className={cn(styles.circle, styles.circleFive, activeService === 4 && styles.circleActive)}
-              onClick={() => setActiveService(4)}
-            >
-              <p className={styles.circleText}>VR Consulting</p>
-            </div>
-            <div
-              className={cn(styles.circle, styles.circleSix, activeService === 5 && styles.circleActive)}
-              onClick={() => setActiveService(5)}
-            >
-              <p className={styles.circleText}>VR Entertainment</p>
-            </div>
-            <div
-              className={cn(styles.circle, styles.circleSeven, activeService === 6 && styles.circleActive)}
-              onClick={() => setActiveService(6)}
-            >
-              <p className={styles.circleText}>Client Testimony</p>
-            </div>
+            {serviceCircles.map((service) => (
+              <div
+                key={service.id}
+                className={cn(
+                  styles.circle,
+                  styles[`circle${service.id + 1}`],
+                  activeService === service.id && styles.circleActive
+                )}
+                onClick={() => setActiveService(service.id)}
+              >
+                <p className={styles.circleText}>{service.text}</p>
+              </div>
+            ))}
           </div>
         </div>
         <div className={styles.textContainer}>
