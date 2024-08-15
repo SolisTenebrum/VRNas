@@ -1,11 +1,11 @@
-import styles from './Choose2.module.css';
+import styles from './BenefitsWithTitle.module.css';
 import Benefits from '../../Homepage/Benefits/Benefits';
 
-interface Choose2Props {
+interface IBenefitsWithTitle {
   variant: string;
 }
 
-const Choose2: React.FC<Choose2Props> = ({ variant }) => {
+const BenefitsWithTitle: React.FC<IBenefitsWithTitle> = ({ variant }) => {
 
   return (
     <section className={styles.benefits}>
@@ -24,4 +24,4 @@ const Choose2: React.FC<Choose2Props> = ({ variant }) => {
   );
 };
 
-export default Choose2;
+export default BenefitsWithTitle;

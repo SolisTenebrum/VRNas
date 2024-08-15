@@ -1,48 +1,10 @@
 import styles from './Team.module.css';
 import { clsx as cn } from 'clsx';
-import memberOne from '../../../assets/people/Member1.png';
-import memberTwo from '../../../assets/people/Member2.png';
-import memberThree from '../../../assets/people/Member3.png';
-import memberFive from '../../../assets/people/Member4.png';
-import memberFour from '../../../assets/people/Member5.png';
-import memberSix from '../../../assets/people/Member6.png';
 import instagramIcon from '../../../assets/logos/logo-instagram.svg';
 import facebookIcon from '../../../assets/logos/logo-fb.svg';
 import twitterIcon from '../../../assets/logos/logo-twitter.svg';
+import { team } from '../../../constants';
 
-const team = [
-  {
-    name: 'Bondan Prabowo',
-    jobTitle: 'CEO',
-    image: memberOne,
-  },
-  {
-    name: 'Bayu Aji',
-    jobTitle: 'VR Development',
-    image: memberTwo,
-  },
-  {
-    name: 'Agung Brandon',
-    jobTitle: 'VR Artist',
-    image: memberThree,
-  },
-  {
-    name: 'Aril Laso',
-    jobTitle: 'UI / UX Designer',
-    image: memberFour,
-  },
-  {
-    name: 'Aldo Boy',
-    jobTitle: '3D Designer',
-    image: memberFive,
-  },
-
-  {
-    name: 'Beni Barak',
-    jobTitle: '3D Artist',
-    image: memberSix,
-  },
-];
 
 const TeamCard = ({ team, variant }: { team: any; variant: string }) => {
   return (

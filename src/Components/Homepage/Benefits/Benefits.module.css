@@ -21,7 +21,7 @@
   padding: 42px 64px 53px 64px;
 }
 
-.column {
+.card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

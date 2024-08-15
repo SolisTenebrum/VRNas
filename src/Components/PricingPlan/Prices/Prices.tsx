@@ -1,7 +1,7 @@
 import styles from './Prices.module.css';
 import { pricingCardsList } from '../../../constants';
 
-interface PricingCardProps {
+interface IPricingCardProps {
   title: string;
   price: string;
   text: string;
@@ -9,7 +9,7 @@ interface PricingCardProps {
   buttonText: string;
 }
 
-const PricingCard = ({ title, price, text, list, buttonText }: PricingCardProps) => {
+const PricingCard = ({ title, price, text, list, buttonText }: IPricingCardProps) => {
   return (
     <div className={styles.pricingCard}>
       <div className={styles.cardContent}>

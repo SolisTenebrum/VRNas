@@ -4,7 +4,7 @@ import { clsx as cn } from 'clsx';
 import { faqCardsAll, faqCardsAboutUs, faqCardsPricingPlan } from '../../../constants';
 import vrperson from '../../../assets/vrperson/vrperson4.png';
 
-interface FAQProps {
+interface IFAQProps {
   title: string;
   text: string;
   index: number;
@@ -12,7 +12,7 @@ interface FAQProps {
   faqCardsOpened: number[];
 }
 
-const FAQCard = ({ title, text, index, toggleVisibility, faqCardsOpened }: FAQProps) => {
+const FAQCard = ({ title, text, index, toggleVisibility, faqCardsOpened }: IFAQProps) => {
   return (
     <div
       className={cn(styles.faqCard, faqCardsOpened.includes(index) ? styles.faqCardActive : '')}

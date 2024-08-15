@@ -69,37 +69,37 @@
   z-index: 5;
 }
 
-.clientOne {
+.client1 {
   position: absolute;
   top: 24%;
   left: 3%;
 }
 
-.clientTwo {
+.client2 {
   position: absolute;
   top: 20%;
   left: 58%;
 }
 
-.clientThree {
+.client3 {
   position: absolute;
   top: 51%;
   right: 11.5%;
 }
 
-.clientFour {
+.client4 {
   position: absolute;
   bottom: 25%;
   left: 48%;
 }
 
-.clientFive {
+.client5 {
   position: absolute;
   bottom: 21%;
   left: 12%;
 }
 
-.clientSix {
+.client6 {
   position: absolute;
   bottom: 6%;
   right: 20%;

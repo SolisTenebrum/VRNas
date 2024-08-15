@@ -75,7 +75,7 @@
   align-items: center;
 }
 
-.circleOne {
+.circle1 {
   position: absolute;
   bottom: 30%;
   left: 2.5%;
@@ -83,7 +83,7 @@
   animation-delay: 0.1s;
 }
 
-.circleTwo {
+.circle2 {
   position: absolute;
   bottom: 58%;
   left: 10%;
@@ -91,7 +91,7 @@
   animation-delay: 0.3s;
 }
 
-.circleThree {
+.circle3 {
   position: absolute;
   bottom: 76%;
   left: 25%;
@@ -99,7 +99,7 @@
   animation-delay: 0.5s;
 }
 
-.circleFour {
+.circle4 {
   position: absolute;
   bottom: 84%;
   left: 45.5%;
@@ -107,7 +107,7 @@
   animation-delay: 0.7s;
 }
 
-.circleFive {
+.circle5 {
   position: absolute;
   bottom: 76%;
   right: 25%;
@@ -115,7 +115,7 @@
   animation-delay: 0.9s;
 }
 
-.circleSix {
+.circle6 {
   position: absolute;
   bottom: 58%;
   right: 10%;
@@ -123,7 +123,7 @@
   animation-delay: 0.11s;
 }
 
-.circleSeven {
+.circle7 {
   position: absolute;
   bottom: 30%;
   right: 2.5%;
