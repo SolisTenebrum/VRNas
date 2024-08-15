@@ -78,6 +78,7 @@
 
 .navigationElement {
   position: relative;
+  cursor: pointer;
 }
 
 .link {

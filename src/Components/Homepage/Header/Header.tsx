@@ -27,10 +27,10 @@ const NavigationItem = ({ href, navName }: { href: string; navName: string }) =>
 };
 
 const Header = () => {
-  const [openedMenus, setOpenedMenus] = useState<number[]>([]);
+  const [openedMenu, setOpenedMenu] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState(false);
-  const menuRefs = useRef<HTMLUListElement[]>([]);
-  const buttonRefs = useRef<HTMLButtonElement[]>([]);
+  const buttonRef = useRef<HTMLLIElement>(null);
+  const menuRef = useRef<HTMLUListElement>(null);
 
   const location = useLocation();
   const isPageActive =
@@ -41,27 +41,17 @@ const Header = () => {
     location.pathname.startsWith('/terms-and-conditions') ||
     location.pathname.startsWith('/privacy-policy');
 
-  const handleMenuClick = (index: number) => {
-    setOpenedMenus((prevState) => {
-      return prevState.includes(index) ? prevState.filter((i) => i !== index) : [...prevState, index];
-    });
-
-    if (!openedMenus.includes(index)) {
-      setOpenedMenus([index]);
-    }
+  const handleMenuClick = () => {
+    setOpenedMenu(!openedMenu);
   };
 
   const handleClickOutside = (event: MouseEvent) => {
     const target = event.target;
 
-    if (buttonRefs.current.some((button) => button && button.contains(target as Node))) {
-      return;
-    }
-
-    const clickedOutside = menuRefs.current.every((ref) => ref && !ref.contains(event.target as Node));
+    const clickedOutside = !buttonRef.current?.contains(target as Node);
 
     if (clickedOutside) {
-      setOpenedMenus([]);
+      setOpenedMenu(false);
     }
   };
 
@@ -74,10 +64,10 @@ const Header = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', () => setOpenedMenus([]));
+    window.addEventListener('scroll', () => setOpenedMenu(false));
 
     return () => {
-      window.removeEventListener('scroll', () => setOpenedMenus([]));
+      window.removeEventListener('scroll', () => setOpenedMenu(false));
     };
   }, [scrolled]);
 
@@ -111,25 +101,12 @@ const Header = () => {
             <NavigationItem href={'/'} navName={'Home'} />
             <NavigationItem href={'/about'} navName={'About us'} />
             <NavigationItem href={'/service'} navName={'Service'} />
-            <li className={styles.navigationElement}>
+            <li className={styles.navigationElement} onClick={() => handleMenuClick()} ref={buttonRef}>
               <div className={styles.spoiler}>
-                <div className={cn(styles.link, `${isPageActive && styles.linkActive}`)}>Page</div>
-                <button
-                  className={cn(styles.arrow, `${openedMenus.includes(0) ? styles.active : ''}`)}
-                  onClick={() => handleMenuClick(0)}
-                  ref={(element) => {
-                    if (element) buttonRefs.current[0] = element;
-                  }}
-                ></button>
+                <div className={cn(styles.link, `${(isPageActive || openedMenu) && styles.linkActive}`)}>Page</div>
+                <button className={cn(styles.arrow, `${openedMenu ? styles.active : ''}`)}></button>
               </div>
-              <ul
-                className={cn(styles.menu, `${openedMenus.includes(0) ? styles.menuActive : ''}`)}
-                ref={(element) => {
-                  if (element) {
-                    menuRefs.current[0] = element;
-                  }
-                }}
-              >
+              <ul className={cn(styles.menu, `${openedMenu ? styles.menuActive : ''}`)} ref={menuRef}>
                 <li>
                   <NavLink className={styles.menuElement} to={'/detail-service'}>
                     Detail Service
@@ -167,43 +144,7 @@ const Header = () => {
                 <NavLink to="/blog" className={styles.link}>
                   Blog
                 </NavLink>
-                <button
-                  className={cn(styles.arrow, `${openedMenus.includes(1) ? styles.active : ''}`)}
-                  onClick={() => handleMenuClick(1)}
-                  ref={(element) => {
-                    if (element) buttonRefs.current[1] = element;
-                  }}
-                ></button>
               </div>
-              <ul
-                className={cn(styles.menu, `${openedMenus.includes(1) ? styles.menuActive : ''}`)}
-                ref={(element) => {
-                  if (element) {
-                    menuRefs.current[1] = element;
-                  }
-                }}
-              >
-                <li>
-                  <NavLink className={styles.menuElement} to={'/'}>
-                    One
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className={styles.menuElement} to={'/'}>
-                    Two
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className={styles.menuElement} to={'/'}>
-                    Three
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className={styles.menuElement} to={'/'}>
-                    Four
-                  </NavLink>
-                </li>
-              </ul>
             </li>
           </ul>
         </nav>
