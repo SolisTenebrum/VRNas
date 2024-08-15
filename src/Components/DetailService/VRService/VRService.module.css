@@ -59,40 +59,40 @@
   text-align: center;
 }
 
-.circleOne {
+.circle1 {
   position: absolute;
   top: 50%;
   left: 8%;
   transform: translateY(-50%);
 }
 
-.circleTwo {
+.circle2 {
   position: absolute;
   top: 29%;
   left: 13%;
   transform: translateY(-50%);
 }
 
-.circleThree {
+.circle3 {
   position: absolute;
   top: 8%;
   left: 27%;
 }
 
-.circleFour {
+.circle4 {
   position: absolute;
   top: 2%;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.circleFive {
+.circle5 {
   position: absolute;
   top: 8%;
   right: 27%;
 }
 
-.circleSix {
+.circle6 {
   position: absolute;
   top: 29%;
   right: 13%;
@@ -100,7 +100,7 @@
   display: flex;
 }
 
-.circleSeven {
+.circle7 {
   position: absolute;
   top: 50%;
   right: 8%;
@@ -155,6 +155,7 @@
 }
 
 .text:first-of-type {
+  margin: 0;
 }
 
 .text:nth-of-type(2) {
