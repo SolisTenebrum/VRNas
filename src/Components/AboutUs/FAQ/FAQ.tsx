@@ -66,7 +66,7 @@ const FAQ = ({ variant }: { variant: string }) => {
     <section
       className={cn(
         styles.faq,
-        variant === 'pricing-plan-page' ? styles.faq_pricingplan : variant === 'faq-page' ? styles.faq_faqpage : ''
+        variant === 'pricing-plan-page' ? styles.faq_pricingplan : variant === 'faq-page' ? styles.faq_faqpage : variant === 'about-us-page' ? styles.faq_aboutus : ''
       )}
     >
       {variant === 'faq-page' && (

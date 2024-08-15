@@ -4,6 +4,10 @@
   overflow: hidden;
 }
 
+.faq_aboutus {
+  overflow: visible;
+}
+
 .faq::before {
   position: absolute;
   content: '';
