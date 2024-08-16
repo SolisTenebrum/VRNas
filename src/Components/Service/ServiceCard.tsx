@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styles from './Service.module.css';
 
 const ServiceCard = ({
@@ -17,7 +18,9 @@ const ServiceCard = ({
         <img src={icon} className={styles.icon} />
         <h3 className={styles.cardTitle}>{title}</h3>
         <p className={styles.cardText}>{text}</p>
-        <button className={styles.button}>{buttonText}</button>
+        <NavLink to="/detail-service#vrservice">
+          <button className={styles.button}>{buttonText}</button>
+        </NavLink>
       </li>
     </>
   );

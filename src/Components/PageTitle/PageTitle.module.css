@@ -80,6 +80,11 @@
   line-height: auto;
 }
 
+.pathLink {
+  text-decoration: none;
+  
+}
+
 .arrow {
   transform: rotate(-90deg);
 }

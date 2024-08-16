@@ -1,5 +1,6 @@
 import styles from './About.module.css';
 import vrperson2 from '../../assets/vrperson/vrperson2.png';
+import { NavLink } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -10,7 +11,7 @@ const About = () => {
             <div className={styles.background} />
             <img src={vrperson2} className={styles.vrperson} />
             <div className={styles.video}>
-                <div className={styles.videoImage}></div>
+              <div className={styles.videoImage}></div>
             </div>
           </div>
         </div>
@@ -27,7 +28,9 @@ const About = () => {
             <li className={styles.listItem}>Versatile Applications</li>
             <li className={styles.listItem}>Affordable and Accessible</li>
           </ul>
-          <button className={styles.button}>READ MORE</button>
+          <NavLink to="/about">
+            <button className={styles.button}>READ MORE</button>
+          </NavLink>
         </div>
       </div>
     </section>
