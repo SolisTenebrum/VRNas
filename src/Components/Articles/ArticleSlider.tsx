@@ -1,59 +1,68 @@
-import { useState, useRef } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import styles from './Articles.module.css';
 import arrowRight from '../../assets/icons/arrow-thin-to-right.svg';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Autoplay } from 'swiper/modules';
 import { clsx as cn } from 'clsx';
+import { useRef, useState } from 'react';
 
-const ArticleSlider = ({ articles }: { articles: any }) => {
-const [currentSlide, setCurrentSlide] = useState(0);
-const sliderRef = useRef<Slider>(null);
+interface IArticle {
+  image: string;
+  title: string;
+  span: string;
+}
 
-  const settings = {
-    arrows: false,
-    autoplay: true,
-    infinite: true,
-    speed: 900,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplaySpeed: 5000,
-    cssEase: 'ease-in-out',
-    afterChange: (current: number) => setCurrentSlide(current),
-  };
+interface IArticleSliderProps {
+  articles: IArticle[];
+}
 
-  const goToSlide = (index: number) => {
-    if (sliderRef.current) {
-        sliderRef.current.slickGoTo(index);
-    }
-  }
+const ArticleSlider: React.FC<IArticleSliderProps> = ({ articles }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const swiperRef = useRef<any>(null);
 
   return (
     <div className={styles.articleSlider}>
-      <Slider ref={sliderRef} {...settings} className={styles.sliderDiv}>
-        {articles.map((article: any, index: number) => {
+      <Swiper
+        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+        onSwiper={(swiper) => setActiveIndex(swiper.activeIndex)}
+        ref={swiperRef}
+        slidesPerView={1}
+        centeredSlides={true}
+        spaceBetween={0}
+        grabCursor={true}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Autoplay]}
+        className="mySwiper"
+        autoplay={{
+          delay: 5000,
+        }}
+      >
+        {articles.map((article: IArticle, index: number) => {
           return (
-            <div className={styles.articleFullImageContainer} key={index}>
-              <img src={article.image} className={styles.articleFullImage} />
-              <div className={styles.articleFullImageInfo}>
-                <span className={styles.articleFullImageSpan}>{article.span}</span>
-                <h4 className={styles.articleFullImageTitle}>{article.title}</h4>
+            <SwiperSlide key={index}>
+              <div className={styles.articleFullImageContainer}>
+                <img src={article.image} className={styles.articleFullImage} />
+                <div className={styles.articleFullImageInfo}>
+                  <span className={styles.articleFullImageSpan}>{article.span}</span>
+                  <h4 className={styles.articleFullImageTitle}>{article.title}</h4>
+                </div>
+                <button className={styles.goButton}>
+                  <img src={arrowRight} className={styles.arrowRight} />
+                </button>
               </div>
-              <button className={styles.goButton}>
-                <img src={arrowRight} className={styles.arrowRight} />
-              </button>
-            </div>
+            </SwiperSlide>
           );
         })}
-      </Slider>
+      </Swiper>
       <div className={styles.indicators}>
-        {articles.map((_: any, index: number) => (
-          <div
-            key={index}
-            className={cn(styles.indicator, { [styles.indicatorActive]: index === currentSlide })}
-            onClick={() => goToSlide(index)}
-          ></div>
-        ))}
+        {articles.map((_, index: number) => {
+          return (
+            <div className={cn(styles.indicator, activeIndex === index && styles.indicatorActive)} key={index}></div>
+          );
+        })}
       </div>
     </div>
   );

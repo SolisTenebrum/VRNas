@@ -3,7 +3,7 @@ import vrPerson from '../../assets/vrperson/vrperson3.png';
 import vrPerson2 from '../../assets/vrperson/vrperson5.png';
 import { chooseUsSpoilerItems } from '../../constants';
 import { useState } from 'react';
-import cn from 'classnames';
+import { clsx as cn } from 'clsx';
 
 const Choose = ({ variant }: { variant: string }) => {
   const [visibleIndexes, setVisibleIndexes] = useState<number[]>([]);
@@ -57,7 +57,10 @@ const Choose = ({ variant }: { variant: string }) => {
                 variant === 'pricing-plan-page' ? styles.background_pricingplan : ''
               )}
             ></div>
-            <img src={(variant === 'about-us-page') || (variant === 'pricing-plan-page') ? vrPerson2 : vrPerson} className={styles.vrperson} />
+            <img
+              src={variant === 'about-us-page' || variant === 'pricing-plan-page' ? vrPerson2 : vrPerson}
+              className={styles.vrperson}
+            />
             <div
               className={cn(
                 styles.video,

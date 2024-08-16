@@ -11,13 +11,14 @@ body {
   margin: 0 auto;
 }
 
-section, footer {
+section,
+footer {
   animation: fadeIn 0.4s ease-in-out forwards;
 }
 
 html {
   scrollbar-width: thin;
-  scrollbar-color: #E95CE9 transparent;
+  scrollbar-color: #e95ce9 transparent;
   border-radius: 20px;
 }
 

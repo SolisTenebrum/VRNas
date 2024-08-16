@@ -1,7 +1,7 @@
 .articles {
   margin-bottom: 150px;
   position: relative;
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 .articles::before {
@@ -174,9 +174,8 @@
 }
 
 .articleFullImageContainer {
-  margin-bottom: 44px;
+  /* margin-bottom: 44px; */
   position: relative;
-  cursor: grab;
   outline: none;
   max-width: 636px;
   height: 425px;
@@ -271,9 +270,10 @@
   column-gap: 12px;
   align-self: center;
   position: absolute;
-  bottom: 0;
+  bottom: -40px;
   right: 50%;
   transform: translateX(50%);
+  z-index: 1;
 }
 
 .indicator {
@@ -482,4 +482,6 @@
 
 .articleSlider {
   width: 636px;
+  height: 425px;
+  position: relative;
 }
