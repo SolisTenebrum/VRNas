@@ -37,7 +37,7 @@ const ArticleSlider: React.FC<IArticleSliderProps> = ({ articles }) => {
         modules={[Autoplay]}
         className="mySwiper"
         autoplay={{
-          delay: 5000,
+          delay: 4000,
         }}
       >
         {articles.map((article: IArticle, index: number) => {
