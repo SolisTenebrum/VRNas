@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styles from './VRService.module.css';
 import { clsx as cn } from 'clsx';
 import { vrServicesText } from '../../constants';
+import { NavLink } from 'react-router-dom';
 
 interface IServiceTextProps {
   subtitle: string;
@@ -36,7 +37,9 @@ const ServiceText = ({ subtitle, title, text, listTitle, listItems }: IServiceTe
           {item}
         </p>
       ))}
-      <button className={styles.button}>CONTACT US</button>
+      <NavLink to="/contact-us" className={styles.button}>
+        <button className={styles.button}>CONTACT US</button>
+      </NavLink>
     </>
   );
 };

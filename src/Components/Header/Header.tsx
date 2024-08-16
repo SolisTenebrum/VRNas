@@ -99,7 +99,7 @@ const Header = () => {
         <nav className={styles.navigationContainer}>
           <ul className={styles.navigation}>
             <NavigationItem href={'/'} navName={'Home'} />
-            <NavigationItem href={'/about'} navName={'About us'} />
+            <NavigationItem href={'/about-us'} navName={'About us'} />
             <NavigationItem href={'/service'} navName={'Service'} />
             <li className={styles.navigationElement} onClick={() => handleMenuClick()} ref={buttonRef}>
               <div className={styles.spoiler}>

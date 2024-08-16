@@ -3,8 +3,14 @@ import vrPerson from '../../assets/vrperson/vrperson1.png';
 import clientOne from '../../assets/people/Client1.png';
 import clientTwo from '../../assets/people/Client2.png';
 import clientThree from '../../assets/people/Client3.png';
+import scrollToElement from '../../utils/scrollToElement';
 
 const Hero = () => {
+  const handleScroll = (event: React.MouseEvent) => {
+    event.preventDefault();
+    scrollToElement('#about');
+  };
+
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
@@ -14,19 +20,21 @@ const Hero = () => {
             <p className={styles.text}>
               Experience Unforgettable Events in VR. Bring your events to life like never before with our VR services
             </p>
-            <button className={styles.button}>DISCOVER MORE</button>
+            <a href="#about" onClick={handleScroll}>
+              <button className={styles.button}>DISCOVER MORE</button>
+            </a>
           </div>
           <div className={styles.clientsContainer}>
             <div className={styles.clients}>
               <ul className={styles.clientImages}>
                 <li className={styles.clientImageContainer}>
-                  <img src={clientOne} alt="client" className={styles.clientImage}/>
+                  <img src={clientOne} alt="client" className={styles.clientImage} />
                 </li>
                 <li className={styles.clientImageContainer}>
-                  <img src={clientTwo} alt="client" className={styles.clientImage}/>
+                  <img src={clientTwo} alt="client" className={styles.clientImage} />
                 </li>
                 <li className={styles.clientImageContainer}>
-                  <img src={clientThree} alt="client" className={styles.clientImage}/>
+                  <img src={clientThree} alt="client" className={styles.clientImage} />
                 </li>
               </ul>
               <p className={styles.clientCaption}>

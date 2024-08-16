@@ -3,8 +3,9 @@ import { useEffect, useRef } from 'react';
 import ArticleSmallCard from './ArticleSmallCard';
 import { smallArticles, bigArticles } from '../../constants';
 import ArticleSlider from './ArticleSlider';
+import { NavLink } from 'react-router-dom';
 
-const Articles = ({variant}: {variant: string}) => {
+const Articles = ({ variant }: { variant: string }) => {
   const articlesContainerRef = useRef<HTMLDivElement>(null);
   const scrollBarIndicatorRef = useRef<HTMLDivElement>(null);
 
@@ -37,7 +38,9 @@ const Articles = ({variant}: {variant: string}) => {
             <h3 className={styles.subtitle}>Our Articles</h3>
             <h2 className={styles.title}>Stay Up-to-Date with Our VR Insights</h2>
           </div>
-          <button className={styles.button}>SEE ALL</button>
+          <NavLink to="/blog#blog" className={styles.link}>
+            <button className={styles.button}>SEE ALL</button>
+          </NavLink>
         </div>
         <div className={styles.containerBottom}>
           <div className={styles.content}>
@@ -51,7 +54,13 @@ const Articles = ({variant}: {variant: string}) => {
               <h4 className={styles.subsubtitle}>Recent Article</h4>
               <div className={styles.articlesContainer} ref={articlesContainerRef}>
                 {smallArticles.map((article, index) => (
-                  <ArticleSmallCard key={index} image={article.image} title={article.title} span={article.span} variant={variant} />
+                  <ArticleSmallCard
+                    key={index}
+                    image={article.image}
+                    title={article.title}
+                    span={article.span}
+                    variant={variant}
+                  />
                 ))}
               </div>
               <div className={styles.scrollBar}>
@@ -66,4 +75,3 @@ const Articles = ({variant}: {variant: string}) => {
 };
 
 export default Articles;
-

@@ -3,12 +3,18 @@ import cloudIcon from '../../assets/icons/cloud-icon.svg';
 import vrperson from '../../assets/vrperson/vrperson4.png';
 import { serviceBenefits } from '../../constants';
 import { clsx as cn } from 'clsx';
+import { NavLink } from 'react-router-dom';
 
 const Pricing = ({ variant }: { variant: string }) => {
   return (
     <section className={styles.pricing}>
       <div className={cn(styles.container, variant === 'our-service-page' ? styles.container_ourservice : '')}>
-        <div className={cn(styles.textContainer, variant === 'detail-service-page' ? styles.textContainer_detailservice : '')}>
+        <div
+          className={cn(
+            styles.textContainer,
+            variant === 'detail-service-page' ? styles.textContainer_detailservice : ''
+          )}
+        >
           <h3 className={styles.subtitle}>Our Pricing</h3>
           <h2 className={styles.title}>Affordable VR Services for Everyone</h2>
           <p className={styles.text}>
@@ -39,7 +45,10 @@ const Pricing = ({ variant }: { variant: string }) => {
           <div className={styles.priceContainer}>
             <p className={styles.startFrom}>Start from</p>
             <span className={styles.price}>$99</span>
-            <button className={styles.button}>GET STARTED</button>
+            <NavLink to="/pricing-plan#prices">
+              <button className={styles.button}>GET STARTED</button>
+            </NavLink>
+
             <p className={styles.caption}>30 Days Moneyback Guarantee</p>
           </div>
         </div>

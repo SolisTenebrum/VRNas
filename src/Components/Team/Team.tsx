@@ -4,7 +4,7 @@ import xIcon from '../../assets/logos/logo-x.svg';
 import facebookIcon from '../../assets/logos/logo-fb.svg';
 import instagramIcon from '../../assets/logos/logo-instagram.svg';
 import { team } from '../../constants';
-
+import { NavLink } from 'react-router-dom';
 
 const TeamCard = ({ team, variant }: { team: any; variant: string }) => {
   return (
@@ -47,7 +47,11 @@ const Team = ({ variant }: { variant: string }) => {
             <h3 className={styles.subtitle}>Our Team</h3>
             <h2 className={styles.title}>Our Professionals Team</h2>
           </div>
-          {variant !== 'our-team-page' && <button className={styles.button}>SEE ALL</button>}
+          {variant !== 'our-team-page' && (
+            <NavLink to="/our-team" className={styles.link}>
+              <button className={styles.button}>SEE ALL</button>
+            </NavLink>
+          )}
         </div>
         <div className={cn(styles.row, variant === 'our-team-page' ? styles.row_ourteam : '')}>
           {(variant === 'our-team-page' ? team : teamPreview).map((member, index) => {

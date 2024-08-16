@@ -34,7 +34,7 @@ const PricingCard = ({ title, price, text, list, buttonText }: IPricingCardProps
 
 const Prices = () => {
   return (
-    <section className={styles.prices}>
+    <section className={styles.prices} id="prices">
       <div className={styles.container}>
         <div className={styles.row}>
           <div className={styles.textContainer}>

@@ -48,7 +48,7 @@ const BlogArticles = () => {
   };
 
   return (
-    <section className={styles.blogArticles}>
+    <section className={styles.blogArticles} id='blog'>
       <div className={styles.container}>
         {currentCards.map((card, index) => (
           <BlogArticleCard

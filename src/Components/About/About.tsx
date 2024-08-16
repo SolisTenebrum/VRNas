@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const About = () => {
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id='about'>
       <div className={styles.container}>
         <div className={styles.column}>
           <div className={styles.vrpersonContainer}>
@@ -28,7 +28,7 @@ const About = () => {
             <li className={styles.listItem}>Versatile Applications</li>
             <li className={styles.listItem}>Affordable and Accessible</li>
           </ul>
-          <NavLink to="/about">
+          <NavLink to="/about-us">
             <button className={styles.button}>READ MORE</button>
           </NavLink>
         </div>

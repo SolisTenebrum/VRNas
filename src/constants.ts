@@ -254,7 +254,7 @@ const quickLinks = [
 const supportLinks = [
   {
     linkText: 'About us',
-    link: '/about',
+    link: '/about-us',
   },
   {
     linkText: 'Contact us',

@@ -94,7 +94,6 @@
   user-select: none;
   transition: background-color 0.3s ease;
   overflow: hidden;
-  align-self: flex-end;
 }
 
 .button::before {
@@ -118,6 +117,10 @@
   transition: background-color 0.3s ease;
   background-color: transparent;
   color: white;
+}
+
+.link {
+  align-self: flex-end;
 }
 
 .containerBottom {

@@ -4,8 +4,17 @@ import Choose from '../../Components//Choose/Choose';
 import Subscribe from '../../Components//Subscribe/Subscribe';
 import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop';
 import Prices from '../../Components/Prices/Prices';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import scrollToElement from '../../utils/scrollToElement';
 
 const PricingPlan = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    scrollToElement(hash);
+  }, [hash]);
+  
   return (
     <>
       <ScrollToTop />

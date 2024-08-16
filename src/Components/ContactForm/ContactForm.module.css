@@ -220,6 +220,6 @@
   opacity: 1;
 }
 
-.button:focus::before {
-  opacity: 1;
+.button:focus {
+  outline: 1px solid #ffffff;
 }

@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styles from './GetStarted.module.css';
 import { clsx as cn } from 'clsx';
 
@@ -16,15 +17,21 @@ const GetStarted = ({ variant }: { variant: string }) => {
         <div className={styles.video}>
           <div className={styles.videoInfo}>
             <span className={styles.videoSpan}>{variant === 'detail-service-page' ? 'VR Design' : 'VR Service'}</span>
-            <h4 className={styles.videoTitle}>{variant === 'detail-service-page' ? 'VR Design Projects' : 'How to get started'}</h4>
+            <h4 className={styles.videoTitle}>
+              {variant === 'detail-service-page' ? 'VR Design Projects' : 'How to get started'}
+            </h4>
           </div>
-          <div className={cn(styles.videoImage, variant === 'detail-service-page' ? styles.videoImage_detailservice : '')}></div>
+          <div
+            className={cn(styles.videoImage, variant === 'detail-service-page' ? styles.videoImage_detailservice : '')}
+          ></div>
           <div className={styles.controls}>
             <div className={styles.playSmall}></div>
             <div className={styles.progressBar}></div>
           </div>
         </div>
-        <button className={styles.button}>GET STARTED</button>
+        <NavLink to="/pricing-plan#prices">
+          <button className={styles.button}>GET STARTED</button>
+        </NavLink>
       </div>
     </section>
   );
