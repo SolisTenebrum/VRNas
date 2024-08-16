@@ -18,7 +18,7 @@ const ServiceCard = ({
         <img src={icon} className={styles.icon} />
         <h3 className={styles.cardTitle}>{title}</h3>
         <p className={styles.cardText}>{text}</p>
-        <NavLink to="/detail-service#vrservice">
+        <NavLink to={`/detail-service?serviceTitle=${title}#vrservice`}>
           <button className={styles.button}>{buttonText}</button>
         </NavLink>
       </li>

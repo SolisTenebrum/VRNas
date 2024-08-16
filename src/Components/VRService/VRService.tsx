@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './VRService.module.css';
 import { clsx as cn } from 'clsx';
 import { vrServicesText } from '../../constants';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 interface IServiceTextProps {
   subtitle: string;
@@ -45,7 +45,20 @@ const ServiceText = ({ subtitle, title, text, listTitle, listItems }: IServiceTe
 };
 
 const VRService = () => {
+  const location = useLocation();
   const [activeService, setActiveService] = useState<number>(3);
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const serviceName = params.get('serviceTitle');
+
+    if (serviceName) {
+      const foundService = serviceCircles.find((service) => service.text === serviceName);
+      if (foundService) {
+        setActiveService(foundService.id);
+      }
+    }
+  }, [location.search]);
 
   const serviceCircles = [
     { id: 0, text: 'VR Development' },
