@@ -17,7 +17,9 @@ const ServiceText = ({ subtitle, title, text, listTitle, listItems }: IServiceTe
       <h3 className={styles.subtitle}>{subtitle}</h3>
       <h2 className={styles.title}>{title}</h2>
       {text.slice(0, 2).map((item, index) => (
-        <p className={styles.text} key={index}>{item}</p>
+        <p className={styles.text} key={index}>
+          {item}
+        </p>
       ))}
       <div className={styles.listContainer}>
         <h3 className={styles.listTitle}>{listTitle}</h3>
@@ -30,7 +32,9 @@ const ServiceText = ({ subtitle, title, text, listTitle, listItems }: IServiceTe
         </ul>
       </div>
       {text.slice(2).map((item, index) => (
-        <p className={styles.text} key={index}>{item}</p>
+        <p className={styles.text} key={index}>
+          {item}
+        </p>
       ))}
       <button className={styles.button}>CONTACT US</button>
     </>
@@ -51,7 +55,7 @@ const VRService = () => {
   ];
 
   return (
-    <section className={styles.vrService}>
+    <section className={styles.vrService} id="vrservice">
       <div className={styles.container}>
         <div className={styles.circlesBackground}>
           <div className={styles.circles}>

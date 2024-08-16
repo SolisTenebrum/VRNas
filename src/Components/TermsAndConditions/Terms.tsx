@@ -2,7 +2,6 @@ import styles from './Terms.module.css';
 import vrperson from '../../assets/vrperson/vrperson4.png';
 import { termsAndConditionsText } from '../../constants';
 
-
 const Terms = () => {
   return (
     <section className={styles.terms}>

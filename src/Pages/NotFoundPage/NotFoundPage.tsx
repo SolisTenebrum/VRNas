@@ -2,10 +2,12 @@ import Subscribe from '../../Components/Subscribe/Subscribe';
 import styles from './NotFoundPage.module.css';
 import notFoundPageImage from '../../assets/background-elements/notfoundpage-image.png';
 import { NavLink } from 'react-router-dom';
+import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop';
 
 const NotFoundPage = () => {
   return (
     <>
+      <ScrollToTop />
       <section className={styles.notFoundPage}>
         <div className={styles.container}>
           <div className={styles.column}>
