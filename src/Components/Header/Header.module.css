@@ -187,6 +187,96 @@
   justify-content: flex-end;
 }
 
+.burgerButtonContainer {
+  display: none;
+  cursor: pointer;
+  width: 52px;
+  height: 52px;
+  border: none;
+  padding: 0;
+  outline: none;
+  background-color: transparent;
+  color: #d1d1d1;
+  border: 1px solid white;
+  position: relative;
+  border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
+  border-width: 1px;
+  border-style: solid;
+  user-select: none;
+  transition: color 0.3s ease, scale 0.1s ease;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.burgerButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  row-gap: 5px;
+  width: 25px;
+}
+
+.burgerLine1 {
+  width: 25px;
+  height: 1px;
+  background-color: #ffffff;
+  transition: width 0.3s ease, transform 0.3s ease;
+}
+
+.burgerLine2 {
+  width: 20px;
+  height: 1px;
+  background-color: #ffffff;
+  transition: width 0.3s ease, transform 0.3s ease;
+}
+
+.burgerLine3 {
+  width: 15px;
+  height: 1px;
+  background-color: #ffffff;
+  transition: width 0.3s ease, transform 0.3s ease;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  background-color: red;
+  height: 1px;
+  transform: translateY(-50%);
+}
+
+.line2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  background-color: red;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.burgerLine1Active {
+  width: 27px;
+  transform: rotate(45deg) translateY(3.5px) translateX(4px);
+  transition: width 0.3s ease, transform 0.4s ease;
+}
+
+.burgerLine2Active {
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.burgerLine3Active {
+  width: 27px;
+  transform: rotate(-45deg) translateY(-4.5px) translateX(5px);
+  transition: width 0.3s ease, transform 0.4s ease;
+}
+
 .button {
   cursor: pointer;
   width: 126px;
@@ -237,7 +327,72 @@
 
 @media screen and (max-width: 1215px) {
   .container {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .navigation {
+    display: none;
+  }
+
+  .burgerButtonContainer {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .button {
+    height: 30px;
+  }
+
+  .burgerButtonContainer {
+    height: 30px;
+    width: 30px;
+  }
+
+  .burgerButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    row-gap: 4px;
+    width: 17px;
+  }
+
+  .burgerLine1 {
+    width: 17px;
+    height: 2px;
+  }
+
+  .burgerLine2 {
+    width: 13px;
+    height: 2px;
+  }
+
+  .burgerLine3 {
+    width: 8px;
+    height: 2px;
+  }
+
+  .burgerLine1Active {
+    width: 15px;
+    transform: rotate(45deg) translateY(5.5px) translateX(3.5px);
+  }
+
+  .burgerLine2Active {
+    width: 0;
+  }
+
+  .burgerLine3Active {
+    width: 15px;
+    transform: rotate(-45deg) translateY(-5px) translateX(3px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .button {
+    display: none;
   }
 }

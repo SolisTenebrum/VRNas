@@ -31,6 +31,7 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const buttonRef = useRef<HTMLLIElement>(null);
   const menuRef = useRef<HTMLUListElement>(null);
+  const [burgerActive, setBurgerActive] = useState(false);
 
   const location = useLocation();
   const isPageActive =
@@ -61,6 +62,10 @@ const Header = () => {
     } else {
       setScrolled(false);
     }
+  };
+
+  const handleBurgerClick = () => {
+    setBurgerActive(!burgerActive);
   };
 
   useEffect(() => {
@@ -152,6 +157,15 @@ const Header = () => {
           <NavLink to={'/contact-us'}>
             <button className={styles.button}>Contact us</button>
           </NavLink>
+        </div>
+        <div className={styles.burgerButtonContainer} onClick={handleBurgerClick}>
+          <div className={styles.burgerButton}>
+            <div className={cn(styles.burgerLine1, `${burgerActive && styles.burgerLine1Active}`)}/>
+            <div className={cn(styles.burgerLine2, `${burgerActive && styles.burgerLine2Active}`)}/>
+            <div className={cn(styles.burgerLine3, `${burgerActive && styles.burgerLine3Active}`)}/>
+            {/* <div className={styles.line}></div>
+            <div className={styles.line2}></div> */}
+          </div>
         </div>
       </div>
     </header>
