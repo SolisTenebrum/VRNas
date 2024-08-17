@@ -4,7 +4,15 @@ import { useState, useRef, useEffect } from 'react';
 import { clsx as cn } from 'clsx';
 import { NavLink, useLocation } from 'react-router-dom';
 
-const NavigationItem = ({ href, navName }: { href: string; navName: string }) => {
+const NavigationItem = ({
+  href,
+  navName,
+  setBurgerActive,
+}: {
+  href: string;
+  navName: string;
+  setBurgerActive: (isActive: boolean) => void;
+}) => {
   const scroll = () => {
     window.scrollTo({
       top: 0,
@@ -18,7 +26,10 @@ const NavigationItem = ({ href, navName }: { href: string; navName: string }) =>
       <NavLink
         to={href}
         className={({ isActive }: { isActive: boolean }) => cn(styles.link, isActive && styles.linkActive)}
-        onClick={() => scroll()}
+        onClick={() => {
+          setBurgerActive(false);
+          scroll();
+        }}
       >
         {navName}
       </NavLink>
@@ -92,6 +103,14 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (burgerActive) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [burgerActive]);
+
   return (
     <header className={cn(styles.header, `${scrolled && styles.fixedHeader}`)}>
       <div className={cn(styles.container, `${scrolled && styles.fixedContainer}`)}>
@@ -101,11 +120,11 @@ const Header = () => {
           </NavLink>
         </div>
 
-        <nav className={styles.navigationContainer}>
+        <nav className={cn(styles.navigationContainer, burgerActive && styles.navigationContainerActive)}>
           <ul className={styles.navigation}>
-            <NavigationItem href={'/'} navName={'Home'} />
-            <NavigationItem href={'/about-us'} navName={'About us'} />
-            <NavigationItem href={'/service'} navName={'Service'} />
+            <NavigationItem href={'/'} navName={'Home'} setBurgerActive={setBurgerActive} />
+            <NavigationItem href={'/about-us'} navName={'About us'} setBurgerActive={setBurgerActive} />
+            <NavigationItem href={'/service'} navName={'Service'} setBurgerActive={setBurgerActive} />
             <li className={styles.navigationElement} onClick={() => handleMenuClick()} ref={buttonRef}>
               <div className={styles.spoiler}>
                 <div className={cn(styles.link, `${(isPageActive || openedMenu) && styles.linkActive}`)}>Page</div>
@@ -113,32 +132,36 @@ const Header = () => {
               </div>
               <ul className={cn(styles.menu, `${openedMenu ? styles.menuActive : ''}`)} ref={menuRef}>
                 <li>
-                  <NavLink className={styles.menuElement} to={'/detail-service'}>
+                  <NavLink className={styles.menuElement} to={'/detail-service'} onClick={() => setBurgerActive(false)}>
                     Detail Service
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className={styles.menuElement} to={'/pricing-plan'}>
+                  <NavLink className={styles.menuElement} to={'/pricing-plan'} onClick={() => setBurgerActive(false)}>
                     Pricing Plan
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className={styles.menuElement} to={'/our-team'}>
+                  <NavLink className={styles.menuElement} to={'/our-team'} onClick={() => setBurgerActive(false)}>
                     Our Team
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className={styles.menuElement} to={'/faq'}>
+                  <NavLink className={styles.menuElement} to={'/faq'} onClick={() => setBurgerActive(false)}>
                     FAQ
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className={styles.menuElement} to={'/terms-and-conditions'}>
+                  <NavLink
+                    className={styles.menuElement}
+                    to={'/terms-and-conditions'}
+                    onClick={() => setBurgerActive(false)}
+                  >
                     Terms &amp; Conditions
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className={styles.menuElement} to={'/privacy-policy'}>
+                  <NavLink className={styles.menuElement} to={'/privacy-policy'} onClick={() => setBurgerActive(false)}>
                     Privacy Policy
                   </NavLink>
                 </li>
@@ -146,7 +169,7 @@ const Header = () => {
             </li>
             <li className={styles.navigationElement}>
               <div className={styles.spoiler}>
-                <NavLink to="/blog" className={styles.link}>
+                <NavLink to="/blog" className={styles.link} onClick={() => setBurgerActive(false)}>
                   Blog
                 </NavLink>
               </div>
@@ -154,17 +177,15 @@ const Header = () => {
           </ul>
         </nav>
         <div className={styles.buttonContainer}>
-          <NavLink to={'/contact-us'}>
+          <NavLink to={'/contact-us'} onClick={() => setBurgerActive(false)}>
             <button className={styles.button}>Contact us</button>
           </NavLink>
         </div>
         <div className={styles.burgerButtonContainer} onClick={handleBurgerClick}>
           <div className={styles.burgerButton}>
-            <div className={cn(styles.burgerLine1, `${burgerActive && styles.burgerLine1Active}`)}/>
-            <div className={cn(styles.burgerLine2, `${burgerActive && styles.burgerLine2Active}`)}/>
-            <div className={cn(styles.burgerLine3, `${burgerActive && styles.burgerLine3Active}`)}/>
-            {/* <div className={styles.line}></div>
-            <div className={styles.line2}></div> */}
+            <div className={cn(styles.burgerLine1, burgerActive && styles.burgerLine1Active)} />
+            <div className={cn(styles.burgerLine2, burgerActive && styles.burgerLine2Active)} />
+            <div className={cn(styles.burgerLine3, burgerActive && styles.burgerLine3Active)} />
           </div>
         </div>
       </div>
