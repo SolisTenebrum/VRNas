@@ -579,7 +579,7 @@ const articleContent = [
       `Proident reprehenderit qui anim ullamco Lorem. Velit dolor esse ea consectetur do nisi commodo deserunt fugiat sit. Duis eu elit id nostrud velit et officia culpa ea eu sint sint velit. Adipisicing quis nulla quis ea officia nisi ea consequat. Minim ut fugiat aliquip ad enim cupidatat enim non incididunt irure irure ut. Elit eiusmod nulla deserunt non excepteur elit eiusmod mollit.`,
       `Ut consequat sunt proident eiusmod. Culpa Lorem laborum sunt magna deserunt officia. Officia dolor ut excepteur ullamco deserunt fugiat aliquip velit laborum id. Labore velit nulla incididunt nostrud Lorem velit fugiat occaecat adipisicing Lorem sunt id tempor consequat. Excepteur consectetur aliqua irure ex. Sit exercitation pariatur sit eu mollit ullamco aliqua enim consequat nulla exercitation. Duis excepteur quis voluptate et ea elit.`,
     ],
-    articleImages: [articleImage1, articleImage1],
+    articleImages: [articleImage3, articleImage4],
     postTags: '#VRGaming #VirtualReality #ImmersiveExperiences #GamingInnovation #NextLevelGaming #FutureOfGames',
   },
   {
@@ -596,7 +596,7 @@ const articleContent = [
       `Ipsum ea eu non velit non magna. Officia ad aliqua ad consequat eiusmod sit. Laboris velit irure culpa ullamco in magna. Id laboris aliqua sunt aute et eu Lorem cupidatat. Magna pariatur in esse commodo non magna quis ullamco non et. Laboris et elit commodo incididunt eu esse nulla velit cupidatat fugiat Lorem ea. Qui ut occaecat eu incididunt cupidatat cillum ad velit.`,
       `Deserunt ea excepteur aute ipsum est laborum aute mollit in tempor voluptate. Fugiat eu aliquip labore velit dolore exercitation sit enim. Labore ad consequat qui sint laborum. Aute est cillum amet cillum officia eu amet Lorem. Cillum veniam ullamco anim Lorem excepteur. Non do dolore ipsum consectetur eu ut id tempor tempor sunt. Aliquip ut enim magna nulla aute.`,
     ],
-    articleImages: [articleImage1, articleImage1],
+    articleImages: [articleImage1, articleImage4],
     postTags:
       '#VRGaming #ImmersiveGameplay #VirtualRealityGames #GamingRevolution #FutureOfGaming #VRInGames #NextGenGaming',
   },
@@ -614,7 +614,7 @@ const articleContent = [
       `Lorem duis fugiat ipsum labore laborum nulla proident. Qui voluptate mollit non duis quis sunt ullamco ex. In tempor ad eiusmod aliqua enim amet ipsum exercitation in nostrud enim tempor excepteur. Est incididunt nostrud nostrud aliquip nostrud. Id velit do voluptate et esse consequat officia esse fugiat ipsum enim cillum. Proident eiusmod consequat do eiusmod labore esse. Deserunt consequat ipsum eu ut duis aliqua minim tempor do.`,
       `Proident in nostrud mollit esse voluptate labore occaecat ullamco cupidatat qui officia esse. Magna dolor excepteur non sint eu sint qui non ex consectetur ut consectetur in. Commodo commodo magna voluptate sint laborum ullamco enim reprehenderit veniam ipsum eu do enim incididunt. Veniam nostrud magna ea sunt minim elit fugiat consectetur. Qui adipisicing mollit voluptate nostrud. Occaecat do laboris nisi cillum mollit cillum officia quis in proident irure. Dolor sit adipisicing enim ex aute tempor id.`,
     ],
-    articleImages: [articleImage1, articleImage1],
+    articleImages: [articleImage7, articleImage8],
     postTags:
       '#VREntertainment #ImmersiveExperiences #VirtualReality #NewMedia #EntertainmentRevolution #VRStorytelling',
   },
@@ -632,7 +632,7 @@ const articleContent = [
       `Do elit consectetur laboris dolore consequat mollit laborum laborum deserunt officia pariatur non culpa laboris. Deserunt non dolor dolore exercitation ut ad consectetur. Elit laborum veniam laborum cupidatat mollit tempor irure deserunt aliquip nisi nostrud. Ullamco et in nostrud nulla sint. Cillum occaecat dolore ipsum aute. Esse consequat duis irure aliquip officia pariatur aliquip. Exercitation nostrud anim aliqua voluptate deserunt esse veniam veniam nulla et ullamco cillum dolore Lorem.`,
       `Anim anim laboris dolore amet labore dolor ut excepteur. Pariatur exercitation aliquip velit dolore magna magna dolor voluptate velit sit. Dolor sint exercitation ea amet aliquip nulla dolore quis. Est id occaecat in pariatur cupidatat id dolor sit ex voluptate laboris Lorem veniam amet. Irure do ad dolore excepteur cupidatat voluptate ad in amet do sint. Qui enim consectetur quis excepteur consectetur nisi Lorem ad non. Irure tempor exercitation magna laboris consequat reprehenderit mollit enim aliqua.`,
     ],
-    articleImages: [articleImage1, articleImage1],
+    articleImages: [articleImage7, articleImage2],
     postTags:
       '#VREducation #ImmersiveLearning #VirtualRealityInSchools #EdTech #FutureOfEducation #LearningRevolution #VRInClassrooms',
   },
@@ -650,7 +650,7 @@ const articleContent = [
       `Est ullamco ex excepteur et nulla ullamco duis occaecat. Incididunt veniam commodo deserunt voluptate laboris do enim sit. Do deserunt tempor nulla elit laboris anim do consectetur sunt cupidatat occaecat magna officia veniam.`,
       `Cillum et eiusmod adipisicing dolor fugiat fugiat amet Lorem laborum Lorem. Sit officia eu veniam Lorem dolore enim quis aute consectetur. Proident dolore occaecat cupidatat id est id commodo. Nisi veniam sint excepteur enim laboris.`,
     ],
-    articleImages: [articleImage1, articleImage1],
+    articleImages: [articleImage4, articleImage8],
     postTags: '#VRGaming #ImmersiveExperiences #GamingInnovation #VirtualRealityGames #NextLevelGaming #FutureOfGaming',
   },
   {
@@ -667,7 +667,7 @@ const articleContent = [
       `Mollit officia cillum quis pariatur ipsum consectetur sunt deserunt in quis reprehenderit elit. Commodo et veniam reprehenderit non enim velit velit. Aliqua laboris ea eu cillum tempor. Nostrud nisi labore incididunt do. Quis quis in quis quis consequat qui officia.`,
       `Cupidatat consectetur veniam excepteur in do mollit Lorem reprehenderit consectetur. Veniam ea nostrud sit eu enim laborum voluptate. Non laboris velit laborum et aliquip Lorem laboris labore amet nisi irure. Sint amet non nulla eu ullamco elit cillum deserunt ullamco amet. Laboris aliquip veniam exercitation sunt aliquip voluptate do aliqua.`,
     ],
-    articleImages: [articleImage1, articleImage1],
+    articleImages: [articleImage4, articleImage1],
     postTags:
       '#VRGaming #FutureOfGames #ImmersiveTechnology #VirtualReality #GamingEvolution #NextGenGames #InteractiveGameplay',
   },
@@ -685,7 +685,7 @@ const articleContent = [
       `Ad labore nisi sint magna reprehenderit ullamco eiusmod ullamco nisi occaecat laborum eiusmod laboris. Duis sint elit exercitation minim nulla nisi labore. Mollit laboris ex esse culpa ut cupidatat id cupidatat ipsum nulla aliquip ut eu esse. Ex exercitation laboris exercitation enim consequat esse et nostrud. Fugiat minim in dolor occaecat do. Cupidatat ipsum quis ex dolore non ea in eu deserunt quis excepteur.`,
       `Consectetur id ex elit ipsum in. Ullamco deserunt eiusmod cillum pariatur adipisicing ullamco ea ut voluptate sint enim ex. Duis officia quis velit excepteur reprehenderit amet consectetur anim fugiat adipisicing id officia. Lorem mollit culpa occaecat non qui adipisicing ex est eu ullamco nisi ipsum dolore nulla. Laboris ut velit ex fugiat aliqua irure magna exercitation non sit cillum aliquip.`,
     ],
-    articleImages: [articleImage1, articleImage1],
+    articleImages: [articleImage5, articleImage6],
     postTags: '#VRGaming #GamingEvolution #VirtualRealityGames #NextLevelGameplay #ImmersiveTechnology #FutureOfGaming',
   },
   {
@@ -702,7 +702,7 @@ const articleContent = [
       `Laborum dolor tempor incididunt consectetur. Aliquip quis enim ullamco ut. Esse nostrud laboris est nulla ut nisi laborum anim consequat anim.`,
       `Aliqua ut pariatur tempor in amet et anim amet nostrud sint sunt officia ex esse. Reprehenderit aliqua veniam proident occaecat minim elit commodo aute non veniam proident. Non et sint ipsum irure laborum dolor ullamco tempor ipsum in pariatur ea. Laboris elit culpa occaecat deserunt id. Sit mollit anim in sunt quis magna deserunt enim elit do ad do.`,
     ],
-    articleImages: [articleImage1, articleImage1],
+    articleImages: [articleImage2, articleImage3],
     postTags: '#VRGaming #ImmersiveTechnology #VirtualRealityGames #NextGenGaming #GamingInnovation #FutureOfGames',
   },
 ];

@@ -62,18 +62,24 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
 
 const ArticlePage = () => {
   const params = useParams();
-
   const [noArticle, setNoArticle] = useState<boolean>(false);
 
   useEffect(() => {
-    if (Number(params.id) > articleContent.length) {
+    const articleId = Number(params.id);
+    if (isNaN(articleId) || articleId <= 0 || articleId > articleContent.length) {
       setNoArticle(true);
-      console.log('more than 9')
     }
   }, [params.id]);
 
   if (noArticle) {
-    return <Navigate to="/404" replace/>
+    return <Navigate to="/404" replace />;
+  }
+
+  const articleIndex = Number(params.id) - 1;
+  const article = articleContent[articleIndex];
+
+  if (!article) {
+    return <Navigate to="/404" replace />;
   }
 
   return (
@@ -83,20 +89,16 @@ const ArticlePage = () => {
         <div className={styles.container}>
           <div className={styles.path}>
             <p className={styles.pathText}>
-              <NavLink to="/" className={styles.pathLink}>
-                Home
-              </NavLink>
-              <img className={styles.arrow} src={arrow} />{' '}
-              <NavLink to="/blog" className={styles.pathLink}>
-                Blog
-              </NavLink>{' '}
+              <NavLink to="/" className={styles.pathLink}>Home</NavLink>
+              <img className={styles.arrow} src={arrow} />
+              <NavLink to="/blog" className={styles.pathLink}>Blog</NavLink>
               <img className={styles.arrow} src={arrow} />
             </p>
-            <span className={styles.pathSpan}>{articleContent[Number(params.id) - 1].title}</span>
+            <span className={styles.pathSpan}>{article.title}</span>
           </div>
           <div className={styles.content}>
             <div className={styles.column}>
-            <Article {...articleContent[Number(params.id) - 1]} />
+              <Article {...article} />
             </div>
             <div className={styles.column}>
               <div className={styles.recentArticles}>
