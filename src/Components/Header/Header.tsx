@@ -175,6 +175,13 @@ const Header = () => {
               </div>
             </li>
           </ul>
+          {burgerActive && (
+            <div className={styles.buttonContainer}>
+              <NavLink to={'/contact-us'} onClick={() => setBurgerActive(false)} className={styles.buttonContainer}>
+                <button className={cn(styles.button, styles.contactBurger)}>Contact us</button>
+              </NavLink>
+            </div>
+          )}
         </nav>
         <div className={styles.buttonContainer}>
           <NavLink to={'/contact-us'} onClick={() => setBurgerActive(false)}>
