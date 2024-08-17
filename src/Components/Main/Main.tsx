@@ -12,9 +12,10 @@ import FAQPage from '../../Pages/FAQPage/FAQPage';
 import TermsAndConditionsPage from '../../Pages/TermsAndConditionsPage/TermsAndConditionsPage';
 import PrivacyPolicyPage from '../../Pages//PrivacyPolicyPage/PrivacyPolicyPage';
 import ArticlePage from '../../Pages/ArticlePage/ArticlePage';
-import { articleContent } from '../../constants';
 
 const Main = () => {
+
+
   return (
     <main>
       <Routes>
@@ -29,7 +30,7 @@ const Main = () => {
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditionsPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-        <Route path='/article-page' element={<ArticlePage articleContent={articleContent[0]}/>} />
+        <Route path='/blog/:id' element={<ArticlePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </main>

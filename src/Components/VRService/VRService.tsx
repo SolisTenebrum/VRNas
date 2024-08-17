@@ -48,6 +48,16 @@ const VRService = () => {
   const location = useLocation();
   const [activeService, setActiveService] = useState<number>(3);
 
+  const serviceCircles = [
+    { id: 0, text: 'VR Development' },
+    { id: 1, text: 'VR Games' },
+    { id: 2, text: 'VR Events' },
+    { id: 3, text: 'VR Design' },
+    { id: 4, text: 'VR Consulting' },
+    { id: 5, text: 'VR Entertainment' },
+    { id: 6, text: 'Client Testimony' },
+  ];
+
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const serviceName = params.get('serviceTitle');
@@ -58,17 +68,7 @@ const VRService = () => {
         setActiveService(foundService.id);
       }
     }
-  }, [location.search]);
-
-  const serviceCircles = [
-    { id: 0, text: 'VR Development' },
-    { id: 1, text: 'VR Games' },
-    { id: 2, text: 'VR Events' },
-    { id: 3, text: 'VR Design' },
-    { id: 4, text: 'VR Consulting' },
-    { id: 5, text: 'VR Entertainment' },
-    { id: 6, text: 'Client Testimony' },
-  ];
+  }, [location.search, serviceCircles]);
 
   return (
     <section className={styles.vrService} id="vrservice">

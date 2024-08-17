@@ -2,27 +2,32 @@ import styles from './BlogArticles.module.css';
 import { clsx as cn } from 'clsx';
 import { useState } from 'react';
 import { blogCards } from '../../constants';
+import { NavLink } from 'react-router-dom';
 
 const BlogArticleCard = ({
   image,
   subtitle,
   title,
   span,
+  id,
 }: {
   image: string;
   subtitle: string;
   title: string;
   span: string;
+  id: number;
 }) => {
   return (
     <div className={styles.card}>
       <div className={styles.imageContainer}>
-          <img className={styles.image} src={image} />
+        <img className={styles.image} src={image} />
       </div>
       <div className={styles.textContainer}>
         <h4 className={styles.subtitle}>{subtitle}</h4>
         <h3 className={styles.title}>{title}</h3>
-        <span className={styles.span}>{span}</span>
+        <NavLink to={`/blog/${id}`} className={styles.link}>
+          <span className={styles.span}>{span}</span>
+        </NavLink>
       </div>
     </div>
   );
@@ -48,7 +53,7 @@ const BlogArticles = () => {
   };
 
   return (
-    <section className={styles.blogArticles} id='blog'>
+    <section className={styles.blogArticles} id="blog">
       <div className={styles.container}>
         {currentCards.map((card, index) => (
           <BlogArticleCard
@@ -57,6 +62,7 @@ const BlogArticles = () => {
             subtitle={card.subtitle}
             title={card.title}
             span={card.span}
+            id={card.id}
           />
         ))}
       </div>

@@ -5,7 +5,10 @@ import ArticleSmallCard from '../../Components/Articles/ArticleSmallCard';
 import xIcon from '../../assets/logos/logo-x.svg';
 import facebookIcon from '../../assets/logos/logo-fb.svg';
 import instagramIcon from '../../assets/logos/logo-instagram.svg';
-import { NavLink } from 'react-router-dom';
+import { Navigate, NavLink, useParams } from 'react-router-dom';
+import { articleContent } from '../../constants';
+import { useEffect, useState } from 'react';
+import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop';
 
 interface IArticleProps {
   category: string;
@@ -16,6 +19,7 @@ interface IArticleProps {
   paragraphs: string[];
   articleImages: string[];
   postTags: string;
+  id: number;
 }
 
 const Article = ({ category, title, author, date, mainImage, paragraphs, articleImages, postTags }: IArticleProps) => {
@@ -29,7 +33,7 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
       <div className={styles.articleMainImageContainer}>
         <img className={styles.articleMainImage} src={mainImage} />
       </div>
-      {paragraphs.slice(0, 4).map((paragraph, index) => (
+      {paragraphs?.slice(0, 4).map((paragraph, index) => (
         <p className={styles.articleText} key={index}>
           {paragraph}
         </p>
@@ -39,7 +43,7 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
           <img className={styles.articleImage} src={image} key={index} />
         ))}
       </div>
-      {paragraphs.slice(4).map((paragraph, index) => (
+      {paragraphs?.slice(4).map((paragraph, index) => (
         <p className={styles.articleText} key={index}>
           {paragraph}
         </p>
@@ -56,60 +60,78 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
   );
 };
 
-const ArticlePage = ({ articleContent }: any) => {
+const ArticlePage = () => {
+  const params = useParams();
+
+  const [noArticle, setNoArticle] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (Number(params.id) > articleContent.length) {
+      setNoArticle(true);
+      console.log('more than 9')
+    }
+  }, [params.id]);
+
+  if (noArticle) {
+    return <Navigate to="/404" replace/>
+  }
+
   return (
-    <section className={styles.articlePage}>
-      <div className={styles.container}>
-        <div className={styles.path}>
-          <p className={styles.pathText}>
-            <NavLink to="/" className={styles.pathLink}>
-              Home
-            </NavLink>
-            <img className={styles.arrow} src={arrow} />{' '}
-            <NavLink to="/blog" className={styles.pathLink}>
-              Blog
-            </NavLink>{' '}
-            <img className={styles.arrow} src={arrow} />
-          </p>
-          <span className={styles.pathSpan}>{articleContent.title}</span>
-        </div>
-        <div className={styles.content}>
-          <div className={styles.column}>
-            <Article {...articleContent} />
+    <>
+      <ScrollToTop />
+      <section className={styles.articlePage}>
+        <div className={styles.container}>
+          <div className={styles.path}>
+            <p className={styles.pathText}>
+              <NavLink to="/" className={styles.pathLink}>
+                Home
+              </NavLink>
+              <img className={styles.arrow} src={arrow} />{' '}
+              <NavLink to="/blog" className={styles.pathLink}>
+                Blog
+              </NavLink>{' '}
+              <img className={styles.arrow} src={arrow} />
+            </p>
+            <span className={styles.pathSpan}>{articleContent[Number(params.id) - 1].title}</span>
           </div>
-          <div className={styles.column}>
-            <div className={styles.recentArticles}>
-              <h4 className={styles.subsubtitle}>Recent Article</h4>
-              <div className={styles.articlesContainer}>
-                {smallArticles.map((article, index) => (
-                  <ArticleSmallCard
-                    key={index}
-                    image={article.image}
-                    title={article.title}
-                    span={article.span}
-                    variant="blog-page"
-                  />
-                ))}
+          <div className={styles.content}>
+            <div className={styles.column}>
+            <Article {...articleContent[Number(params.id) - 1]} />
+            </div>
+            <div className={styles.column}>
+              <div className={styles.recentArticles}>
+                <h4 className={styles.subsubtitle}>Recent Article</h4>
+                <div className={styles.articlesContainer}>
+                  {smallArticles.map((article, index) => (
+                    <ArticleSmallCard
+                      key={index}
+                      image={article.image}
+                      title={article.title}
+                      span={article.span}
+                      variant="blog-page"
+                    />
+                  ))}
+                </div>
+              </div>
+              <div className={styles.popularHashTags}>
+                <h4 className={styles.subsubtitle}>Popular Hashtag</h4>
+                <div className={styles.hashTags}>
+                  <span className={styles.hashTag}>#VRDesign</span>
+                  <span className={styles.hashTag}>#ArchitectureInnovation</span>
+                  <span className={styles.hashTag}>#DesignThinking</span>
+                  <span className={styles.hashTag}>#VirtualRealityArchitecture</span>
+                  <span className={styles.hashTag}>#BringingDesignsToLife</span>
+                  <span className={styles.hashTag}>#DesignVisualization</span>
+                  <span className={styles.hashTag}>#ArchitecturalVisualization</span>
+                  <span className={styles.hashTag}>#RevolutionizingArchitecture</span>
+                  <span className={styles.hashTag}>#BuildingInVR</span>
+                </div>
               </div>
             </div>
-            <div className={styles.popularHashTags}>
-              <h4 className={styles.subsubtitle}>Popular Hashtag</h4>
-              <div className={styles.hashTags}>
-                <span className={styles.hashTag}>#VRDesign</span>
-                <span className={styles.hashTag}>#ArchitectureInnovation</span>
-                <span className={styles.hashTag}>#DesignThinking</span>
-                <span className={styles.hashTag}>#VirtualRealityArchitecture</span>
-                <span className={styles.hashTag}>#BringingDesignsToLife</span>
-                <span className={styles.hashTag}>#DesignVisualization</span>
-                <span className={styles.hashTag}>#ArchitecturalVisualization</span>
-                <span className={styles.hashTag}>#RevolutionizingArchitecture</span>
-                <span className={styles.hashTag}>#BuildingInVR</span>
-              </div>
-            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

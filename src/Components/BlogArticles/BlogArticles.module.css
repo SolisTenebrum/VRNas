@@ -103,6 +103,10 @@
   border-style: solid;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .pagination {
   display: flex;
   flex-direction: row;
