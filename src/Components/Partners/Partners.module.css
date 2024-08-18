@@ -1,6 +1,6 @@
 .partners {
   margin-bottom: 150px;
-  overflow-x: clip;
+  /* overflow-x: clip; */
 }
 
 .container {
@@ -167,8 +167,9 @@
 
 @media screen and (max-width: 430px) {
   .partners {
-    padding-bottom: 130px;
-    margin: 0;
+    /* padding-bottom: 130px;
+    margin: 0; */
+    margin-bottom: 100px;
   }
 
   .title {
