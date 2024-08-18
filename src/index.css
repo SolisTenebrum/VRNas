@@ -9,6 +9,7 @@ body {
 
 #root {
   margin: 0 auto;
+  overflow-x: clip;
 }
 
 section,
