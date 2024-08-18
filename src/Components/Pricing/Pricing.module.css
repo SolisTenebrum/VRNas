@@ -254,7 +254,6 @@
 @media screen and (max-width: 430px) {
   .pricing {
     margin-bottom: 190px;
-    overflow-x: clip;
   }
 
   .title {

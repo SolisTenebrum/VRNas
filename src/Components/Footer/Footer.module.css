@@ -162,7 +162,9 @@
 
 @media screen and (max-width: 430px) {
   .footer {
-    overflow-x: clip;
+    overflow: hidden;
+    margin: 0;
+    padding-bottom: 30px;
   }
 
   .top {

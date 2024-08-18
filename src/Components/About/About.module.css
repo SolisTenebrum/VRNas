@@ -212,6 +212,10 @@
     row-gap: 48px;
   }
 
+  .videoImage {
+    scale: 0.7;
+  }
+
   .vrpersonContainer {
     width: 390px;
     height: 467px;

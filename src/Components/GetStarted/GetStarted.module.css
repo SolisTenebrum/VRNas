@@ -182,12 +182,12 @@
 }
 
 .progressBar::after {
-    content: '';
-    position: absolute;
-    height: 8px;
-    background-color: #ffffff;
-    width: 10px;
-    border-radius: 4px;
+  content: '';
+  position: absolute;
+  height: 8px;
+  background-color: #ffffff;
+  width: 10px;
+  border-radius: 4px;
 }
 
 .button {
@@ -222,8 +222,6 @@
 .button:hover:before {
   opacity: 1;
 }
-
-
 
 @media screen and (max-width: 1215px) {
   .container {
@@ -262,8 +260,8 @@
     max-width: 398px;
     height: 254px;
     border-radius: 12px 12px 0 0;
-  } 
-  
+  }
+
   .videoTitle {
     font-size: 20px;
     line-height: normal;
