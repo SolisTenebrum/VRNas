@@ -88,6 +88,10 @@ const VRService = () => {
                 <p className={styles.circleText}>{service.text}</p>
               </div>
             ))}
+            <div className={styles.arrowButtons}>
+              <div className={styles.arrowButtonRight} onClick={() => setActiveService((activeService - 1 + 7) % 7)} />
+              <div className={styles.arrowButtonLeft} onClick={() => setActiveService((activeService + 1) % 7)} />
+            </div>
           </div>
         </div>
         <div className={styles.textContainer}>

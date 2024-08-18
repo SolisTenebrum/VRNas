@@ -53,7 +53,7 @@
 
 .title {
   font-size: 64px;
-  letter-spacing: 0.008px;
+  letter-spacing: -0.08px;
   font-weight: 600;
   margin: 0;
   margin-bottom: 28.5px;
@@ -130,5 +130,10 @@
   .pageTitle {
     padding-top: 207px;
     margin-bottom: 100px;
+  }
+
+  .title {
+    font-size: 40px;
+    line-height: 58px;
   }
 }
