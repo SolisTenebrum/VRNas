@@ -1,6 +1,8 @@
 .articles {
+  padding-top: 65px;
   margin-bottom: 150px;
   position: relative;
+  overflow: hidden;
 }
 
 .articles::before {
@@ -483,6 +485,10 @@
   width: 636px;
   height: 425px;
   position: relative;
+}
+
+.buttonMobile {
+  display: none;
 }
 
 @media screen and (max-width: 1215px) {
