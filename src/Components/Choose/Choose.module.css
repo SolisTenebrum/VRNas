@@ -267,6 +267,9 @@
   .title {
     font-size: 32px;
     line-height: normal;
+  }
 
+  .button {
+    font-size: 17px;
   }
 }

@@ -178,6 +178,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0;
+    column-gap: 10px;
   }
 
   .linksContainer {

@@ -69,11 +69,11 @@ const Articles = ({ variant }: { variant: string }) => {
               </div>
             </div>
           </div>
+          <NavLink to="/blog#blog"  className={styles.link}>
+            <button className={cn(styles.button, styles.buttonMobile)}>SEE ALL</button>
+          </NavLink>
         </div>
       </div>
-      <NavLink to="/blog#blog" className={styles.link}>
-        <button className={cn(styles.button, styles.buttonMobile)}>SEE ALL</button>
-      </NavLink>
     </section>
   );
 };

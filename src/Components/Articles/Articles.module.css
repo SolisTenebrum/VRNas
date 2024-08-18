@@ -182,6 +182,19 @@
   height: 425px;
 }
 
+.articleFullImageContainer::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(0deg, #090085 0%, transparent, transparent);
+  z-index: 0;
+}
+
 .articleFullImage {
   object-fit: cover;
   width: 100%;
@@ -243,6 +256,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 .goButton::before {
@@ -302,6 +316,11 @@
   scrollbar-width: none;
   scrollbar-color: transparent transparent;
   position: relative;
+}
+
+.articlesContainer::-webkit-scrollbar {
+  display: none;
+  width: 0;
 }
 
 .articleCard {
@@ -509,17 +528,15 @@
 
 @media screen and (max-width: 430px) {
   .articles {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    margin-bottom: 100px;
   }
 
   .articles::before {
-    bottom: -26%;
+    bottom: 20%;
     left: 0;
     width: 100vw;
-    height: 506px;
+    height: 729px;
   }
 
   .button {
@@ -551,7 +568,9 @@
   .content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     row-gap: 111px;
+    margin-bottom: 35px;
   }
 
   .articleSlider {
@@ -630,6 +649,7 @@
   }
 
   .link {
-    align-self: center;
+    display: flex;
+    justify-content: center;
   }
 }

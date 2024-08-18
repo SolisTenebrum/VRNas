@@ -112,7 +112,7 @@
   .title {
     font-size: 28px;
     line-height: normal;
-    min-width: 372px;
+    max-width: 372px;
     margin-bottom: 10px;
     text-align: center;
   }
@@ -121,6 +121,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 31px 13px;
   }
 
   .column:last-of-type {
