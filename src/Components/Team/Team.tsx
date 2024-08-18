@@ -58,6 +58,11 @@ const Team = ({ variant }: { variant: string }) => {
             return <TeamCard key={index} team={member} variant={variant} />;
           })}
         </div>
+        {variant !== 'our-team-page' && (
+          <NavLink to="/our-team" className={styles.link}>
+            <button className={cn(styles.button, styles.buttonMobile)}>SEE ALL</button>
+          </NavLink>
+        )}
       </div>
     </section>
   );

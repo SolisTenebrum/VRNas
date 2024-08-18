@@ -37,6 +37,7 @@ const PageTitle = ({ variant }: { variant: string }) => {
           <img src={arrow} className={styles.arrow} />
           {title}
         </p>
+        <div className={styles.divider} />
       </div>
     </section>
   );

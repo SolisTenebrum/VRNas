@@ -1,12 +1,15 @@
 .hero {
   padding-top: 114px;
   position: relative;
+  overflow-x: clip;
 }
 
 .hero::after {
   position: absolute;
   content: '';
   background-image: url('../../assets/background-elements/topWaves.svg');
+  background-repeat: no-repeat;
+  background-position: right;
   right: 0;
   top: 0;
   width: 736px;
@@ -239,10 +242,6 @@
 }
 
 @media screen and (max-width: 430px) {
-  .hero {
-    overflow-x: clip;
-  }
-
   .hero::before {
     position: absolute;
     content: '';
@@ -252,6 +251,19 @@
     top: 24%;
     width: 430px;
     height: 721px;
+    z-index: -2;
+  }
+
+  .hero::after {
+    position: absolute;
+    content: '';
+    background-image: url('../../assets/background-elements/top-waves-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    right: 0;
+    top: 0;
+    width: 736px;
+    height: 353.2px;
     z-index: -2;
   }
 

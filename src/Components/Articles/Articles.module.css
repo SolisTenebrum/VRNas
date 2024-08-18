@@ -2,7 +2,7 @@
   padding-top: 65px;
   margin-bottom: 150px;
   position: relative;
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 .articles::before {
@@ -535,10 +535,11 @@
   }
 
   .articles::before {
-    bottom: 20%;
+    bottom: -18%;
     left: 0;
     width: 100vw;
-    height: 729px;
+    /* height: 729px; */
+    height: 400px;
   }
 
   .button {

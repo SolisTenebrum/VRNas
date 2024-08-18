@@ -1,5 +1,6 @@
 .pricing {
   margin-bottom: 200px;
+  overflow-x: clip;
 }
 
 .container {

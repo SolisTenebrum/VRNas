@@ -1,5 +1,5 @@
 .pageTitle {
-  padding-top: calc(114px + 13px + 80px);
+  padding-top: 207px;
   margin-bottom: 150px;
 }
 
@@ -34,12 +34,6 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 70px;
-  border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
-  border-width: 1px;
-  border-style: solid;
-  border-top: none;
-  border-left: none;
-  border-right: none;
   position: relative;
 }
 
@@ -82,9 +76,47 @@
 
 .pathLink {
   text-decoration: none;
-  
 }
 
 .arrow {
   transform: rotate(-90deg);
+}
+
+.divider {
+  position: absolute;
+  border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
+  border-width: 1px;
+  border-style: solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  bottom: -1px;
+}
+
+@media screen and (max-width: 1215px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .divider {
+    width: 93%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+}
+
+@media screen and (max-width: 550px) {
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 430px) {
+  .pageTitle {
+    padding-top: 207px;
+    margin-bottom: 100px;
+  }
 }

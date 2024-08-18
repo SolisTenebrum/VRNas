@@ -1,5 +1,6 @@
 .partners {
   margin-bottom: 150px;
+  overflow-x: clip;
 }
 
 .container {
@@ -166,7 +167,6 @@
 
 @media screen and (max-width: 430px) {
   .partners {
-    overflow: hidden;
     padding-bottom: 130px;
     margin: 0;
   }

@@ -368,6 +368,8 @@
   .navigation {
     flex-direction: column;
     width: 100vw;
+    flex: 0;
+    margin-bottom: 20px;
   }
 
   .navigationElement {

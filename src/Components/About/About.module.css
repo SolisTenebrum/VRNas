@@ -1,5 +1,6 @@
 .about {
   margin-bottom: 150px;
+  overflow-x: clip;
 }
 
 .container {
@@ -204,7 +205,6 @@
 @media screen and (max-width: 430px) {
   .about {
     margin-bottom: 105px;
-    overflow-x: clip;
   }
 
   .container {

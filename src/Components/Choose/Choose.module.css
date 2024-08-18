@@ -1,5 +1,6 @@
 .choose {
   margin-bottom: 200px;
+  overflow-x: clip;
 }
 
 .container {
@@ -240,7 +241,6 @@
 @media screen and (max-width: 430px) {
   .choose {
     margin-bottom: 100px;
-    overflow-x: clip;
   }
 
   .container {
@@ -271,5 +271,22 @@
 
   .button {
     font-size: 17px;
+  }
+
+  .video_aboutus {
+    width: 160px;
+    height: 104px;
+    right: 15px;
+    bottom: -35px;
+  }
+
+  .background_aboutus {
+    width: 82%;
+    height: 86%;
+    left: 13px;
+  }
+
+  .container_aboutus {
+    row-gap: 90px;
   }
 }
