@@ -57,7 +57,7 @@
   width: 60%;
   height: 40%;
   background: linear-gradient(90deg, #0cbcf1c9 -30%, #e95ce9c5 100%);
-  filter: blur(100px);
+  filter: blur(50px);
   border-radius: 10% 20% 100% 40%;
   transform: rotate(-20deg);
   z-index: -1;
@@ -166,7 +166,9 @@
 
 @media screen and (max-width: 430px) {
   .partners {
-    margin-bottom: 100px;
+    overflow: hidden;
+    padding-bottom: 130px;
+    margin: 0;
   }
 
   .title {
@@ -184,37 +186,37 @@
     justify-content: center;
     align-items: center;
   }
-  
+
   .circle1 {
     bottom: 30%;
     left: 2.5%;
   }
-  
+
   .circle2 {
     bottom: 58%;
     left: 10%;
   }
-  
+
   .circle3 {
     bottom: 76%;
     left: 25%;
   }
-  
+
   .circle4 {
     bottom: 84%;
     left: 45.5%;
   }
-  
+
   .circle5 {
     bottom: 76%;
     right: 25%;
   }
-  
+
   .circle6 {
     bottom: 58%;
     right: 10%;
   }
-  
+
   .circle7 {
     bottom: 30%;
     right: 2.5%;
