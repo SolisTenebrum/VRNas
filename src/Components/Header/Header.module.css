@@ -360,7 +360,7 @@
     height: 100vh;
     background-color: rgba(37, 37, 50, 0.98);
     z-index: 1;
-    padding-top: 116px;
+    padding-top: 90px;
     transition: opacity 0.3s ease, width 0.3s ease;
     flex-direction: column;
   }
@@ -372,11 +372,11 @@
 
   .navigationElement {
     width: 90%;
-    padding: 10px 10px 25px 10px;
+    padding: 5px 10px 5px 10px;
     display: flex;
     align-items: start;
     flex-direction: column;
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .menu {
@@ -385,11 +385,11 @@
     width: 96%;
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
+    row-gap: 20px;
   }
 
   .menuActive {
-    height: 320px;
+    height: 270px;
   }
 
   .spoiler {
