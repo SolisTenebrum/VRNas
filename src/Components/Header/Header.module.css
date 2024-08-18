@@ -329,7 +329,7 @@
   transition: scale 0.1s ease;
 }
 
-.contactBurger {
+.contactButtonBurger {
   display: none;
 }
 
@@ -369,7 +369,7 @@
     flex-direction: column;
     width: 100vw;
     flex: 0;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
 
   .navigationElement {
@@ -397,7 +397,6 @@
   .spoiler {
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 10px;
     position: relative;
   }
 
@@ -481,7 +480,7 @@
     display: none;
   }
 
-  .contactBurger {
+  .contactButtonBurger {
     display: block;
     width: 100%;
     height: 50px;
