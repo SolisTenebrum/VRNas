@@ -115,6 +115,18 @@
 }
 
 @media screen and (max-width: 430px) {
+  .container:before {
+    top: 40%;
+    left: 50%;
+    width: 60%;
+    height: 70%;
+    background: linear-gradient(90deg, #0cbcf1c9 -30%, #e95ce9c5 100%);
+    filter: blur(40px);
+    border-radius: 10% 20% 100% 40%;
+    transform: translateX(-50%) translateY(-50%) rotate(-10deg);
+    z-index: -1;
+  }
+
   .pageTitle {
     padding-top: 207px;
     margin-bottom: 100px;

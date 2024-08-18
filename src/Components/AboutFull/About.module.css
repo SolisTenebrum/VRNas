@@ -1,6 +1,5 @@
 .about {
   margin-bottom: 150px;
-  overflow-x: clip;
 }
 
 .container {
@@ -72,8 +71,8 @@
   position: absolute;
   content: '';
   top: 40%;
-  left: 0;
-  width: 100%;
+  left: 20px;
+  width: 90%;
   height: 50%;
   background: linear-gradient(90deg, #0cbcf1c9 -30%, #e95ce9c5 100%);
   filter: blur(100px);
