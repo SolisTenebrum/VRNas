@@ -112,7 +112,7 @@
   margin-bottom: 12px;
   font-size: 48px;
   line-height: 58px;
-  letter-spacing: -0.5%;
+  letter-spacing: -0.08px;
   font-weight: 600;
 }
 
@@ -183,4 +183,51 @@
 
 .button:hover:before {
   opacity: 1;
+}
+
+@media screen and (max-width: 1215px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+}
+
+@media screen and (max-width: 550px) {
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 430px) {
+  .about {
+    margin-bottom: 105px;
+    overflow-x: clip;
+  }
+
+  .container {
+    flex-direction: column;
+    row-gap: 48px;
+  }
+
+  .vrpersonContainer {
+    width: 390px;
+    height: 467px;
+  }
+
+  .background {
+    left: -10px;
+  }
+
+  .video {
+    width: 147px;
+    height: 96px;
+  }
+
+  .title {
+    font-size: 32px;
+    line-height: normal;
+  }
 }

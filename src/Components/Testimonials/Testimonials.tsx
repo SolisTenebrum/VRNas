@@ -43,7 +43,7 @@ const Client = ({ image, name, company, message, index }: IClientProps) => {
   }, []);
 
   return (
-    <div className={cn(styles.client, styles[`client${index + 1}`])} ref={clientRef}>
+    <div className={cn(styles.client, styles[`client${index + 1}`], `${visibleIndex === index + 1 ? styles.moveToLeft : ''}`)} ref={clientRef}>
       <button
         className={cn(styles.button, `${visibleIndex === index + 1 ? styles.active : ''}`)}
         onClick={() => toggleVisibility(index + 1)}

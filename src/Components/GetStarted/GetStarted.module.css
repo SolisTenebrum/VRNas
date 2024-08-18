@@ -47,7 +47,7 @@
   margin-bottom: 48px;
   font-size: 48px;
   line-height: 58px;
-  letter-spacing: -0.5%;
+  letter-spacing: -0.08px;
   font-weight: 600;
   max-width: 800px;
   text-align: center;
@@ -70,6 +70,7 @@
 .video::after {
   content: '';
   background-image: url('../../assets/icons/play-button-big.svg');
+  background-repeat: no-repeat;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -220,4 +221,61 @@
 
 .button:hover:before {
   opacity: 1;
+}
+
+
+
+@media screen and (max-width: 1215px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+}
+
+@media screen and (max-width: 550px) {
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 430px) {
+  .getStarted {
+    margin-bottom: 100px;
+  }
+
+  .title {
+    font-size: 32px;
+    line-height: normal;
+    margin-bottom: 32px;
+  }
+
+  .videoInfo {
+    top: 22px;
+    left: 16px;
+  }
+
+  .video {
+    margin-bottom: 32px;
+    max-width: 398px;
+    height: 254px;
+    border-radius: 12px 12px 0 0;
+  } 
+  
+  .videoTitle {
+    font-size: 20px;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+
+  .video::after {
+    content: '';
+    background-image: url('../../assets/icons/play-button-big-mobile.svg');
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
 }

@@ -4,6 +4,7 @@ import ArticleSmallCard from './ArticleSmallCard';
 import { smallArticles, bigArticles } from '../../constants';
 import ArticleSlider from './ArticleSlider';
 import { NavLink } from 'react-router-dom';
+import { clsx as cn } from 'clsx';
 
 const Articles = ({ variant }: { variant: string }) => {
   const articlesContainerRef = useRef<HTMLDivElement>(null);
@@ -70,6 +71,9 @@ const Articles = ({ variant }: { variant: string }) => {
           </div>
         </div>
       </div>
+      <NavLink to="/blog#blog" className={styles.link}>
+        <button className={cn(styles.button, styles.buttonMobile)}>SEE ALL</button>
+      </NavLink>
     </section>
   );
 };

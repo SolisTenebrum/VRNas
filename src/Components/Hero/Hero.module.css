@@ -1,5 +1,6 @@
 .hero {
   padding-top: 114px;
+  position: relative;
 }
 
 .hero::after {
@@ -48,7 +49,7 @@
   margin-bottom: 12px;
   font-size: 64px;
   line-height: 84px;
-  letter-spacing: -0.5%;
+  letter-spacing: -0.08px;
   font-weight: 600;
   -webkit-text-stroke: 1px #000000;
 }
@@ -112,7 +113,6 @@
   display: flex;
   padding-left: 0;
   list-style-type: none;
-
 }
 
 .clientImageContainer {
@@ -121,7 +121,7 @@
 
 .clientImageContainer:first-of-type {
   margin-left: 0;
-} 
+}
 
 .clientImage {
   width: 50px;
@@ -224,7 +224,75 @@
 
 @media screen and (max-width: 1215px) {
   .container {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+}
+
+@media screen and (max-width: 550px) {
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 430px) {
+  .hero {
+    overflow-x: clip;
+  }
+
+  .hero::before {
+    position: absolute;
+    content: '';
+    background-image: url('../../assets/background-elements/net.svg');
+    background-repeat: no-repeat;
+    left: 0;
+    top: 24%;
+    width: 430px;
+    height: 721px;
+    z-index: -2;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .description {
+    max-width: 398px;
+    padding-top: 10px;
+    margin-bottom: 32px;
+  }
+
+  .title {
+    font-size: 48px;
+    line-height: 58px;
+    font-weight: 600;
+  }
+
+  .clientsContainer {
+    flex-direction: column;
+    row-gap: 145px;
+  }
+
+  .clients {
+    justify-content: start;
+  }
+
+  .column:first-of-type {
+    margin-bottom: 145px;
+  }
+
+  .vrPersonContainer {
+    width: 354px;
+    height: 422px;
+    position: absolute;
+    bottom: 0;
+    right: -140px;
+    z-index: -1;
+  }
+
+  .vrPerson {
   }
 }

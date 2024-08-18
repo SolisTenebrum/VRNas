@@ -45,13 +45,13 @@ const ArticleSlider: React.FC<IArticleSliderProps> = ({ articles }) => {
             <SwiperSlide key={index}>
               <div className={styles.articleFullImageContainer}>
                 <img src={article.image} className={styles.articleFullImage} />
-                <div className={styles.articleFullImageInfo}>
-                  <span className={styles.articleFullImageSpan}>{article.span}</span>
-                  <h4 className={styles.articleFullImageTitle}>{article.title}</h4>
-                </div>
-                <button className={styles.goButton}>
-                  <img src={arrowRight} className={styles.arrowRight} />
-                </button>
+                  <div className={styles.articleFullImageInfo}>
+                    <span className={styles.articleFullImageSpan}>{article.span}</span>
+                    <h4 className={styles.articleFullImageTitle}>{article.title}</h4>
+                  </div>
+                  <button className={styles.goButton}>
+                    <img src={arrowRight} className={styles.arrowRight} />
+                  </button>
               </div>
             </SwiperSlide>
           );

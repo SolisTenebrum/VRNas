@@ -78,7 +78,7 @@
   margin-bottom: 12px;
   font-size: 48px;
   line-height: 58px;
-  letter-spacing: -0.5%;
+  letter-spacing: -0.08px;
   font-weight: 600;
 }
 
@@ -155,8 +155,8 @@
 }
 
 .card:hover::after {
-    opacity: 1;
-    transition: opacity 0.4s ease;
+  opacity: 1;
+  transition: opacity 0.4s ease;
 }
 
 .button {
@@ -224,7 +224,62 @@
 
 @media screen and (max-width: 1215px) {
   .container {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+}
+
+@media screen and (max-width: 550px) {
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 430px) {
+  .service {
+    margin-bottom: 100px;
+  }
+
+  .container::before {
+    content: none;
+  }
+
+  .title {
+    font-size: 32px;
+    line-height: normal;
+  }
+
+  .row:first-of-type {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  .column:first-of-type {
+    margin: 0;
+    align-items: start;
+  }
+
+  .cardList {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+  }
+
+  .card:nth-of-type(2),
+  .card:nth-of-type(3),
+  .card:nth-of-type(4),
+  .card:nth-of-type(5),
+  .card:nth-of-type(6) {
+    margin: 0px;
+  }
+
+  .card {
+    width: 100%;
   }
 }

@@ -50,7 +50,28 @@
 
 @media screen and (max-width: 1215px) {
   .container {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+}
+
+@media screen and (max-width: 550px) {
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 430px) {
+  .benefits {
+    margin-bottom: 100px;
+  }
+   
+  .content {
+    flex-direction: column;
+    row-gap: 50px;
+    padding: 36px 37px;
   }
 }

@@ -87,3 +87,43 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+@media screen and (max-width: 1215px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+}
+
+@media screen and (max-width: 550px) {
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 430px) {
+  .subscribe {
+    margin-bottom: 92px;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: normal;
+    min-width: 372px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .column:last-of-type {
+    flex-basis: 0;
+  }
+}
