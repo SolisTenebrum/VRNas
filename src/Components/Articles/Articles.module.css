@@ -512,7 +512,7 @@
   .articles::before {
     bottom: -26%;
     left: 0;
-    width: 430px;
+    width: 100vw;
     height: 506px;
   }
 
