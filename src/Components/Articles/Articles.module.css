@@ -2,7 +2,6 @@
   padding-top: 65px;
   margin-bottom: 150px;
   position: relative;
-  overflow-x: clip;
 }
 
 .articles::before {
@@ -535,10 +534,9 @@
   }
 
   .articles::before {
-    bottom: -18%;
+    top: 88%;
     left: 0;
     width: 100vw;
-    /* height: 729px; */
     height: 400px;
   }
 

@@ -1,14 +1,11 @@
 .pricing {
   margin-bottom: 200px;
-  overflow-x: clip;
-  overflow-clip-margin: content-box;
 }
 
 .container {
   margin: 0 auto;
   max-width: 1200px;
   position: relative;
-  /* padding-bottom: 105px; */
 }
 
 .container_ourservice::after {

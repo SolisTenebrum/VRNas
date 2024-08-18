@@ -1,8 +1,8 @@
 .testimonials {
   margin: 0 auto;
   margin-bottom: 150px;
-  overflow-x: clip;
   padding-bottom: 57px;
+  overflow: hidden;
 }
 
 .container {
