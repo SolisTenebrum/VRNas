@@ -109,7 +109,7 @@ const Header = () => {
     } else {
       document.body.style.overflow = 'auto';
     }
-  }, []);
+  }, [burgerActive]);
 
   return (
     <header className={cn(styles.header, `${scrolled && styles.fixedHeader}`)}>
