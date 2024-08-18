@@ -4,4 +4,10 @@ Platform providing VR services, including virtual reality experiences, augmented
 
 ## Preview
 
-![vrnas-preview](./src/assets/vrnas-preview.png)
+[![vrnas-preview](./src/assets/vrnas-preview.png)](https://solistenebrum-vrnas.vercel.app/)
+
+## Stack
+
+- React.js
+- CCS Modules
+- Typescript
