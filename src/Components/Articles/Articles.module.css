@@ -489,6 +489,8 @@
   right: -46px;
   bottom: 31px;
   z-index: 2;
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
 }
 
 .scrollBarIndicator {
