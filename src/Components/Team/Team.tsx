@@ -40,7 +40,7 @@ const Team = ({ variant }: { variant: string }) => {
   const teamPreview = team.slice(0, 4);
 
   return (
-    <section className={styles.team}>
+    <section className={cn(styles.team, variant === 'our-team-page' ? styles.team_ourteam : '')}>
       <div className={styles.container}>
         <div className={cn(styles.row, variant === 'our-team-page' ? styles.row_ourteam : '')}>
           <div className={cn(styles.textContainer, variant === 'our-team-page' ? styles.textContainer_ourteam : '')}>

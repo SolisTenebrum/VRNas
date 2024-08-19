@@ -10,7 +10,7 @@ const TeamPage = () => {
       <ScrollToTop />
       <PageTitle variant='our-team-page'/>
       <Team variant='our-team-page'/>
-      <Statistics />
+      <Statistics variant='our-team-page'/>
       <Subscribe />
     </>
   );

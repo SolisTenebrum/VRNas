@@ -2,6 +2,10 @@
   margin-bottom: 152px;
 }
 
+.team_ourteam {
+  margin-bottom: 100px;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1200px;
@@ -258,6 +262,10 @@
 }
 
 @media screen and (max-width: 430px) {
+  .team_ourteam {
+    margin-bottom: 100px;
+  }
+  
   .container {
     align-items: center;
   }

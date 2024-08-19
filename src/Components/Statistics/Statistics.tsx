@@ -1,9 +1,10 @@
 import styles from './Statistics.module.css';
 import { stats } from '../../constants';
+import { clsx as cn } from 'clsx';
 
-const Statistics = () => {
+const Statistics = ({ variant }: { variant: string }) => {
   return (
-    <section className={styles.numbers}>
+    <section className={cn(styles.statistics, variant === 'our-team-page' ? styles.statistics_ourteam : '')}>
       <div className={styles.container}>
         {stats.map((stat, index) => (
           <div className={styles.column} key={index}>
