@@ -1,6 +1,6 @@
 import styles from './BlogArticles.module.css';
 import { clsx as cn } from 'clsx';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { blogCards } from '../../constants';
 import { NavLink } from 'react-router-dom';
 
@@ -35,7 +35,23 @@ const BlogArticleCard = ({
 
 const BlogArticles = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const cardsPerPage = 9;
+  const [cardsPerPage, setCardsPerPage] = useState(9);
+
+  useEffect(() => {
+    const updateCardsPerPage = () => {
+      if (window.innerWidth < 431) {
+        setCardsPerPage(6);
+      } else {
+        setCardsPerPage(9);
+      }
+    };
+
+    updateCardsPerPage();
+
+    window.addEventListener('resize', updateCardsPerPage);
+
+    return () => window.removeEventListener('resize', updateCardsPerPage);
+  }, []);
 
   const totalPages = Math.ceil(blogCards.length / cardsPerPage);
 
