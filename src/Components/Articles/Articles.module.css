@@ -654,4 +654,25 @@
     display: flex;
     justify-content: center;
   }
+
+  .articleCardTitle_blogpage {
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0;
+    text-overflow: none;
+    display: -webkit-box;
+    overflow: visible;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: horizontal;
+  }
+
+  .articleCardInfo_blogpage {
+    max-width: 257px;
+  }
+
+  .articleCardSpan_blogpage {
+    font-size: 11px;
+    line-height: 14px;
+  }
 }

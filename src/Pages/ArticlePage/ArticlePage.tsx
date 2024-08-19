@@ -9,6 +9,7 @@ import { Navigate, NavLink, useParams } from 'react-router-dom';
 import { articleContent } from '../../constants';
 import { useEffect, useState } from 'react';
 import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop';
+import Subscribe from '../../Components/Subscribe/Subscribe';
 
 interface IArticleProps {
   category: string;
@@ -38,7 +39,7 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
           {paragraph}
         </p>
       ))}
-      <div className={styles.articleImageContainer}>
+      <div className={styles.articleImagesContainer}>
         {articleImages.map((image, index) => (
           <img className={styles.articleImage} src={image} key={index} />
         ))}
@@ -89,9 +90,13 @@ const ArticlePage = () => {
         <div className={styles.container}>
           <div className={styles.path}>
             <p className={styles.pathText}>
-              <NavLink to="/" className={styles.pathLink}>Home</NavLink>
+              <NavLink to="/" className={styles.pathLink}>
+                Home
+              </NavLink>
               <img className={styles.arrow} src={arrow} />
-              <NavLink to="/blog" className={styles.pathLink}>Blog</NavLink>
+              <NavLink to="/blog" className={styles.pathLink}>
+                Blog
+              </NavLink>
               <img className={styles.arrow} src={arrow} />
             </p>
             <span className={styles.pathSpan}>{article.title}</span>
@@ -133,6 +138,7 @@ const ArticlePage = () => {
           </div>
         </div>
       </section>
+      <Subscribe />
     </>
   );
 };
