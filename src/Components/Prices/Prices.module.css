@@ -38,7 +38,7 @@
   margin-bottom: 16px;
   font-size: 48px;
   line-height: 58px;
-  letter-spacing: -0.5%;
+  letter-spacing: -0.08px;
   font-weight: 600;
 }
 
@@ -186,4 +186,37 @@
 .cardButton:hover {
   background-color: transparent;
   color: white;
+}
+
+@media screen and (max-width: 1215px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+}
+
+@media screen and (max-width: 550px) {
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 430px) {
+  .prices {
+    margin-bottom: 100px;
+  }
+
+  .title {
+    font-size: 32px;
+    line-height: normal;
+  }
+
+  .row:last-of-type {
+    padding: 0 16px;
+    flex-direction: column;
+    row-gap: 40px;
+  }
 }
