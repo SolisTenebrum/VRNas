@@ -5,17 +5,23 @@
 .container {
   margin: 0 auto;
   max-width: 1200px;
-  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
 .imageContainer {
-  position: absolute;
-  left: -20%;
-  top: -5%;
-  width: 100%;
-  height: 100%;
+  width: 973px;
+  height: 672px;
   z-index: 0;
+}
+
+.image {
+  position: absolute;
+  left: -14%;
+  top: 0%;
+  height: 100%;
 }
 
 .socialIconContainer {
@@ -43,33 +49,34 @@
 }
 
 .instagramIcon {
-  bottom: -8%;
-  left: 23%;
+  bottom: 2%;
+  left: 9%;
 }
 
 .facebookIcon {
   top: 70%;
-  left: 11%;
+  left: -3.5%;
 }
 
-.twitterIcon {
+.xIcon {
   top: 20%;
-  left: 15%;
+  left: -3%;
 }
 
 .githubIcon {
-  bottom: 12%;
-  right: 39%;
+  bottom: 17%;
+  right: 60%;
 }
 
 .column:last-of-type {
-  justify-self: flex-end;
   max-width: 645px;
   z-index: 1;
+  flex-shrink: 0;
 }
 
 .textContainer {
   margin-bottom: 32px;
+  max-width: 645px;
 }
 
 .subtitle {
@@ -158,7 +165,7 @@
 
 .message {
   grid-area: message;
-  border-image: linear-gradient(90deg, #585858 0%, #7e7e7e13 100%) 1 round;
+  border-image: linear-gradient(90deg, #585858 0%, #7e7e7e13 100%) 1;
   border-color: transparent;
   border-width: 1px;
   border-style: solid;
@@ -222,4 +229,78 @@
 
 .button:focus {
   outline: 1px solid #ffffff;
+}
+
+@media screen and (max-width: 1215px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+}
+
+@media screen and (max-width: 550px) {
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 430px) {
+  .contactForm {
+    margin-bottom: 100px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 100px;
+  }
+
+  .imageContainer {
+    width: 673px;
+    height: 472px;
+    z-index: 0;
+    position: relative;
+  }
+
+  .image {
+    position: absolute;
+    left: -4%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .form {
+    grid-template-areas:
+      'name'
+      'lastname'
+      'email'
+      'phone'
+      'message'
+      'button';
+    row-gap: 16px;
+  }
+
+  .instagramIcon {
+    top: 46%;
+    left: 74%;
+  }
+  
+  .facebookIcon {
+    top: 2%;
+    left: 22%;
+  }
+  
+  .xIcon {
+    top: -1%;
+    left: 52%;
+  }
+  
+  .githubIcon {
+    bottom: 18%;
+    right: 33%;
+  }
 }

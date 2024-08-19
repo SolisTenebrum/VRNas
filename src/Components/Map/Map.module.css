@@ -44,3 +44,32 @@
     transform: scale(1);
   }
 }
+
+@media screen and (max-width: 1215px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+}
+
+@media screen and (max-width: 550px) {
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 430px) {
+  .marker {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    left: 43%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    animation: pulse 2s infinite;
+  }
+}

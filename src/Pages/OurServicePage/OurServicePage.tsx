@@ -10,10 +10,10 @@ const OurService = () => {
   return (
     <>
       <ScrollToTop />
-      <PageTitle variant={'our-service-page'}/>
-      <Service variant={'our-service-page'}/>
-      <Statistics />
-      <Pricing variant={'our-service-page'}/>
+      <PageTitle variant='our-service-page'/>
+      <Service variant='our-service-page'/>
+      <Statistics variant='our-service-page'/>
+      <Pricing variant='our-service-page'/>
       <Testimonials />
       <Subscribe />
     </>

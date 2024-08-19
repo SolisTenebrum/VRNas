@@ -23,7 +23,7 @@ const ContactForm = () => {
             <div className={cn(styles.socialIconContainer, styles.facebookIcon)}>
               <img src={facebookIcon} className={styles.socialIcon} />
             </div>
-            <div className={cn(styles.socialIconContainer, styles.twitterIcon)}>
+            <div className={cn(styles.socialIconContainer, styles.xIcon)}>
               <img src={xIcon} className={styles.socialIcon} />
             </div>
             <div className={cn(styles.socialIconContainer, styles.githubIcon)}>
