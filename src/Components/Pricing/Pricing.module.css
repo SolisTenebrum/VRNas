@@ -264,6 +264,9 @@
 
   .textContainer {
     margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .content {
