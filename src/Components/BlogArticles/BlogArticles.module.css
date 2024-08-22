@@ -13,6 +13,7 @@
   column-gap: 28px;
   row-gap: 32px;
   margin-bottom: 64px;
+  padding: 0 16px;
 }
 
 .card {
@@ -170,13 +171,6 @@
   height: 100%;
   object-fit: cover;
   z-index: 5;
-}
-
-@media screen and (max-width: 1215px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 }
 
 @media screen and (max-width: 880px) {

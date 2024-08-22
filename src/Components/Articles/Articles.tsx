@@ -1,10 +1,17 @@
 import styles from './Articles.module.css';
 import { useEffect, useRef } from 'react';
 import ArticleSmallCard from './ArticleSmallCard';
-import { smallArticles, bigArticles } from '../../constants';
+import { articleContent } from '../../constants';
 import ArticleSlider from './ArticleSlider';
 import { NavLink } from 'react-router-dom';
 import { clsx as cn } from 'clsx';
+
+export const shuffleArray = (array: any[]) => {
+  return array
+    .map((value) => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+};
 
 const Articles = ({ variant }: { variant: string }) => {
   const articlesContainerRef = useRef<HTMLDivElement>(null);
@@ -31,6 +38,12 @@ const Articles = ({ variant }: { variant: string }) => {
     };
   }, []);
 
+   const shuffledArticles = shuffleArray(articleContent);
+
+   const sliderArticles = shuffledArticles.slice(0, 4);
+ 
+   const recentArticles = shuffledArticles.slice(4);
+
   return (
     <section className={styles.articles}>
       <div className={styles.container}>
@@ -48,19 +61,20 @@ const Articles = ({ variant }: { variant: string }) => {
             <div className={styles.firstColumn}>
               <h4 className={styles.subsubtitle}>Popular Article</h4>
               <div className={styles.sliderContainer}>
-                <ArticleSlider articles={bigArticles} />
+                <ArticleSlider articles={sliderArticles} />
               </div>
             </div>
             <div className={styles.secondColumn}>
               <h4 className={styles.subsubtitle}>Recent Article</h4>
               <div className={styles.articlesContainer} ref={articlesContainerRef}>
-                {smallArticles.map((article, index) => (
+                {recentArticles.map((article, index) => (
                   <ArticleSmallCard
                     key={index}
-                    image={article.image}
+                    image={article.mainImage}
                     title={article.title}
-                    span={article.span}
+                    span={article.category}
                     variant={variant}
+                    id={article.id}
                   />
                 ))}
               </div>
@@ -69,7 +83,7 @@ const Articles = ({ variant }: { variant: string }) => {
               </div>
             </div>
           </div>
-          <NavLink to="/blog#blog"  className={styles.link}>
+          <NavLink to="/blog#blog" className={styles.link}>
             <button className={cn(styles.button, styles.buttonMobile)}>SEE ALL</button>
           </NavLink>
         </div>

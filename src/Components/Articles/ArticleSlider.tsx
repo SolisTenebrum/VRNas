@@ -6,11 +6,18 @@ import 'swiper/css/pagination';
 import { Autoplay } from 'swiper/modules';
 import { clsx as cn } from 'clsx';
 import { useRef, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 interface IArticle {
-  image: string;
+  id: number;
+  category: string;
   title: string;
-  span: string;
+  author: string;
+  date: string;
+  mainImage: string;
+  paragraphs: string[];
+  articleImages: string[];
+  postTags: string;
 }
 
 interface IArticleSliderProps {
@@ -44,14 +51,18 @@ const ArticleSlider: React.FC<IArticleSliderProps> = ({ articles }) => {
           return (
             <SwiperSlide key={index}>
               <div className={styles.articleFullImageContainer}>
-                <img src={article.image} className={styles.articleFullImage} />
-                  <div className={styles.articleFullImageInfo}>
-                    <span className={styles.articleFullImageSpan}>{article.span}</span>
+                <img src={article.mainImage} className={styles.articleFullImage} />
+                <div className={styles.articleFullImageInfo}>
+                  <span className={styles.articleFullImageSpan}>{article.category}</span>
+                  <NavLink to={`/blog/${article.id}`}>
                     <h4 className={styles.articleFullImageTitle}>{article.title}</h4>
-                  </div>
+                  </NavLink>
+                </div>
+                <NavLink to={`/blog/${article.id}`}>
                   <button className={styles.goButton}>
                     <img src={arrowRight} className={styles.arrowRight} />
                   </button>
+                </NavLink>
               </div>
             </SwiperSlide>
           );

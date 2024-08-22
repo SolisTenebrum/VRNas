@@ -160,53 +160,6 @@ const serviceBenefits = [
   },
 ];
 
-// Article section cards
-const smallArticles = [
-  {
-    image: articleImage1,
-    span: 'VR Education',
-    title: 'The Future of Education: How VR is Revolutionizing the Classroom',
-  },
-  {
-    image: articleImage5,
-    span: 'VR Architecture',
-    title: 'Bringing Designs to Life: How VR is Changing Architecture',
-  },
-  {
-    image: articleImage3,
-    span: 'VR Entertainment',
-    title: 'Making Events Memorable: The Power of VR for Corporate and Special Occasions',
-  },
-  {
-    image: articleImage4,
-    span: 'VR Event',
-    title: 'Exploring New Worlds: The Benefits of VR Travel',
-  },
-];
-
-const bigArticles = [
-  {
-    image: articleImage1,
-    span: 'VR Games',
-    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
-  },
-  {
-    image: articleImage3,
-    span: 'VR Event',
-    title: 'Making Events Memorable: The Power of VR for Corporate and Special Occasions',
-  },
-  {
-    image: articleImage7,
-    span: 'VR Games',
-    title: 'Entertainment Goes Virtual: The Rise of VR Gaming',
-  },
-  {
-    image: articleImage2,
-    span: 'VR Education',
-    title: 'The Future of Education: How VR is Revolutionizing the Classroom',
-  },
-];
-
 // Footer social icons
 const socialLogos = [
   {
@@ -1245,8 +1198,6 @@ export {
   supportLinks,
   contactLinks,
   socialLogos,
-  smallArticles,
-  bigArticles,
   chooseUsSpoilerItems,
   serviceBenefits,
   pricingCardsList,
