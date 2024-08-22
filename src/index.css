@@ -1,26 +1,186 @@
 @import url('../vendor/normalize.css');
 @import url('../vendor/fonts.css');
 
-body {
-  background-color: #18181b;
-  font-family: 'ChakraPetch', sans-serif;
-  color: #ffffff;
-}
-
 #root {
   margin: 0 auto;
   overflow-x: clip;
-}
 
-section,
-footer {
-  animation: fadeIn 0.4s ease-in-out forwards;
+  /* variables */
+  --black-100: #18181b;
+  --black-50: #252532;
+  --grey-1: #B0B0B2;
+  --grey-2: #D1D1D1;
+  --white: #FFFFFF;
+  --linear: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
+  --purple: #CA6AEB;
+  --blue: #19B5F1;
 }
 
 html {
   scrollbar-width: thin;
   scrollbar-color: #e95ce9 transparent;
   border-radius: 20px;
+}
+
+body {
+  background-color: #18181b;
+  font-family: 'ChakraPetch', sans-serif;
+  color: #ffffff;
+}
+
+header,
+section,
+footer {
+  animation: fadeIn 0.4s ease-in-out forwards;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* Headings */
+.heading1 {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.heading2 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58px;
+}
+
+.heading3 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 58px;
+}
+
+.heading4 {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 44px;
+}
+
+.heading5 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.heading6 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.heading7 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.heading8 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.heading9 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.heading10 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.heading11 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.heading12 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* Bodies */
+.body1 {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+.body2 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.body3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.body4 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* Captions */
+.caption1 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.caption2 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.caption3 {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 14px;
+}
+
+/* Buttons */
+.button1 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+.button2 {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white)
 }
 
 @keyframes fadeIn {
