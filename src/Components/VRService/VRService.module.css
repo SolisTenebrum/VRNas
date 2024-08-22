@@ -7,35 +7,46 @@
   max-width: 1200px;
   display: flex;
   justify-content: center;
-  align-items: center;
   position: relative;
+  padding: 0 16px;
 }
 
 .circlesBackground {
   background-image: url('../../assets/background-elements/detail-service-circle.svg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 1055px;
+  background-position: center;
   width: 1055px;
+  height: 1055px;
   z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .circles {
   width: 100%;
   height: 100%;
+  transition: transform 0.3s ease;
 }
 
 .circle {
   background-image: url('../../assets/background-elements/detail-service-bg-inactive.svg');
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   width: 102px;
   height: 102px;
+  max-width: 102px;
+  max-height: 102px;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
-  transition: background-image 0.3s ease-in-out;
+  z-index: 5;
+  transition: background-image 0.3s ease-in-out, transform 0.3s ease;
+  transform-origin: center center;
 }
 
 .circle:hover {
@@ -57,71 +68,70 @@
   font-weight: 400;
   line-height: 20px;
   letter-spacing: -0.5px;
-  width: 80px;
+  width: 80%;
   text-align: center;
 }
 
 .circle1 {
   position: absolute;
-  top: 50%;
-  left: 12%;
-  transform: translate(-50%, -50%);
+  top: 45.2%;
+  left: calc(0% + 2%);
 }
 
 .circle2 {
   position: absolute;
-  top: 29%;
-  left: 17%;
-  transform: translate(-50%, -50%);
+  top: calc(21.9% + 2%);
+  left: calc(6.1% + 2%);
 }
 
 .circle3 {
   position: absolute;
-  top: 13%;
-  left: 30%;
-  transform: translate(-50%, -50%);
+  top: calc(6.1% + 2%);
+  left: calc(21.8% + 2%);
 }
 
 .circle4 {
   position: absolute;
-  top: 7%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: calc(0% + 2%);
+  left: 45.2%;
 }
 
 .circle5 {
   position: absolute;
-  top: 13%;
-  right: 30%;
-  transform: translate(50%, -50%);
+  top: calc(6.1% + 2%);
+  right: calc(21.5% + 2%);
 }
 
 .circle6 {
   position: absolute;
-  top: 29%;
-  right: 17%;
-  transform: translate(50%, -50%);
+  top: calc(21.9% + 2%);
+  right: calc(6.1% + 2%);
   display: flex;
 }
 
 .circle7 {
   position: absolute;
-  top: 50%;
-  right: 12%;
-  transform: translate(50%, -50%);
+  top: 45.2%;
+  right: calc(0% + 2%);
 }
 
 .textContainer {
-  width: 627px;
-  position: absolute;
-  top: 22.5%;
-  left: 50%;
+  max-width: 627px;
+  width: 100%;
+  margin-top: 235px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: translateX(-50%);
   z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: all;
+}
+
+.textContainerActive {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .subtitle {
@@ -259,16 +269,49 @@
   display: none;
 }
 
-@media screen and (max-width: 1215px) {
+@media screen and (max-width: 992px) {
+  .arrowButtons {
+    position: absolute;
+    top: 17.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    column-gap: 55px;
+  }
+
+  .arrowButtonRight {
+    background-image: url('../../assets/icons/arrow-next.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    scale: 1.5;
+    cursor: pointer;
+  }
+
+  .arrowButtonLeft {
+    background-image: url('../../assets/icons/arrow-next.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    transform: rotate(180deg);
+    scale: 1.5;
+    cursor: pointer;
+  }
+
+  .arrowInvisible {
+    visibility: hidden;
+  }
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 768px) {
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 576px) {
 }
 
-@media screen and (max-width: 480px) {
+@media screnn and (max-width: 480px) {
 }
 
 @media screen and (max-width: 430px) {
@@ -284,41 +327,6 @@
     padding-left: 16px;
     padding-right: 16px;
     max-width: 400px;
-  }
-
-  .circle1 {
-    top: 37%;
-    left: -70%;
-  }
-
-  .circle2 {
-    top: 23%;
-    left: -35%;
-  }
-
-  .circle3 {
-    top: 12%;
-    left: 5%;
-  }
-
-  .circle4 {
-    top: 7%;
-    left: 50%;
-  }
-
-  .circle5 {
-    top: 12%;
-    right: 5%;
-  }
-
-  .circle6 {
-    top: 23%;
-    right: -35%;
-  }
-
-  .circle7 {
-    top: 37%;
-    right: -70%;
   }
 
   .arrowButtons {

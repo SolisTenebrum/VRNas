@@ -47,6 +47,10 @@ const ServiceText = ({ subtitle, title, text, listTitle, listItems }: IServiceTe
 const VRService = () => {
   const location = useLocation();
   const [activeService, setActiveService] = useState<number>(3);
+  const [isTextVisible, setIsTextVisible] = useState<boolean>(false);
+  const [isAnimating, setIsAnimating] = useState<boolean>(false);
+  const [animationDirection, setAnimationDirection] = useState<string | null>(null);
+  const [rotationAngle, setRotationAngle] = useState<number>(0);
 
   const serviceCircles = [
     { id: 0, text: 'VR Development' },
@@ -68,13 +72,56 @@ const VRService = () => {
         setActiveService(foundService.id);
       }
     }
-  }, [location.search, serviceCircles]);
+
+    setTimeout(() => {
+      setIsTextVisible(true);
+    }, 100);
+  }, [location.search]);
+
+  const handleCircleClick = (id: number) => {
+    if (isAnimating) return;
+
+    setIsTextVisible(false);
+    setIsAnimating(true);
+
+    setTimeout(() => {
+      setActiveService(id);
+      setIsTextVisible(true);
+      setIsAnimating(false);
+
+      window.history.replaceState(null, '', location.pathname);
+    }, 500);
+  };
+
+  const handleArrowClick = (direction: 'left' | 'right') => {
+    if (isAnimating) return;
+    if (direction === 'left' && activeService === 0) return;
+    if (direction === 'right' && activeService === serviceCircles.length - 1) return;
+
+    setIsTextVisible(false);
+    setIsAnimating(true);
+
+    setTimeout(() => {
+      const newActiveService =
+        direction === 'left'
+          ? (activeService - 1 + serviceCircles.length) % serviceCircles.length
+          : (activeService + 1) % serviceCircles.length;
+
+      setActiveService(newActiveService);
+
+      const angleChange = direction === 'left' ? 30 : -30;
+      setRotationAngle((prevAngle) => prevAngle + angleChange);
+
+      setIsTextVisible(true);
+      setIsAnimating(false);
+    }, 200);
+  };
 
   return (
     <section className={styles.vrService} id="vrservice">
       <div className={styles.container}>
         <div className={styles.circlesBackground}>
-          <div className={styles.circles}>
+          <div className={cn(styles.circles)} style={{ transform: `rotate(${rotationAngle}deg)` }}>
             {serviceCircles.map((service) => (
               <div
                 key={service.id}
@@ -83,18 +130,28 @@ const VRService = () => {
                   styles[`circle${service.id + 1}`],
                   activeService === service.id && styles.circleActive
                 )}
-                onClick={() => setActiveService(service.id)}
+                onClick={() => handleCircleClick(service.id)}
+                style={{ transform: `rotate(${-rotationAngle}deg)` }}
               >
                 <p className={styles.circleText}>{service.text}</p>
               </div>
             ))}
-            <div className={styles.arrowButtons}>
-              <div className={styles.arrowButtonRight} onClick={() => setActiveService((activeService - 1 + 7) % 7)} />
-              <div className={styles.arrowButtonLeft} onClick={() => setActiveService((activeService + 1) % 7)} />
-            </div>
+          </div>
+          <div className={styles.arrowButtons}>
+            <div
+              className={cn(styles.arrowButtonRight, activeService === 0 && styles.arrowInvisible)}
+              onClick={() => handleArrowClick('left')}
+            />
+            <div
+              className={cn(
+                styles.arrowButtonLeft,
+                activeService === serviceCircles.length - 1 && styles.arrowInvisible
+              )}
+              onClick={() => handleArrowClick('right')}
+            />
           </div>
         </div>
-        <div className={styles.textContainer}>
+        <div className={cn(styles.textContainer, isTextVisible && styles.textContainerActive)}>
           <ServiceText {...vrServicesText[activeService]} />
         </div>
       </div>
