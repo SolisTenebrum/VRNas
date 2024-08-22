@@ -10,6 +10,7 @@ import { articleContent } from '../../constants';
 import { useEffect, useState } from 'react';
 import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop';
 import Subscribe from '../../Components/Subscribe/Subscribe';
+import { shuffleArray } from '../../Components/Articles/Articles';
 
 interface IArticleProps {
   category: string;
@@ -62,6 +63,10 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
 };
 
 const ArticlePage = () => {
+  const shuffledArticles = shuffleArray(articleContent);
+
+  const recentArticles = shuffledArticles.slice(4);
+
   const params = useParams();
   const [noArticle, setNoArticle] = useState<boolean>(false);
 
@@ -109,13 +114,14 @@ const ArticlePage = () => {
               <div className={styles.recentArticles}>
                 <h4 className={styles.subsubtitle}>Recent Article</h4>
                 <div className={styles.articlesContainer}>
-                  {smallArticles.map((article, index) => (
+                  {recentArticles.map((article, index) => (
                     <ArticleSmallCard
                       key={index}
-                      image={article.image}
+                      image={article.mainImage}
                       title={article.title}
-                      span={article.span}
+                      span={article.category}
                       variant="blog-page"
+                      id={article.id}
                     />
                   ))}
                 </div>
