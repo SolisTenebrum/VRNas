@@ -52,13 +52,13 @@ const VRService = () => {
   const [rotationAngle, setRotationAngle] = useState<number>(0);
 
   const serviceCircles = [
-    { id: 0, text: 'VR Development' },
-    { id: 1, text: 'VR Games' },
-    { id: 2, text: 'VR Events' },
-    { id: 3, text: 'VR Design' },
-    { id: 4, text: 'VR Consulting' },
-    { id: 5, text: 'VR Entertainment' },
-    { id: 6, text: 'Client Testimony' },
+    { id: 0, text: 'VR Development', angle: 90 },
+    { id: 1, text: 'VR Games', angle: 60 },
+    { id: 2, text: 'VR Events', angle: 30 },
+    { id: 3, text: 'VR Design', angle: 0 },
+    { id: 4, text: 'VR Consulting', angle: -30 },
+    { id: 5, text: 'VR Entertainment', angle: -60 },
+    { id: 6, text: 'Client Testimony', angle: -90 },
   ];
 
   useEffect(() => {
@@ -69,6 +69,8 @@ const VRService = () => {
       const foundService = serviceCircles.find((service) => service.text === serviceName);
       if (foundService) {
         setActiveService(foundService.id);
+
+        setRotationAngle(foundService.angle);
       }
     }
 
@@ -79,7 +81,6 @@ const VRService = () => {
 
   const handleCircleClick = (id: number) => {
     if (isAnimating) return;
-
     setIsTextVisible(false);
     setIsAnimating(true);
 
@@ -120,7 +121,7 @@ const VRService = () => {
     <section className={styles.vrService} id="vrservice">
       <div className={styles.container}>
         <div className={styles.circlesBackground}>
-          <div className={cn(styles.circles)} style={{ transform: `rotate(${rotationAngle}deg)` }}>
+          <div className={styles.circles} style={{ transform: `rotate(${rotationAngle}deg)` }}>
             {serviceCircles.map((service) => (
               <div
                 key={service.id}
