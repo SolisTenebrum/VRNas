@@ -1,6 +1,5 @@
 import styles from './ArticlePage.module.css';
 import arrow from '../../assets/icons/menu-arrow.svg';
-import { smallArticles } from '../../constants';
 import ArticleSmallCard from '../../Components/Articles/ArticleSmallCard';
 import xIcon from '../../assets/logos/logo-x.svg';
 import facebookIcon from '../../assets/logos/logo-fb.svg';
