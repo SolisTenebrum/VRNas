@@ -26,6 +26,7 @@
   justify-content: center;
   align-items: center;
   column-gap: 200px;
+  padding: 0 16px;
 }
 
 .column {
@@ -60,13 +61,6 @@
   letter-spacing: -0.08px;
   font-weight: 600;
   max-width: 708px;
-}
-
-@media screen and (max-width: 1215px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 }
 
 @media screen and (max-width: 880px) {

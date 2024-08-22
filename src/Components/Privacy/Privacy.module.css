@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 16px;
 }
 
 .titleContainer {
@@ -121,13 +122,6 @@
   margin: 0;
   padding-left: 25px;
   list-style-type: disc;
-}
-
-@media screen and (max-width: 1215px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 }
 
 @media screen and (max-width: 880px) {

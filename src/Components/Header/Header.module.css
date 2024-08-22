@@ -10,11 +10,10 @@
 .container {
   margin: 0 auto;
   max-width: 1200px;
-  padding: 31px 0 31px 0;
+  padding: 31px 16px 31px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  column-gap: 20px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -333,14 +332,24 @@
   display: none;
 }
 
-@media screen and (max-width: 1215px) {
+@media screen and (max-width: 1228px) {
   .container {
     padding-left: 16px;
     padding-right: 16px;
   }
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 992px) {
+  .container {
+    column-gap: 20px;
+  }
+
+  .navigation {
+    column-gap: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .navigationContainer {
     display: none;
     opacity: 0;
@@ -426,7 +435,11 @@
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 576px) {
+  .buttonContainer {
+    justify-content: end;
+  }
+
   .button {
     height: 30px;
   }
@@ -476,8 +489,33 @@
 }
 
 @media screen and (max-width: 480px) {
+  .buttonContainer {
+    display: flex;
+    justify-content: end;
+    padding: 0px 0px;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .navlink {
+    width: 90%;
+    height: 52px;
+    text-decoration: none;
+    display: inline-block;
+  }
+
   .button {
     display: none;
+  }
+
+  .contactButtonBurger {
+    display: flex;
+  }
+
+  .buttonContainer {
+    justify-content: center;
+    text-decoration: none;
   }
 
   .contactButtonBurger {
@@ -487,15 +525,4 @@
     font-size: 23px;
     font-weight: 500;
   }
-
-  .buttonContainer {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    padding: 0px 10px;
-    text-decoration: none;
-  }
-}
-
-@media screen and (max-width: 430px) {
 }

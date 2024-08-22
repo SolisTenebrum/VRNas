@@ -1,5 +1,5 @@
 .vrService {
-  margin-bottom: 400px;
+  margin-bottom: 200px;
 }
 
 .container {
@@ -316,7 +316,7 @@
 
 @media screen and (max-width: 430px) {
   .vrService {
-    margin-bottom: 600px;
+    margin-bottom: 200px;
   }
 
   .circlesBackground {

@@ -33,8 +33,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 70px;
   position: relative;
+  padding: 0 16px;
+  padding-bottom: 70px;
 }
 
 .container:before {
@@ -95,11 +96,6 @@
 }
 
 @media screen and (max-width: 1215px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
   .divider {
     width: 93%;
   }

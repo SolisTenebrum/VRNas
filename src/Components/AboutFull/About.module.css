@@ -8,6 +8,7 @@
   display: flex;
   justify-content: space-between;
   column-gap: 92px;
+  padding: 0 16px;
 }
 
 .column {
@@ -128,13 +129,6 @@
 
 .video:hover .videoImage {
   transform: scale(1.1);
-}
-
-@media screen and (max-width: 1215px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 }
 
 @media screen and (max-width: 880px) {

@@ -9,6 +9,7 @@
 .container {
   margin: 0 auto;
   max-width: 1200px;
+  padding: 0 16px;
 }
 
 .content {
@@ -46,13 +47,6 @@
   font-size: 14px;
   line-height: 28px;
   color: #B0B0B2;
-}
-
-@media screen and (max-width: 1215px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 }
 
 @media screen and (max-width: 880px) {

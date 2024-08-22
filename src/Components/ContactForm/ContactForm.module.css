@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  padding: 0 16px;
 }
 
 .imageContainer {
@@ -229,13 +230,6 @@
 
 .button:focus {
   outline: 1px solid #ffffff;
-}
-
-@media screen and (max-width: 1215px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 }
 
 @media screen and (max-width: 880px) {

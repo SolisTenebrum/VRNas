@@ -177,17 +177,19 @@ const Header = () => {
           </ul>
           {burgerActive && (
             <div className={styles.buttonContainer}>
-              <NavLink to={'/contact-us'} onClick={() => setBurgerActive(false)} className={styles.buttonContainer}>
-                <button className={cn(styles.button, styles.contactButtonBurger)}>Contact us</button>
+              <NavLink to={'/contact-us'} onClick={() => setBurgerActive(false)} className={styles.navlink}>
+                <button className={cn(styles.button, burgerActive && styles.contactButtonBurger)}>Contact us</button>
               </NavLink>
             </div>
           )}
         </nav>
-        <div className={styles.buttonContainer}>
-          <NavLink to={'/contact-us'} onClick={() => setBurgerActive(false)}>
-            <button className={styles.button}>Contact us</button>
-          </NavLink>
-        </div>
+        {!burgerActive && (
+          <div className={styles.buttonContainer}>
+            <NavLink to={'/contact-us'} onClick={() => setBurgerActive(false)}>
+              <button className={styles.button}>Contact us</button>
+            </NavLink>
+          </div>
+        )}
         <div className={styles.burgerButtonContainer} onClick={handleBurgerClick}>
           <div className={styles.burgerButton}>
             <div className={cn(styles.burgerLine1, burgerActive && styles.burgerLine1Active)} />

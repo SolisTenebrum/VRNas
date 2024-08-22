@@ -9,6 +9,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  padding: 0 16px;
 }
 
 .container::before {
@@ -221,13 +222,6 @@
 
 .button:hover:before {
   opacity: 1;
-}
-
-@media screen and (max-width: 1215px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 }
 
 @media screen and (max-width: 880px) {

@@ -34,6 +34,7 @@
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
+  padding: 0 16px;
 }
 
 .column:last-of-type {
@@ -223,13 +224,6 @@
 }
 
 .vrPerson {
-}
-
-@media screen and (max-width: 1215px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 }
 
 @media screen and (max-width: 880px) {

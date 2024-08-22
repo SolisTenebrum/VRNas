@@ -49,7 +49,6 @@ const VRService = () => {
   const [activeService, setActiveService] = useState<number>(3);
   const [isTextVisible, setIsTextVisible] = useState<boolean>(false);
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
-  const [animationDirection, setAnimationDirection] = useState<string | null>(null);
   const [rotationAngle, setRotationAngle] = useState<number>(0);
 
   const serviceCircles = [

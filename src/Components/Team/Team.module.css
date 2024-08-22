@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  padding: 0 16px;
 }
 
 .row:first-of-type {
@@ -243,13 +244,6 @@
 
 .link {
   text-decoration: none;
-}
-
-@media screen and (max-width: 1215px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 }
 
 @media screen and (max-width: 880px) {

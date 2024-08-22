@@ -6,6 +6,7 @@
 .container {
   margin: 0 auto;
   max-width: 1200px;
+  padding: 0 16px;
 }
 
 .textContainer {
@@ -68,6 +69,7 @@
   background-image: url('../../assets/background-elements/logo-ipsum-background.svg');
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
   width: 102px;
   height: 102px;
   display: flex;
@@ -149,13 +151,6 @@
   }
 }
 
-@media screen and (max-width: 1215px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-
 @media screen and (max-width: 880px) {
 }
 
@@ -180,7 +175,6 @@
   }
 
   .circle {
-    background-image: url('../../assets/background-elements/logo-ipsum-background-mobile.svg');
     width: 42px;
     height: 42px;
     display: flex;

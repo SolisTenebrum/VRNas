@@ -10,6 +10,7 @@
   justify-content: space-between;
   align-items: end;
   column-gap: 68px;
+  padding: 0 16px;
 }
 
 .column {
@@ -184,13 +185,6 @@
 
 .button:hover:before {
   opacity: 1;
-}
-
-@media screen and (max-width: 1215px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 }
 
 @media screen and (max-width: 880px) {
