@@ -41,7 +41,7 @@ const ArticleSlider: React.FC<IArticleSliderProps> = ({ articles }) => {
         pagination={{
           clickable: true,
         }}
-        // modules={[Autoplay]}
+        modules={[Autoplay]}
         className="mySwiper"
         autoplay={{
           delay: 4000,
