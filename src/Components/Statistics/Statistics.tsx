@@ -9,7 +9,7 @@ const Statistics = ({ variant }: { variant: string }) => {
         {stats.map((stat, index) => (
           <div className={styles.column} key={index}>
             <div className={styles.textContainer}>
-              <h3 className={styles.subtitle}>{stat.title}</h3>
+              <p className={cn(styles.subtitle, 'gradient-text')}>{stat.title}</p>
               <p className={styles.title}>{stat.number}</p>
             </div>
           </div>

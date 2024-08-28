@@ -5,29 +5,46 @@
 .container {
   margin: 0 auto;
   max-width: 1200px;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  justify-content: flex-end;
   align-items: center;
   position: relative;
   padding: 0 16px;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .imageContainer {
-  width: 973px;
-  height: 672px;
+  max-width: 686px;
+  max-height: 686px;
+  width: 100%;
   z-index: 0;
+  position: absolute;
+  left: -2%;
+}
+
+.imageContainer::before {
+  position: absolute;
+  content: '';
+  top: 40%;
+  left: 50%;
+  width: 57%;
+  height: 46%;
+  background: linear-gradient(90deg, #0cbcf1c9 -30%, #e95ce9c5 100%);
+  filter: blur(70px);
+  border-radius: 10% 20% 100% 40%;
+  transform: rotate(-10deg) translateX(-50%) translateY(-50px);
+  z-index: -1;
 }
 
 .image {
-  position: absolute;
-  left: -14%;
-  top: 0%;
   height: 100%;
+  width: 100%;
 }
 
 .socialIconContainer {
   background-image: url('../../assets/background-elements/social-bg.svg');
   background-repeat: no-repeat;
+  background-size: contain;
   width: 46px;
   height: 46px;
   display: flex;
@@ -50,29 +67,29 @@
 }
 
 .instagramIcon {
-  bottom: 2%;
-  left: 9%;
+  bottom: 0;
+  left: 29%;
 }
 
 .facebookIcon {
-  top: 70%;
-  left: -3.5%;
+  top: 62%;
+  left: 8.5%;
 }
 
 .xIcon {
-  top: 20%;
-  left: -3%;
+  top: 15%;
+  left: 8%;
 }
 
 .githubIcon {
-  bottom: 17%;
-  right: 60%;
+  bottom: 16%;
+  right: 20%;
 }
 
 .column:last-of-type {
   max-width: 645px;
   z-index: 1;
-  flex-shrink: 0;
+  grid-column: 2;
 }
 
 .textContainer {
@@ -80,27 +97,12 @@
   max-width: 645px;
 }
 
-.subtitle {
-  margin: 0;
-  margin-bottom: 12px;
-  display: inline-block;
-  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  font-size: 16px;
-  letter-spacing: 2px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
 .title {
   margin: 0;
   margin-bottom: 15px;
   font-size: 48px;
   line-height: 58px;
-  letter-spacing: -0.5%;
+  letter-spacing: -0.08px;
   font-weight: 600;
 }
 
@@ -232,69 +234,157 @@
   outline: 1px solid #ffffff;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 1100px) {
+  .githubIcon {
+    bottom: 7%;
+    right: 37%;
+  }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr min-content;
+    row-gap: 100px;
+    justify-content: center;
+  }
+
+  .column:last-of-type {
+    grid-column: 1;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .message {
+    max-width: 100%;
+  }
+
+  .imageContainer {
+    grid-row: 2;
+    position: relative;
+    left: auto;
+    justify-self: center;
+  }
+
+  .instagramIcon {
+    bottom: 47%;
+    left: 96.5%;
+  }
+
+  .facebookIcon {
+    top: 2%;
+    left: 24.5%;
+  }
+
+  .xIcon {
+    top: 1%;
+    left: 66%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr minmax(min-content, max-content);
+    row-gap: 100px;
+    justify-content: center;
+  }
+
+  .imageContainer {
+    left: -11%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .form {
+    grid-template-areas:
+      'name '
+      'lastname'
+      'email '
+      'phone'
+      'message '
+      'button ';
+  }
+
+  .imageContainer {
+    left: -17%;
+  }
+
+  .facebookIcon {
+    top: 1%;
+  }
+
+  .instagramIcon {
+    left: 95.5%;
+  }
+
+  .githubIcon {
+    bottom: 6%;
+  }
 }
 
 @media screen and (max-width: 480px) {
-}
-
-@media screen and (max-width: 430px) {
   .contactForm {
     margin-bottom: 100px;
   }
 
   .container {
-    display: flex;
-    flex-direction: column-reverse;
     row-gap: 100px;
   }
 
-  .imageContainer {
-    width: 673px;
-    height: 472px;
-    z-index: 0;
-    position: relative;
+  .socialIconContainer {
+    width: 31px;
+    height: 31px;
   }
 
-  .image {
-    position: absolute;
-    left: -4%;
-    top: 0%;
-    width: 100%;
-    height: 100%;
-  }
-
-  .form {
-    grid-template-areas:
-      'name'
-      'lastname'
-      'email'
-      'phone'
-      'message'
-      'button';
-    row-gap: 16px;
+  .socialIcon {
+    width: 15px;
+    height: 15px;
   }
 
   .instagramIcon {
-    top: 46%;
-    left: 74%;
+    bottom: 47%;
+    left: 96.5%;
   }
-  
+
   .facebookIcon {
     top: 2%;
-    left: 22%;
+    left: 24.5%;
   }
-  
+
+  .xIcon {
+    top: 0%;
+    left: 64%;
+  }
+
+  .githubIcon {
+    bottom: 15%;
+    right: 20%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .instagramIcon {
+    bottom: 46%;
+    left: 94.5%;
+  }
+
+  .facebookIcon {
+    top: -1%;
+    left: 24.5%;
+  }
+
   .xIcon {
     top: -1%;
-    left: 52%;
+    left: 64%;
   }
-  
+
   .githubIcon {
-    bottom: 18%;
-    right: 33%;
+    bottom: 15%;
+    right: 16%;
   }
 }

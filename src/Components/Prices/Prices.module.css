@@ -19,21 +19,6 @@
   align-items: center;
 }
 
-.subtitle {
-  margin: 0;
-  margin-bottom: 12px;
-  display: inline-block;
-  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  font-size: 16px;
-  letter-spacing: 2px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
 .title {
   margin: 0;
   margin-bottom: 16px;
@@ -54,7 +39,8 @@
 }
 
 .row:last-of-type {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 62px;
 }
 
@@ -85,6 +71,14 @@
   align-items: flex-start;
 }
 
+.top {
+  grid-area: top;
+}
+
+.bottom {
+  grid-area: bottom;
+}
+
 .cardTitle {
   margin: 0;
   margin-bottom: 9px;
@@ -96,7 +90,6 @@
   margin: 0;
   margin-bottom: 9px;
   font-size: 64px;
-  line-height: -0.08;
   font-weight: 600;
 }
 
@@ -164,6 +157,7 @@
   overflow: hidden;
   align-self: center;
   z-index: 1;
+  grid-area: cardButton;
 }
 
 .cardButton::before {
@@ -189,28 +183,137 @@
   color: white;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 1280px) {
+  .row:last-of-type {
+    column-gap: 20px;
+    justify-content: center;
+  }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1160px) {
+  .row:last-of-type {
+    column-gap: 20px;
+    justify-content: center;
+    row-gap: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .pricingCard {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    justify-self: center;
+  }
+
+  .cardText {
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 28px;
+    color: #b0b0b2;
+    max-width: 100%;
+  }
+
+  .cardList {
+    max-width: 100%;
+    margin-bottom: 0px;
+  }
+
+  .cardContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    column-gap: 20px;
+    row-gap: 10px;
+    grid-template-areas:
+      'top bottom'
+      'cardButton bottom';
+    width: 100%;
+  }
+
+  .top {
+    align-self: center;
+    justify-self: center;
+  }
+
+  .cardTitle {
+    text-align: center;
+  }
+
+  .cardPrice {
+    font-size: 85px;
+  }
+
+  .cardButton {
+    justify-self: center;
+    align-self: flex-end;
+  }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 992px) {
+  .pricingCard {
+    width: 90%;
+  }
+  .cardContent {
+  }
 }
 
-@media screen and (max-width: 430px) {
-  .prices {
-    margin-bottom: 100px;
+@media screen and (max-width: 768px) {
+  .pricingCard {
+    width: 100%;
   }
 
   .title {
     font-size: 32px;
-    line-height: normal;
   }
 
-  .row:last-of-type {
-    padding: 0 16px;
+  .cardPrice {
+    font-size: 64px;
+  }
+
+  .cardButton {
+    width: 230px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .pricingCard {
+    width: 100%;
+  }
+  .cardContent {
+    display: flex;
     flex-direction: column;
-    row-gap: 40px;
+    align-items: center;
+    row-gap: 10px;
+  }
+
+  .cardButton {
+    align-self: center;
+    width: 292px;
+  }
+
+  .cardList {
+    margin-bottom: 50px;
+  }
+
+  .bottom {
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .cardContent {
+    padding: 29px 5px 30px 10px;
+  }
+
+  .cardText {
+    text-align: center;
+  }
+
+  .cardButton {
+    width: 250px;
   }
 }

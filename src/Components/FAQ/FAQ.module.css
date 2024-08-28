@@ -31,6 +31,7 @@
 }
 
 .vrpersonContainer {
+  max-width: 100%;
 }
 
 .vrpersonContainer::before {
@@ -39,18 +40,18 @@
   background-image: url('../../assets/background-elements/fading-background.svg');
   background-repeat: no-repeat;
   background-size: cover;
-  top: 254px;
+  top: 214px;
   left: 0;
   width: 100%;
   height: 344px;
-  z-index: 0;
+  z-index: -1;
 }
 
 .vrperson {
   position: absolute;
-  height: 520px;
-  width: 360px;
-  z-index: -1;
+  max-width: 360px;
+  max-height: 100%;
+  z-index: -2;
 }
 
 .vrperson:first-of-type {
@@ -82,21 +83,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.subtitle {
-  margin: 0;
-  margin-bottom: 12px;
-  display: inline-block;
-  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  font-size: 16px;
-  letter-spacing: 2px;
-  font-weight: 500;
-  text-transform: uppercase;
 }
 
 .title {
@@ -262,60 +248,100 @@
   transition: transform 0.3s ease;
 }
 
-@media screen and (max-width: 880px) {
-}
-
-@media screen and (max-width: 550px) {
-}
-
-@media screen and (max-width: 480px) {
-}
-
-@media screen and (max-width: 430px) {
-  .faq {
-    margin-bottom: 100px;
+@media screen and (max-width: 1280px) {
+  .vrperson {
+    max-width: 260px;
   }
 
-  .faq_aboutus {
-    overflow-x: clip;
+  .vrperson:first-of-type {
+    right: -9%;
+  }
+  
+  .vrperson:last-of-type {
+    left: -9%;
   }
 
+  .vrpersonContainer::before {
+    top: 164px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .vrperson {
+    max-width: 200px;
+  }
+
+  .vrpersonContainer::before {
+    top: 64px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .title {
-    margin: 0;
-    margin-bottom: 12px;
     font-size: 32px;
-    line-height: normal;
     text-align: center;
+    margin-bottom: 14px;
+    line-height: normal
   }
 
   .faqCardTitle {
     font-size: 16px;
-    line-height: normal;
-  }
-
-  .vrpersonContainer::before {
-    top: 39px;
-    left: 0;
-    width: 100%;
-    height: 202px;
-    z-index: 0;
   }
 
   .vrperson {
-    position: absolute;
-    height: 156px;
-    width: 108px;
-    z-index: -1;
+    max-width: 150px;
+  }
+
+  .vrpersonContainer::before {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .faqCard {
+    margin-bottom: 24px;
+    border-image: linear-gradient(90deg, #585858 0%, #7e7e7e13 100%) 1;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #252532;
+    padding: 20px 20px 20px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .faqCardTitle {
+    font-size: 14px;
   }
 
   .vrperson:first-of-type {
-    top: 0;
-    right: -9%;
+    right: -12%;
   }
-
+  
   .vrperson:last-of-type {
-    top: 0;
-    left: -9%;
-    transform: scaleX(-1);
+    left: -12%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .button {
+    padding: 12px 15px 12px 15px;
+  }
+  
+  .vrperson:first-of-type {
+    right: -18%;
+  }
+  
+  .vrperson:last-of-type {
+    left: -18%;
+  }
+}
+
+@media screen and (max-width: 320px) {  
+  .vrperson:first-of-type {
+    right: -22%;
+  }
+  
+  .vrperson:last-of-type {
+    left: -22%;
   }
 }

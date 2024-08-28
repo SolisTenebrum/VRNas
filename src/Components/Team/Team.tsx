@@ -44,7 +44,7 @@ const Team = ({ variant }: { variant: string }) => {
       <div className={styles.container}>
         <div className={cn(styles.row, variant === 'our-team-page' ? styles.row_ourteam : '')}>
           <div className={cn(styles.textContainer, variant === 'our-team-page' ? styles.textContainer_ourteam : '')}>
-            <h3 className={styles.subtitle}>Our Team</h3>
+            <p className={cn(styles.subtitle, 'gradient-text')}>Our Team</p>
             <h2 className={styles.title}>Our Professionals Team</h2>
           </div>
           {variant !== 'our-team-page' && (

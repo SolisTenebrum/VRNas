@@ -1,6 +1,7 @@
 import styles from './Privacy.module.css';
 import vrperson from '../../assets/vrperson/vrperson4.png';
 import { privacyPolicyText } from '../../constants';
+import { clsx as cn } from 'clsx';
 
 const Privacy = () => {
   return (
@@ -11,7 +12,7 @@ const Privacy = () => {
       </div>
       <div className={styles.container}>
         <div className={styles.titleContainer}>
-          <h3 className={styles.subtitle}>Privacy Policy</h3>
+          <p className={cn(styles.subtitle, 'gradient-text')}>Privacy Policy</p>
           <h2 className={styles.title}>Privacy Policy</h2>
           <p className={styles.text}>
             This Privacy Policy describes how [Company Name] collects, uses, and protects the personal information of

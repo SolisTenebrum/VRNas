@@ -44,27 +44,13 @@
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 104px;
+  column-gap: 30px;
 }
 
 .textContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-
-.subtitle {
-  margin: 0;
-  margin-bottom: 12px;
-  display: inline-block;
-  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  font-size: 16px;
-  letter-spacing: 2px;
-  font-weight: 500;
-  text-transform: uppercase;
 }
 
 .title {
@@ -137,12 +123,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  flex: 1;
-}
-
-.sliderContainer {
-  position: relative;
-  display: flex;
+  flex: 0 0 45%;
 }
 
 .secondColumn {
@@ -150,6 +131,7 @@
   flex-direction: column;
   height: 572px;
   position: relative;
+  flex: 0 0 40%;
 }
 
 .secondColumn::before {
@@ -178,7 +160,7 @@
 .articleFullImageContainer {
   position: relative;
   outline: none;
-  max-width: 636px;
+  max-width: 100%;
   height: 425px;
 }
 
@@ -311,7 +293,7 @@
 }
 
 .articlesContainer {
-  height: 572px;
+  max-width: 100%;
   overflow-y: scroll;
   scrollbar-width: none;
   scrollbar-color: transparent transparent;
@@ -327,6 +309,7 @@
   padding-bottom: 32px;
   border-bottom: 1px solid #ffffff75;
   display: flex;
+  align-items: center;
   position: relative;
   padding-top: 32px;
 }
@@ -351,6 +334,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .articleCardImageContainer_blogpage {
@@ -374,13 +358,12 @@
 
 .articleCardInfo {
   max-width: 297px;
-  padding-left: 21px;
-  padding-top: 7px;
-  padding-right: 13px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-left: 20px;
+  padding-right: 10px;
 }
 
 .articleCardInfo_blogpage {
@@ -503,8 +486,7 @@
 }
 
 .articleSlider {
-  width: 636px;
-  height: 425px;
+  max-width: 636px;
   position: relative;
 }
 
@@ -512,161 +494,168 @@
   display: none;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 1440px) {
+  .articleSlider {
+    max-width: 620px;
+  }
 }
 
-@media screen and (max-width: 550px) {
-}
-
-@media screen and (max-width: 480px) {
-}
-
-@media screen and (max-width: 430px) {
-  .articles {
-    width: 100%;
-    margin-bottom: 100px;
-    padding-top: 0;
+@media screen and (max-width: 1280px) {
+  .articleSlider {
+    max-width: 540px;
   }
 
-  .articles::before {
-    top: 88%;
+  .secondColumn {
+    flex: 0 0 45%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .secondColumn {
+    flex: 0 0 40%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .articleSlider {
+    max-width: 500px;
+  }
+
+  .content {
+    column-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .content {
+    flex-direction: column;
+    row-gap: 80px;
+  }
+
+  .articleSlider {
+    max-width: 100%;
+  }
+
+  .articlesContainer {
+    max-width: 100%;
+  }
+
+  .articleCard {
+    max-width: 95%;
+  }
+
+  .secondColumn {
+    padding: 30px 20px 0 20px;
+    height: 685px;
+    flex: 0 0 auto;
+  }
+
+  .secondColumn::before {
+    width: 100%;
+    height: 714px;
+    background-color: #252532;
+    top: 0;
     left: 0;
-    width: 100vw;
-    height: 400px;
+    overflow: hidden;
+  }
+
+  .articleCardInfo {
+    max-width: 100%;
+    flex-grow: 1;
+  }
+
+  .scrollBar {
+    width: 2px;
+    height: 80%;
+    right: 20px;
+    bottom: 31px;
   }
 
   .button {
     display: none;
   }
 
-  .container {
-    margin-bottom: 32px;
+  .buttonMobile {
+    display: block;
+    margin: 40px auto 0;
   }
+}
 
-  .container::before {
-    position: absolute;
-    content: '';
-    top: 200px;
-    left: -150px;
-    width: 400px;
-    height: 200px;
+@media screen and (max-width: 768px) {
+  .containerTop {
+    column-gap: 0;
+    margin-bottom: 50px;
   }
 
   .title {
-    font-size: 32px;
     line-height: normal;
   }
 
-  .containerTop {
-    margin-bottom: 40px;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 111px;
-    margin-bottom: 35px;
-  }
-
-  .articleSlider {
-    max-width: 398px;
-    height: 266px;
-  }
-
-  .articleFullImageContainer {
-    max-width: 398px;
-    height: 266px;
-  }
-
-  .articleFullImageInfo {
-    bottom: 20px;
-    left: 16px;
+  .articleCardInfo {
+    padding-right: 0;
   }
 
   .articleFullImageTitle {
-    font-size: 20px;
-    line-height: normal;
-    letter-spacing: normal;
-    max-width: 264px;
-    cursor: pointer;
-  }
-
-  .goButton {
-    bottom: 20px;
-    right: 16px;
+    font-size: 32px;
+    max-width: 80%;
   }
 
   .articleCardGoButton {
     display: none;
   }
 
-  .secondColumn {
-    padding-left: 16px;
-    padding-right: 30px;
-  }
-
-  .secondColumn::before {
-    width: 100%;
-    height: 605px;
-    top: -34px;
-    left: 0;
-    z-index: -1;
-  }
-
-  .articleCardInfo {
-    max-width: 190px;
-    padding-left: 21px;
-    padding-right: 13px;
-  }
-
-  .scrollBar {
-    width: 2px;
-    height: 80%;
-    right: 10px;
-    bottom: 31px;
-  }
-
-  .articleCardTitle {
-    margin: 0;
-    font-size: 16px;
-    letter-spacing: normal;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    overflow: hidden;
-    text-wrap: wrap;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    -webkit-box-orient: vertical;
-  }
-
-  .buttonMobile {
-    display: block;
-  }
-
-  .link {
-    display: flex;
-    justify-content: center;
-  }
-
   .articleCardTitle_blogpage {
-    font-size: 13px;
-    font-weight: 300;
-    letter-spacing: 0;
-    text-overflow: none;
-    display: -webkit-box;
-    overflow: visible;
-    -webkit-line-clamp: 5;
-    line-clamp: 5;
-    -webkit-box-orient: horizontal;
-  }
-
-  .articleCardInfo_blogpage {
-    max-width: 257px;
+    font-size: 15px;
   }
 
   .articleCardSpan_blogpage {
-    font-size: 11px;
-    line-height: 14px;
+    font-size: 14px;
+    line-height: normal;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .articleFullImageTitle {
+    font-size: 20px;
+    line-height: normal;
+    max-width: 80%;
+  }
+
+  .articleFullImageContainer {
+    height: 266px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .articleFullImageTitle {
+    max-width: 65%;
+  }
+
+  .articleCardImageContainer {
+    width: 101px;
+    height: 71px;
+  }
+
+  .articleCardTitle {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+  }
+
+  .articleCardSpan {
+    font-size: 12px;
+    line-height: normal;
+  }
+
+  .articleCardInfo {
+    padding-left: 10px;
   }
 }

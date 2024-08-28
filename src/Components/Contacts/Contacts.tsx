@@ -2,6 +2,7 @@ import styles from './Contacts.module.css';
 import emailIcon from '../../assets/icons/email-icon-white.svg';
 import locationIcon from '../../assets/icons/location-icon-white.svg';
 import callIcon from '../../assets/icons/call-icon-white.svg';
+import { clsx as cn } from 'clsx';
 
 const Contacts = () => {
   return (
@@ -13,7 +14,7 @@ const Contacts = () => {
               <img src={emailIcon} className={styles.icon} />
             </div>
             <div className={styles.textContainer}>
-              <h3 className={styles.subtitle}>Email</h3>
+              <p className={cn(styles.subtitle, 'gradient-text')}>Email</p>
               <h2 className={styles.title}>Support@VRNas.com</h2>
             </div>
           </div>
@@ -24,7 +25,7 @@ const Contacts = () => {
               <img src={locationIcon} className={styles.icon} />
             </div>
             <div className={styles.textContainer}>
-              <h3 className={styles.subtitle}>Address</h3>
+              <p className={cn(styles.subtitle, 'gradient-text')}>Address</p>
               <h2 className={styles.title}>Tanjung Sari Street no.48, Pontianak City</h2>
             </div>
           </div>
@@ -35,7 +36,7 @@ const Contacts = () => {
               <img src={callIcon} className={styles.icon} />
             </div>
             <div className={styles.textContainer}>
-              <h3 className={styles.subtitle}>Phone</h3>
+              <p className={cn(styles.subtitle, 'gradient-text')}>Phone</p>
               <h2 className={styles.title}>+123 456 7890</h2>
             </div>
           </div>

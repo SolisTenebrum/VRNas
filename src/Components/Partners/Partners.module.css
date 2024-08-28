@@ -1,6 +1,5 @@
 .partners {
   margin-bottom: 150px;
-  /* overflow-x: clip; */
 }
 
 .container {
@@ -15,21 +14,6 @@
   align-items: center;
 }
 
-.subtitle {
-  margin: 0;
-  margin-bottom: 12px;
-  display: inline-block;
-  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  font-size: 16px;
-  letter-spacing: 2px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
 .title {
   margin: 0;
   margin-bottom: 58px;
@@ -37,6 +21,7 @@
   line-height: 58px;
   letter-spacing: -0.08px;
   font-weight: 600;
+  text-align: center;
 }
 
 .content {
@@ -54,14 +39,14 @@
 .imageContainer::before {
   position: absolute;
   content: '';
-  top: 50%;
-  left: 20%;
-  width: 60%;
-  height: 40%;
+  top: 35%;
+  left: 50%;
+  width: 57%;
+  height: 46%;
   background: linear-gradient(90deg, #0cbcf1c9 -30%, #e95ce9c5 100%);
-  filter: blur(50px);
+  filter: blur(70px);
   border-radius: 10% 20% 100% 40%;
-  transform: rotate(-20deg);
+  transform: rotate(-10deg) translateX(-50%) translateY(50px);
   z-index: -1;
 }
 
@@ -151,78 +136,42 @@
   }
 }
 
-@media screen and (max-width: 880px) {
-}
-
-@media screen and (max-width: 550px) {
-}
-
-@media screen and (max-width: 480px) {
-}
-
-@media screen and (max-width: 430px) {
-  .partners {
-    /* padding-bottom: 130px;
-    margin: 0; */
-    margin-bottom: 100px;
-  }
-
+@media screen and (max-width: 992px) {
   .title {
-    margin-bottom: 24px;
     font-size: 32px;
-    line-height: normal;
-    text-align: center;
   }
 
   .circle {
-    width: 42px;
-    height: 42px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .circle1 {
-    bottom: 30%;
-    left: 2.5%;
-  }
-
-  .circle2 {
-    bottom: 58%;
-    left: 10%;
-  }
-
-  .circle3 {
-    bottom: 76%;
-    left: 25%;
-  }
-
-  .circle4 {
-    bottom: 84%;
-    left: 45.5%;
-  }
-
-  .circle5 {
-    bottom: 76%;
-    right: 25%;
-  }
-
-  .circle6 {
-    bottom: 58%;
-    right: 10%;
-  }
-
-  .circle7 {
-    bottom: 30%;
-    right: 2.5%;
+    width: 11vw;
+    height: 11vw;
   }
 
   .logo {
-    width: 34px;
-    height: 13px;
+    width: 8vw;
+    height: 4vw;
   }
 
   .halfCircle {
     max-width: 100vw;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .partners {
+    margin-bottom: 100px;
+  }
+
+  .title {
+    line-height: normal;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
 }

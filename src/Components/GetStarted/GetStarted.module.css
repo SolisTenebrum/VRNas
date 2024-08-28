@@ -27,19 +27,7 @@
 }
 
 .subtitle {
-  margin: 0;
-  margin-bottom: 12px;
-  display: inline-block;
-  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  font-size: 16px;
-  letter-spacing: 2px;
-  font-weight: 500;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .title {
@@ -63,7 +51,8 @@
   margin-bottom: 48px;
   overflow: hidden;
   position: relative;
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   height: 522px;
   border-radius: 12px 12px 0 0;
 }
@@ -72,6 +61,7 @@
   content: '';
   background-image: url('../../assets/icons/play-button-big.svg');
   background-repeat: no-repeat;
+  background-size: contain;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -145,6 +135,7 @@
   line-height: 44px;
   letter-spacing: -0.9px;
   font-weight: 500;
+  text-shadow: #e95ce9 2px 0 5px;
 }
 
 .controls {
@@ -224,50 +215,72 @@
   opacity: 1;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 992px) {
+  
 }
 
-@media screen and (max-width: 550px) {
-}
-
-@media screen and (max-width: 480px) {
-}
-
-@media screen and (max-width: 430px) {
-  .getStarted {
-    margin-bottom: 100px;
-  }
-
+@media screen and (max-width: 768px) {
   .title {
     font-size: 32px;
-    line-height: normal;
-    margin-bottom: 32px;
-  }
-
-  .videoInfo {
-    top: 22px;
-    left: 16px;
   }
 
   .video {
-    margin-bottom: 32px;
-    max-width: 398px;
-    height: 254px;
-    border-radius: 12px 12px 0 0;
+    height: 422px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    line-height: normal;
+  }
+
+  .video {
+    height: 322px;
+  }
+
+  .videoInfo {
+    top: 32px;
+    left: 24px;
+  }
+
+  .videoSpan {
+    font-size: 12px;
+  }
+
+  .videoTitle {
+    font-size: 28px;
+    line-height: 44px;
+  }
+
+  .controls {
+    position: absolute;
+    width: calc(100% - 66px);
+    bottom: 32px;
+    left: 24px;
+  }
+
+  .video::after {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 25px;
+  }
+  
+  .video {
+    height: 222px;
+  }
+
+  .videoSpan {
+    font-size: 12px;
+    margin: 0;
   }
 
   .videoTitle {
     font-size: 20px;
-    line-height: normal;
-    letter-spacing: normal;
-  }
-
-  .video::after {
-    content: '';
-    background-image: url('../../assets/icons/play-button-big-mobile.svg');
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
+    line-height: 44px;
   }
 }

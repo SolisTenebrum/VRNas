@@ -24,7 +24,7 @@
 }
 
 .vrpersonContainer {
-  font-size: 1px;
+  max-width: 100%;
   z-index: 0;
 }
 
@@ -34,7 +34,7 @@
   background-image: url('../../assets/background-elements/fading-background.svg');
   background-repeat: no-repeat;
   background-size: cover;
-  top: 254px;
+  top: 214px;
   left: 0;
   width: 100%;
   height: 344px;
@@ -43,8 +43,8 @@
 
 .vrperson {
   position: absolute;
-  height: 520px;
-  width: 360px;
+  max-width: 360px;
+  max-height: 100%;
   z-index: -2;
 }
 
@@ -57,21 +57,6 @@
   top: 0;
   left: -6%;
   transform: scaleX(-1);
-}
-
-.subtitle {
-  margin: 0;
-  margin-bottom: 12px;
-  display: inline-block;
-  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  font-size: 16px;
-  letter-spacing: 2px;
-  font-weight: 500;
-  text-transform: uppercase;
 }
 
 .title {
@@ -126,53 +111,81 @@
   list-style-type: disc;
 }
 
+@media screen and (max-width: 1280px) {
+  .vrperson {
+    max-width: 260px;
+  }
 
-@media screen and (max-width: 880px) {
+  .vrperson:first-of-type {
+    right: -9%;
+  }
+
+  .vrperson:last-of-type {
+    left: -9%;
+  }
+
+  .vrpersonContainer::before {
+    top: 164px;
+  }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 992px) {
+  .vrperson {
+    max-width: 200px;
+  }
+
+  .vrpersonContainer::before {
+    top: 64px;
+  }
 }
 
-@media screen and (max-width: 480px) {
-}
-
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 768px) {
   .terms {
     margin-bottom: 100px;
   }
 
   .title {
     font-size: 32px;
+    text-align: center;
+    margin-bottom: 14px;
     line-height: normal;
   }
 
-  .text {
-    max-width: 347px;
+  .vrperson {
+    max-width: 150px;
   }
 
   .vrpersonContainer::before {
-    top: 39px;
-    left: 0;
-    width: 100%;
-    height: 202px;
-    z-index: 0;
-  }
-
-  .vrperson {
-    position: absolute;
-    height: 156px;
-    width: 108px;
-    z-index: -1;
-  }
-
-  .vrperson:first-of-type {
     top: 0;
-    right: -9%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .vrperson:first-of-type {
+    right: -12%;
   }
 
   .vrperson:last-of-type {
-    top: 0;
-    left: -9%;
-    transform: scaleX(-1);
+    left: -12%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .vrperson:first-of-type {
+    right: -18%;
+  }
+
+  .vrperson:last-of-type {
+    left: -18%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .vrperson:first-of-type {
+    right: -22%;
+  }
+
+  .vrperson:last-of-type {
+    left: -22%;
   }
 }

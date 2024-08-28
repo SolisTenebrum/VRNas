@@ -1,5 +1,6 @@
 import styles from './Prices.module.css';
 import { pricingCardsList } from '../../constants';
+import { clsx as cn } from 'clsx';
 
 interface IPricingCardProps {
   title: string;
@@ -13,19 +14,23 @@ const PricingCard = ({ title, price, text, list, buttonText }: IPricingCardProps
   return (
     <div className={styles.pricingCard}>
       <div className={styles.cardContent}>
-        <h4 className={styles.cardTitle}>{title}</h4>
-        <h3 className={styles.cardPrice}>
-          {price}
-          <span className={styles.cardPriceSpan}>/ month</span>
-        </h3>
-        <p className={styles.cardText}>{text}</p>
-        <ul className={styles.cardList}>
-          {list.map((item, index) => (
-            <li className={styles.cardListItem} key={index}>
-              {item}
-            </li>
-          ))}
-        </ul>
+        <div className={styles.top}>
+          <h4 className={styles.cardTitle}>{title}</h4>
+          <h3 className={styles.cardPrice}>
+            {price}
+            <span className={styles.cardPriceSpan}>/ month</span>
+          </h3>
+        </div>
+        <div className={styles.bottom}>
+          <p className={styles.cardText}>{text}</p>
+          <ul className={styles.cardList}>
+            {list.map((item, index) => (
+              <li className={styles.cardListItem} key={index}>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
         <button className={styles.cardButton}>{buttonText}</button>
       </div>
     </div>
@@ -38,7 +43,7 @@ const Prices = () => {
       <div className={styles.container}>
         <div className={styles.row}>
           <div className={styles.textContainer}>
-            <h3 className={styles.subtitle}>Pricing</h3>
+            <p className={cn(styles.subtitle, 'gradient-text')}>Pricing</p>
             <h2 className={styles.title}>Pricing Plans</h2>
             <p className={styles.text}>
               Choose the pricing plan that fits your needs and budget. All plans come with a free trial period so you

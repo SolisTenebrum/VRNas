@@ -4,15 +4,40 @@ import { useState, useRef, useEffect } from 'react';
 import { clsx as cn } from 'clsx';
 import { NavLink, useLocation } from 'react-router-dom';
 
-const NavigationItem = ({
-  href,
-  navName,
-  setBurgerActive,
-}: {
+const pageButtonArray = [
+  {
+    name: 'Detail Service',
+    href: '/detail-service',
+  },
+  {
+    name: 'Pricing Plan',
+    href: '/pricing-plan',
+  },
+  {
+    name: 'Our Team',
+    href: '/our-team',
+  },
+  {
+    name: 'FAQ',
+    href: '/faq',
+  },
+  {
+    name: 'Terms & Conditions',
+    href: '/terms-and-conditions',
+  },
+  {
+    name: 'Privacy Policy',
+    href: '/privacy-policy',
+  },
+];
+
+interface INavigationItemProps {
   href: string;
   navName: string;
   setBurgerActive: (isActive: boolean) => void;
-}) => {
+}
+
+const NavigationItem = ({ href, navName, setBurgerActive }: INavigationItemProps) => {
   const scroll = () => {
     window.scrollTo({
       top: 0,
@@ -45,13 +70,16 @@ const Header = () => {
   const [burgerActive, setBurgerActive] = useState(false);
 
   const location = useLocation();
-  const isPageActive =
-    location.pathname.startsWith('/detail-service') ||
-    location.pathname.startsWith('/pricing-plan') ||
-    location.pathname.startsWith('/our-team') ||
-    location.pathname.startsWith('/faq') ||
-    location.pathname.startsWith('/terms-and-conditions') ||
-    location.pathname.startsWith('/privacy-policy');
+  const isPageActive = [
+    '/detail-service',
+    '/pricing-plan',
+    '/our-team',
+    '/faq',
+    '/terms-and-conditions',
+    '/privacy-policy',
+  ].some((path) => location.pathname.startsWith(path));
+
+  const isContactPage = location.pathname === '/contact-us';
 
   const handleMenuClick = () => {
     setOpenedMenu(!openedMenu);
@@ -104,11 +132,7 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    if (burgerActive) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+    document.body.style.overflow = burgerActive ? 'hidden' : 'auto';
   }, [burgerActive]);
 
   return (
@@ -119,7 +143,6 @@ const Header = () => {
             <img src={logo} alt={'vrnas-logo'} className={styles.logo} />
           </NavLink>
         </div>
-
         <nav className={cn(styles.navigationContainer, burgerActive && styles.navigationContainerActive)}>
           <ul className={styles.navigation}>
             <NavigationItem href={'/'} navName={'Home'} setBurgerActive={setBurgerActive} />
@@ -131,40 +154,13 @@ const Header = () => {
                 <button className={cn(styles.arrow, `${openedMenu ? styles.active : ''}`)}></button>
               </div>
               <ul className={cn(styles.menu, `${openedMenu ? styles.menuActive : ''}`)} ref={menuRef}>
-                <li>
-                  <NavLink className={styles.menuElement} to={'/detail-service'} onClick={() => setBurgerActive(false)}>
-                    Detail Service
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className={styles.menuElement} to={'/pricing-plan'} onClick={() => setBurgerActive(false)}>
-                    Pricing Plan
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className={styles.menuElement} to={'/our-team'} onClick={() => setBurgerActive(false)}>
-                    Our Team
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className={styles.menuElement} to={'/faq'} onClick={() => setBurgerActive(false)}>
-                    FAQ
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    className={styles.menuElement}
-                    to={'/terms-and-conditions'}
-                    onClick={() => setBurgerActive(false)}
-                  >
-                    Terms &amp; Conditions
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className={styles.menuElement} to={'/privacy-policy'} onClick={() => setBurgerActive(false)}>
-                    Privacy Policy
-                  </NavLink>
-                </li>
+                {pageButtonArray.map((item, index) => (
+                  <li key={index}>
+                    <NavLink to={`${item.href}`} className={styles.menuElement} onClick={() => setBurgerActive(false)}>
+                      {item.name}
+                    </NavLink>
+                  </li>
+                ))}
               </ul>
             </li>
             <li className={styles.navigationElement}>
@@ -176,25 +172,26 @@ const Header = () => {
             </li>
           </ul>
           {burgerActive && (
-            <div className={styles.buttonContainer}>
-              <NavLink to={'/contact-us'} onClick={() => setBurgerActive(false)} className={styles.navlink}>
-                <button className={cn(styles.button, burgerActive && styles.contactButtonBurger)}>Contact us</button>
+            <div className={cn(styles.contactButtonBurgerContainer, isContactPage && styles.buttonContactUsPage)}>
+              <NavLink to={'/contact-us'} onClick={() => setBurgerActive(false)}>
+                <button className={cn(styles.contactBurgerButton)}>Contact us</button>
               </NavLink>
             </div>
           )}
         </nav>
-        {!burgerActive && (
-          <div className={styles.buttonContainer}>
-            <NavLink to={'/contact-us'} onClick={() => setBurgerActive(false)}>
-              <button className={styles.button}>Contact us</button>
-            </NavLink>
-          </div>
-        )}
+        <div className={cn(styles.buttonContainer, isContactPage && styles.buttonContactUsPage)}>
+          <NavLink to={'/contact-us'} onClick={() => setBurgerActive(false)}>
+            <button className={cn(styles.button)}>Contact us</button>
+          </NavLink>
+        </div>
         <div className={styles.burgerButtonContainer} onClick={handleBurgerClick}>
           <div className={styles.burgerButton}>
-            <div className={cn(styles.burgerLine1, burgerActive && styles.burgerLine1Active)} />
-            <div className={cn(styles.burgerLine2, burgerActive && styles.burgerLine2Active)} />
-            <div className={cn(styles.burgerLine3, burgerActive && styles.burgerLine3Active)} />
+            {[1, 2, 3].map((line) => (
+              <div
+                key={line}
+                className={cn(styles[`burgerLine${line}`], burgerActive && styles[`burgerLine${line}Active`])}
+              />
+            ))}
           </div>
         </div>
       </div>

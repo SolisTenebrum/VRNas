@@ -1,5 +1,6 @@
 import styles from './About.module.css';
 import vrperson2 from '../../assets/vrperson/vrperson4.png'
+import { clsx as cn } from 'clsx';
 
 const About = () => {
   return (
@@ -7,7 +8,7 @@ const About = () => {
       <div className={styles.container}>
         <div className={styles.column}>
           <div className={styles.textContainer}>
-            <h3 className={styles.subtitle}>About Us</h3>
+            <p className={cn(styles.subtitle, 'gradient-text')}>About Us</p>
             <h2 className={styles.title}>Bringing Your Vision to Life: Learn About VRNas</h2>
             <p className={styles.text}>
               VRNas is a leading provider of VR services for education, entertainment, architecture, and events. Our

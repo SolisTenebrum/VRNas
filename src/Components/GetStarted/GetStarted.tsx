@@ -6,9 +6,9 @@ const GetStarted = ({ variant }: { variant: string }) => {
   return (
     <section className={styles.getStarted}>
       <div className={styles.container}>
-        <h3 className={styles.subtitle}>
+        <p className={cn(styles.subtitle, 'gradient-text')}>
           {variant === 'detail-service-page' ? 'Our VR Design Project' : 'How To Get Started'}
-        </h3>
+        </p>
         <h2 className={cn(styles.title, variant === 'detail-service-page' ? styles.title_detailservice : '')}>
           {variant === 'detail-service-page'
             ? 'Revolutionize Your Experience with Our Cutting-Edge VR Design Project'

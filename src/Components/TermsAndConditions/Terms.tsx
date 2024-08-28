@@ -1,6 +1,7 @@
 import styles from './Terms.module.css';
 import vrperson from '../../assets/vrperson/vrperson4.png';
 import { termsAndConditionsText } from '../../constants';
+import { clsx as cn } from 'clsx';
 
 const Terms = () => {
   return (
@@ -11,7 +12,7 @@ const Terms = () => {
       </div>
       <div className={styles.container}>
         <div className={styles.titleContainer}>
-          <h3 className={styles.subtitle}>Tems & Conditions</h3>
+          <p className={cn(styles.subtitle, 'gradient-text')}>Tems & Conditions</p>
           <h2 className={styles.title}>Terms and Conditions</h2>
           <p className={styles.text}>
             Welcome to VRNas. Please read these Terms and Conditions carefully before using our website and services.

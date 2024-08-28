@@ -25,7 +25,7 @@ const Choose = ({ variant }: { variant: string }) => {
       >
         <div className={styles.column}>
           <div className={styles.textContainer}>
-            <h3 className={styles.subtitle}>Why Choose Us</h3>
+            <p className={cn(styles.subtitle, 'gradient-text')}>Why Choose Us</p>
             <h2 className={styles.title}>Why Choose Us for Your VR Needs</h2>
             <div className={styles.spoilers}>
               {chooseUsSpoilerItems.map((item: { title: string; description: string }, index: number) => {

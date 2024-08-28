@@ -1066,8 +1066,7 @@ const clients = [
     image: clientImageFive,
     name: 'Michael Brooks',
     company: 'Systems Architect',
-    message: `Curabitur vel diam neque. Curabitur tempor suscipit egestas. Nunc justo urna, pharetra a pulvinar
-     et, consequat vel magna. Etiam dapibus egestas quam, in.`,
+    message: `Curabitur vel diam neque. Curabitur tempor suscipit egestas. Nunc justo urna pellentesque.`,
   },
   {
     image: clientImageSix,

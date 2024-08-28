@@ -1,10 +1,11 @@
 import styles from './About.module.css';
 import vrperson2 from '../../assets/vrperson/vrperson2.png';
 import { NavLink } from 'react-router-dom';
+import { clsx as cn } from 'clsx';
 
 const About = () => {
   return (
-    <section className={styles.about} id='about'>
+    <section className={styles.about} id="about">
       <div className={styles.container}>
         <div className={styles.column}>
           <div className={styles.vrpersonContainer}>
@@ -16,7 +17,7 @@ const About = () => {
           </div>
         </div>
         <div className={styles.column}>
-          <h3 className={styles.subtitle}>About Us</h3>
+          <p className={cn(styles.subtitle, 'gradient-text')}>About Us</p>
           <h2 className={styles.title}>Bring your events to life like never before with our VR services.</h2>
           <p className={styles.text}>
             VRNas is a leading provider of VR services for education, entertainment, architecture, and events. Our

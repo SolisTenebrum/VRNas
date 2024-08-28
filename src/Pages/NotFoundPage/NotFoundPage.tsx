@@ -3,6 +3,7 @@ import styles from './NotFoundPage.module.css';
 import notFoundPageImage from '../../assets/background-elements/notfoundpage-image.png';
 import { NavLink } from 'react-router-dom';
 import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop';
+import { clsx as cn } from 'clsx';
 
 const NotFoundPage = () => {
   return (
@@ -12,7 +13,7 @@ const NotFoundPage = () => {
         <div className={styles.container}>
           <div className={styles.column}>
             <div className={styles.textContainer}>
-              <h3 className={styles.subtitle}>404 Error</h3>
+              <h3 className={cn(styles.subtitle, 'gradient-text')}>404 Error</h3>
               <h2 className={styles.title}>Page Not Found</h2>
               <div className={styles.text}>
                 <p className={styles.textParagraph}>

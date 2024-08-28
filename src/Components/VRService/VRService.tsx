@@ -15,7 +15,7 @@ interface IServiceTextProps {
 const ServiceText = ({ subtitle, title, text, listTitle, listItems }: IServiceTextProps) => {
   return (
     <>
-      <h3 className={styles.subtitle}>{subtitle}</h3>
+      <p className={cn(styles.subtitle, 'gradient-text')}>{subtitle}</p>
       <h2 className={styles.title}>{title}</h2>
       {text.slice(0, 2).map((item, index) => (
         <p className={styles.text} key={index}>

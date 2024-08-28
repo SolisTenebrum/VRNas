@@ -33,7 +33,7 @@ const ContactForm = () => {
         </div>
         <div className={styles.column}>
           <div className={styles.textContainer}>
-            <h3 className={styles.subtitle}>Contact Us</h3>
+            <p className={cn(styles.subtitle, 'gradient-text')}>Contact Us</p>
             <h2 className={styles.title}>Get In Touch</h2>
             <div className={styles.text}>
               At VRNas, we're always happy to hear from our clients and potential clients. Whether you have a question

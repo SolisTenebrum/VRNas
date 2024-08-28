@@ -23,7 +23,7 @@ const BlogArticleCard = ({
         <img className={styles.image} src={image} />
       </div>
       <div className={styles.textContainer}>
-        <h4 className={styles.subtitle}>{subtitle}</h4>
+        <p className={styles.category}>{subtitle}</p>
         <h3 className={styles.title}>{title}</h3>
         <NavLink to={`/blog/${id}`} className={styles.link}>
           <span className={styles.span}>{span}</span>
@@ -41,6 +41,8 @@ const BlogArticles = () => {
     const updateCardsPerPage = () => {
       if (window.innerWidth < 431) {
         setCardsPerPage(6);
+      } else if (window.innerWidth < 993 && window.innerWidth > 768) {
+        setCardsPerPage(10);
       } else {
         setCardsPerPage(9);
       }

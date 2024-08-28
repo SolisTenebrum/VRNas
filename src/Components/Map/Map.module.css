@@ -14,21 +14,25 @@
 
 .mapContainer {
   position: relative;
+  overflow: hidden;
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .mapImage {
-  border-radius: 10px;
   width: 100%;
   height: 100%;
   cursor: pointer;
+  object-fit: contain;
 }
 
 .marker {
   position: absolute;
   width: 64px;
   height: 64px;
-  left: 50%;
-  top: 50%;
+  left: 47%;
+  top: 44%;
   transform: translate(-50%, -50%);
   cursor: pointer;
   animation: pulse 2s infinite;
@@ -46,24 +50,30 @@
   }
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 992px) {
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 768px) {
+  .marker {
+    left: 45%;
+    top: 40%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .marker {
+    left: 44%;
+    top: 38%;
+  }
 }
 
 @media screen and (max-width: 480px) {
-}
+  .mapImage {
+    scale: 1.5;
+  }
 
-@media screen and (max-width: 430px) {
   .marker {
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    left: 43%;
-    top: 30%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    animation: pulse 2s infinite;
+    left: 38%;
+    top: 18%;
   }
 }

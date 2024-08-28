@@ -38,18 +38,18 @@ const Articles = ({ variant }: { variant: string }) => {
     };
   }, []);
 
-   const shuffledArticles = shuffleArray(articleContent);
+  const shuffledArticles = shuffleArray(articleContent);
 
-   const sliderArticles = shuffledArticles.slice(0, 4);
- 
-   const recentArticles = shuffledArticles.slice(4);
+  const sliderArticles = shuffledArticles.slice(0, 4);
+
+  const recentArticles = shuffledArticles.slice(4);
 
   return (
     <section className={styles.articles}>
       <div className={styles.container}>
         <div className={styles.containerTop}>
           <div className={styles.textContainer}>
-            <h3 className={styles.subtitle}>Our Articles</h3>
+            <p className={cn(styles.subtitle, 'gradient-text')}>Our Articles</p>
             <h2 className={styles.title}>Stay Up-to-Date with Our VR Insights</h2>
           </div>
           <NavLink to="/blog#blog" className={styles.link}>
@@ -60,9 +60,7 @@ const Articles = ({ variant }: { variant: string }) => {
           <div className={styles.content}>
             <div className={styles.firstColumn}>
               <h4 className={styles.subsubtitle}>Popular Article</h4>
-              <div className={styles.sliderContainer}>
-                <ArticleSlider articles={sliderArticles} />
-              </div>
+              <ArticleSlider articles={sliderArticles} />
             </div>
             <div className={styles.secondColumn}>
               <h4 className={styles.subsubtitle}>Recent Article</h4>

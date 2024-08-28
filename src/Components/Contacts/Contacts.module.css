@@ -4,10 +4,12 @@
 
 .container {
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
   column-gap: 32px;
   padding: 0 16px;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 291px);
 }
 
 .card {
@@ -15,20 +17,25 @@
   border-width: 1px;
   border-style: solid;
   background-color: rgba(37, 37, 50, 0.6);
+  display: flex;
+  justify-content: center;
 }
 
 .content {
-  padding: 55px 65px 58px 65px;
+  padding-top: 55px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 248px;
+  max-width: 248px;
 }
 
 .iconContainer {
   background-image: url('../../assets/background-elements/contact-bg.svg');
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
   width: 65px;
   height: 65px;
   display: flex;
@@ -51,18 +58,7 @@
 }
 
 .subtitle {
-  margin: 0;
   margin-bottom: 8px;
-  display: inline-block;
-  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  font-size: 16px;
-  letter-spacing: 2px;
-  font-weight: 500;
-  text-transform: uppercase;
 }
 
 .title {
@@ -72,19 +68,34 @@
   text-align: center;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 1280px) {
+  .container {
+    column-gap: 10px;
+  }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 992px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 230px);
+    row-gap: 10px;
+  }
+
+  .content {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 230px);
+    row-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
 }
 
 @media screen and (max-width: 480px) {
-}
-
-@media screen and (max-width: 430px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    row-gap: 32px;
-  }
 }

@@ -18,15 +18,15 @@ const FAQCard = ({ title, text, index, toggleVisibility, faqCardsOpened }: IFAQP
       className={cn(styles.faqCard, faqCardsOpened.includes(index) ? styles.faqCardActive : '')}
       onClick={() => toggleVisibility(index)}
     >
-      <div
+      <p
         className={cn(
           styles.faqCardTitle,
           faqCardsOpened.includes(index) ? `${styles.opened} ${styles.faqCardTitleActive}` : ''
         )}
       >
         {title}
-      </div>
-      <div className={cn(styles.faqCardText, faqCardsOpened.includes(index) ? styles.textVisible : '')}>{text}</div>
+      </p>
+      <p className={cn(styles.faqCardText, faqCardsOpened.includes(index) ? styles.textVisible : '')}>{text}</p>
     </div>
   );
 };
@@ -41,7 +41,7 @@ const FAQ = ({ variant }: { variant: string }) => {
   const handleClick = (list: { title: string; text: string }[], index: number) => {
     setCurrentButton(index);
     setFaqList(list);
-    setFaqCardsOpened([])
+    setFaqCardsOpened([]);
 
     if (index === currentButton) {
       return;
@@ -66,7 +66,13 @@ const FAQ = ({ variant }: { variant: string }) => {
     <section
       className={cn(
         styles.faq,
-        variant === 'pricing-plan-page' ? styles.faq_pricingplan : variant === 'faq-page' ? styles.faq_faqpage : variant === 'about-us-page' ? styles.faq_aboutus : ''
+        variant === 'pricing-plan-page'
+          ? styles.faq_pricingplan
+          : variant === 'faq-page'
+          ? styles.faq_faqpage
+          : variant === 'about-us-page'
+          ? styles.faq_aboutus
+          : ''
       )}
     >
       {variant === 'faq-page' && (
@@ -78,7 +84,7 @@ const FAQ = ({ variant }: { variant: string }) => {
       <div className={styles.container}>
         <div className={styles.row}>
           <div className={styles.textContainer}>
-            <h3 className={styles.subtitle}>Faq</h3>
+            <p className={cn(styles.subtitle, 'gradient-text')}>Faq</p>
             <h2 className={styles.title}>Frequently Asked Questions</h2>
             <p className={styles.text}>
               At VRNas, we want to make sure that you have all the information you need to make informed decisions about

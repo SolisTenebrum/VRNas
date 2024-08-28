@@ -19,6 +19,9 @@
   position: absolute;
   content: '';
   background-image: url('../../assets/background-elements/topWaves.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
   right: 0;
   top: 0;
   width: 736px;
@@ -34,7 +37,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 0 16px;
+  /* padding: 0 16px; */
   padding-bottom: 70px;
 }
 
@@ -43,12 +46,12 @@
   content: '';
   top: 40%;
   left: 50%;
-  width: 30%;
-  height: 80%;
+  width: 391.77px;
+  height: 221.81px;
   background: linear-gradient(90deg, #0cbcf1c9 -30%, #e95ce9c5 100%);
-  filter: blur(50px);
+  filter: blur(55px);
   border-radius: 10% 20% 100% 40%;
-  transform: translateX(-50%) translateY(-50%) rotate(-10deg);
+  transform: translate(-50%, -50%) rotate(-10deg);
   z-index: -1;
 }
 
@@ -58,6 +61,7 @@
   font-weight: 600;
   margin: 0;
   margin-bottom: 28.5px;
+  text-align: center;
 }
 
 .path {
@@ -91,36 +95,30 @@
   border-top: none;
   border-left: none;
   border-right: none;
+  max-width: 100%;
   width: 100%;
   bottom: -1px;
 }
 
-@media screen and (max-width: 1215px) {
+@media screen and (max-width: 1280px) {
   .divider {
-    width: 93%;
+    max-width: calc(100% - 32px);
   }
 }
 
-@media screen and (max-width: 880px) {
-}
-
-@media screen and (max-width: 550px) {
-}
-
-@media screen and (max-width: 480px) {
-}
-
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 992px) {
   .container:before {
-    top: 40%;
-    left: 50%;
-    width: 60%;
-    height: 70%;
-    background: linear-gradient(90deg, #0cbcf1c9 -30%, #e95ce9c5 100%);
-    filter: blur(40px);
-    border-radius: 10% 20% 100% 40%;
-    transform: translateX(-50%) translateY(-50%) rotate(-10deg);
-    z-index: -1;
+    transform: translate(-50%, -50%) rotate(-10deg) scale(0.9);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pageTitle:before {
+    height: 280px;
+  }
+
+  .container:before {
+    transform: translate(-50%, -50%) rotate(-10deg) scale(0.7);
   }
 
   .pageTitle {
@@ -131,5 +129,17 @@
   .title {
     font-size: 40px;
     line-height: 58px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .pageTitle:before {
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pageTitle:before {
+    height: 180px;
   }
 }

@@ -29,21 +29,6 @@
   align-self: center;
 }
 
-.subtitle {
-  margin: 0;
-  margin-bottom: 12px;
-  display: inline-block;
-  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  font-size: 16px;
-  letter-spacing: 2px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
 .title {
   margin: 0;
   margin-bottom: 32px;
@@ -117,6 +102,8 @@
 .vrpersonContainer {
   position: relative;
   display: flex;
+  max-width: 563px;
+  max-height: 662px;
 }
 
 .vrpersonContainer::before {
@@ -134,6 +121,8 @@
 }
 
 .vrperson {
+  width: 100%;
+  height: 100%;
 }
 
 .video {
@@ -223,68 +212,49 @@
   left: 20px;
 }
 
-@media screen and (max-width: 880px) {
-}
-
-@media screen and (max-width: 550px) {
-}
-
-@media screen and (max-width: 480px) {
-}
-
-@media screen and (max-width: 430px) {
-  .choose {
-    margin-bottom: 100px;
-  }
-
+@media screen and (max-width: 1230px) {
   .container {
-    flex-direction: column-reverse;
-    row-gap: 75.5px;
-  }
-
-  .vrpersonContainer {
-    width: 418px;
-    height: 492px;
-    display: flex;
-  }
-
-  .video {
-    width: 145px;
-    height: 95px;
-    right: 60px;
-  }
-
-  .background {
-    left: 46px;
+    column-gap: 30px;
   }
 
   .title {
     font-size: 32px;
-    line-height: normal;
+  }
+
+  .column:first-of-type {
+    flex: 1 0 50%;
+  }
+
+  .column:last-of-type {
+    flex: 1 0 50%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    row-gap: 80px;
+  }
+
+  .background {
+    width: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .video {
+    width: 145px;
+    height: 95px;
+    right: 40px;
   }
 
   .button {
-    font-size: 17px;
-  }
-
-  .video_aboutus {
-    width: 160px;
-    height: 104px;
-    right: 15px;
-    bottom: -35px;
-  }
-
-  .background_aboutus {
-    width: 82%;
-    height: 86%;
-    left: 13px;
-  }
-
-  .container_aboutus {
-    row-gap: 90px;
-  }
-
-  .container_pricingplan {
-    row-gap: 90px;
+    font-size: 16px;
   }
 }
