@@ -294,12 +294,14 @@
 
 .articlesContainer {
   max-width: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-width: none;
   scrollbar-color: transparent transparent;
   position: relative;
   padding-left: 0;
   margin: 0;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 .articlesContainer::-webkit-scrollbar {

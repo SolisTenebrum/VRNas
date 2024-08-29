@@ -41,8 +41,15 @@ const Articles = ({ variant }: { variant: string }) => {
             </div>
             <div className={styles.secondColumn}>
               <h4 className={styles.subsubtitle}>Recent Article</h4>
-              <SimpleBar className={styles.simpleBar} forceVisible="y" autoHide={false} scrollbarMaxSize={100}>
-                <ul className={styles.articlesContainer}>
+
+              <ul className={styles.articlesContainer}>
+                <SimpleBar
+                  className={styles.simpleBar}
+                  forceVisible="y"
+                  autoHide={false}
+                  scrollbarMaxSize={100}
+                  scrollbarMinSize={100}
+                >
                   {recentArticles.map((article, index) => (
                     <ArticleSmallCard
                       key={index}
@@ -53,8 +60,8 @@ const Articles = ({ variant }: { variant: string }) => {
                       id={article.id}
                     />
                   ))}
-                </ul>
-              </SimpleBar>
+                </SimpleBar>
+              </ul>
             </div>
           </div>
           <NavLink to="/blog#blog" className={styles.link}>
