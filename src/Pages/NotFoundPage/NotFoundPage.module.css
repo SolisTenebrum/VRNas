@@ -151,13 +151,17 @@
 
   .container {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
     column-gap: 0;
   }
 
   .imageContainer {
     right: 0;
     left: 40%;
+  }
+
+  .image {
+    width: 70%;
   }
 }
 
@@ -169,7 +173,7 @@
 
   .imageContainer {
     right: 0;
-    left: 3%;
+    left: 25%;
   }
 }
 
@@ -181,6 +185,10 @@
 
   .imageContainer {
     right: 0;
-    left: -12%;
+    left: 0%;
+  }
+
+  .image {
+    width: 70%;
   }
 }
