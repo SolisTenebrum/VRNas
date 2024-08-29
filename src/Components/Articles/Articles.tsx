@@ -6,13 +6,8 @@ import { NavLink } from 'react-router-dom';
 import { clsx as cn } from 'clsx';
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
+import { shuffleArray } from '../../utils/shuffleArray';
 
-export const shuffleArray = (array: any[]) => {
-  return array
-    .map((value) => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value);
-};
 
 const Articles = ({ variant }: { variant: string }) => {
   const shuffledArticles = shuffleArray(articleContent);
