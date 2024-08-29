@@ -1,14 +1,9 @@
 import styles from './Prices.module.css';
 import { pricingCardsList } from '../../constants';
 import { clsx as cn } from 'clsx';
+import { IPricingCardProps } from '../../types/types';
 
-interface IPricingCardProps {
-  title: string;
-  price: string;
-  text: string;
-  list: string[];
-  buttonText: string;
-}
+
 
 const PricingCard = ({ title, price, text, list, buttonText }: IPricingCardProps) => {
   return (

@@ -9,19 +9,8 @@ import { articleContent } from '../../constants';
 import { useEffect, useState } from 'react';
 import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop';
 import Subscribe from '../../Components/Subscribe/Subscribe';
-import { shuffleArray } from '../../Components/Articles/Articles';
-
-interface IArticleProps {
-  category: string;
-  title: string;
-  author: string;
-  date: string;
-  mainImage: string;
-  paragraphs: string[];
-  articleImages: string[];
-  postTags: string;
-  id: number;
-}
+import { shuffleArray } from '../../utils/shuffleArray';
+import { IArticleProps } from '../../types/types';
 
 const Article = ({ category, title, author, date, mainImage, paragraphs, articleImages, postTags }: IArticleProps) => {
   return (

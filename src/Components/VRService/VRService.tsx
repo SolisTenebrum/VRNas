@@ -3,14 +3,7 @@ import styles from './VRService.module.css';
 import { clsx as cn } from 'clsx';
 import { vrServicesText } from '../../constants';
 import { NavLink, useLocation } from 'react-router-dom';
-
-interface IServiceTextProps {
-  subtitle: string;
-  title: string;
-  text: string[];
-  listTitle: string;
-  listItems: string[];
-}
+import { IServiceTextProps } from '../../types/types';
 
 const ServiceText = ({ subtitle, title, text, listTitle, listItems }: IServiceTextProps) => {
   return (

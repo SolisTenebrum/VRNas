@@ -1,13 +1,9 @@
 import styles from './BenefitsFull.module.css';
 import Benefits from '../Benefits/Benefits';
 import { clsx as cn } from 'clsx';
+import { IBenefitsFull } from '../../types/types';
 
-interface IBenefitsWithTitle {
-  variant: string;
-}
-
-const BenefitsFull: React.FC<IBenefitsWithTitle> = ({ variant }) => {
-
+const BenefitsFull: React.FC<IBenefitsFull> = ({ variant }) => {
   return (
     <section className={styles.benefits}>
       <div className={styles.container}>
@@ -18,7 +14,7 @@ const BenefitsFull: React.FC<IBenefitsWithTitle> = ({ variant }) => {
           </div>
         </div>
         <div className={styles.row}>
-          <Benefits variant={variant}/>
+          <Benefits variant={variant} />
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@ import logo from '../../assets/logos/vrnas-full-logo.svg';
 import { useState, useRef, useEffect } from 'react';
 import { clsx as cn } from 'clsx';
 import { NavLink, useLocation } from 'react-router-dom';
+import { INavigationItemProps } from '../../types/types';
 
 const pageButtonArray = [
   {
@@ -31,11 +32,7 @@ const pageButtonArray = [
   },
 ];
 
-interface INavigationItemProps {
-  href: string;
-  navName: string;
-  setBurgerActive: (isActive: boolean) => void;
-}
+
 
 const NavigationItem = ({ href, navName, setBurgerActive }: INavigationItemProps) => {
   const scroll = () => {

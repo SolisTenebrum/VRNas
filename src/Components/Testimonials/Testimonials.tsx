@@ -3,14 +3,7 @@ import testimonialImage from '../../assets/background-elements/testimonial-image
 import { clsx as cn } from 'clsx';
 import { useEffect, useState, useRef } from 'react';
 import { clients } from '../../constants';
-
-interface IClientProps {
-  image: string;
-  name: string;
-  company: string;
-  message: string;
-  index: number;
-}
+import { IClientProps } from '../../types/types';
 
 const Client = ({ image, name, company, message, index }: IClientProps) => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
