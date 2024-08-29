@@ -41,7 +41,6 @@ const Articles = ({ variant }: { variant: string }) => {
             </div>
             <div className={styles.secondColumn}>
               <h4 className={styles.subsubtitle}>Recent Article</h4>
-
               <ul className={styles.articlesContainer}>
                 <SimpleBar
                   className={styles.simpleBar}

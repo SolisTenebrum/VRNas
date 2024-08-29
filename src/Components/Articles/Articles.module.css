@@ -123,7 +123,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  flex: 0 0 45%;
+  flex: 1 1 50%;
+  min-width: 0;
 }
 
 .secondColumn {
@@ -131,7 +132,7 @@
   flex-direction: column;
   height: 572px;
   position: relative;
-  flex: 1 0 40%;
+  flex: 1 0 545px;
 }
 
 .secondColumn::before {
@@ -293,7 +294,6 @@
 }
 
 .articlesContainer {
-  max-width: 100%;
   overflow-y: auto;
   scrollbar-width: none;
   scrollbar-color: transparent transparent;
@@ -475,53 +475,37 @@
 .articleSlider {
   max-width: 636px;
   position: relative;
+  width: 100%;
 }
 
 .buttonMobile {
   display: none;
 }
 
-@media screen and (max-width: 1440px) {
-  .articleSlider {
-    max-width: 620px;
-  }
-}
-
 @media screen and (max-width: 1280px) {
-  .articleSlider {
-    max-width: 540px;
-  }
-
-  .firstColumn {
-    flex: 0 1 60%;
-  }
-
-  .secondColumn {
-    flex: 0 1 40%;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .title {
-    font-size: 32px;
-  }
-
-  .secondColumn {
-    flex: 0 0 40%;
+  .content {
+    column-gap: 25px;
   }
 }
 
 @media screen and (max-width: 1100px) {
-  .articleSlider {
-    max-width: 500px;
+  .title {
+    font-size: 36px;
   }
-
-  .content {
-    column-gap: 30px;
+  .secondColumn {
+    flex: 1 1 40%;
   }
 }
 
 @media screen and (max-width: 992px) {
+  .title {
+    font-size: 30px;
+  }
+
+  .containerTop {
+    margin-bottom: 70px;
+  }
+
   .content {
     flex-direction: column;
     row-gap: 80px;
@@ -563,15 +547,6 @@
     max-height: 620px;
     padding-right: 0;
   }
-
-  .button {
-    display: none;
-  }
-
-  .buttonMobile {
-    display: block;
-    margin: 40px auto 0;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -605,6 +580,15 @@
     font-size: 14px;
     line-height: normal;
   }
+
+  .button {
+    display: none;
+  }
+
+  .buttonMobile {
+    display: block;
+    margin: 40px auto 0;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -620,8 +604,21 @@
 }
 
 @media screen and (max-width: 480px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .containerTop {
+    margin-bottom: 25px;
+  }
+
+  .subsubtitle {
+    font-size: 20px;
+  }
+
   .articleFullImageTitle {
     max-width: 65%;
+    font-size: 20px;
   }
 
   .articlesContainer {
