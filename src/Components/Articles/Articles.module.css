@@ -131,7 +131,7 @@
   flex-direction: column;
   height: 572px;
   position: relative;
-  flex: 0 0 40%;
+  flex: 1 0 40%;
 }
 
 .secondColumn::before {
@@ -298,6 +298,8 @@
   scrollbar-width: none;
   scrollbar-color: transparent transparent;
   position: relative;
+  padding-left: 0;
+  margin: 0;
 }
 
 .articlesContainer::-webkit-scrollbar {
@@ -463,26 +465,9 @@
   background-color: transparent;
 }
 
-.scrollBar {
-  position: absolute;
-  width: 2px;
-  height: 80%;
-  background-color: #ffffff54;
-  border-radius: 32px;
-  right: -46px;
-  bottom: 31px;
-  z-index: 2;
-  -webkit-overflow-scrolling: touch;
-  overflow: scroll;
-}
-
-.scrollBarIndicator {
-  width: 2px;
-  height: 130px;
-  background-color: #ffffff;
-  border-radius: 32px;
-  position: absolute;
-  z-index: 3;
+.simpleBar {
+  max-height: 509px;
+  padding-right: 30px;
 }
 
 .articleSlider {
@@ -505,8 +490,12 @@
     max-width: 540px;
   }
 
+  .firstColumn {
+    flex: 0 1 60%;
+  }
+
   .secondColumn {
-    flex: 0 0 45%;
+    flex: 0 1 40%;
   }
 }
 
@@ -568,11 +557,9 @@
     flex-grow: 1;
   }
 
-  .scrollBar {
-    width: 2px;
-    height: 80%;
-    right: 20px;
-    bottom: 31px;
+  .simpleBar {
+    max-height: 620px;
+    padding-right: 0;
   }
 
   .button {
@@ -635,6 +622,10 @@
     max-width: 65%;
   }
 
+  .articlesContainer {
+    max-height: 512px;
+  }
+
   .articleCardImageContainer {
     width: 101px;
     height: 71px;
@@ -651,11 +642,24 @@
   }
 
   .articleCardSpan {
-    font-size: 12px;
+    font-size: 11px;
     line-height: normal;
   }
 
   .articleCardInfo {
     padding-left: 10px;
+  }
+
+  .secondColumn {
+    height: auto;
+    padding: 20px 20px 0 20px;
+  }
+
+  .secondColumn::before {
+    height: 595px;
+  }
+
+  .simpleBar {
+    max-height: 512px;
   }
 }

@@ -17,7 +17,7 @@ const ArticleSmallCard = ({
   id: number;
 }): JSX.Element => {
   return (
-    <div className={cn(styles.articleCard, variant === 'blog-page' ? styles.articleCard_blogpage : '')}>
+    <li className={cn(styles.articleCard, variant === 'blog-page' ? styles.articleCard_blogpage : '')}>
       <div
         className={cn(
           styles.articleCardImageContainer,
@@ -44,7 +44,7 @@ const ArticleSmallCard = ({
           </button>
         </NavLink>
       )}
-    </div>
+    </li>
   );
 };
 

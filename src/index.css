@@ -8,12 +8,12 @@
   /* variables */
   --black-100: #18181b;
   --black-50: #252532;
-  --grey-1: #B0B0B2;
-  --grey-2: #D1D1D1;
-  --white: #FFFFFF;
+  --grey-1: #b0b0b2;
+  --grey-2: #d1d1d1;
+  --white: #ffffff;
   --linear: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
-  --purple: #CA6AEB;
-  --blue: #19B5F1;
+  --purple: #ca6aeb;
+  --blue: #19b5f1;
 }
 
 html {
@@ -180,7 +180,7 @@ img {
 
 a {
   text-decoration: none;
-  color: var(--white)
+  color: var(--white);
 }
 
 .gradient-text {
@@ -195,6 +195,20 @@ a {
   letter-spacing: 2px;
   font-weight: 500;
   text-transform: uppercase;
+}
+
+/* Simplebar scrollbar */
+.simplebar-scrollbar {
+  background-color: #ffffff;
+  width: 2px;
+  border-radius: 32px;
+}
+
+.simplebar-track.simplebar-vertical {
+  background-color: #ffffff54;
+  width: 2px;
+  bottom: 32px;
+  border-radius: 32px;
 }
 
 @keyframes fadeIn {
