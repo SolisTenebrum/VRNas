@@ -3,14 +3,8 @@ import styles from './FAQ.module.css';
 import { clsx as cn } from 'clsx';
 import { faqCardsAll, faqCardsAboutUs, faqCardsPricingPlan } from '../../constants';
 import vrperson from '../../assets/vrperson/vrperson4.png';
-
-interface IFAQProps {
-  title: string;
-  text: string;
-  index: number;
-  toggleVisibility: (index: number) => void;
-  faqCardsOpened: number[];
-}
+import { IFAQProps } from '../../types/types';
+import menuArrow from '../../assets/icons/menu-arrow.svg';
 
 const FAQCard = ({ title, text, index, toggleVisibility, faqCardsOpened }: IFAQProps) => {
   return (
@@ -18,14 +12,12 @@ const FAQCard = ({ title, text, index, toggleVisibility, faqCardsOpened }: IFAQP
       className={cn(styles.faqCard, faqCardsOpened.includes(index) ? styles.faqCardActive : '')}
       onClick={() => toggleVisibility(index)}
     >
-      <p
-        className={cn(
-          styles.faqCardTitle,
-          faqCardsOpened.includes(index) ? `${styles.opened} ${styles.faqCardTitleActive}` : ''
-        )}
-      >
-        {title}
-      </p>
+      <div className={styles.titleContainer}>
+        <p className={cn(styles.faqCardTitle, faqCardsOpened.includes(index) ? `${styles.faqCardTitleActive}` : '')}>
+          {title}
+        </p>
+        <img src={menuArrow} className={cn(styles.menuArrow, faqCardsOpened.includes(index) && styles.opened)} />
+      </div>
       <p className={cn(styles.faqCardText, faqCardsOpened.includes(index) ? styles.textVisible : '')}>{text}</p>
     </div>
   );

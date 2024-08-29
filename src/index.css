@@ -179,6 +179,7 @@ img {
 }
 
 a {
+  display: block;
   text-decoration: none;
   color: var(--white);
 }

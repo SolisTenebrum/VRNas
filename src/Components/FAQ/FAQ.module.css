@@ -188,6 +188,11 @@
   transition: all 0.3s ease-in-out;
 }
 
+.titleContainer {
+  display: flex;
+  align-items: flex-start;
+}
+
 .faqCardTitle {
   font-size: 20px;
   font-weight: 600;
@@ -198,27 +203,21 @@
   width: 100%;
   text-align: left;
   cursor: pointer;
-  position: relative;
   transition: padding 0.3s ease-in-out;
+  padding-right: 15px;
 }
 
 .faqCardTitleActive {
+  position: relative;
   padding-bottom: 12px;
   border-bottom: 1px solid #ffffff32;
   transition: padding 0.3s ease-in-out;
 }
 
-.faqCardTitle::after {
-  content: '';
-  background-image: url('../../assets/icons/menu-arrow.svg');
-  background-position: center;
-  position: absolute;
-  right: 0;
-  bottom: 50%;
-  width: 15px;
-  height: 15px;
+.menuArrow {
+  width: 20px;
+  height: 20px;
   transition: transform 0.3s ease-in-out;
-  transform: translateY(50%);
 }
 
 .faqCardText {
@@ -240,10 +239,7 @@
   transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, opacity 0.4s ease-in-out;
 }
 
-.opened::after {
-  content: '';
-  position: absolute;
-  cursor: pointer;
+.opened {
   transform: rotate(-180deg);
   transition: transform 0.3s ease;
 }
@@ -256,7 +252,7 @@
   .vrperson:first-of-type {
     right: -9%;
   }
-  
+
   .vrperson:last-of-type {
     left: -9%;
   }
@@ -281,7 +277,7 @@
     font-size: 32px;
     text-align: center;
     margin-bottom: 14px;
-    line-height: normal
+    line-height: normal;
   }
 
   .faqCardTitle {
@@ -316,7 +312,7 @@
   .vrperson:first-of-type {
     right: -12%;
   }
-  
+
   .vrperson:last-of-type {
     left: -12%;
   }
@@ -326,21 +322,21 @@
   .button {
     padding: 12px 15px 12px 15px;
   }
-  
+
   .vrperson:first-of-type {
     right: -18%;
   }
-  
+
   .vrperson:last-of-type {
     left: -18%;
   }
 }
 
-@media screen and (max-width: 320px) {  
+@media screen and (max-width: 320px) {
   .vrperson:first-of-type {
     right: -22%;
   }
-  
+
   .vrperson:last-of-type {
     left: -22%;
   }
