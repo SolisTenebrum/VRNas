@@ -43,6 +43,10 @@
   font-weight: 600;
 }
 
+.title_detailservice {
+  text-align: center;
+}
+
 .text {
   margin: 0;
   color: #d1d1d1;
@@ -50,6 +54,10 @@
   line-height: 28px;
   font-weight: 300;
   max-width: 625px;
+}
+
+.text_detailservice {
+  text-align: center;
 }
 
 .content {
@@ -291,10 +299,6 @@
 }
 
 @media screen and (max-width: 430px) {
-  .title {
-    text-align: center;
-  }
-
   .column:first-of-type {
     padding: 35px 25px 40px 25px;
   }

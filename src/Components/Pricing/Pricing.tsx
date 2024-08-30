@@ -16,8 +16,8 @@ const Pricing = ({ variant }: { variant: string }) => {
           )}
         >
           <p className={cn(styles.subtitle, 'gradient-text')}>Our Pricing</p>
-          <h2 className={styles.title}>Affordable VR Services for Everyone</h2>
-          <p className={styles.text}>
+          <h2 className={cn(styles.title, variant === 'detail-service-page' ? styles.title_detailservice : '')}>Affordable VR Services for Everyone</h2>
+          <p className={cn(styles.text, variant === 'detail-service-page' ? styles.text_detailservice : '')}>
             At VRNas, we believe that everyone should have access to the benefits of VR. That's why we offer a range of
             pricing options to meet the needs of any budget.
           </p>
