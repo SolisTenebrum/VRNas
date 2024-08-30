@@ -98,6 +98,14 @@
   cursor: pointer;
 }
 
+.card_mobile {
+  display: grid;
+  grid-template-areas:
+    'icon button'
+    'title title'
+    'text text';
+}
+
 .card:hover {
   border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
   opacity: 1;
@@ -108,6 +116,10 @@
   opacity: 1;
   transform: translateX(-50%) translateY(0);
   transition: transform 0.3s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.card_mobile:hover .button {
+  transform: none;
 }
 
 .card:nth-of-type(2) {
@@ -147,6 +159,14 @@
 .card:hover::after {
   opacity: 1;
   transition: opacity 0.4s ease;
+}
+
+.card_mobile::after {
+  z-index: -1;
+}
+
+.navlink {
+  justify-self: flex-end;
 }
 
 .button {
@@ -192,10 +212,26 @@
   opacity: 1;
 }
 
+.button_mobile {
+  position: static;
+  opacity: 1;
+  transform: none;
+  width: 150px;
+}
+
+.button_mobile:hover {
+  transform: none;
+}
+
+.button_mobile:hover::before {
+  opacity: 1;
+}
+
 .icon {
   width: 48px;
   height: 48px;
   margin-bottom: 58px;
+  grid-area: icon;
 }
 
 .cardTitle {
@@ -203,6 +239,7 @@
   margin-bottom: 12px;
   font-size: 20px;
   font-weight: 400;
+  grid-area: title;
 }
 
 .cardText {
@@ -210,6 +247,7 @@
   color: #b0b0b2;
   font-size: 14px;
   line-height: 28px;
+  grid-area: text;
 }
 
 @media screen and (max-width: 1230px) {
@@ -294,5 +332,12 @@
 
   .column:last-of-type {
     max-width: 95%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .button_mobile {
+    width: 120px;
+    font-size: 12px;
   }
 }
