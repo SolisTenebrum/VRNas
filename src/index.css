@@ -217,6 +217,11 @@ a {
   border-radius: 32px;
 }
 
+/* fixes a bug in simplebar when resizing the window */
+.simplebar-placeholder {
+  width: auto !important;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
