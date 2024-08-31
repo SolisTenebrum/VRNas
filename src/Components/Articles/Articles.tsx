@@ -2,12 +2,11 @@ import styles from './Articles.module.css';
 import ArticleSmallCard from './ArticleSmallCard';
 import { articleContent } from '../../constants';
 import ArticleSlider from './ArticleSlider';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { clsx as cn } from 'clsx';
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 import { shuffleArray } from '../../utils/shuffleArray';
-
 
 const Articles = ({ variant }: { variant: string }) => {
   const shuffledArticles = shuffleArray(articleContent);
@@ -24,9 +23,9 @@ const Articles = ({ variant }: { variant: string }) => {
             <p className={cn(styles.subtitle, 'gradient-text')}>Our Articles</p>
             <h2 className={styles.title}>Stay Up-to-Date with Our VR Insights</h2>
           </div>
-          <NavLink to="/blog#blog" className={styles.link}>
-            <button className={styles.button}>SEE ALL</button>
-          </NavLink>
+          <Link to="/blog#blog" className={styles.button}>
+            SEE ALL
+          </Link>
         </div>
         <div className={styles.containerBottom}>
           <div className={styles.content}>
@@ -58,9 +57,9 @@ const Articles = ({ variant }: { variant: string }) => {
               </ul>
             </div>
           </div>
-          <NavLink to="/blog#blog" className={styles.link}>
-            <button className={cn(styles.button, styles.buttonMobile)}>SEE ALL</button>
-          </NavLink>
+          <Link to="/blog#blog" className={cn(styles.button, styles.buttonMobile)}>
+            SEE ALL
+          </Link>
         </div>
       </div>
     </section>

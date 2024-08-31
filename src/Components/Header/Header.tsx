@@ -2,7 +2,7 @@ import styles from './Header.module.css';
 import logo from '../../assets/logos/vrnas-full-logo.svg';
 import { useState, useRef, useEffect } from 'react';
 import { clsx as cn } from 'clsx';
-import { NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { INavigationItemProps } from '../../types/types';
 
 const pageButtonArray = [
@@ -31,8 +31,6 @@ const pageButtonArray = [
     href: '/privacy-policy',
   },
 ];
-
-
 
 const NavigationItem = ({ href, navName, setBurgerActive }: INavigationItemProps) => {
   const scroll = () => {
@@ -77,6 +75,7 @@ const Header = () => {
   ].some((path) => location.pathname.startsWith(path));
 
   const isContactPage = location.pathname === '/contact-us';
+  const isBlogpage = location.pathname === '/blog';
 
   const handleMenuClick = () => {
     setOpenedMenu(!openedMenu);
@@ -136,9 +135,9 @@ const Header = () => {
     <header className={cn(styles.header, `${scrolled && styles.fixedHeader}`)}>
       <div className={cn(styles.container, `${scrolled && styles.fixedContainer}`)}>
         <div className={styles.logoContainer}>
-          <NavLink to={'/'} onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>
+          <Link to={'/'} onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>
             <img src={logo} alt={'vrnas-logo'} className={styles.logo} />
-          </NavLink>
+          </Link>
         </div>
         <nav className={cn(styles.navigationContainer, burgerActive && styles.navigationContainerActive)}>
           <ul className={styles.navigation}>
@@ -162,7 +161,11 @@ const Header = () => {
             </li>
             <li className={styles.navigationElement}>
               <div className={styles.spoiler}>
-                <NavLink to="/blog" className={styles.link} onClick={() => setBurgerActive(false)}>
+                <NavLink
+                  to="/blog"
+                  className={cn(styles.link, `${isBlogpage && styles.linkActive}`)}
+                  onClick={() => setBurgerActive(false)}
+                >
                   Blog
                 </NavLink>
               </div>
@@ -177,9 +180,9 @@ const Header = () => {
           )}
         </nav>
         <div className={cn(styles.buttonContainer, isContactPage && styles.buttonContactUsPage)}>
-          <NavLink to={'/contact-us'} onClick={() => setBurgerActive(false)}>
+          <Link to={'/contact-us'} onClick={() => setBurgerActive(false)}>
             <button className={cn(styles.button)}>Contact us</button>
-          </NavLink>
+          </Link>
         </div>
         <div className={styles.burgerButtonContainer} onClick={handleBurgerClick}>
           <div className={styles.burgerButton}>

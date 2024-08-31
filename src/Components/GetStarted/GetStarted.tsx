@@ -29,8 +29,8 @@ const GetStarted = ({ variant }: { variant: string }) => {
             <div className={styles.progressBar}></div>
           </div>
         </div>
-        <NavLink to="/pricing-plan#prices">
-          <button className={styles.button}>GET STARTED</button>
+        <NavLink to="/pricing-plan#prices" className={styles.button}>
+          GET STARTED
         </NavLink>
       </div>
     </section>

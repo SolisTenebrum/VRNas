@@ -165,10 +165,6 @@
   z-index: -1;
 }
 
-.navlink {
-  justify-self: flex-end;
-}
-
 .button {
   position: absolute;
   bottom: 31px;
@@ -193,6 +189,10 @@
   opacity: 0;
   transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
   z-index: 1;
+  justify-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button::before {
@@ -213,10 +213,13 @@
 }
 
 .button_mobile {
-  position: static;
+  position: relative;
   opacity: 1;
   transform: none;
   width: 150px;
+  grid-area: button;
+  left: auto;
+  bottom: auto;
 }
 
 .button_mobile:hover {

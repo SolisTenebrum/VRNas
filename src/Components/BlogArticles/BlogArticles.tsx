@@ -2,7 +2,7 @@ import styles from './BlogArticles.module.css';
 import { clsx as cn } from 'clsx';
 import { useEffect, useState } from 'react';
 import { blogCards } from '../../constants';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const BlogArticleCard = ({
   image,
@@ -25,9 +25,9 @@ const BlogArticleCard = ({
       <div className={styles.textContainer}>
         <p className={styles.category}>{subtitle}</p>
         <h3 className={styles.title}>{title}</h3>
-        <NavLink to={`/blog/${id}`} className={styles.link}>
-          <span className={styles.span}>{span}</span>
-        </NavLink>
+        <Link to={`/blog/${id}`} className={styles.span}>
+          {span}
+        </Link>
       </div>
     </div>
   );

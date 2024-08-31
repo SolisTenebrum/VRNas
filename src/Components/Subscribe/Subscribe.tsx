@@ -1,6 +1,10 @@
 import styles from './Subscribe.module.css';
 
 const Subscribe = () => {
+  const handleSubmit = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+  };
+
   return (
     <section className={styles.subscribe}>
       <div className={styles.container}>
@@ -10,8 +14,8 @@ const Subscribe = () => {
           </div>
           <div className={styles.column}>
             <form className={styles.form}>
-              <input className={styles.input} type='email' placeholder='Enter your email adress'></input>
-              <button className={styles.button} type='submit' />
+              <input className={styles.input} type="email" placeholder="Enter your email adress"></input>
+              <button className={styles.button} type="submit" onClick={handleSubmit} />
             </form>
           </div>
         </div>

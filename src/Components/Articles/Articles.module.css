@@ -67,6 +67,10 @@
   user-select: none;
   transition: background-color 0.3s ease;
   overflow: hidden;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button::before {
@@ -90,11 +94,6 @@
   transition: background-color 0.3s ease;
   background-color: transparent;
   color: white;
-}
-
-.link {
-  align-self: flex-end;
-  text-decoration: none;
 }
 
 .containerBottom {
@@ -229,7 +228,6 @@
 }
 
 .goButton {
-  margin-top: 50%;
   position: relative;
   cursor: pointer;
   width: 50px;
@@ -249,6 +247,7 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
+  flex-shrink: 0;
 }
 
 .goButton::before {
@@ -602,7 +601,7 @@
   }
 
   .buttonMobile {
-    display: block;
+    display: flex;
     margin: 40px auto 0;
   }
 

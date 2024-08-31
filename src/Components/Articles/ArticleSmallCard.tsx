@@ -1,14 +1,14 @@
 import styles from './Articles.module.css';
 import arrowRight from '../../assets/icons/arrow-thin-to-right.svg';
 import { clsx as cn } from 'clsx';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const ArticleSmallCard = ({
   image,
   title,
   span,
   variant,
-  id
+  id,
 }: {
   image: string;
   title: string;
@@ -30,19 +30,16 @@ const ArticleSmallCard = ({
         <span className={cn(styles.articleCardSpan, variant === 'blog-page' ? styles.articleCardSpan_blogpage : '')}>
           {span}
         </span>
-        <NavLink to={`/blog/${id}`}>
+        <Link to={`/blog/${id}`}>
           <h4 className={cn(styles.articleCardTitle, variant === 'blog-page' ? styles.articleCardTitle_blogpage : '')}>
-          {title}
-        </h4>
-        </NavLink>
-        
+            {title}
+          </h4>
+        </Link>
       </div>
       {variant !== 'blog-page' && (
-        <NavLink to={`/blog/${id}`}>
-          <button className={styles.articleCardGoButton}>
-            <img src={arrowRight} className={styles.arrowRight} />
-          </button>
-        </NavLink>
+        <Link to={`/blog/${id}`} className={styles.articleCardGoButton}>
+          <img src={arrowRight} className={styles.arrowRight} />
+        </Link>
       )}
     </li>
   );

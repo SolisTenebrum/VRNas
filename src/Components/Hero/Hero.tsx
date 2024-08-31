@@ -20,8 +20,8 @@ const Hero = () => {
             <p className={styles.text}>
               Experience Unforgettable Events in VR. Bring your events to life like never before with our VR services
             </p>
-            <a href="#about" onClick={handleScroll}>
-              <button className={styles.button}>DISCOVER MORE</button>
+            <a href="#about" onClick={handleScroll} className={styles.button}>
+              DISCOVER MORE
             </a>
           </div>
           <div className={styles.clientsContainer}>

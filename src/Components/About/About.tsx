@@ -1,7 +1,7 @@
 import styles from './About.module.css';
 import vrperson2 from '../../assets/vrperson/vrperson2.png';
-import { NavLink } from 'react-router-dom';
 import { clsx as cn } from 'clsx';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -29,9 +29,9 @@ const About = () => {
             <li className={styles.listItem}>Versatile Applications</li>
             <li className={styles.listItem}>Affordable and Accessible</li>
           </ul>
-          <NavLink to="/about-us">
-            <button className={styles.button}>READ MORE</button>
-          </NavLink>
+          <Link to="/about-us" className={styles.button}>
+            READ MORE
+          </Link>
         </div>
       </div>
     </section>
