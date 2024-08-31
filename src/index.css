@@ -176,6 +176,7 @@ p {
 
 img {
   display: block;
+  user-select: none;
 }
 
 a {
