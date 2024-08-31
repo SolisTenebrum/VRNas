@@ -18,7 +18,7 @@
   right: -80px;
   width: 40%;
   height: 25%;
-  background: linear-gradient(90deg, #0cbcf1c9 0, #e95ce9c5 100%);
+  background: linear-gradient(90deg, #0cbcf1c9 -5%, #e95ce9c5 100%);
   filter: blur(100px);
   border-radius: 10% 20% 100% 40%;
   transform: rotate(-20deg);

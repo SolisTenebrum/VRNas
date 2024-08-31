@@ -25,7 +25,6 @@
 
 .textContainer {
   max-width: 548px;
-  flex: 1;
   align-self: center;
 }
 
@@ -42,9 +41,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 48px;
-}
-
-.spoilerItem {
+  outline: 1px solid transparent;
 }
 
 .button {
@@ -92,9 +89,11 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.7s ease;
+  outline: 1px solid transparent;
 }
 
 .descriptionVisible {
+  transition: max-height 0.7s ease;
   display: block;
   max-height: 200px;
 }
@@ -110,13 +109,14 @@
   position: absolute;
   content: '';
   top: 40%;
-  left: 0;
+  left: 55%;
   width: 100%;
   height: 50%;
-  background: linear-gradient(90deg, #0cbcf1c9 -30%, #e95ce9c5 100%);
+  background: linear-gradient(90deg, #0cbcf1c9 -5%, #e95ce9c5 100%);
   filter: blur(100px);
   border-radius: 10% 20% 100% 40%;
-  transform: rotate(-20deg);
+  transform: rotate(-20deg) translateZ(0) translateX(-50%) translateY(-50%);
+  -webkit-transform: rotate(-20deg) translateZ(0) translateX(-50%) translateY(-50%);
   z-index: -1;
 }
 
@@ -245,6 +245,10 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+  .vrpersonContainer::before {
+    filter: blur(70px);
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -256,5 +260,9 @@
 
   .button {
     font-size: 16px;
+  }
+
+  .vrpersonContainer::before {
+    filter: blur(55px);
   }
 }

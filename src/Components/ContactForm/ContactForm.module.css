@@ -29,7 +29,7 @@
   left: 50%;
   width: 57%;
   height: 46%;
-  background: linear-gradient(90deg, #0cbcf1c9 -30%, #e95ce9c5 100%);
+  background: linear-gradient(90deg, #0cbcf1c9 -5%, #e95ce9c5 100%);
   filter: blur(70px);
   border-radius: 10% 20% 100% 40%;
   transform: rotate(-10deg) translateX(-50%) translateY(-50px);

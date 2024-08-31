@@ -41,10 +41,10 @@
   content: '';
   top: 35%;
   left: 50%;
-  width: 57%;
-  height: 46%;
-  background: linear-gradient(90deg, #0cbcf1c9 -30%, #e95ce9c5 100%);
-  filter: blur(70px);
+  width: 657px;
+  height: 292px;
+  background: linear-gradient(90deg, #0cbcf1c9 -5%, #e95ce9c5 100%);
+  filter: blur(100px);
   border-radius: 10% 20% 100% 40%;
   transform: rotate(-10deg) translateX(-50%) translateY(50px);
   z-index: -1;
@@ -154,6 +154,11 @@
   .halfCircle {
     max-width: 100vw;
   }
+
+  .imageContainer::before {
+    width: 496px;
+    height: 207px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -165,13 +170,48 @@
     line-height: normal;
     margin-bottom: 30px;
   }
+
+  .imageContainer::before {
+    top: 30%;
+    width: 467px;
+    height: 173px;
+    filter: blur(70px);
+  }
 }
 
 @media screen and (max-width: 576px) {
   .title {
     font-size: 24px;
   }
+
+  .imageContainer::before {
+    top: 30%;
+    left: 50%;
+    width: 315px;
+    height: 148px;
+    filter: blur(52px);
+  }
 }
 
 @media screen and (max-width: 480px) {
+  .imageContainer::before {
+    top: 27%;
+    left: 50%;
+    width: 259px;
+    height: 125px;
+    filter: blur(52px);
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .imageContainer::before {
+    top: 25%;
+    left: 50%;
+    width: 238px;
+    height: 109px;
+    filter: blur(52px);
+  }
+}
+
+@media screen and (max-width: 320px) {
 }

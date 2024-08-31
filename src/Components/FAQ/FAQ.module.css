@@ -12,14 +12,17 @@
   position: absolute;
   content: '';
   top: 13%;
-  right: 20%;
-  width: 20%;
-  height: 15%;
-  background: linear-gradient(90deg, #0cbcf1c9 -30%, #e95ce9c5 100%);
+  left: 65%;
+  width: 331px;
+  height: 100px;
+  background: linear-gradient(90deg, #0cbcf1c9 -5%, #e95ce9c5 100%);
   filter: blur(80px);
   border-radius: 10% 20% 100% 40%;
   transform: rotate(-10deg);
   z-index: -1;
+  -webkit-transform: translateZ(0);
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
 }
 
 .faq_pricingplan::before {
