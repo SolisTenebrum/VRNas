@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from './Service.module.css';
 import { clsx as cn } from 'clsx';
 import isMobileDevice from '../../utils/isMobileDevice';
