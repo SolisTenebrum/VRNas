@@ -10,17 +10,14 @@ const About = () => {
         <div className={styles.column}>
           <div
             data-aos="fade-right"
-            data-aos-delay="0"
             data-aos-duration="700"
             data-aos-easing="ease"
-            data-aos-offset="-300"
             className={styles.vrpersonContainer}
           >
             <div className={styles.background} />
             <img src={vrperson2} className={styles.vrperson} />
             <div
               data-aos="zoom-in-up"
-              data-aos-delay="180"
               data-aos-duration="700"
               data-aos-easing="ease"
               className={styles.video}

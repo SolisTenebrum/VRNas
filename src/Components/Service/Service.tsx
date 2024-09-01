@@ -14,7 +14,7 @@ const Service = ({ variant }: { variant: string }) => {
               data-aos-delay="50"
               data-aos-duration="700"
               data-aos-easing="ease"
-              data-aos-offset="300"
+              data-aos-offset="500"
               className={cn(styles.subtitle, 'gradient-text')}
             >
               Our Service
@@ -24,7 +24,7 @@ const Service = ({ variant }: { variant: string }) => {
               data-aos-delay="200"
               data-aos-duration="700"
               data-aos-easing="ease"
-              data-aos-offset="300"
+              data-aos-offset="500"
               className={styles.title}
             >
               Our Service
@@ -36,7 +36,7 @@ const Service = ({ variant }: { variant: string }) => {
               data-aos-delay="250"
               data-aos-duration="700"
               data-aos-easing="ease"
-              data-aos-offset="300"
+              data-aos-offset="500"
               className={styles.text}
             >
               We use the latest VR hardware and software to create high-quality VR experiences that are accessible and

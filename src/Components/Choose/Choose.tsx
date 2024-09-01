@@ -27,20 +27,18 @@ const Choose = ({ variant }: { variant: string }) => {
           <div className={styles.textContainer}>
             <p
               data-aos="fade-up"
-              data-aos-delay="50"
               data-aos-duration="700"
               data-aos-easing="ease"
-              data-aos-offset="300"
+              data-aos-offset="500"
               className={cn(styles.subtitle, 'gradient-text')}
             >
               Why Choose Us
             </p>
             <h2
               data-aos="fade-up"
-              data-aos-delay="200"
               data-aos-duration="700"
               data-aos-easing="ease"
-              data-aos-offset="300"
+              data-aos-offset="500"
               className={styles.title}
             >
               Why Choose Us for Your VR Needs
@@ -50,10 +48,9 @@ const Choose = ({ variant }: { variant: string }) => {
                 return (
                   <div
                     data-aos="fade-left"
-                    data-aos-delay="250"
                     data-aos-duration="700"
                     data-aos-easing="ease"
-                    data-aos-offset="300"
+                    data-aos-offset="500"
                     className={styles.spoilerItem}
                     key={index}
                   >
@@ -77,10 +74,9 @@ const Choose = ({ variant }: { variant: string }) => {
         <div className={styles.column}>
           <div
             data-aos="fade-left"
-            data-aos-delay="50"
             data-aos-duration="700"
             data-aos-easing="ease"
-            data-aos-offset="300"
+           data-aos-offset="500"
             className={styles.vrpersonContainer}
           >
             <div
@@ -96,7 +92,6 @@ const Choose = ({ variant }: { variant: string }) => {
             />
             <div
               data-aos="zoom-in-up"
-              data-aos-delay="180"
               data-aos-duration="700"
               data-aos-easing="ease"
               data-aos-offset="900"

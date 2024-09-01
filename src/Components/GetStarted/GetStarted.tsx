@@ -11,7 +11,7 @@ const GetStarted = ({ variant }: { variant: string }) => {
           data-aos-delay="50"
           data-aos-duration="700"
           data-aos-easing="ease"
-          data-aos-offset="300"
+          data-aos-offset="600"
           className={cn(styles.subtitle, 'gradient-text')}
         >
           {variant === 'detail-service-page' ? 'Our VR Design Project' : 'How To Get Started'}
@@ -21,7 +21,7 @@ const GetStarted = ({ variant }: { variant: string }) => {
           data-aos-delay="200"
           data-aos-duration="700"
           data-aos-easing="ease"
-          data-aos-offset="300"
+          data-aos-offset="600"
           className={cn(styles.title, variant === 'detail-service-page' ? styles.title_detailservice : '')}
         >
           {variant === 'detail-service-page'

@@ -20,7 +20,7 @@ const Pricing = ({ variant }: { variant: string }) => {
             data-aos-delay="50"
             data-aos-duration="700"
             data-aos-easing="ease"
-            data-aos-offset="1700"
+            data-aos-offset="1800"
             className={cn(styles.subtitle, 'gradient-text')}
           >
             Our Pricing
@@ -30,7 +30,7 @@ const Pricing = ({ variant }: { variant: string }) => {
             data-aos-delay="200"
             data-aos-duration="700"
             data-aos-easing="ease"
-            data-aos-offset="1700"
+            data-aos-offset="1800"
             className={cn(styles.title, variant === 'detail-service-page' ? styles.title_detailservice : '')}
           >
             Affordable VR Services for Everyone
@@ -40,7 +40,7 @@ const Pricing = ({ variant }: { variant: string }) => {
             data-aos-delay="200"
             data-aos-duration="700"
             data-aos-easing="ease"
-            data-aos-offset="1700"
+            data-aos-offset="1800"
             className={cn(styles.text, variant === 'detail-service-page' ? styles.text_detailservice : '')}
           >
             At VRNas, we believe that everyone should have access to the benefits of VR. That's why we offer a range of
@@ -52,7 +52,7 @@ const Pricing = ({ variant }: { variant: string }) => {
           data-aos-delay="200"
           data-aos-duration="700"
           data-aos-easing="ease"
-          data-aos-offset="1700"
+          data-aos-offset="2000"
         >
           <div className={styles.content}>
             <div className={styles.column}>

@@ -72,7 +72,7 @@ const Testimonials = () => {
             data-aos-delay="50"
             data-aos-duration="700"
             data-aos-easing="ease"
-            data-aos-offset="400"
+            data-aos-offset="700"
             className={cn(styles.subtitle, 'gradient-text')}
           >
             Testimonial
@@ -82,7 +82,7 @@ const Testimonials = () => {
             data-aos-delay="200"
             data-aos-duration="700"
             data-aos-easing="ease"
-            data-aos-offset="400"
+           data-aos-offset="700"
             className={styles.title}
           >
             What Our Clients Are Saying
@@ -93,7 +93,7 @@ const Testimonials = () => {
           data-aos-delay="200"
           data-aos-duration="700"
           data-aos-easing="ease"
-          data-aos-offset="900"
+          data-aos-offset="1000"
           className={styles.imageContainer}
         >
           <img src={testimonialImage} className={styles.image} />

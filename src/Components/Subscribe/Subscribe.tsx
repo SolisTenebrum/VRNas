@@ -12,7 +12,7 @@ const Subscribe = () => {
         data-aos-delay="200"
         data-aos-duration="700"
         data-aos-easing="ease"
-        data-aos-offset="2300"
+        data-aos-offset="2500"
         className={styles.container}
       >
         <div className={styles.content}>

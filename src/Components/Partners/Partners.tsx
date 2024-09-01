@@ -29,7 +29,7 @@ const Partners = () => {
             data-aos-delay="50"
             data-aos-duration="700"
             data-aos-easing="ease"
-            data-aos-offset="1700"
+            data-aos-offset="1900"
             className={cn(styles.subtitle, 'gradient-text')}
           >
             Our Trusted Partners
@@ -39,7 +39,7 @@ const Partners = () => {
             data-aos-delay="200"
             data-aos-duration="700"
             data-aos-easing="ease"
-            data-aos-offset="1700"
+            data-aos-offset="1900"
             className={styles.title}
           >
             Discover the Companies We Work With

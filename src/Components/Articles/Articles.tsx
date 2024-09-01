@@ -25,7 +25,7 @@ const Articles = ({ variant }: { variant: string }) => {
               data-aos-delay="50"
               data-aos-duration="700"
               data-aos-easing="ease"
-              data-aos-offset="2200"
+              data-aos-offset="2300"
               className={cn(styles.subtitle, 'gradient-text')}
             >
               Our Articles
@@ -35,7 +35,7 @@ const Articles = ({ variant }: { variant: string }) => {
               data-aos-delay="200"
               data-aos-duration="700"
               data-aos-easing="ease"
-              data-aos-offset="2200"
+              data-aos-offset="2300"
               className={styles.title}
             >
               Stay Up-to-Date with Our VR Insights
@@ -46,7 +46,7 @@ const Articles = ({ variant }: { variant: string }) => {
             data-aos-delay="200"
             data-aos-duration="700"
             data-aos-easing="ease"
-            data-aos-offset="2200"
+            data-aos-offset="2300"
             to="/blog#blog"
             className={styles.button}
           >
@@ -60,7 +60,7 @@ const Articles = ({ variant }: { variant: string }) => {
               data-aos-delay="200"
               data-aos-duration="700"
               data-aos-easing="ease"
-              data-aos-offset="2500"
+              data-aos-offset="2600"
               className={styles.firstColumn}
             >
               <h4 className={styles.subsubtitle}>Popular Article</h4>
@@ -72,7 +72,7 @@ const Articles = ({ variant }: { variant: string }) => {
                 data-aos-delay="200"
                 data-aos-duration="700"
                 data-aos-easing="ease"
-                data-aos-offset="2500"
+                data-aos-offset="2600"
                 className={styles.subsubtitle}
               >
                 Recent Article
@@ -82,7 +82,7 @@ const Articles = ({ variant }: { variant: string }) => {
                 data-aos-delay="200"
                 data-aos-duration="700"
                 data-aos-easing="ease"
-                data-aos-offset="2500"
+                data-aos-offset="2600"
                 className={styles.articlesContainer}
               >
                 <SimpleBar
