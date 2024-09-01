@@ -10,7 +10,14 @@ const Footer = () => {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.container}>
+      <div
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="700"
+        data-aos-easing="ease"
+        data-aos-offset="2500"
+        className={styles.container}
+      >
         <div className={styles.top}>
           <div className={styles.logosContainer}>
             <NavLink to="/" className={styles.link}>

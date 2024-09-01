@@ -6,7 +6,7 @@ import { clients } from '../../constants';
 import { IClientProps } from '../../types/types';
 
 const Client = ({ image, name, company, message, index }: IClientProps) => {
-  const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
+  const [visibleIndex, setVisibleIndex] = useState<number | null>(1);
   const clientRef = useRef<HTMLDivElement>(null);
 
   const toggleVisibility = (index: number | null) => {
@@ -36,7 +36,14 @@ const Client = ({ image, name, company, message, index }: IClientProps) => {
   }, []);
 
   return (
-    <div className={cn(styles.client, styles[`client${index + 1}`], `${visibleIndex === index + 1 ? styles.moveToLeft : ''}`)} ref={clientRef}>
+    <div
+      className={cn(
+        styles.client,
+        styles[`client${index + 1}`],
+        `${visibleIndex === index + 1 ? styles.moveToLeft : ''}`
+      )}
+      ref={clientRef}
+    >
       <button
         className={cn(styles.button, `${visibleIndex === index + 1 ? styles.active : ''}`)}
         onClick={() => toggleVisibility(index + 1)}
@@ -60,10 +67,35 @@ const Testimonials = () => {
     <section className={styles.testimonials}>
       <div className={styles.container}>
         <div className={styles.textContainer}>
-          <p className={cn(styles.subtitle, 'gradient-text')}>Testimonial</p>
-          <h2 className={styles.title}>What Our Clients Are Saying</h2>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="50"
+            data-aos-duration="700"
+            data-aos-easing="ease"
+            data-aos-offset="400"
+            className={cn(styles.subtitle, 'gradient-text')}
+          >
+            Testimonial
+          </p>
+          <h2
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="700"
+            data-aos-easing="ease"
+            data-aos-offset="400"
+            className={styles.title}
+          >
+            What Our Clients Are Saying
+          </h2>
         </div>
-        <div className={styles.imageContainer}>
+        <div
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          data-aos-duration="700"
+          data-aos-easing="ease"
+          data-aos-offset="900"
+          className={styles.imageContainer}
+        >
           <img src={testimonialImage} className={styles.image} />
           <div className={styles.clients}>
             {clients.map((client, index) => (

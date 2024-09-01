@@ -34,7 +34,7 @@ const ArticleSlider: React.FC<IArticleSliderProps> = ({ articles }) => {
         {articles.map((article: IArticle, index: number) => {
           return (
             <SwiperSlide key={index}>
-              <ArticleBigCard article={article}/>
+              <ArticleBigCard article={article} />
             </SwiperSlide>
           );
         })}

@@ -8,16 +8,25 @@ const ServiceCard = ({
   title,
   text,
   buttonText,
+  index,
 }: {
   icon: string;
   title: string;
   text: string;
   buttonText: string;
+  index: number;
 }): JSX.Element => {
-
+  console.log(index);
   return (
     <>
-      <li className={cn(styles.card, isMobileDevice() === 'mobile' ? styles.card_mobile : '')}>
+      <li
+        data-aos="fade-up"
+        data-aos-delay="50"
+        data-aos-duration="700"
+        data-aos-easing="ease"
+        data-aos-offset="300"
+        className={cn(styles.card, isMobileDevice() === 'mobile' ? styles.card_mobile : '')}
+      >
         <img src={icon} className={styles.icon} />
         <h3 className={styles.cardTitle}>{title}</h3>
         <p className={styles.cardText}>{text}</p>

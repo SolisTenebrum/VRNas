@@ -28,12 +28,6 @@ body {
   color: #ffffff;
 }
 
-header,
-section,
-footer {
-  animation: fadeIn 0.4s ease-in-out forwards;
-}
-
 h1,
 h2,
 h3,
@@ -221,13 +215,4 @@ a {
 /* fixes a bug in simplebar when resizing the window */
 .simplebar-placeholder {
   width: auto !important;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }

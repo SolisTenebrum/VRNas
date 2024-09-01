@@ -16,16 +16,45 @@ const Hero = () => {
       <div className={styles.container}>
         <div className={styles.column}>
           <div className={styles.description}>
-            <h1 className={styles.title}>Immerse Yourself in Virtual Reality</h1>
-            <p className={styles.text}>
+            <h1
+              data-aos="fade-up"
+              data-aos-delay="50"
+              data-aos-duration="700"
+              data-aos-easing="ease"
+              id="titleAnchor"
+              className={styles.title}
+            >
+              Immerse Yourself in Virtual Reality
+            </h1>
+            <p
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="700"
+              data-aos-easing="ease"
+              className={styles.text}
+            >
               Experience Unforgettable Events in VR. Bring your events to life like never before with our VR services
             </p>
-            <a href="#about" onClick={handleScroll} className={styles.button}>
+            <a
+              data-aos="fade-up"
+              data-aos-delay="250"
+              data-aos-duration="700"
+              data-aos-easing="ease"
+              href="#about"
+              onClick={handleScroll}
+              className={styles.button}
+            >
               DISCOVER MORE
             </a>
           </div>
           <div className={styles.clientsContainer}>
-            <div className={styles.clients}>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="150"
+              data-aos-duration="700"
+              data-aos-easing="ease"
+              className={styles.clients}
+            >
               <ul className={styles.clientImages}>
                 <li className={styles.clientImageContainer}>
                   <img src={clientOne} alt="client" className={styles.clientImage} />
@@ -41,13 +70,27 @@ const Hero = () => {
                 <span className={styles.clientCaptionAccent}>32k+ </span>Happy Client
               </p>
             </div>
-            <div className={styles.video}>
+            <div
+              data-aos="zoom-in-up"
+              data-aos-delay="180"
+              data-aos-duration="700"
+              data-aos-easing="ease"
+              data-aos-anchor="#titleAnchor"
+              className={styles.video}
+            >
               <div className={styles.videoImage}></div>
             </div>
           </div>
         </div>
         <div className={styles.column}>
-          <div className={styles.vrPersonContainer}>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="700"
+            data-aos-easing="ease"
+            data-aos-anchor="#titleAnchor"
+            className={styles.vrPersonContainer}
+          >
             <img className={styles.vrPerson} src={vrPerson}></img>
           </div>
         </div>

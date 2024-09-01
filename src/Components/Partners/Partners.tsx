@@ -24,11 +24,36 @@ const Partners = () => {
     <section className={styles.partners}>
       <div className={styles.container}>
         <div className={styles.textContainer}>
-          <p className={cn(styles.subtitle, 'gradient-text')}>Our Trusted Partners</p>
-          <h2 className={styles.title}>Discover the Companies We Work With</h2>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="50"
+            data-aos-duration="700"
+            data-aos-easing="ease"
+            data-aos-offset="1700"
+            className={cn(styles.subtitle, 'gradient-text')}
+          >
+            Our Trusted Partners
+          </p>
+          <h2
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="700"
+            data-aos-easing="ease"
+            data-aos-offset="1700"
+            className={styles.title}
+          >
+            Discover the Companies We Work With
+          </h2>
         </div>
         <div className={styles.content}>
-          <div className={styles.imageContainer}>
+          <div
+            data-aos="zoom-out"
+            data-aos-delay="200"
+            data-aos-duration="700"
+            data-aos-easing="ease"
+            data-aos-offset="2000"
+            className={styles.imageContainer}
+          >
             <img src={partnersHalfCircle} className={styles.halfCircle} />
             <div className={styles.circles}>
               {partnerLogos.map((logo, index) => (

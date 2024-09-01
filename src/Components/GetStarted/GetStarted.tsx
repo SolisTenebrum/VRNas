@@ -6,15 +6,36 @@ const GetStarted = ({ variant }: { variant: string }) => {
   return (
     <section className={styles.getStarted}>
       <div className={styles.container}>
-        <p className={cn(styles.subtitle, 'gradient-text')}>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="50"
+          data-aos-duration="700"
+          data-aos-easing="ease"
+          data-aos-offset="300"
+          className={cn(styles.subtitle, 'gradient-text')}
+        >
           {variant === 'detail-service-page' ? 'Our VR Design Project' : 'How To Get Started'}
         </p>
-        <h2 className={cn(styles.title, variant === 'detail-service-page' ? styles.title_detailservice : '')}>
+        <h2
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="700"
+          data-aos-easing="ease"
+          data-aos-offset="300"
+          className={cn(styles.title, variant === 'detail-service-page' ? styles.title_detailservice : '')}
+        >
           {variant === 'detail-service-page'
             ? 'Revolutionize Your Experience with Our Cutting-Edge VR Design Project'
             : 'Bringing Your Virtual Reality Dreams to Life'}
         </h2>
-        <div className={styles.video}>
+        <div
+          data-aos="zoom-in-up"
+          data-aos-delay="180"
+          data-aos-duration="700"
+          data-aos-easing="ease"
+          data-aos-offset="700"
+          className={styles.video}
+        >
           <div className={styles.videoInfo}>
             <span className={styles.videoSpan}>{variant === 'detail-service-page' ? 'VR Design' : 'VR Service'}</span>
             <h4 className={styles.videoTitle}>
@@ -29,7 +50,14 @@ const GetStarted = ({ variant }: { variant: string }) => {
             <div className={styles.progressBar}></div>
           </div>
         </div>
-        <NavLink to="/pricing-plan#prices" className={styles.button}>
+        <NavLink
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-aos-duration="700"
+          data-aos-easing="ease"
+          to="/pricing-plan#prices"
+          className={styles.button}
+        >
           GET STARTED
         </NavLink>
       </div>

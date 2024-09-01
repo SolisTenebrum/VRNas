@@ -7,7 +7,14 @@ const Subscribe = () => {
 
   return (
     <section className={styles.subscribe}>
-      <div className={styles.container}>
+      <div
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="700"
+        data-aos-easing="ease"
+        data-aos-offset="2300"
+        className={styles.container}
+      >
         <div className={styles.content}>
           <div className={styles.column}>
             <h2 className={styles.title}>Subscribe to our newsletter for latest updates</h2>

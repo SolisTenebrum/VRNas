@@ -1,4 +1,3 @@
-import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop';
 import About from '../../Components/About/About';
 import Articles from '../../Components/Articles/Articles';
 import Benefits from '../../Components/Benefits/Benefits';
@@ -14,7 +13,6 @@ import Testimonials from '../../Components/Testimonials/Testimonials';
 const Homepage = () => {
   return (
     <>
-      <ScrollToTop />
       <Hero />
       <Benefits variant="" />
       <About />
