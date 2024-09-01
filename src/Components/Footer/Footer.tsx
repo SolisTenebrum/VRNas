@@ -11,11 +11,10 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div
-        data-aos="fade-up"
-        data-aos-delay="200"
-        data-aos-duration="700"
+        data-aos="fade-down"
+        data-aos-duration="1000"
         data-aos-easing="ease"
-        data-aos-offset="2500"
+        data-aos-offset="2300"
         className={styles.container}
       >
         <div className={styles.top}>
