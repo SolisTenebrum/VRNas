@@ -16,44 +16,23 @@ const Pricing = ({ variant }: { variant: string }) => {
           )}
         >
           <p
-            data-aos="fade-up"
-            data-aos-delay="50"
-            data-aos-duration="700"
-            data-aos-easing="ease"
-            data-aos-offset="1800"
             className={cn(styles.subtitle, 'gradient-text')}
           >
             Our Pricing
           </p>
           <h2
-            data-aos="fade-up"
-            data-aos-delay="200"
-            data-aos-duration="700"
-            data-aos-easing="ease"
-            data-aos-offset="1800"
             className={cn(styles.title, variant === 'detail-service-page' ? styles.title_detailservice : '')}
           >
             Affordable VR Services for Everyone
           </h2>
           <p
-            data-aos="fade-left"
-            data-aos-delay="200"
-            data-aos-duration="700"
-            data-aos-easing="ease"
-            data-aos-offset="1800"
             className={cn(styles.text, variant === 'detail-service-page' ? styles.text_detailservice : '')}
           >
             At VRNas, we believe that everyone should have access to the benefits of VR. That's why we offer a range of
             pricing options to meet the needs of any budget.
           </p>
         </div>
-        <div
-          data-aos="fade-up"
-          data-aos-delay="200"
-          data-aos-duration="700"
-          data-aos-easing="ease"
-          data-aos-offset="2000"
-        >
+        <div>
           <div className={styles.content}>
             <div className={styles.column}>
               {serviceBenefits.map((item, index) => {
@@ -74,14 +53,7 @@ const Pricing = ({ variant }: { variant: string }) => {
               </div>
             </div>
 
-            <div
-              data-aos="fade-up"
-              data-aos-delay="200"
-              data-aos-duration="700"
-              data-aos-easing="ease"
-              data-aos-offset="1700"
-              className={styles.priceContainer}
-            >
+            <div className={styles.priceContainer}>
               <p className={styles.startFrom}>Start from</p>
               <span className={styles.price}>$99</span>
               <NavLink to="/pricing-plan#prices" className={styles.button}>

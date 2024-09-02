@@ -17,29 +17,17 @@ const Hero = () => {
         <div className={styles.column}>
           <div className={styles.description}>
             <h1
-              data-aos="fade-up"
-              data-aos-delay="50"
-              data-aos-duration="700"
-              data-aos-easing="ease"
               id="titleAnchor"
               className={styles.title}
             >
               Immerse Yourself in Virtual Reality
             </h1>
             <p
-              data-aos="fade-up"
-              data-aos-delay="200"
-              data-aos-duration="700"
-              data-aos-easing="ease"
               className={styles.text}
             >
               Experience Unforgettable Events in VR. Bring your events to life like never before with our VR services
             </p>
             <a
-              data-aos="fade-up"
-              data-aos-delay="250"
-              data-aos-duration="700"
-              data-aos-easing="ease"
               href="#about"
               onClick={handleScroll}
               className={styles.button}
@@ -49,10 +37,6 @@ const Hero = () => {
           </div>
           <div className={styles.clientsContainer}>
             <div
-              data-aos="fade-up"
-              data-aos-delay="150"
-              data-aos-duration="700"
-              data-aos-easing="ease"
               className={styles.clients}
             >
               <ul className={styles.clientImages}>
@@ -71,11 +55,6 @@ const Hero = () => {
               </p>
             </div>
             <div
-              data-aos="zoom-in-up"
-              data-aos-delay="180"
-              data-aos-duration="700"
-              data-aos-easing="ease"
-              data-aos-anchor="#titleAnchor"
               className={styles.video}
             >
               <div className={styles.videoImage}></div>
@@ -84,11 +63,6 @@ const Hero = () => {
         </div>
         <div className={styles.column}>
           <div
-            data-aos="fade-up"
-            data-aos-delay="300"
-            data-aos-duration="700"
-            data-aos-easing="ease"
-            data-aos-anchor="#titleAnchor"
             className={styles.vrPersonContainer}
           >
             <img className={styles.vrPerson} src={vrPerson}></img>

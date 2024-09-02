@@ -21,32 +21,17 @@ const Articles = ({ variant }: { variant: string }) => {
         <div className={styles.containerTop}>
           <div className={styles.textContainer}>
             <p
-              data-aos="fade-up"
-              data-aos-delay="50"
-              data-aos-duration="700"
-              data-aos-easing="ease"
-              data-aos-offset="2300"
               className={cn(styles.subtitle, 'gradient-text')}
             >
               Our Articles
             </p>
             <h2
-              data-aos="fade-up"
-              data-aos-delay="200"
-              data-aos-duration="700"
-              data-aos-easing="ease"
-              data-aos-offset="2300"
               className={styles.title}
             >
               Stay Up-to-Date with Our VR Insights
             </h2>
           </div>
           <Link
-            data-aos="fade-up"
-            data-aos-delay="200"
-            data-aos-duration="700"
-            data-aos-easing="ease"
-            data-aos-offset="2300"
             to="/blog#blog"
             className={styles.button}
           >
@@ -56,11 +41,6 @@ const Articles = ({ variant }: { variant: string }) => {
         <div className={styles.containerBottom}>
           <div className={styles.content}>
             <div
-              data-aos="zoom-out"
-              data-aos-delay="200"
-              data-aos-duration="700"
-              data-aos-easing="ease"
-              data-aos-offset="2600"
               className={styles.firstColumn}
             >
               <h4 className={styles.subsubtitle}>Popular Article</h4>
@@ -68,21 +48,11 @@ const Articles = ({ variant }: { variant: string }) => {
             </div>
             <div className={styles.secondColumn}>
               <h4
-                data-aos="fade-left"
-                data-aos-delay="200"
-                data-aos-duration="700"
-                data-aos-easing="ease"
-                data-aos-offset="2600"
                 className={styles.subsubtitle}
               >
                 Recent Article
               </h4>
               <ul
-                data-aos="fade-left"
-                data-aos-delay="200"
-                data-aos-duration="700"
-                data-aos-easing="ease"
-                data-aos-offset="2600"
                 className={styles.articlesContainer}
               >
                 <SimpleBar

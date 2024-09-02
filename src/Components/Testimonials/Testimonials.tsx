@@ -68,32 +68,17 @@ const Testimonials = () => {
       <div className={styles.container}>
         <div className={styles.textContainer}>
           <p
-            data-aos="fade-up"
-            data-aos-delay="50"
-            data-aos-duration="700"
-            data-aos-easing="ease"
-            data-aos-offset="700"
             className={cn(styles.subtitle, 'gradient-text')}
           >
             Testimonial
           </p>
           <h2
-            data-aos="fade-up"
-            data-aos-delay="200"
-            data-aos-duration="700"
-            data-aos-easing="ease"
-           data-aos-offset="700"
             className={styles.title}
           >
             What Our Clients Are Saying
           </h2>
         </div>
         <div
-          data-aos="zoom-in"
-          data-aos-delay="200"
-          data-aos-duration="700"
-          data-aos-easing="ease"
-          data-aos-offset="1000"
           className={styles.imageContainer}
         >
           <img src={testimonialImage} className={styles.image} />

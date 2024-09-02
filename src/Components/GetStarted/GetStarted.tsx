@@ -7,21 +7,11 @@ const GetStarted = ({ variant }: { variant: string }) => {
     <section className={styles.getStarted}>
       <div className={styles.container}>
         <p
-          data-aos="fade-up"
-          data-aos-delay="50"
-          data-aos-duration="700"
-          data-aos-easing="ease"
-          data-aos-offset="600"
           className={cn(styles.subtitle, 'gradient-text')}
         >
           {variant === 'detail-service-page' ? 'Our VR Design Project' : 'How To Get Started'}
         </p>
         <h2
-          data-aos="fade-up"
-          data-aos-delay="200"
-          data-aos-duration="700"
-          data-aos-easing="ease"
-          data-aos-offset="600"
           className={cn(styles.title, variant === 'detail-service-page' ? styles.title_detailservice : '')}
         >
           {variant === 'detail-service-page'
@@ -29,11 +19,6 @@ const GetStarted = ({ variant }: { variant: string }) => {
             : 'Bringing Your Virtual Reality Dreams to Life'}
         </h2>
         <div
-          data-aos="zoom-in-up"
-          data-aos-delay="180"
-          data-aos-duration="700"
-          data-aos-easing="ease"
-          data-aos-offset="700"
           className={styles.video}
         >
           <div className={styles.videoInfo}>
@@ -51,10 +36,6 @@ const GetStarted = ({ variant }: { variant: string }) => {
           </div>
         </div>
         <NavLink
-          data-aos="fade-up"
-          data-aos-delay="600"
-          data-aos-duration="700"
-          data-aos-easing="ease"
           to="/pricing-plan#prices"
           className={styles.button}
         >

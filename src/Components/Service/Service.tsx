@@ -10,21 +10,11 @@ const Service = ({ variant }: { variant: string }) => {
         <div className={styles.row}>
           <div className={styles.column}>
             <p
-              data-aos="fade-up"
-              data-aos-delay="50"
-              data-aos-duration="700"
-              data-aos-easing="ease"
-              data-aos-offset="500"
               className={cn(styles.subtitle, 'gradient-text')}
             >
               Our Service
             </p>
             <h2
-              data-aos="fade-up"
-              data-aos-delay="200"
-              data-aos-duration="700"
-              data-aos-easing="ease"
-              data-aos-offset="500"
               className={styles.title}
             >
               Our Service
@@ -32,11 +22,6 @@ const Service = ({ variant }: { variant: string }) => {
           </div>
           <div className={styles.column}>
             <p
-              data-aos="fade-left"
-              data-aos-delay="250"
-              data-aos-duration="700"
-              data-aos-easing="ease"
-              data-aos-offset="500"
               className={styles.text}
             >
               We use the latest VR hardware and software to create high-quality VR experiences that are accessible and
@@ -55,7 +40,6 @@ const Service = ({ variant }: { variant: string }) => {
                   text={card.text}
                   buttonText={card.button}
                   key={index}
-                  index={index}
                 />
               );
             })}

@@ -25,21 +25,11 @@ const Partners = () => {
       <div className={styles.container}>
         <div className={styles.textContainer}>
           <p
-            data-aos="fade-up"
-            data-aos-delay="50"
-            data-aos-duration="700"
-            data-aos-easing="ease"
-            data-aos-offset="1900"
             className={cn(styles.subtitle, 'gradient-text')}
           >
             Our Trusted Partners
           </p>
           <h2
-            data-aos="fade-up"
-            data-aos-delay="200"
-            data-aos-duration="700"
-            data-aos-easing="ease"
-            data-aos-offset="1900"
             className={styles.title}
           >
             Discover the Companies We Work With
@@ -47,11 +37,6 @@ const Partners = () => {
         </div>
         <div className={styles.content}>
           <div
-            data-aos="zoom-out"
-            data-aos-delay="200"
-            data-aos-duration="700"
-            data-aos-easing="ease"
-            data-aos-offset="2000"
             className={styles.imageContainer}
           >
             <img src={partnersHalfCircle} className={styles.halfCircle} />

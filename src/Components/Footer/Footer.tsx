@@ -11,10 +11,6 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div
-        data-aos="fade-down"
-        data-aos-duration="1000"
-        data-aos-easing="ease"
-        data-aos-offset="2300"
         className={styles.container}
       >
         <div className={styles.top}>
