@@ -19,7 +19,8 @@
   background: linear-gradient(90deg, #0cbcf1c9 -5%, #e95ce9c5 100%);
   filter: blur(80px);
   border-radius: 10% 20% 100% 40%;
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg) translateZ(0);
+  transform: rotate(-90deg) translateZ(0);
   z-index: -1;
 }
 
@@ -80,7 +81,8 @@
   background: linear-gradient(90deg, #0cbcf1c9 -5%, #e95ce9c5 100%);
   filter: blur(100px);
   border-radius: 10% 20% 100% 40%;
-  transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg) translateZ(0);
+  transform: rotate(-30deg) translateZ(0);
   z-index: -5;
 }
 

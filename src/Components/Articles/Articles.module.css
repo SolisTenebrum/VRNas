@@ -115,7 +115,8 @@
   background: linear-gradient(90deg, #0cbcf1c9 -5%, #e95ce9c5 100%);
   filter: blur(70px);
   border-radius: 10% 20% 100% 40%;
-  transform: rotate(-20deg) translate(-20%, 20%);
+  -webkit-transform: rotate(-20deg) translate(-20%, 20%) translateZ(0);
+  transform: rotate(-20deg) translate(-20%, 20%) translateZ(0);
   z-index: -1;
 }
 
