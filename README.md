@@ -11,3 +11,6 @@ Platform providing VR services, including virtual reality experiences, augmented
 - React.js
 - CCS Modules
 - Typescript
+- framer-motion
+- Swiper
+- simplebar-react
