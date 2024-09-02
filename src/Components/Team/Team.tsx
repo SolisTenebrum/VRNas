@@ -12,10 +12,10 @@ const MotionLink = motion(Link);
 const TeamCard = ({ team, variant, index }: { team: any; variant: string; index: number }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.3, easings: 'ease', delay: index * 0.1 }}
-      viewport={{ once: true, amount: 0.4 }}
+      initial={{ scale: 0 }}
+      whileInView={{ scale: 1, transformOrigin: 'top' }}
+      transition={{ duration: 0.1, easings: 'ease', delay: index * 0.1 }}
+      viewport={{ once: true, amount: 0.2 }}
       className={styles.card}
     >
       <div className={styles.imageContainer}>

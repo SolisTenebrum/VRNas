@@ -10,10 +10,10 @@ import { motion } from 'framer-motion';
 const FAQCard = ({ title, text, index, toggleVisibility, faqCardsOpened }: IFAQProps) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.2, easings: 'ease', delay: 0.1 }}
-      viewport={{ once: true, amount: 0.5 }}
+      initial={{ scale: 0 }}
+      whileInView={{ scale: 1 }}
+      transition={{ duration: 0.1, easings: 'ease', delay: 0.1 }}
+      viewport={{ once: true, amount: 0.1 }}
       className={cn(styles.faqCard, faqCardsOpened.includes(index) ? styles.faqCardActive : '')}
       onClick={() => toggleVisibility(index)}
     >

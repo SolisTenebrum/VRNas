@@ -95,13 +95,6 @@
   color: white;
 }
 
-/* .row:last-of-type {
-  display: flex;
-  flex-direction: row;
-  column-gap: 10px;
-  justify-content: space-around;
-} */
-
 .row:last-of-type {
   display: grid;
   column-gap: 10px;
