@@ -4,18 +4,49 @@ import { clsx as cn } from 'clsx';
 import { vrServicesText } from '../../constants';
 import { NavLink, useLocation } from 'react-router-dom';
 import { IServiceTextProps } from '../../types/types';
+import { motion } from 'framer-motion';
+import isMobileDevice from '../../utils/isMobileDevice';
 
 const ServiceText = ({ subtitle, title, text, listTitle, listItems }: IServiceTextProps) => {
   return (
     <>
-      <p className={cn(styles.subtitle, 'gradient-text')}>{subtitle}</p>
-      <h2 className={styles.title}>{title}</h2>
+      <motion.p
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, easings: 'ease' }}
+        viewport={{ once: true, amount: 0.5 }}
+        className={cn(styles.subtitle, 'gradient-text')}
+      >
+        {subtitle}
+      </motion.p>
+      <motion.h2
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+        viewport={{ once: true, amount: 0.5 }}
+        className={styles.title}
+      >
+        {title}
+      </motion.h2>
       {text.slice(0, 2).map((item, index) => (
-        <p className={styles.text} key={index}>
+        <motion.p
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+          viewport={{ once: true, amount: 0.5 }}
+          className={styles.text}
+          key={index}
+        >
           {item}
-        </p>
+        </motion.p>
       ))}
-      <div className={styles.listContainer}>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+        viewport={{ once: true, amount: 0.5 }}
+        className={styles.listContainer}
+      >
         <h3 className={styles.listTitle}>{listTitle}</h3>
         <ul className={styles.list}>
           {listItems.map((item, index) => (
@@ -24,15 +55,29 @@ const ServiceText = ({ subtitle, title, text, listTitle, listItems }: IServiceTe
             </li>
           ))}
         </ul>
-      </div>
+      </motion.div>
       {text.slice(2).map((item, index) => (
-        <p className={styles.text} key={index}>
+        <motion.p
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+          viewport={{ once: true, amount: 0.5 }}
+          className={styles.text}
+          key={index}
+        >
           {item}
-        </p>
+        </motion.p>
       ))}
-      <NavLink to="/contact-us" className={styles.button}>
-        <button className={styles.button}>CONTACT US</button>
-      </NavLink>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+        viewport={{ once: true, amount: 0.5 }}
+      >
+        <NavLink to="/contact-us" className={styles.button}>
+          <button className={styles.button}>CONTACT US</button>
+        </NavLink>
+      </motion.div>
     </>
   );
 };
@@ -57,13 +102,15 @@ const VRService = () => {
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const serviceName = params.get('serviceTitle');
-
     if (serviceName) {
       const foundService = serviceCircles.find((service) => service.text === serviceName);
       if (foundService) {
         setActiveService(foundService.id);
-
-        setRotationAngle(foundService.angle);
+        if (isMobileDevice() === 'mobile') {
+          setRotationAngle(foundService.angle);
+        } else {
+          setRotationAngle(0);
+        }
       }
     }
 
@@ -115,8 +162,12 @@ const VRService = () => {
       <div className={styles.container}>
         <div className={styles.circlesBackground}>
           <div className={styles.circles} style={{ transform: `rotate(${rotationAngle}deg)` }}>
-            {serviceCircles.map((service) => (
-              <div
+            {serviceCircles.map((service, index) => (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5, rotate: -rotationAngle }}
+                whileInView={{ opacity: 1, scale: 1, rotate: -rotationAngle }}
+                transition={{ duration: 0.2, easings: 'ease', delay: 0.1 * index }}
+                viewport={{ once: true, amount: 0.5 }}
                 key={service.id}
                 className={cn(
                   styles.circle,
@@ -124,10 +175,10 @@ const VRService = () => {
                   activeService === service.id && styles.circleActive
                 )}
                 onClick={() => handleCircleClick(service.id)}
-                style={{ transform: `rotate(${-rotationAngle}deg)` }}
+                // style={{ transform: `rotate(${-rotationAngle}deg)` }}
               >
                 <p className={styles.circleText}>{service.text}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
           <div className={styles.arrowButtons}>

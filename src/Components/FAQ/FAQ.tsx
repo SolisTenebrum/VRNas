@@ -5,10 +5,15 @@ import { faqCardsAll, faqCardsAboutUs, faqCardsPricingPlan } from '../../constan
 import vrperson from '../../assets/vrperson/vrperson4.png';
 import { IFAQProps } from '../../types/types';
 import menuArrow from '../../assets/icons/menu-arrow.svg';
+import { motion } from 'framer-motion';
 
 const FAQCard = ({ title, text, index, toggleVisibility, faqCardsOpened }: IFAQProps) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.2, easings: 'ease', delay: 0.1 }}
+      viewport={{ once: true, amount: 0.5 }}
       className={cn(styles.faqCard, faqCardsOpened.includes(index) ? styles.faqCardActive : '')}
       onClick={() => toggleVisibility(index)}
     >
@@ -19,7 +24,7 @@ const FAQCard = ({ title, text, index, toggleVisibility, faqCardsOpened }: IFAQP
         <img src={menuArrow} className={cn(styles.menuArrow, faqCardsOpened.includes(index) && styles.opened)} />
       </div>
       <p className={cn(styles.faqCardText, faqCardsOpened.includes(index) ? styles.textVisible : '')}>{text}</p>
-    </div>
+    </motion.div>
   );
 };
 
@@ -69,23 +74,65 @@ const FAQ = ({ variant }: { variant: string }) => {
     >
       {variant === 'faq-page' && (
         <div className={styles.vrpersonContainer}>
-          <img src={vrperson} className={styles.vrperson} />
-          <img src={vrperson} className={styles.vrperson} />
+          <motion.img
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+            viewport={{ once: true, amount: 0.5 }}
+            src={vrperson}
+            className={styles.vrperson}
+          />
+          <motion.img
+            initial={{ opacity: 0, scaleX: -1, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+            viewport={{ once: true, amount: 0.5 }}
+            src={vrperson}
+            className={styles.vrperson}
+          />
         </div>
       )}
       <div className={styles.container}>
         <div className={styles.row}>
           <div className={styles.textContainer}>
-            <p className={cn(styles.subtitle, 'gradient-text')}>Faq</p>
-            <h2 className={styles.title}>Frequently Asked Questions</h2>
-            <p className={styles.text}>
+            <motion.p
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, easings: 'ease' }}
+              viewport={{ once: true, amount: 0.5 }}
+              className={cn(styles.subtitle, 'gradient-text')}
+            >
+              Faq
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+              viewport={{ once: true, amount: 0.5 }}
+              className={styles.title}
+            >
+              Frequently Asked Questions
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+              viewport={{ once: true, amount: 0.5 }}
+              className={styles.text}
+            >
               At VRNas, we want to make sure that you have all the information you need to make informed decisions about
               our VR services. Here are some of the most common questions we receive:
-            </p>
+            </motion.p>
           </div>
         </div>
         {variant === 'faq-page' && (
-          <div className={styles.buttons}>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+            viewport={{ once: true, amount: 0.5 }}
+            className={styles.buttons}
+          >
             <button
               className={cn(styles.button, activeButtons.includes(0) ? styles.buttonActive : '')}
               onClick={() => handleClick(faqCardsAll, 0)}
@@ -104,7 +151,7 @@ const FAQ = ({ variant }: { variant: string }) => {
             >
               Pricing
             </button>
-          </div>
+          </motion.div>
         )}
         <div className={styles.row}>
           {(variant === 'pricing-plan-page'

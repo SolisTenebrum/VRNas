@@ -2,6 +2,7 @@ import styles from './PageTitle.module.css';
 import arrow from '../../assets/icons/menu-arrow.svg';
 import { clsx as cn } from 'clsx';
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const variantClasses = {
   'detail-service-page': styles.pageTitle_detailservice,
@@ -29,15 +30,35 @@ const PageTitle = ({ variant }: { variant: string }) => {
   return (
     <section className={cn(styles.pageTitle, pageClass)}>
       <div className={styles.container}>
-        <h1 className={styles.title}>{title}</h1>
-        <p className={styles.path}>
+        <motion.h1
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true, amount: 0.5 }}
+          className={styles.title}
+        >
+          {title}
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true, amount: 0.5 }}
+          className={styles.path}
+        >
           <NavLink to="/" className={styles.pathLink}>
             <span className={styles.pathSpan}>Home</span>
           </NavLink>
           <img src={arrow} className={styles.arrow} />
           {title}
-        </p>
-        <div className={styles.divider} />
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, scale: 0, x: 20 }}
+          whileInView={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ duration: 0.7, easings: 'ease' }}
+          viewport={{ once: true, amount: 0.5 }}
+          className={styles.divider}
+        />
       </div>
     </section>
   );

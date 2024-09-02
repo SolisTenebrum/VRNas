@@ -1,24 +1,37 @@
 import { NavLink } from 'react-router-dom';
 import styles from './GetStarted.module.css';
 import { clsx as cn } from 'clsx';
+import { motion } from 'framer-motion';
 
 const GetStarted = ({ variant }: { variant: string }) => {
   return (
     <section className={styles.getStarted}>
       <div className={styles.container}>
-        <p
+        <motion.p
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, easings: 'ease' }}
+          viewport={{ once: true, amount: 0.5 }}
           className={cn(styles.subtitle, 'gradient-text')}
         >
           {variant === 'detail-service-page' ? 'Our VR Design Project' : 'How To Get Started'}
-        </p>
-        <h2
+        </motion.p>
+        <motion.h2
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+          viewport={{ once: true, amount: 0.5 }}
           className={cn(styles.title, variant === 'detail-service-page' ? styles.title_detailservice : '')}
         >
           {variant === 'detail-service-page'
             ? 'Revolutionize Your Experience with Our Cutting-Edge VR Design Project'
             : 'Bringing Your Virtual Reality Dreams to Life'}
-        </h2>
-        <div
+        </motion.h2>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5, y: 100 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
           className={styles.video}
         >
           <div className={styles.videoInfo}>
@@ -34,13 +47,17 @@ const GetStarted = ({ variant }: { variant: string }) => {
             <div className={styles.playSmall}></div>
             <div className={styles.progressBar}></div>
           </div>
-        </div>
-        <NavLink
-          to="/pricing-plan#prices"
-          className={styles.button}
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
-          GET STARTED
-        </NavLink>
+          <NavLink to="/pricing-plan#prices" className={styles.button}>
+            GET STARTED
+          </NavLink>
+        </motion.div>
       </div>
     </section>
   );

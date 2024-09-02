@@ -5,6 +5,7 @@ import instagramIcon from '../../assets/logos/logo-instagram.svg';
 import facebookIcon from '../../assets/logos/logo-fb.svg';
 import xIcon from '../../assets/logos/logo-x.svg';
 import githubIcon from '../../assets/logos/logo-github.svg';
+import { motion } from 'framer-motion';
 
 const ContactForm = () => {
   const submit = (e: React.SyntheticEvent) => {
@@ -14,7 +15,13 @@ const ContactForm = () => {
   return (
     <section className={styles.contactForm}>
       <div className={styles.container}>
-        <div className={styles.imageContainer}>
+        <motion.div
+          initial={{ opacity: 0, scale: 1.2, y: 100 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.7, easings: 'ease' }}
+          viewport={{ once: true, amount: 0.5 }}
+          className={styles.imageContainer}
+        >
           <img src={contactUsImage} className={styles.image}></img>
           <div className={styles.socials}>
             <div className={cn(styles.socialIconContainer, styles.instagramIcon)}>
@@ -30,27 +37,63 @@ const ContactForm = () => {
               <img src={githubIcon} className={styles.socialIcon} />
             </div>
           </div>
-        </div>
+        </motion.div>
         <div className={styles.column}>
           <div className={styles.textContainer}>
-            <p className={cn(styles.subtitle, 'gradient-text')}>Contact Us</p>
-            <h2 className={styles.title}>Get In Touch</h2>
-            <div className={styles.text}>
+            <motion.p
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, easings: 'ease' }}
+              viewport={{ once: true, amount: 0.5 }}
+              className={cn(styles.subtitle, 'gradient-text')}
+            >
+              Contact Us
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+              viewport={{ once: true, amount: 0.5 }}
+              className={styles.title}
+            >
+              Get In Touch
+            </motion.h2>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+              viewport={{ once: true, amount: 0.5 }}
+              className={styles.text}
+            >
               At VRNas, we're always happy to hear from our clients and potential clients. Whether you have a question
               about our VR services, want to discuss a potential project, or just want to say hello, we're here to help.
-            </div>
+            </motion.div>
           </div>
 
-          <form className={styles.form}>
+          <motion.form
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, easings: 'ease', delay: 0.2 }}
+            viewport={{ once: true, amount: 0.5 }}
+            className={styles.form}
+          >
             <input className={cn(styles.input, styles.name)} type="text" placeholder="First Name"></input>
             <input className={cn(styles.input, styles.lastName)} type="text" placeholder="Last Name"></input>
             <input className={cn(styles.input, styles.email)} type="email" placeholder="Email"></input>
             <input className={cn(styles.input, styles.phone)} type="phone" placeholder="Phone Number"></input>
             <textarea className={styles.message} placeholder="Message"></textarea>
-            <button className={styles.button} type="submit" onClick={submit}>
+            <motion.button
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, easings: 'ease', delay: 0.4 }}
+              viewport={{ once: true, amount: 0.9 }}
+              className={styles.button}
+              type="submit"
+              onClick={submit}
+            >
               SEND MESSAGE
-            </button>
-          </form>
+            </motion.button>
+          </motion.form>
         </div>
       </div>
     </section>

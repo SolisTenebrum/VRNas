@@ -2,6 +2,7 @@ import styles from './Footer.module.css';
 import mainLogo from '../../assets/logos/vrnas-full-logo.svg';
 import { quickLinks, supportLinks, contactLinks, socialLogos } from '../../constants';
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -10,7 +11,11 @@ const Footer = () => {
 
   return (
     <footer className={styles.footer}>
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, easings: 'ease' }}
+        viewport={{ once: true, amount: 0.5 }}
         className={styles.container}
       >
         <div className={styles.top}>
@@ -74,7 +79,7 @@ const Footer = () => {
         <div className={styles.bottom}>
           <p className={styles.copyright}>© Copyright 2023, All Rights Reserved</p>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 };

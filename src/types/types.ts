@@ -50,6 +50,7 @@ interface IPricingCardProps {
   text: string;
   list: string[];
   buttonText: string;
+  index: number;
 }
 
 interface IClientProps {

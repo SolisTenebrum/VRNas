@@ -4,6 +4,7 @@ import vrPerson2 from '../../assets/vrperson/vrperson5.png';
 import { chooseUsSpoilerItems } from '../../constants';
 import { useState } from 'react';
 import { clsx as cn } from 'clsx';
+import { motion } from 'framer-motion';
 
 const Choose = ({ variant }: { variant: string }) => {
   const [visibleIndexes, setVisibleIndexes] = useState<number[]>([]);
@@ -25,20 +26,32 @@ const Choose = ({ variant }: { variant: string }) => {
       >
         <div className={styles.column}>
           <div className={styles.textContainer}>
-            <p
+            <motion.p
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, easings: 'ease' }}
+              viewport={{ once: true, amount: 0.5 }}
               className={cn(styles.subtitle, 'gradient-text')}
             >
               Why Choose Us
-            </p>
-            <h2
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, easings: 'ease', delay: 0.2 }}
+              viewport={{ once: true, amount: 0.5 }}
               className={styles.title}
             >
               Why Choose Us for Your VR Needs
-            </h2>
+            </motion.h2>
             <div className={styles.spoilers}>
               {chooseUsSpoilerItems.map((item: { title: string; description: string }, index: number) => {
                 return (
-                  <div
+                  <motion.div
+                    initial={{ opacity: 0, x: 100, y: 50 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ duration: 0.5, easings: 'ease', delay: 0.3 * index }}
+                    viewport={{ once: true, amount: 0.5 }}
                     className={styles.spoilerItem}
                     key={index}
                   >
@@ -53,14 +66,18 @@ const Choose = ({ variant }: { variant: string }) => {
                     >
                       {item.description}
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
           </div>
         </div>
         <div className={styles.column}>
-          <div
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             className={styles.vrpersonContainer}
           >
             <div
@@ -74,7 +91,11 @@ const Choose = ({ variant }: { variant: string }) => {
               src={variant === 'about-us-page' || variant === 'pricing-plan-page' ? vrPerson2 : vrPerson}
               className={styles.vrperson}
             />
-            <div
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5, y: 100 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true, amount: 0.5 }}
               className={cn(
                 styles.video,
                 variant === 'about-us-page' ? styles.video_aboutus : '',
@@ -88,8 +109,8 @@ const Choose = ({ variant }: { variant: string }) => {
                   variant === 'pricing-plan-page' ? styles.videoImage_pricingplan : ''
                 )}
               ></div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

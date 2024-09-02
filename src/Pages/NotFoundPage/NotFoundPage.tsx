@@ -4,6 +4,7 @@ import notFoundPageImage from '../../assets/background-elements/notfoundpage-ima
 import { NavLink } from 'react-router-dom';
 import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop';
 import { clsx as cn } from 'clsx';
+import { motion } from 'framer-motion';
 
 const NotFoundPage = () => {
   return (
@@ -13,9 +14,31 @@ const NotFoundPage = () => {
         <div className={styles.container}>
           <div className={styles.column}>
             <div className={styles.textContainer}>
-              <h3 className={cn(styles.subtitle, 'gradient-text')}>404 Error</h3>
-              <h2 className={styles.title}>Page Not Found</h2>
-              <div className={styles.text}>
+              <motion.h3
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, easings: 'ease' }}
+                viewport={{ once: true, amount: 0.5 }}
+                className={cn(styles.subtitle, 'gradient-text')}
+              >
+                404 Error
+              </motion.h3>
+              <motion.h2
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+                viewport={{ once: true, amount: 0.5 }}
+                className={styles.title}
+              >
+                Page Not Found
+              </motion.h2>
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, easings: 'ease', delay: 0.4 }}
+                viewport={{ once: true, amount: 0.5 }}
+                className={styles.text}
+              >
                 <p className={styles.textParagraph}>
                   Oops! It looks like the page you were looking for is not here. Here are some possible reasons why:
                 </p>
@@ -37,16 +60,29 @@ const NotFoundPage = () => {
                   If you believe there's an issue with our website, please contact us using the information provided on
                   our contact page.
                 </p>
-              </div>
-              <NavLink to="/">
-                <button className={styles.button}>BACK HOME</button>
-              </NavLink>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, easings: 'ease', delay: 0.6 }}
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                <NavLink to="/" className={styles.button}>
+                  BACK HOME
+                </NavLink>
+              </motion.div>
             </div>
           </div>
           <div className={styles.column}>
-            <div className={styles.imageContainer}>
+            <motion.div
+              initial={{ opacity: 0, scale: 1.2, x: 100 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.7, easings: 'ease' }}
+              viewport={{ once: true, amount: 0.5 }}
+              className={styles.imageContainer}
+            >
               <img src={notFoundPageImage} className={styles.image} />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

@@ -4,6 +4,7 @@ import { clsx as cn } from 'clsx';
 import { useEffect, useState, useRef } from 'react';
 import { clients } from '../../constants';
 import { IClientProps } from '../../types/types';
+import { motion } from 'framer-motion';
 
 const Client = ({ image, name, company, message, index }: IClientProps) => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(1);
@@ -67,18 +68,30 @@ const Testimonials = () => {
     <section className={styles.testimonials}>
       <div className={styles.container}>
         <div className={styles.textContainer}>
-          <p
+          <motion.p
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, easings: 'ease', delay: 0.5 }}
+            viewport={{ once: true, amount: 1 }}
             className={cn(styles.subtitle, 'gradient-text')}
           >
             Testimonial
-          </p>
-          <h2
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, easings: 'ease', delay: 0.5 }}
+            viewport={{ once: true, amount: 1 }}
             className={styles.title}
           >
             What Our Clients Are Saying
-          </h2>
+          </motion.h2>
         </div>
-        <div
+        <motion.div
+          initial={{ opacity: 0, scale: 1.2, y: 100 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true, amount: 0.4 }}
           className={styles.imageContainer}
         >
           <img src={testimonialImage} className={styles.image} />
@@ -87,7 +100,7 @@ const Testimonials = () => {
               <Client key={index} {...client} index={index} />
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

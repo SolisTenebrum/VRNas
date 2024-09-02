@@ -11,41 +11,120 @@ import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop';
 import Subscribe from '../../Components/Subscribe/Subscribe';
 import { shuffleArray } from '../../utils/shuffleArray';
 import { IArticleProps } from '../../types/types';
+import { motion } from 'framer-motion';
 
 const Article = ({ category, title, author, date, mainImage, paragraphs, articleImages, postTags }: IArticleProps) => {
   return (
     <>
-      <span className={styles.articleSpan}>{category}</span>
-      <h2 className={styles.articleTitle}>{title}</h2>
-      <h3 className={styles.articleSubtitle}>
+      <motion.span
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, easings: 'ease' }}
+        viewport={{ once: true, amount: 0.5 }}
+        className={styles.articleSpan}
+      >
+        {category}
+      </motion.span>
+      <motion.h2
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+        viewport={{ once: true, amount: 0.5 }}
+        className={styles.articleTitle}
+      >
+        {title}
+      </motion.h2>
+      <motion.h3
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, easings: 'ease', delay: 0.4 }}
+        viewport={{ once: true, amount: 0.5 }}
+        className={styles.articleSubtitle}
+      >
         {author} | {date}
-      </h3>
-      <div className={styles.articleMainImageContainer}>
+      </motion.h3>
+      <motion.div
+        initial={{ opacity: 0, scale: 1.2, y: 100 }}
+        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+        viewport={{ once: true, amount: 0.5 }}
+        className={styles.articleMainImageContainer}
+      >
         <img className={styles.articleMainImage} src={mainImage} />
-      </div>
+      </motion.div>
       {paragraphs?.slice(0, 4).map((paragraph, index) => (
-        <p className={styles.articleText} key={index}>
+        <motion.p
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, easings: 'ease' }}
+          viewport={{ once: true, amount: 0.5 }}
+          className={styles.articleText}
+          key={index}
+        >
           {paragraph}
-        </p>
+        </motion.p>
       ))}
-      <div className={styles.articleImagesContainer}>
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7, easings: 'ease' }}
+        viewport={{ once: true, amount: 0.5 }}
+        className={styles.articleImagesContainer}
+      >
         {articleImages.map((image, index) => (
           <img className={styles.articleImage} src={image} key={index} />
         ))}
-      </div>
+      </motion.div>
       {paragraphs?.slice(4).map((paragraph, index) => (
-        <p className={styles.articleText} key={index}>
+        <motion.p
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, easings: 'ease' }}
+          viewport={{ once: true, amount: 0.5 }}
+          className={styles.articleText}
+          key={index}
+        >
           {paragraph}
-        </p>
+        </motion.p>
       ))}
-      <h4 className={styles.postTagsTitle}>Post Tags:</h4>
-      <p className={styles.postTags}>{postTags}</p>
-      <h4 className={styles.shareTitle}>Share:</h4>
-      <div className={styles.shareContainer}>
+      <motion.h4
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, easings: 'ease' }}
+        viewport={{ once: true, amount: 0.5 }}
+        className={styles.postTagsTitle}
+      >
+        Post Tags:
+      </motion.h4>
+      <motion.p
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, easings: 'ease' }}
+        viewport={{ once: true, amount: 0.5 }}
+        className={styles.postTags}
+      >
+        {postTags}
+      </motion.p>
+      <motion.h4
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, easings: 'ease' }}
+        viewport={{ once: true, amount: 0.5 }}
+        className={styles.shareTitle}
+      >
+        Share:
+      </motion.h4>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, easings: 'ease' }}
+        viewport={{ once: true, amount: 0.5 }}
+        className={styles.shareContainer}
+      >
         <img className={styles.shareIcon} src={xIcon} />
         <img className={styles.shareIcon} src={facebookIcon} />
         <img className={styles.shareIcon} src={instagramIcon} />
-      </div>
+      </motion.div>
     </>
   );
 };
@@ -81,7 +160,13 @@ const ArticlePage = () => {
       <ScrollToTop />
       <section className={styles.articlePage}>
         <div className={styles.container}>
-          <div className={styles.path}>
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, easings: 'ease' }}
+            viewport={{ once: true, amount: 0.5 }}
+            className={styles.path}
+          >
             <p className={styles.pathText}>
               <NavLink to="/" className={styles.pathLink}>
                 Home
@@ -93,13 +178,19 @@ const ArticlePage = () => {
               <img className={styles.arrow} src={arrow} />
             </p>
             <span className={styles.pathSpan}>{article.title}</span>
-          </div>
+          </motion.div>
           <div className={styles.content}>
             <div className={styles.column}>
               <Article {...article} />
             </div>
             <div className={styles.column}>
-              <div className={styles.recentArticles}>
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7, easings: 'ease' }}
+                viewport={{ once: true, amount: 0.5 }}
+                className={styles.recentArticles}
+              >
                 <h4 className={styles.subsubtitle}>Recent Article</h4>
                 <div className={styles.articlesContainer}>
                   {recentArticles.map((article, index) => (
@@ -113,8 +204,14 @@ const ArticlePage = () => {
                     />
                   ))}
                 </div>
-              </div>
-              <div className={styles.popularHashTags}>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7, easings: 'ease' }}
+                viewport={{ once: true, amount: 0.5 }}
+                className={styles.popularHashTags}
+              >
                 <h4 className={styles.subsubtitle}>Popular Hashtag</h4>
                 <div className={styles.hashTags}>
                   <span className={styles.hashTag}>#VRDesign</span>
@@ -127,7 +224,7 @@ const ArticlePage = () => {
                   <span className={styles.hashTag}>#RevolutionizingArchitecture</span>
                   <span className={styles.hashTag}>#BuildingInVR</span>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

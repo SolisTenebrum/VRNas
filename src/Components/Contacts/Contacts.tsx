@@ -3,11 +3,18 @@ import emailIcon from '../../assets/icons/email-icon-white.svg';
 import locationIcon from '../../assets/icons/location-icon-white.svg';
 import callIcon from '../../assets/icons/call-icon-white.svg';
 import { clsx as cn } from 'clsx';
+import { motion } from 'framer-motion';
 
 const Contacts = () => {
   return (
     <section className={styles.contacts}>
-      <div className={styles.container}>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, easings: 'ease' }}
+        viewport={{ once: true, amount: 0.5 }}
+        className={styles.container}
+      >
         <div className={styles.card}>
           <div className={styles.content}>
             <div className={styles.iconContainer}>
@@ -41,7 +48,7 @@ const Contacts = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

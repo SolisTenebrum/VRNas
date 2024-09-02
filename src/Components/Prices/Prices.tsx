@@ -2,12 +2,17 @@ import styles from './Prices.module.css';
 import { pricingCardsList } from '../../constants';
 import { clsx as cn } from 'clsx';
 import { IPricingCardProps } from '../../types/types';
+import { motion } from 'framer-motion';
 
-
-
-const PricingCard = ({ title, price, text, list, buttonText }: IPricingCardProps) => {
+const PricingCard = ({ title, price, text, list, buttonText, index }: IPricingCardProps) => {
   return (
-    <div className={styles.pricingCard}>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8, y: 50 }}
+      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+      transition={{ duration: 0.3, easings: 'ease', delay: index * 0.1 }}
+      viewport={{ once: true, amount: 0.5 }}
+      className={styles.pricingCard}
+    >
       <div className={styles.cardContent}>
         <div className={styles.top}>
           <h4 className={styles.cardTitle}>{title}</h4>
@@ -28,7 +33,7 @@ const PricingCard = ({ title, price, text, list, buttonText }: IPricingCardProps
         </div>
         <button className={styles.cardButton}>{buttonText}</button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -38,17 +43,39 @@ const Prices = () => {
       <div className={styles.container}>
         <div className={styles.row}>
           <div className={styles.textContainer}>
-            <p className={cn(styles.subtitle, 'gradient-text')}>Pricing</p>
-            <h2 className={styles.title}>Pricing Plans</h2>
-            <p className={styles.text}>
+            <motion.p
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, easings: 'ease' }}
+              viewport={{ once: true, amount: 0.5 }}
+              className={cn(styles.subtitle, 'gradient-text')}
+            >
+              Pricing
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+              viewport={{ once: true, amount: 0.5 }}
+              className={styles.title}
+            >
+              Pricing Plans
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+              viewport={{ once: true, amount: 0.5 }}
+              className={styles.text}
+            >
               Choose the pricing plan that fits your needs and budget. All plans come with a free trial period so you
               can test out our service and see which plan works best for you.
-            </p>
+            </motion.p>
           </div>
         </div>
         <div className={styles.row}>
           {pricingCardsList.map((card, index) => {
-            return <PricingCard key={index} {...card} />;
+            return <PricingCard key={index} {...card} index={index} />;
           })}
         </div>
       </div>

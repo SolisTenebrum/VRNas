@@ -65,7 +65,7 @@
 .vrperson:last-of-type {
   top: 0;
   left: -6%;
-  transform: scaleX(-1);
+  scale: (-1, 0);
 }
 
 .container {

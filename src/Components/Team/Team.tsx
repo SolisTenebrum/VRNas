@@ -4,11 +4,20 @@ import xIcon from '../../assets/logos/logo-x.svg';
 import facebookIcon from '../../assets/logos/logo-fb.svg';
 import instagramIcon from '../../assets/logos/logo-instagram.svg';
 import { team } from '../../constants';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-const TeamCard = ({ team, variant }: { team: any; variant: string }) => {
+const MotionLink = motion(Link);
+
+const TeamCard = ({ team, variant, index }: { team: any; variant: string; index: number }) => {
   return (
-    <div className={styles.card}>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.3, easings: 'ease', delay: index * 0.1 }}
+      viewport={{ once: true, amount: 0.4 }}
+      className={styles.card}
+    >
       <div className={styles.imageContainer}>
         <div className={styles.overlay} />
         <img src={team.image} alt="team-member" className={styles.cardImage} />
@@ -32,7 +41,7 @@ const TeamCard = ({ team, variant }: { team: any; variant: string }) => {
         <h4 className={styles.cardName}>{team.name}</h4>
         <p className={styles.cardJobTitle}>{team.jobTitle}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -44,24 +53,54 @@ const Team = ({ variant }: { variant: string }) => {
       <div className={styles.container}>
         <div className={cn(styles.row, variant === 'our-team-page' ? styles.row_ourteam : '')}>
           <div className={cn(styles.textContainer, variant === 'our-team-page' ? styles.textContainer_ourteam : '')}>
-            <p className={cn(styles.subtitle, 'gradient-text')}>Our Team</p>
-            <h2 className={styles.title}>Our Professionals Team</h2>
+            <motion.p
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, easings: 'ease' }}
+              viewport={{ once: true, amount: 0.5 }}
+              className={cn(styles.subtitle, 'gradient-text')}
+            >
+              Our Team
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+              viewport={{ once: true, amount: 0.5 }}
+              className={styles.title}
+            >
+              Our Professionals Team
+            </motion.h2>
           </div>
           {variant !== 'our-team-page' && (
-            <NavLink to="/our-team" className={styles.link}>
-              <button className={styles.button}>SEE ALL</button>
-            </NavLink>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              <Link to="/our-team" className={styles.button}>
+                SEE ALL
+              </Link>
+            </motion.div>
           )}
         </div>
         <div className={cn(styles.row, variant === 'our-team-page' ? styles.row_ourteam : '')}>
           {(variant === 'our-team-page' ? team : teamPreview).map((member, index) => {
-            return <TeamCard key={index} team={member} variant={variant} />;
+            return <TeamCard key={index} team={member} variant={variant} index={index} />;
           })}
         </div>
         {variant !== 'our-team-page' && (
-          <NavLink to="/our-team" className={styles.link}>
-            <button className={cn(styles.button, styles.buttonMobile)}>SEE ALL</button>
-          </NavLink>
+          <MotionLink
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, easings: 'ease', delay: 0.1 }}
+            viewport={{ once: true, amount: 0.6 }}
+            to="/our-team"
+            className={cn(styles.button, styles.buttonMobile)}
+          >
+            SEE ALL
+          </MotionLink>
         )}
       </div>
     </section>

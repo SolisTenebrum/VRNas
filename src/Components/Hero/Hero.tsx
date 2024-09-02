@@ -4,6 +4,7 @@ import clientOne from '../../assets/people/Client1.png';
 import clientTwo from '../../assets/people/Client2.png';
 import clientThree from '../../assets/people/Client3.png';
 import scrollToElement from '../../utils/scrollToElement';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   const handleScroll = (event: React.MouseEvent) => {
@@ -16,27 +17,42 @@ const Hero = () => {
       <div className={styles.container}>
         <div className={styles.column}>
           <div className={styles.description}>
-            <h1
-              id="titleAnchor"
+            <motion.h1
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, easings: 'ease' }}
+              viewport={{ once: true, amount: 0.5 }}
               className={styles.title}
             >
               Immerse Yourself in Virtual Reality
-            </h1>
-            <p
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+              viewport={{ once: true, amount: 0.5 }}
               className={styles.text}
             >
               Experience Unforgettable Events in VR. Bring your events to life like never before with our VR services
-            </p>
-            <a
+            </motion.p>
+            <motion.a
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, easings: 'ease', delay: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               href="#about"
               onClick={handleScroll}
               className={styles.button}
             >
               DISCOVER MORE
-            </a>
+            </motion.a>
           </div>
           <div className={styles.clientsContainer}>
-            <div
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, easings: 'ease', delay: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               className={styles.clients}
             >
               <ul className={styles.clientImages}>
@@ -53,20 +69,28 @@ const Hero = () => {
               <p className={styles.clientCaption}>
                 <span className={styles.clientCaptionAccent}>32k+ </span>Happy Client
               </p>
-            </div>
-            <div
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, easings: 'ease', delay: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               className={styles.video}
             >
               <div className={styles.videoImage}></div>
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className={styles.column}>
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, easings: 'ease', delay: 0.3 }}
+            viewport={{ once: true, amount: 0.5 }}
             className={styles.vrPersonContainer}
           >
             <img className={styles.vrPerson} src={vrPerson}></img>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

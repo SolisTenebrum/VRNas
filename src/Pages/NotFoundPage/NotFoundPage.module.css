@@ -88,6 +88,9 @@
   font-weight: 700;
   cursor: pointer;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button:before {

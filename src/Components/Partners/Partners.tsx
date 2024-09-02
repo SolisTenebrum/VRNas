@@ -8,6 +8,7 @@ import partnerLogoFour from '../../assets/logos/partner-logo-4.svg';
 import partnerLogoFive from '../../assets/logos/partner-logo-5.svg';
 import partnerLogoSix from '../../assets/logos/partner-logo-6.svg';
 import partnerLogoSeven from '../../assets/logos/partner-logo-7.svg';
+import { motion } from 'framer-motion';
 
 const partnerLogos = [
   partnerLogoOne,
@@ -24,19 +25,31 @@ const Partners = () => {
     <section className={styles.partners}>
       <div className={styles.container}>
         <div className={styles.textContainer}>
-          <p
+          <motion.p
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, easings: 'ease' }}
+            viewport={{ once: true, amount: 0.5 }}
             className={cn(styles.subtitle, 'gradient-text')}
           >
             Our Trusted Partners
-          </p>
-          <h2
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+            viewport={{ once: true, amount: 0.5 }}
             className={styles.title}
           >
             Discover the Companies We Work With
-          </h2>
+          </motion.h2>
         </div>
         <div className={styles.content}>
-          <div
+          <motion.div
+            initial={{ opacity: 0, scale: 1.6, y: 100 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true, amount: 0.5 }}
             className={styles.imageContainer}
           >
             <img src={partnersHalfCircle} className={styles.halfCircle} />
@@ -47,7 +60,7 @@ const Partners = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

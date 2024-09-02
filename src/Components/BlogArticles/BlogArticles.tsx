@@ -3,6 +3,7 @@ import { clsx as cn } from 'clsx';
 import { useEffect, useState } from 'react';
 import { blogCards } from '../../constants';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const BlogArticleCard = ({
   image,
@@ -18,7 +19,13 @@ const BlogArticleCard = ({
   id: number;
 }) => {
   return (
-    <div className={styles.card}>
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, easings: 'ease', delay: 0.2, type: 'spring' }}
+      viewport={{ once: true, amount: 0.1 }}
+      className={styles.card}
+    >
       <div className={styles.imageContainer}>
         <img className={styles.image} src={image} />
       </div>
@@ -29,7 +36,7 @@ const BlogArticleCard = ({
           {span}
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -84,7 +91,13 @@ const BlogArticles = () => {
           />
         ))}
       </div>
-      <div className={styles.pagination}>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, easings: 'ease', delay: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
+        className={styles.pagination}
+      >
         {Array.from({ length: totalPages }, (_, index) => {
           return (
             <button
@@ -96,7 +109,7 @@ const BlogArticles = () => {
             </button>
           );
         })}
-      </div>
+      </motion.div>
     </section>
   );
 };

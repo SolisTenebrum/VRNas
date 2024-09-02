@@ -68,6 +68,9 @@
   transition: color 0.3s ease;
   overflow: hidden;
   margin-bottom: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button::before {
@@ -235,10 +238,6 @@
   display: none;
 }
 
-.link {
-  text-decoration: none;
-}
-
 @media screen and (max-width: 1230px) {
   .row:last-of-type {
     grid-template-columns: repeat(2, 1fr);
@@ -281,7 +280,7 @@
   }
 
   .buttonMobile {
-    display: block;
+    display: flex;
     margin: 0 auto;
   }
 }

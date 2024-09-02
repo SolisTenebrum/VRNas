@@ -7,12 +7,12 @@ import { clsx as cn } from 'clsx';
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 import { shuffleArray } from '../../utils/shuffleArray';
+import { motion } from 'framer-motion';
 
 const Articles = ({ variant }: { variant: string }) => {
   const shuffledArticles = shuffleArray(articleContent);
 
   const sliderArticles = shuffledArticles.slice(0, 4);
-
   const recentArticles = shuffledArticles.slice(4);
 
   return (
@@ -20,39 +20,64 @@ const Articles = ({ variant }: { variant: string }) => {
       <div className={styles.container}>
         <div className={styles.containerTop}>
           <div className={styles.textContainer}>
-            <p
+            <motion.p
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, easings: 'ease' }}
+              viewport={{ once: true, amount: 0.5 }}
               className={cn(styles.subtitle, 'gradient-text')}
             >
               Our Articles
-            </p>
-            <h2
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+              viewport={{ once: true, amount: 0.5 }}
               className={styles.title}
             >
               Stay Up-to-Date with Our VR Insights
-            </h2>
+            </motion.h2>
           </div>
-          <Link
-            to="/blog#blog"
-            className={styles.button}
+          <motion.div
+            style={{ alignSelf: 'end' }}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+            viewport={{ once: true, amount: 0.5 }}
           >
-            SEE ALL
-          </Link>
+            <Link to="/blog#blog" className={styles.button}>
+              SEE ALL
+            </Link>
+          </motion.div>
         </div>
         <div className={styles.containerBottom}>
           <div className={styles.content}>
-            <div
+            <motion.div
+              initial={{ opacity: 0, scale: 1.5, y: 100 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true, amount: 0.5 }}
               className={styles.firstColumn}
             >
               <h4 className={styles.subsubtitle}>Popular Article</h4>
               <ArticleSlider articles={sliderArticles} />
-            </div>
+            </motion.div>
             <div className={styles.secondColumn}>
-              <h4
+              <motion.h4
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7, easings: 'ease' }}
+                viewport={{ once: true, amount: 0.5 }}
                 className={styles.subsubtitle}
               >
                 Recent Article
-              </h4>
-              <ul
+              </motion.h4>
+              <motion.ul
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7, easings: 'ease' }}
+                viewport={{ once: true, amount: 0.5 }}
                 className={styles.articlesContainer}
               >
                 <SimpleBar
@@ -73,12 +98,19 @@ const Articles = ({ variant }: { variant: string }) => {
                     />
                   ))}
                 </SimpleBar>
-              </ul>
+              </motion.ul>
             </div>
           </div>
-          <Link to="/blog#blog" className={cn(styles.button, styles.buttonMobile)}>
-            SEE ALL
-          </Link>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
+            <Link to="/blog#blog" className={cn(styles.button, styles.buttonMobile)}>
+              SEE ALL
+            </Link>
+          </motion.div>
         </div>
       </div>
     </section>
