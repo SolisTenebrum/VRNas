@@ -95,6 +95,7 @@ const Articles = ({ variant }: { variant: string }) => {
                       span={article.category}
                       variant={variant}
                       id={article.id}
+                      alt={article.alt}
                     />
                   ))}
                 </SimpleBar>

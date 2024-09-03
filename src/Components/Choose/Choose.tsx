@@ -89,6 +89,9 @@ const Choose = ({ variant }: { variant: string }) => {
             ></div>
             <img
               src={variant === 'about-us-page' || variant === 'pricing-plan-page' ? vrPerson2 : vrPerson}
+              alt={
+                variant === 'about-us-page' || variant === 'pricing-plan-page' ? 'A person in VR helmet running' : 'A person in VR helmet'
+              }
               className={styles.vrperson}
             />
             <motion.div

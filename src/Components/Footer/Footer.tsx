@@ -23,6 +23,7 @@ const Footer = () => {
             <NavLink to="/" className={styles.link}>
               <img
                 src={mainLogo}
+                alt='VRNas logo'
                 className={styles.mainLogo}
                 onClick={() => {
                   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -33,7 +34,7 @@ const Footer = () => {
             <div className={styles.socialLogos}>
               {socialLogos.map((item, index) => (
                 <div className={styles.logoBackground} key={index}>
-                  <img src={item.icon} className={styles.socialLogo} />
+                  <img src={item.icon} alt={item.alt} className={styles.socialLogo} />
                 </div>
               ))}
             </div>
@@ -68,7 +69,7 @@ const Footer = () => {
               <ul className={styles.linksList}>
                 {contactLinks.map((link, index) => (
                   <li className={styles.link} key={index}>
-                    <img src={link.icon} className={styles.linkIcon} />
+                    <img src={link.icon} alt={link.alt} className={styles.linkIcon} />
                     {link.linkText}
                   </li>
                 ))}

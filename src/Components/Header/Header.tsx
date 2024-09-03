@@ -136,7 +136,7 @@ const Header = () => {
       <div className={cn(styles.container, `${scrolled && styles.fixedContainer}`)}>
         <div className={styles.logoContainer}>
           <Link to={'/'} onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>
-            <img src={logo} alt={'vrnas-logo'} className={styles.logo} />
+            <img src={logo} alt='VRNas logo' className={styles.logo} />
           </Link>
         </div>
         <nav className={cn(styles.navigationContainer, burgerActive && styles.navigationContainerActive)}>

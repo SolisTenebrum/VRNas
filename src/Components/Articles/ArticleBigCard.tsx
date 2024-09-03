@@ -6,7 +6,7 @@ import { IArticle } from '../../types/types';
 const ArticleBigCard = ({ article }: { article: IArticle }) => {
   return (
     <div className={styles.articleFullImageContainer}>
-      <img src={article.mainImage} className={styles.articleFullImage} />
+      <img src={article.mainImage} className={styles.articleFullImage} alt={article.alt} />
       <div className={styles.articleFullImageContainerBottom}>
         <div className={styles.articleFullImageInfo}>
           <span className={styles.articleFullImageSpan}>{article.category}</span>
@@ -15,7 +15,7 @@ const ArticleBigCard = ({ article }: { article: IArticle }) => {
           </Link>
         </div>
         <Link to={`/blog/${article.id}`} className={styles.goButton}>
-          <img src={arrowRight} className={styles.arrowRight} />
+          <img src={arrowRight} className={styles.arrowRight} alt="Arrow to right" />
         </Link>
       </div>
     </div>

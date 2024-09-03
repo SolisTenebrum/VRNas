@@ -9,12 +9,14 @@ const ArticleSmallCard = ({
   span,
   variant,
   id,
+  alt
 }: {
   image: string;
   title: string;
   span: string;
   variant: string;
   id: number;
+  alt: string;
 }): JSX.Element => {
   return (
     <li className={cn(styles.articleCard, variant === 'blog-page' ? styles.articleCard_blogpage : '')}>
@@ -24,7 +26,7 @@ const ArticleSmallCard = ({
           variant === 'blog-page' ? styles.articleCardImageContainer_blogpage : ''
         )}
       >
-        <img src={image} className={styles.articleCardImage} />
+        <img src={image} className={styles.articleCardImage} alt={alt}/>
       </div>
       <div className={cn(styles.articleCardInfo, variant === 'blog-page' ? styles.articleCardInfo_blogpage : '')}>
         <span className={cn(styles.articleCardSpan, variant === 'blog-page' ? styles.articleCardSpan_blogpage : '')}>
@@ -38,7 +40,7 @@ const ArticleSmallCard = ({
       </div>
       {variant !== 'blog-page' && (
         <Link to={`/blog/${id}`} className={styles.articleCardGoButton}>
-          <img src={arrowRight} className={styles.arrowRight} />
+          <img src={arrowRight} className={styles.arrowRight} alt="Arrow to right" />
         </Link>
       )}
     </li>

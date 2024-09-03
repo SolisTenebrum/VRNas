@@ -54,7 +54,7 @@ const About = () => {
             className={styles.vrpersonContainer}
           >
             <div className={styles.background} />
-            <img src={vrperson2} className={styles.vrperson} />
+            <img src={vrperson2} className={styles.vrperson} alt='A man in a vritual reality helmet watching left'/>
             <motion.div
               initial={{ opacity: 0, scale: 0.5, y: 100 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}

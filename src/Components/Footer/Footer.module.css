@@ -149,7 +149,6 @@
   .logosContainer {
     padding-right: 50px;
   }
-  
 }
 
 @media screen and (max-width: 992px) {
@@ -194,9 +193,7 @@
   .linksList {
     row-gap: 10px;
   }
-
 }
 
 @media screen and (max-width: 480px) {
-
 }

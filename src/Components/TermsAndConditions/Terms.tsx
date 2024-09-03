@@ -14,6 +14,7 @@ const Terms = () => {
           transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
           viewport={{ once: true, amount: 0.5 }}
           src={vrperson}
+          alt='A person in VR helmet looks left'
           className={styles.vrperson}
         />
         <motion.img
@@ -22,6 +23,7 @@ const Terms = () => {
           transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
           viewport={{ once: true, amount: 0.5 }}
           src={vrperson}
+          alt='A person in VR helmet looks right'
           className={styles.vrperson}
         />
       </div>

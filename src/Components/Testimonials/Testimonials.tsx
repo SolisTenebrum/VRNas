@@ -49,7 +49,7 @@ const Client = ({ image, name, company, message, index }: IClientProps) => {
         className={cn(styles.button, `${visibleIndex === index + 1 ? styles.active : ''}`)}
         onClick={() => toggleVisibility(index + 1)}
       >
-        <img src={image} className={styles.clientImage} />
+        <img src={image} alt={`Client ${index + 1}`} className={styles.clientImage} />
       </button>
       <div className={cn(styles.messageBox, `${visibleIndex === index + 1 ? styles.messageBoxActive : ''}`)}>
         <div className={styles.messageContainer}>

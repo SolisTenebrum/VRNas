@@ -19,8 +19,8 @@ const Map = () => {
           className={styles.container}
         >
           <div className={styles.mapContainer} onClick={goToMaps}>
-            <img src={map} className={styles.mapImage} />
-            <img src={mapMarker} className={styles.marker} />
+            <img src={map} className={styles.mapImage} alt='Map image'/>
+            <img src={mapMarker} className={styles.marker} alt='Map marker'/>
           </div>
         </motion.div>
       </section>

@@ -22,19 +22,19 @@ const ContactForm = () => {
           viewport={{ once: true, amount: 0.5 }}
           className={styles.imageContainer}
         >
-          <img src={contactUsImage} className={styles.image}></img>
+          <img src={contactUsImage} className={styles.image} alt="A person in VR glasses" />
           <div className={styles.socials}>
             <div className={cn(styles.socialIconContainer, styles.instagramIcon)}>
-              <img src={instagramIcon} className={styles.socialIcon} />
+              <img src={instagramIcon} className={styles.socialIcon} alt='Instagram icon'/>
             </div>
             <div className={cn(styles.socialIconContainer, styles.facebookIcon)}>
-              <img src={facebookIcon} className={styles.socialIcon} />
+              <img src={facebookIcon} className={styles.socialIcon} alt='Facebook icon' />
             </div>
             <div className={cn(styles.socialIconContainer, styles.xIcon)}>
-              <img src={xIcon} className={styles.socialIcon} />
+              <img src={xIcon} className={styles.socialIcon} alt='X icon' />
             </div>
             <div className={cn(styles.socialIconContainer, styles.githubIcon)}>
-              <img src={githubIcon} className={styles.socialIcon} />
+              <img src={githubIcon} className={styles.socialIcon} alt='Github icon' />
             </div>
           </div>
         </motion.div>

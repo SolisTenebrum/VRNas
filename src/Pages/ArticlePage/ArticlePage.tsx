@@ -50,7 +50,7 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
         viewport={{ once: true, amount: 0.5 }}
         className={styles.articleMainImageContainer}
       >
-        <img className={styles.articleMainImage} src={mainImage} />
+        <img className={styles.articleMainImage} alt='Article image' src={mainImage} />
       </motion.div>
       {paragraphs?.slice(0, 4).map((paragraph, index) => (
         <motion.p
@@ -72,7 +72,7 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
         className={styles.articleImagesContainer}
       >
         {articleImages.map((image, index) => (
-          <img className={styles.articleImage} src={image} key={index} />
+          <img className={styles.articleImage} src={image} alt='Article image' key={index} />
         ))}
       </motion.div>
       {paragraphs?.slice(4).map((paragraph, index) => (
@@ -121,9 +121,9 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
         viewport={{ once: true, amount: 0.5 }}
         className={styles.shareContainer}
       >
-        <img className={styles.shareIcon} src={xIcon} />
-        <img className={styles.shareIcon} src={facebookIcon} />
-        <img className={styles.shareIcon} src={instagramIcon} />
+        <img className={styles.shareIcon} alt="X icon" src={xIcon} />
+        <img className={styles.shareIcon} alt="Facebook icon" src={facebookIcon} />
+        <img className={styles.shareIcon} alt="Instagram icon" src={instagramIcon} />
       </motion.div>
     </>
   );
@@ -171,11 +171,11 @@ const ArticlePage = () => {
               <NavLink to="/" className={styles.pathLink}>
                 Home
               </NavLink>
-              <img className={styles.arrow} src={arrow} />
+              <img className={styles.arrow} alt="Arrow icon" src={arrow} />
               <NavLink to="/blog" className={styles.pathLink}>
                 Blog
               </NavLink>
-              <img className={styles.arrow} src={arrow} />
+              <img className={styles.arrow} alt="Arrow icon" src={arrow} />
             </p>
             <span className={styles.pathSpan}>{article.title}</span>
           </motion.div>
@@ -201,6 +201,7 @@ const ArticlePage = () => {
                       span={article.category}
                       variant="blog-page"
                       id={article.id}
+                      alt={article.alt}
                     />
                   ))}
                 </div>

@@ -53,18 +53,21 @@ import clientImageSix from './assets/people/Client6.png';
 const benefitsCards = [
   {
     icon: benefitsIconOne,
+    alt: 'Expertise icon',
     title: 'Expertise',
     description: `Our team consists of experienced VR developers, designers, and technicians who have a passion for VR and a
               commitment to delivering quality work and give the best service.`,
   },
   {
     icon: benefitsIconTwo,
+    alt: 'Customization icon',
     title: 'Customization',
     description: `Every client is unique, and we believe every VR experience should be too. We'll work with you to create a
               customized solution that meets your specific needs and goals.`,
   },
   {
     icon: benefitsIconThree,
+    alt: 'Service icon',
     title: 'Service',
     description: `We believe in providing exceptional customer service, from initial consultation to final delivery. Our
               goal is to ensure you're satisfied with every aspect of your VR experience.`,
@@ -165,18 +168,22 @@ const socialLogos = [
   {
     icon: xIcon,
     link: '/',
+    alt: 'X icon',
   },
   {
     icon: facebookIcon,
     link: '/',
+    alt: 'Facebook icon',
   },
   {
     icon: instagramIcon,
     link: '/',
+    alt: 'Instagram icon',
   },
   {
     icon: githubIcon,
     link: '/',
+    alt: 'Github icon',
   },
 ];
 
@@ -232,16 +239,19 @@ const contactLinks = [
     linkText: 'Tanjung Sari Street no.48, Pontianak City',
     link: '/',
     icon: locationIcon,
+    alt:'Location icon'
   },
   {
     linkText: 'Support@VRNas.com',
     link: '/',
     icon: messageIcon,
+    alt: 'Message icon',
   },
   {
     linkText: '+123 456 7890',
     link: '/',
     icon: callIcon,
+    alt: 'Phone icon',
   },
 ];
 
@@ -490,6 +500,7 @@ const articleContent = [
     author: 'Nasyiya Ulfa',
     date: '25 Nov 2022',
     mainImage: articleImage5,
+    alt: 'A man in a VR helmet',
     paragraphs: [
       `Architecture is an art and science that is constantly evolving with technology. The industry has gone through
         various transformations over the years, from pencil and paper sketches to computer-aided design (CAD) software.
@@ -525,6 +536,7 @@ const articleContent = [
     author: 'Liam Silva',
     date: '28 May 2023',
     mainImage: articleImage2,
+    alt: 'A hand holding a VR helmet',
     paragraphs: [
       `VR games offer the ultimate escape, allowing players to step into a completely different world and experience it as if they were really there. The level of immersion provided by VR is unparalleled, making it one of the most exciting developments in gaming.`,
       `Whether it's exploring a fantasy world, solving puzzles, or engaging in intense battles, VR games offer a level of engagement that is unmatched by traditional gaming. The sense of presence and realism that VR provides makes the gaming experience more compelling and enjoyable.`,
@@ -542,6 +554,7 @@ const articleContent = [
     author: 'Aiden Chou',
     date: '12 Mar 2023',
     mainImage: articleImage3,
+    alt: 'A hand reaching VR helmet',
     paragraphs: [
       `Virtual reality has transformed the gaming industry, offering players an immersive experience that was once the stuff of science fiction. VR games allow players to step into the game world, interact with the environment, and experience the game in a way that is far more engaging than traditional gaming.`,
       `The level of immersion provided by VR is unparalleled. Gamers can now move around in the game space, use their hands to interact with objects, and even experience the physical sensations of the game world.`,
@@ -560,6 +573,7 @@ const articleContent = [
     author: 'Sara Iverson',
     date: '5 Sep 2022',
     mainImage: articleImage4,
+    alt: 'A VR game',
     paragraphs: [
       `Virtual reality is transforming the entertainment industry, offering experiences that go beyond traditional media. VR experiences allow users to step into movies, concerts, and other forms of entertainment, creating a sense of presence and immersion that is unparalleled.`,
       `This technology is enabling new forms of storytelling and audience engagement, as creators explore the possibilities of immersive experiences. Whether it's a virtual concert or an interactive movie, VR is opening up new avenues for creativity and expression.`,
@@ -578,6 +592,7 @@ const articleContent = [
     author: 'Emily Novak',
     date: '22 Jan 2024',
     mainImage: articleImage9,
+    alt: 'VR helmet and part of a laptop',
     paragraphs: [
       `Education is being transformed by virtual reality, a technology that allows students to experience learning in new and exciting ways. With VR, students can explore historical sites, conduct virtual science experiments, and engage with complex concepts in a more hands-on manner.`,
       `VR in education offers a more immersive and interactive learning experience, making it easier for students to grasp difficult concepts and retain information. It also allows for more personalized learning, catering to the individual needs of each student.`,
@@ -596,6 +611,7 @@ const articleContent = [
     author: 'Lucas Reed',
     date: '30 Oct 2022',
     mainImage: articleImage7,
+    alt: 'Two persons in VR helmets',
     paragraphs: [
       `VR gaming is breaking new ground, offering players an experience that goes beyond traditional gaming. The immersive power of VR allows players to feel like they are truly inside the game, creating a deeper emotional connection and a more engaging experience.`,
       `From exploring fantastical worlds to engaging in intense battles, VR gaming offers a level of immersion that is unmatched by any other form of gaming. The technology is also opening up new possibilities for game design, allowing developers to create more dynamic and interactive game environments.`,
@@ -613,6 +629,7 @@ const articleContent = [
     author: 'Nina Petrov',
     date: '15 Aug 2023',
     mainImage: articleImage8,
+    alt: 'A man in VR helmet in virtual world',
     paragraphs: [
       `Virtual reality is the next frontier in gaming, offering experiences that are more immersive and interactive than ever before. With VR, players can step into the game world and interact with it in ways that were previously unimaginable.`,
       `The impact of VR on game design is profound, as developers are now able to create more complex and engaging game environments. Players are no longer just passive observers; they are active participants in the game world.`,
@@ -631,6 +648,7 @@ const articleContent = [
     author: 'Jasper Lee',
     date: '9 Feb 2024',
     mainImage: articleImage1,
+    alt: 'A man in VR helmet in a game holding steering wheel',
     paragraphs: [
       `VR gaming has come a long way from its early days as a concept to its current status as a major force in the gaming industry. The technology has evolved rapidly, offering players an increasingly realistic and immersive gaming experience.`,
       `The evolution of VR gaming has been driven by advances in hardware and software, as well as by the creativity of game developers. Today, VR games offer a level of detail and interactivity that was once unimaginable.`,
@@ -648,6 +666,7 @@ const articleContent = [
     author: 'Zoe Kim',
     date: '19 Jul 2023',
     mainImage: articleImage6,
+    alt: 'A hand touching an infinity sign',
     paragraphs: [
       'The rise of VR in gaming has redefined what it means to be immersed in a game. With VR, players are no longer just controlling a character on a screen; they are stepping into the game world and experiencing it firsthand.',
       'This new level of immersion is changing the way games are designed and played. Developers are creating more interactive and dynamic game environments, while players are enjoying a more engaging and realistic gaming experience.',
@@ -665,6 +684,7 @@ const blogCards = [
   {
     id: 1,
     image: articleImage5,
+    alt: 'A man in a VR helmet',
     subtitle: 'VR Architecture',
     title: 'Bringing Designs to Life: How VR is Changing Architecture',
     span: 'READ MORE',
@@ -673,6 +693,7 @@ const blogCards = [
   {
     id: 2,
     image: articleImage2,
+    alt: 'A hand holding a VR helmet',
     subtitle: 'VR Games',
     title: 'The Ultimate Escape: Exploring the World of VR Games',
     span: 'READ MORE',
@@ -680,6 +701,7 @@ const blogCards = [
   {
     id: 3,
     image: articleImage3,
+    alt: 'A hand reaching VR helmet',
     subtitle: 'VR Games',
     title: 'The Future of Gaming: How VR is Revolutionizing Gameplay',
     span: 'READ MORE',
@@ -687,6 +709,7 @@ const blogCards = [
   {
     id: 4,
     image: articleImage4,
+    alt: 'A VR game',
     subtitle: 'VR Entertainment',
     title: 'Redefining Entertainment: The Rise of VR Experiences',
     span: 'READ MORE',
@@ -694,6 +717,7 @@ const blogCards = [
   {
     id: 5,
     image: articleImage9,
+    alt: 'VR helmet and part of a laptop',
     subtitle: 'VR Education',
     title: 'Transforming Learning: The Impact of VR in Education',
     span: 'READ MORE',
@@ -701,6 +725,7 @@ const blogCards = [
   {
     id: 6,
     image: articleImage7,
+    alt: 'Two persons in VR helmets',
     subtitle: 'VR Games',
     title: 'Breaking Boundaries: The Immersive Power of VR Gaming',
     span: 'READ MORE',
@@ -708,6 +733,7 @@ const blogCards = [
   {
     id: 7,
     image: articleImage8,
+    alt: 'A man in VR helmet in virtual world',
     subtitle: 'VR Games',
     title: 'The Next Frontier: How VR is Shaping the Future of Games',
     span: 'READ MORE',
@@ -715,6 +741,7 @@ const blogCards = [
   {
     id: 8,
     image: articleImage1,
+    alt: 'A man in VR helmet in a game holding steering wheel',
     subtitle: 'VR Games',
     title: 'From Concept to Reality: The Evolution of VR Gaming',
     span: 'READ MORE',
@@ -722,6 +749,7 @@ const blogCards = [
   {
     id: 9,
     image: articleImage6,
+    alt: 'A hand touching an infinity sign',
     subtitle: 'VR Games',
     title: 'Immersion Redefined: The Rise of VR in Gaming',
     span: 'READ MORE',
@@ -729,6 +757,7 @@ const blogCards = [
   {
     id: 9,
     image: articleImage6,
+    alt: 'A hand touching an infinity sign',
     subtitle: 'VR Games',
     title: 'Immersion Redefined: The Rise of VR in Gaming',
     span: 'READ MORE',
@@ -736,6 +765,7 @@ const blogCards = [
   {
     id: 4,
     image: articleImage4,
+    alt: 'A VR game',
     subtitle: 'VR Entertainment',
     title: 'Redefining Entertainment: The Rise of VR Experiences',
     span: 'READ MORE',
@@ -743,6 +773,7 @@ const blogCards = [
   {
     id: 2,
     image: articleImage2,
+    alt: 'A hand holding a VR helmet',
     subtitle: 'VR Games',
     title: 'The Ultimate Escape: Exploring the World of VR Games',
     span: 'READ MORE',
@@ -750,6 +781,7 @@ const blogCards = [
   {
     id: 7,
     image: articleImage8,
+    alt: 'A man in VR helmet in virtual world',
     subtitle: 'VR Games',
     title: 'The Next Frontier: How VR is Shaping the Future of Games',
     span: 'READ MORE',
@@ -757,6 +789,7 @@ const blogCards = [
   {
     id: 3,
     image: articleImage3,
+    alt: 'A hand reaching VR helmet',
     subtitle: 'VR Games',
     title: 'The Future of Gaming: How VR is Revolutionizing Gameplay',
     span: 'READ MORE',
@@ -764,6 +797,7 @@ const blogCards = [
   {
     id: 5,
     image: articleImage9,
+    alt: 'VR helmet and part of a laptop',
     subtitle: 'VR Education',
     title: 'Transforming Learning: The Impact of VR in Education',
     span: 'READ MORE',
@@ -771,6 +805,7 @@ const blogCards = [
   {
     id: 6,
     image: articleImage7,
+    alt: 'Two persons in VR helmets',
     subtitle: 'VR Games',
     title: 'Breaking Boundaries: The Immersive Power of VR Gaming',
     span: 'READ MORE',
@@ -778,6 +813,7 @@ const blogCards = [
   {
     id: 8,
     image: articleImage1,
+    alt: 'A man in VR helmet in a game holding steering wheel',
     subtitle: 'VR Games',
     title: 'From Concept to Reality: The Evolution of VR Gaming',
     span: 'READ MORE',
@@ -785,6 +821,7 @@ const blogCards = [
   {
     id: 1,
     image: articleImage5,
+    alt: 'A man in a VR helmet',
     subtitle: 'VR Architecture',
     title: 'Bringing Designs to Life: How VR is Changing Architecture',
     span: 'READ MORE',
@@ -792,6 +829,7 @@ const blogCards = [
   {
     id: 5,
     image: articleImage9,
+    alt: 'VR helmet and part of a laptop',
     subtitle: 'VR Education',
     title: 'Transforming Learning: The Impact of VR in Education',
     span: 'READ MORE',
@@ -799,6 +837,7 @@ const blogCards = [
   {
     id: 7,
     image: articleImage8,
+    alt: 'A man in VR helmet in virtual world',
     subtitle: 'VR Games',
     title: 'The Next Frontier: How VR is Shaping the Future of Games',
     span: 'READ MORE',
@@ -806,6 +845,7 @@ const blogCards = [
   {
     id: 4,
     image: articleImage4,
+    alt: 'A VR game',
     subtitle: 'VR Entertainment',
     title: 'Redefining Entertainment: The Rise of VR Experiences',
     span: 'READ MORE',
@@ -813,6 +853,7 @@ const blogCards = [
   {
     id: 6,
     image: articleImage7,
+    alt: 'Two persons in VR helmets',
     subtitle: 'VR Games',
     title: 'Breaking Boundaries: The Immersive Power of VR Gaming',
     span: 'READ MORE',
@@ -820,6 +861,7 @@ const blogCards = [
   {
     id: 3,
     image: articleImage3,
+    alt: 'A hand reaching VR helmet',
     subtitle: 'VR Games',
     title: 'The Future of Gaming: How VR is Revolutionizing Gameplay',
     span: 'READ MORE',
@@ -827,6 +869,7 @@ const blogCards = [
   {
     id: 9,
     image: articleImage6,
+    alt: 'A hand touching an infinity sign',
     subtitle: 'VR Games',
     title: 'Immersion Redefined: The Rise of VR in Gaming',
     span: 'READ MORE',
@@ -834,6 +877,7 @@ const blogCards = [
   {
     id: 2,
     image: articleImage2,
+    alt: 'A hand holding a VR helmet',
     subtitle: 'VR Games',
     title: 'The Ultimate Escape: Exploring the World of VR Games',
     span: 'READ MORE',
@@ -841,6 +885,7 @@ const blogCards = [
   {
     id: 8,
     image: articleImage1,
+    alt: 'A man in VR helmet in a game holding steering wheel',
     subtitle: 'VR Games',
     title: 'From Concept to Reality: The Evolution of VR Gaming',
     span: 'READ MORE',
@@ -848,6 +893,7 @@ const blogCards = [
   {
     id: 1,
     image: articleImage5,
+    alt: 'A man in a VR helmet',
     subtitle: 'VR Architecture',
     title: 'Bringing Designs to Life: How VR is Changing Architecture',
     span: 'READ MORE',

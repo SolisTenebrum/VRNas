@@ -11,12 +11,14 @@ const BlogArticleCard = ({
   title,
   span,
   id,
+  alt,
 }: {
   image: string;
   subtitle: string;
   title: string;
   span: string;
   id: number;
+  alt: string;
 }) => {
   return (
     <motion.div
@@ -27,7 +29,7 @@ const BlogArticleCard = ({
       className={styles.card}
     >
       <div className={styles.imageContainer}>
-        <img className={styles.image} src={image} />
+        <img className={styles.image} src={image} alt={alt} />
       </div>
       <div className={styles.textContainer}>
         <p className={styles.category}>{subtitle}</p>
@@ -88,6 +90,7 @@ const BlogArticles = () => {
             title={card.title}
             span={card.span}
             id={card.id}
+            alt={card.alt}
           />
         ))}
       </div>

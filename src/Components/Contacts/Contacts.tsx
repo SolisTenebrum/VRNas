@@ -18,7 +18,7 @@ const Contacts = () => {
         <div className={styles.card}>
           <div className={styles.content}>
             <div className={styles.iconContainer}>
-              <img src={emailIcon} className={styles.icon} />
+              <img src={emailIcon} className={styles.icon} alt="Email icon" />
             </div>
             <div className={styles.textContainer}>
               <p className={cn(styles.subtitle, 'gradient-text')}>Email</p>
@@ -29,7 +29,7 @@ const Contacts = () => {
         <div className={styles.card}>
           <div className={styles.content}>
             <div className={styles.iconContainer}>
-              <img src={locationIcon} className={styles.icon} />
+              <img src={locationIcon} className={styles.icon} alt="Location icon" />
             </div>
             <div className={styles.textContainer}>
               <p className={cn(styles.subtitle, 'gradient-text')}>Address</p>
@@ -40,7 +40,7 @@ const Contacts = () => {
         <div className={styles.card}>
           <div className={styles.content}>
             <div className={styles.iconContainer}>
-              <img src={callIcon} className={styles.icon} />
+              <img src={callIcon} className={styles.icon} alt='Phone icon'/>
             </div>
             <div className={styles.textContainer}>
               <p className={cn(styles.subtitle, 'gradient-text')}>Phone</p>

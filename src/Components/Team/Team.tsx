@@ -20,17 +20,17 @@ const TeamCard = ({ team, variant, index }: { team: any; variant: string; index:
     >
       <div className={styles.imageContainer}>
         <div className={styles.overlay} />
-        <img src={team.image} alt="team-member" className={styles.cardImage} />
+        <img src={team.image} alt="Team member" className={styles.cardImage} />
         {variant === 'our-team-page' ? (
           <div className={styles.socials}>
             <div className={styles.socialIconContainer}>
-              <img src={instagramIcon} className={styles.socialIcon} />
+              <img src={instagramIcon} alt="Instagram icon" className={styles.socialIcon} />
             </div>
             <div className={styles.socialIconContainer}>
-              <img src={facebookIcon} className={styles.socialIcon} />
+              <img src={facebookIcon} alt="Facebook icon" className={styles.socialIcon} />
             </div>
             <div className={styles.socialIconContainer}>
-              <img src={xIcon} className={styles.socialIcon} />
+              <img src={xIcon} alt="X icon" className={styles.socialIcon} />
             </div>
           </div>
         ) : (

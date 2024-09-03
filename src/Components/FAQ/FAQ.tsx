@@ -21,7 +21,7 @@ const FAQCard = ({ title, text, index, toggleVisibility, faqCardsOpened }: IFAQP
         <p className={cn(styles.faqCardTitle, faqCardsOpened.includes(index) ? `${styles.faqCardTitleActive}` : '')}>
           {title}
         </p>
-        <img src={menuArrow} className={cn(styles.menuArrow, faqCardsOpened.includes(index) && styles.opened)} />
+        <img src={menuArrow} className={cn(styles.menuArrow, faqCardsOpened.includes(index) && styles.opened)} alt='Expanding icon' />
       </div>
       <p className={cn(styles.faqCardText, faqCardsOpened.includes(index) ? styles.textVisible : '')}>{text}</p>
     </motion.div>
@@ -81,6 +81,7 @@ const FAQ = ({ variant }: { variant: string }) => {
             viewport={{ once: true, amount: 0.5 }}
             src={vrperson}
             className={styles.vrperson}
+            alt='A person in VR helmet looks left'
           />
           <motion.img
             initial={{ opacity: 0, scaleX: -1, x: 100 }}
@@ -89,6 +90,7 @@ const FAQ = ({ variant }: { variant: string }) => {
             viewport={{ once: true, amount: 0.5 }}
             src={vrperson}
             className={styles.vrperson}
+            alt='A person in VR helmet looks right'
           />
         </div>
       )}

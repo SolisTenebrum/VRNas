@@ -52,11 +52,11 @@ const Partners = () => {
             viewport={{ once: true, amount: 0.5 }}
             className={styles.imageContainer}
           >
-            <img src={partnersHalfCircle} className={styles.halfCircle} />
+            <img src={partnersHalfCircle} alt='A person in VR helmet rounded by half circles' className={styles.halfCircle} />
             <div className={styles.circles}>
               {partnerLogos.map((logo, index) => (
                 <div key={index} className={cn(styles.circle, styles[`circle${index + 1}`])}>
-                  <img src={logo} className={styles.logo} />
+                  <img src={logo} alt='Partner logo' className={styles.logo} />
                 </div>
               ))}
             </div>

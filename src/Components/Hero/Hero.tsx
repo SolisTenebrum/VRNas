@@ -57,13 +57,13 @@ const Hero = () => {
             >
               <ul className={styles.clientImages}>
                 <li className={styles.clientImageContainer}>
-                  <img src={clientOne} alt="client" className={styles.clientImage} />
+                  <img src={clientOne} alt="Client one" className={styles.clientImage} />
                 </li>
                 <li className={styles.clientImageContainer}>
-                  <img src={clientTwo} alt="client" className={styles.clientImage} />
+                  <img src={clientTwo} alt="Client two" className={styles.clientImage} />
                 </li>
                 <li className={styles.clientImageContainer}>
-                  <img src={clientThree} alt="client" className={styles.clientImage} />
+                  <img src={clientThree} alt="Client three" className={styles.clientImage} />
                 </li>
               </ul>
               <p className={styles.clientCaption}>
@@ -89,7 +89,7 @@ const Hero = () => {
             viewport={{ once: true, amount: 0.5 }}
             className={styles.vrPersonContainer}
           >
-            <img className={styles.vrPerson} src={vrPerson}></img>
+            <img className={styles.vrPerson} src={vrPerson} alt='A man in a vritual reality helmet'/>
           </motion.div>
         </div>
       </div>

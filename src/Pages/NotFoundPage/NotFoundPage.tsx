@@ -81,7 +81,7 @@ const NotFoundPage = () => {
               viewport={{ once: true, amount: 0.5 }}
               className={styles.imageContainer}
             >
-              <img src={notFoundPageImage} className={styles.image} />
+              <img src={notFoundPageImage} alt="A person in VR helmet" className={styles.image} />
             </motion.div>
           </div>
         </div>

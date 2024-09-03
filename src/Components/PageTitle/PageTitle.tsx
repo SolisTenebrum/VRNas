@@ -49,7 +49,7 @@ const PageTitle = ({ variant }: { variant: string }) => {
           <NavLink to="/" className={styles.pathLink}>
             <span className={styles.pathSpan}>Home</span>
           </NavLink>
-          <img src={arrow} className={styles.arrow} />
+          <img src={arrow} className={styles.arrow} alt='Arrow right icon'/>
           {title}
         </motion.p>
         <motion.div

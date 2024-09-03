@@ -8,6 +8,7 @@ interface IArticle {
   paragraphs: string[];
   articleImages: string[];
   postTags: string;
+  alt: string;
 }
 
 interface IArticleProps {

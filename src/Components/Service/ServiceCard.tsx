@@ -26,7 +26,7 @@ const ServiceCard = ({
         viewport={{ once: true, amount: 0.5 }}
         className={cn(styles.card, isMobileDevice() === 'mobile' ? styles.card_mobile : '')}
       >
-        <img src={icon} className={styles.icon} />
+        <img src={icon} alt={`${title} icon`} className={styles.icon} />
         <h3 className={styles.cardTitle}>{title}</h3>
         <p className={styles.cardText}>{text}</p>
         <Link

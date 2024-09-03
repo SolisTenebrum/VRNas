@@ -16,7 +16,7 @@ const Benefits = ({ variant }: { variant: string }) => {
         <div className={styles.content}>
           {benefitsCards.map((card, index) => (
             <div className={styles.card} key={index}>
-              <img src={card.icon} className={styles.icon}></img>
+              <img src={card.icon} className={styles.icon} alt={card.alt} />
               <h2 className={styles.title}>{card.title}</h2>
               <p className={styles.description}>{card.description}</p>
             </div>

@@ -56,7 +56,7 @@ const Pricing = ({ variant }: { variant: string }) => {
               {serviceBenefits.map((item, index) => {
                 return (
                   <div className={styles.item} key={index}>
-                    <img src={cloudIcon} className={styles.itemIcon} />
+                    <img src={cloudIcon} alt='Cloud icon' className={styles.itemIcon} />
                     <div className={styles.itemText}>
                       <h4 className={styles.itemTitle}>{item.title}</h4>
                       <p className={styles.itemDescription}>{item.text}</p>
@@ -67,7 +67,7 @@ const Pricing = ({ variant }: { variant: string }) => {
             </div>
             <div className={styles.column}>
               <div className={styles.vrpersonContainer}>
-                <img src={vrperson} className={styles.vrperson} />
+                <img src={vrperson} alt='A man in a vritual reality helmet looks left' className={styles.vrperson} />
               </div>
             </div>
 
