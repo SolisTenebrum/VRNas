@@ -81,9 +81,6 @@
   flex: 1;
 }
 
-.linksColumn {
-}
-
 .linksTitle {
   font-size: 16px;
   line-height: 28px;
@@ -193,7 +190,4 @@
   .linksList {
     row-gap: 10px;
   }
-}
-
-@media screen and (max-width: 480px) {
 }

@@ -40,7 +40,6 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  /* width: 377px; */
   min-height: 252px;
 }
 
@@ -188,10 +187,4 @@
   .card {
     max-width: 100%;
   }
-}
-
-@media screen and (max-width: 576px) {
-}
-
-@media screen and (max-width: 480px) {
 }

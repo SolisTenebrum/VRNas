@@ -54,9 +54,6 @@
   z-index: -1;
 }
 
-.clients {
-}
-
 .client {
   position: relative;
   cursor: pointer;

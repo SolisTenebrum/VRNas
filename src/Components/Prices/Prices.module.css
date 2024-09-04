@@ -8,9 +8,6 @@
   padding: 0 16px;
 }
 
-.row {
-}
-
 .textContainer {
   margin-bottom: 40px;
   display: flex;
@@ -253,8 +250,6 @@
 @media screen and (max-width: 992px) {
   .pricingCard {
     width: 90%;
-  }
-  .cardContent {
   }
 }
 

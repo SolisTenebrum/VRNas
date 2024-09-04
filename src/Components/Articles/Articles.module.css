@@ -96,9 +96,6 @@
   color: white;
 }
 
-.containerBottom {
-}
-
 .content {
   display: flex;
   column-gap: 50px;

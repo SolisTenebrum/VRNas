@@ -72,12 +72,6 @@
   padding: 0 16px;
 }
 
-.container::before {
-}
-
-.row {
-}
-
 .textContainer {
   display: flex;
   flex-direction: column;

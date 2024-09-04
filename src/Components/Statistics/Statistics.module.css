@@ -29,9 +29,6 @@
   padding: 0 16px;
 }
 
-.column {
-}
-
 .textContainer {
   display: flex;
   flex-direction: column;
@@ -84,7 +81,4 @@
     flex-direction: column;
     row-gap: 50px;
   }
-}
-
-@media screen and (max-width: 480px) {
 }

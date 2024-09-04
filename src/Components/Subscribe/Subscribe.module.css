@@ -18,9 +18,6 @@
   column-gap: 30px;
 }
 
-.column {
-}
-
 .column:last-of-type {
   max-width: 366px;
   width: 100%;

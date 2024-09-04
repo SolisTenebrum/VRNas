@@ -222,9 +222,6 @@
   }
 }
 
-@media screen and (max-width: 576px) {
-}
-
 @media screen and (max-width: 480px) {
   .video {
     width: 147px;
