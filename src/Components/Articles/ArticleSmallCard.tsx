@@ -2,6 +2,7 @@ import styles from './Articles.module.css';
 import arrowRight from '../../assets/icons/arrow-thin-to-right.svg';
 import { clsx as cn } from 'clsx';
 import { Link } from 'react-router-dom';
+import { IArticleSmallCardProps } from '../../types/types';
 
 const ArticleSmallCard = ({
   image,
@@ -10,14 +11,7 @@ const ArticleSmallCard = ({
   variant,
   id,
   alt
-}: {
-  image: string;
-  title: string;
-  span: string;
-  variant: string;
-  id: number;
-  alt: string;
-}): JSX.Element => {
+}: IArticleSmallCardProps): JSX.Element => {
   return (
     <li className={cn(styles.articleCard, variant === 'blog-page' ? styles.articleCard_blogpage : '')}>
       <div

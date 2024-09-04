@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { blogCards } from '../../constants';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { IBlogArticleCardProps } from '../../types/types';
 
 const BlogArticleCard = ({
   image,
@@ -12,14 +13,7 @@ const BlogArticleCard = ({
   span,
   id,
   alt,
-}: {
-  image: string;
-  subtitle: string;
-  title: string;
-  span: string;
-  id: number;
-  alt: string;
-}) => {
+}: IBlogArticleCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}

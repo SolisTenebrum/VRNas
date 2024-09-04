@@ -1,3 +1,13 @@
+interface INavigationItemProps {
+  href: string;
+  navName: string;
+  setBurgerActive: (isActive: boolean) => void;
+}
+
+interface IBenefitsFull {
+  variant: string;
+}
+
 interface IArticle {
   id: number;
   category: string;
@@ -27,8 +37,22 @@ interface IArticleSliderProps {
   articles: IArticle[];
 }
 
-interface IBenefitsFull {
+interface IArticleSmallCardProps {
+  image: string;
+  title: string;
+  span: string;
   variant: string;
+  id: number;
+  alt: string;
+}
+
+interface IBlogArticleCardProps {
+  image: string;
+  subtitle: string;
+  title: string;
+  span: string;
+  id: number;
+  alt: string;
 }
 
 interface IFAQProps {
@@ -37,12 +61,6 @@ interface IFAQProps {
   index: number;
   toggleVisibility: (index: number) => void;
   faqCardsOpened: number[];
-}
-
-interface INavigationItemProps {
-  href: string;
-  navName: string;
-  setBurgerActive: (isActive: boolean) => void;
 }
 
 interface IPricingCardProps {
@@ -70,6 +88,19 @@ interface IServiceTextProps {
   listItems: string[];
 }
 
+interface IServiceCardProps {
+  icon: string;
+  title: string;
+  text: string;
+  buttonText: string;
+  index: number;
+}
+interface ITeamCardProps {
+  team: any;
+  variant: string;
+  index: number;
+}
+
 export type {
   IArticle,
   IArticleSliderProps,
@@ -80,4 +111,8 @@ export type {
   IClientProps,
   IServiceTextProps,
   IArticleProps,
+  IArticleSmallCardProps,
+  IBlogArticleCardProps,
+  IServiceCardProps,
+  ITeamCardProps,
 };

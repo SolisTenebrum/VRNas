@@ -6,10 +6,11 @@ import instagramIcon from '../../assets/logos/logo-instagram.svg';
 import { team } from '../../constants';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { ITeamCardProps } from '../../types/types';
 
 const MotionLink = motion(Link);
 
-const TeamCard = ({ team, variant, index }: { team: any; variant: string; index: number }) => {
+const TeamCard = ({ team, variant, index }: ITeamCardProps) => {
   return (
     <motion.div
       initial={{ scale: 0 }}
