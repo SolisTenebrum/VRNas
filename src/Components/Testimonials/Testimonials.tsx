@@ -29,6 +29,10 @@ const Client = ({ image, name, company, message, index }: IClientProps) => {
   };
 
   useEffect(() => {
+    window.innerWidth <= 992 && setVisibleIndex(2);
+  }, []);
+
+  useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
