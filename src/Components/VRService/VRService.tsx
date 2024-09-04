@@ -120,6 +120,7 @@ const VRService = () => {
   }, [location.search]);
 
   const handleCircleClick = (id: number) => {
+    if (window.innerWidth <= 992) return;
     if (isAnimating) return;
     setIsTextVisible(false);
     setIsAnimating(true);
