@@ -49,6 +49,44 @@ import clientImageFour from './assets/people/Client4.png';
 import clientImageFive from './assets/people/Client5.png';
 import clientImageSix from './assets/people/Client6.png';
 
+// Partner logos
+import partnerLogoOne from './assets/logos/partner-logo-1.svg';
+import partnerLogoTwo from './assets/logos/partner-logo-2.svg';
+import partnerLogoThree from './assets/logos/partner-logo-3.svg';
+import partnerLogoFour from './assets/logos/partner-logo-4.svg';
+import partnerLogoFive from './assets/logos/partner-logo-5.svg';
+import partnerLogoSix from './assets/logos/partner-logo-6.svg';
+import partnerLogoSeven from './assets/logos/partner-logo-7.svg';
+
+
+// Page links from header
+const pageButtonArray = [
+  {
+    name: 'Detail Service',
+    href: '/detail-service',
+  },
+  {
+    name: 'Pricing Plan',
+    href: '/pricing-plan',
+  },
+  {
+    name: 'Our Team',
+    href: '/our-team',
+  },
+  {
+    name: 'FAQ',
+    href: '/faq',
+  },
+  {
+    name: 'Terms & Conditions',
+    href: '/terms-and-conditions',
+  },
+  {
+    name: 'Privacy Policy',
+    href: '/privacy-policy',
+  },
+];
+
 // Benefits cards
 const benefitsCards = [
   {
@@ -1237,6 +1275,16 @@ const termsAndConditionsText = [
   },
 ];
 
+const partnerLogos = [
+  partnerLogoOne,
+  partnerLogoTwo,
+  partnerLogoThree,
+  partnerLogoFour,
+  partnerLogoFive,
+  partnerLogoSix,
+  partnerLogoSeven,
+];
+
 export {
   serviceCards,
   quickLinks,
@@ -1258,4 +1306,6 @@ export {
   stats,
   privacyPolicyText,
   termsAndConditionsText,
+  pageButtonArray,
+  partnerLogos
 };

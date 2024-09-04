@@ -1,24 +1,8 @@
 import styles from './Partners.module.css';
 import partnersHalfCircle from '../../assets/background-elements/partners-image.png';
 import { clsx as cn } from 'clsx';
-import partnerLogoOne from '../../assets/logos/partner-logo-1.svg';
-import partnerLogoTwo from '../../assets/logos/partner-logo-2.svg';
-import partnerLogoThree from '../../assets/logos/partner-logo-3.svg';
-import partnerLogoFour from '../../assets/logos/partner-logo-4.svg';
-import partnerLogoFive from '../../assets/logos/partner-logo-5.svg';
-import partnerLogoSix from '../../assets/logos/partner-logo-6.svg';
-import partnerLogoSeven from '../../assets/logos/partner-logo-7.svg';
 import { motion } from 'framer-motion';
-
-const partnerLogos = [
-  partnerLogoOne,
-  partnerLogoTwo,
-  partnerLogoThree,
-  partnerLogoFour,
-  partnerLogoFive,
-  partnerLogoSix,
-  partnerLogoSeven,
-];
+import { partnerLogos } from '../../constants';
 
 const Partners = () => {
   return (
@@ -52,11 +36,15 @@ const Partners = () => {
             viewport={{ once: true, amount: 0.5 }}
             className={styles.imageContainer}
           >
-            <img src={partnersHalfCircle} alt='A person in VR helmet rounded by half circles' className={styles.halfCircle} />
+            <img
+              src={partnersHalfCircle}
+              alt="A person in VR helmet rounded by half circles"
+              className={styles.halfCircle}
+            />
             <div className={styles.circles}>
               {partnerLogos.map((logo, index) => (
                 <div key={index} className={cn(styles.circle, styles[`circle${index + 1}`])}>
-                  <img src={logo} alt='Partner logo' className={styles.logo} />
+                  <img src={logo} alt="Partner logo" className={styles.logo} />
                 </div>
               ))}
             </div>

@@ -4,33 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { clsx as cn } from 'clsx';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { INavigationItemProps } from '../../types/types';
-
-const pageButtonArray = [
-  {
-    name: 'Detail Service',
-    href: '/detail-service',
-  },
-  {
-    name: 'Pricing Plan',
-    href: '/pricing-plan',
-  },
-  {
-    name: 'Our Team',
-    href: '/our-team',
-  },
-  {
-    name: 'FAQ',
-    href: '/faq',
-  },
-  {
-    name: 'Terms & Conditions',
-    href: '/terms-and-conditions',
-  },
-  {
-    name: 'Privacy Policy',
-    href: '/privacy-policy',
-  },
-];
+import { pageButtonArray } from '../../constants';
 
 const NavigationItem = ({ href, navName, setBurgerActive }: INavigationItemProps) => {
   const scroll = () => {
@@ -136,7 +110,7 @@ const Header = () => {
       <div className={cn(styles.container, `${scrolled && styles.fixedContainer}`)}>
         <div className={styles.logoContainer}>
           <Link to={'/'} onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>
-            <img src={logo} alt='VRNas logo' className={styles.logo} />
+            <img src={logo} alt="VRNas logo" className={styles.logo} />
           </Link>
         </div>
         <nav className={cn(styles.navigationContainer, burgerActive && styles.navigationContainerActive)}>
