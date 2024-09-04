@@ -123,9 +123,9 @@ const VRService = () => {
     if (isAnimating) return;
     setIsTextVisible(false);
     setIsAnimating(true);
+    setActiveService(id);
 
     setTimeout(() => {
-      setActiveService(id);
       setIsTextVisible(true);
       setIsAnimating(false);
 
