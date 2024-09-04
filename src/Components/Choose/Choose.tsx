@@ -7,7 +7,7 @@ import { clsx as cn } from 'clsx';
 import { motion } from 'framer-motion';
 
 const Choose = ({ variant }: { variant: string }) => {
-  const [visibleIndexes, setVisibleIndexes] = useState<number[]>([]);
+  const [visibleIndexes, setVisibleIndexes] = useState<number[]>([0]);
 
   const toggleVisibility = (index: number) => {
     setVisibleIndexes((prevIndexes) =>
@@ -90,7 +90,9 @@ const Choose = ({ variant }: { variant: string }) => {
             <img
               src={variant === 'about-us-page' || variant === 'pricing-plan-page' ? vrPerson2 : vrPerson}
               alt={
-                variant === 'about-us-page' || variant === 'pricing-plan-page' ? 'A person in VR helmet running' : 'A person in VR helmet'
+                variant === 'about-us-page' || variant === 'pricing-plan-page'
+                  ? 'A person in VR helmet running'
+                  : 'A person in VR helmet'
               }
               className={styles.vrperson}
             />
