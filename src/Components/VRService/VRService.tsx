@@ -160,15 +160,17 @@ const VRService = () => {
 
   return (
     <section className={styles.vrService} id="vrservice">
-      <div className={styles.container}>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, easings: 'ease' }}
+        viewport={{ once: true }}
+        className={styles.container}
+      >
         <div className={styles.circlesBackground}>
           <div className={styles.circles} style={{ transform: `rotate(${rotationAngle}deg)` }}>
-            {serviceCircles.map((service, index) => (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5, rotate: -rotationAngle }}
-                whileInView={{ opacity: 1, scale: 1, rotate: -rotationAngle }}
-                transition={{ duration: 0.2, easings: 'ease', delay: 0.1 * index }}
-                viewport={{ once: true, amount: 0.5 }}
+            {serviceCircles.map((service) => (
+              <div
                 key={service.id}
                 className={cn(
                   styles.circle,
@@ -176,10 +178,10 @@ const VRService = () => {
                   activeService === service.id && styles.circleActive
                 )}
                 onClick={() => handleCircleClick(service.id)}
-                // style={{ transform: `rotate(${-rotationAngle}deg)` }}
+                style={{ transform: `rotate(${-rotationAngle}deg)` }}
               >
                 <p className={styles.circleText}>{service.text}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
           <div className={styles.arrowButtons}>
@@ -199,7 +201,7 @@ const VRService = () => {
         <div className={cn(styles.textContainer, isTextVisible && styles.textContainerActive)}>
           <ServiceText {...vrServicesText[activeService]} />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
