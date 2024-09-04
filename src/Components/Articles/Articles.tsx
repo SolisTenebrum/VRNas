@@ -54,7 +54,7 @@ const Articles = ({ variant }: { variant: string }) => {
         <div className={styles.containerBottom}>
           <div className={styles.content}>
             <motion.div
-              initial={{ opacity: 0, scale: 1.5, y: 100 }}
+              initial={{ opacity: 0, scale: 1.2, y: 100 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.7 }}
               viewport={{ once: true, amount: 0.5 }}
