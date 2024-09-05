@@ -10,7 +10,7 @@ import { ITeamCardProps } from '../../types/types';
 
 const MotionLink = motion(Link);
 
-const TeamCard = ({ team, variant, index }: ITeamCardProps) => {
+const TeamCard = ({ team, variant }: ITeamCardProps) => {
   return (
     <div className={styles.card}>
       <div className={styles.imageContainer}>
@@ -90,7 +90,7 @@ const Team = ({ variant }: { variant: string }) => {
                 viewport={{ once: true, amount: 0.2 }}
                 key={index}
               >
-                <TeamCard team={member} variant={variant} index={index} />
+                <TeamCard team={member} variant={variant} />
               </motion.div>
             );
           })}

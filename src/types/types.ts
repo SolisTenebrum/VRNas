@@ -97,7 +97,6 @@ interface IServiceCardProps {
 interface ITeamCardProps {
   team: any;
   variant: string;
-  index: number;
 }
 
 export type {
