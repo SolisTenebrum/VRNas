@@ -4,15 +4,9 @@ import { clsx as cn } from 'clsx';
 import { IPricingCardProps } from '../../types/types';
 import { motion } from 'framer-motion';
 
-const PricingCard = ({ title, price, text, list, buttonText, index }: IPricingCardProps) => {
+const PricingCard = ({ title, price, text, list, buttonText }: IPricingCardProps) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.8, y: 50 }}
-      whileInView={{ opacity: 1, scale: 1, y: 0 }}
-      transition={{ duration: 0.3, easings: 'ease', delay: index * 0.1 }}
-      viewport={{ once: true, amount: 0.5 }}
-      className={styles.pricingCard}
-    >
+    <div className={styles.pricingCard}>
       <div className={styles.cardContent}>
         <div className={styles.top}>
           <h4 className={styles.cardTitle}>{title}</h4>
@@ -33,7 +27,7 @@ const PricingCard = ({ title, price, text, list, buttonText, index }: IPricingCa
         </div>
         <button className={styles.cardButton}>{buttonText}</button>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -75,7 +69,16 @@ const Prices = () => {
         </div>
         <div className={styles.row}>
           {pricingCardsList.map((card, index) => {
-            return <PricingCard key={index} {...card} index={index} />;
+            return (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8, y: 50 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.3, easings: 'ease', delay: index * 0.1 }}
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                <PricingCard key={index} {...card}/>
+              </motion.div>
+            );
           })}
         </div>
       </div>
