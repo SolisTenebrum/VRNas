@@ -124,14 +124,14 @@ const VRService = () => {
     if (isAnimating) return;
     setIsTextVisible(false);
     setIsAnimating(true);
-    setActiveService(id);
 
     setTimeout(() => {
+      setActiveService(id);
       setIsTextVisible(true);
       setIsAnimating(false);
 
       window.history.replaceState(null, '', location.pathname);
-    }, 500);
+    }, 300);
   };
 
   const handleArrowClick = (direction: 'left' | 'right') => {
