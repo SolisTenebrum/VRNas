@@ -9,11 +9,7 @@ import { motion } from 'framer-motion';
 
 const FAQCard = ({ title, text, index, toggleVisibility, faqCardsOpened }: IFAQProps) => {
   return (
-    <motion.div
-      initial={{ scale: 0 }}
-      whileInView={{ scale: 1 }}
-      transition={{ duration: 0.1, easings: 'ease', delay: 0.1 }}
-      viewport={{ once: true, amount: 0.1 }}
+    <div
       className={cn(styles.faqCard, faqCardsOpened.includes(index) ? styles.faqCardActive : '')}
       onClick={() => toggleVisibility(index)}
     >
@@ -21,10 +17,14 @@ const FAQCard = ({ title, text, index, toggleVisibility, faqCardsOpened }: IFAQP
         <p className={cn(styles.faqCardTitle, faqCardsOpened.includes(index) ? `${styles.faqCardTitleActive}` : '')}>
           {title}
         </p>
-        <img src={menuArrow} className={cn(styles.menuArrow, faqCardsOpened.includes(index) && styles.opened)} alt='Expanding icon' />
+        <img
+          src={menuArrow}
+          className={cn(styles.menuArrow, faqCardsOpened.includes(index) && styles.opened)}
+          alt="Expanding icon"
+        />
       </div>
       <p className={cn(styles.faqCardText, faqCardsOpened.includes(index) ? styles.textVisible : '')}>{text}</p>
-    </motion.div>
+    </div>
   );
 };
 
@@ -81,7 +81,7 @@ const FAQ = ({ variant }: { variant: string }) => {
             viewport={{ once: true, amount: 0.5 }}
             src={vrperson}
             className={styles.vrperson}
-            alt='A person in VR helmet looks left'
+            alt="A person in VR helmet looks left"
           />
           <motion.img
             initial={{ opacity: 0, scaleX: -1, x: 100 }}
@@ -90,7 +90,7 @@ const FAQ = ({ variant }: { variant: string }) => {
             viewport={{ once: true, amount: 0.5 }}
             src={vrperson}
             className={styles.vrperson}
-            alt='A person in VR helmet looks right'
+            alt="A person in VR helmet looks right"
           />
         </div>
       )}
@@ -163,14 +163,21 @@ const FAQ = ({ variant }: { variant: string }) => {
             : faqList
           ).map((card, index) => {
             return (
-              <FAQCard
+              <motion.div
+                initial={{ opacity: 0, scale: 0, y: 50 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.4, easings: 'ease', delay: 0.1 }}
+                viewport={{ once: true, amount: 0.1 }}
                 key={index}
-                title={card.title}
-                text={card.text}
-                index={index}
-                toggleVisibility={toggleVisibility}
-                faqCardsOpened={faqCardsOpened}
-              />
+              >
+                <FAQCard
+                  title={card.title}
+                  text={card.text}
+                  index={index}
+                  toggleVisibility={toggleVisibility}
+                  faqCardsOpened={faqCardsOpened}
+                />
+              </motion.div>
             );
           })}
         </div>

@@ -12,13 +12,7 @@ const MotionLink = motion(Link);
 
 const TeamCard = ({ team, variant, index }: ITeamCardProps) => {
   return (
-    <motion.div
-      initial={{ scale: 0 }}
-      whileInView={{ scale: 1, transformOrigin: 'top' }}
-      transition={{ duration: 0.1, easings: 'ease', delay: index * 0.1 }}
-      viewport={{ once: true, amount: 0.2 }}
-      className={styles.card}
-    >
+    <div className={styles.card}>
       <div className={styles.imageContainer}>
         <div className={styles.overlay} />
         <img src={team.image} alt="Team member" className={styles.cardImage} />
@@ -42,7 +36,7 @@ const TeamCard = ({ team, variant, index }: ITeamCardProps) => {
         <h4 className={styles.cardName}>{team.name}</h4>
         <p className={styles.cardJobTitle}>{team.jobTitle}</p>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -88,7 +82,17 @@ const Team = ({ variant }: { variant: string }) => {
         </div>
         <div className={cn(styles.row, variant === 'our-team-page' ? styles.row_ourteam : '')}>
           {(variant === 'our-team-page' ? team : teamPreview).map((member, index) => {
-            return <TeamCard key={index} team={member} variant={variant} index={index} />;
+            return (
+              <motion.div
+                initial={{ opacity: 0, scale: 0, y: 100 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.4, easings: 'ease', delay: index * 0.1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                key={index}
+              >
+                <TeamCard team={member} variant={variant} index={index} />
+              </motion.div>
+            );
           })}
         </div>
         {variant !== 'our-team-page' && (

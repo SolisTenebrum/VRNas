@@ -75,8 +75,9 @@ const Prices = () => {
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.3, easings: 'ease', delay: index * 0.1 }}
                 viewport={{ once: true, amount: 0.5 }}
+                key={index}
               >
-                <PricingCard key={index} {...card}/>
+                <PricingCard {...card} />
               </motion.div>
             );
           })}
