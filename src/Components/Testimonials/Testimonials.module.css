@@ -63,7 +63,7 @@
 }
 
 .clientImage {
-  border: 0.79px solid #18181b;
+  border: 0.79px solid var(--black-100);
   border-radius: 50%;
   position: absolute;
   top: 12px;
@@ -182,7 +182,7 @@
 .message {
   margin: 0;
   padding: 0;
-  color: #d1d1d1;
+  color: var(--grey-2);
   margin-bottom: 8px;
   font-size: 12px;
   line-height: 20px;
@@ -194,7 +194,7 @@
   font-size: 12px;
   line-height: 24px;
   font-weight: 400;
-  color: #ffffff;
+  color: var(--white);
 }
 
 .company {
@@ -203,7 +203,7 @@
   font-size: 12px;
   line-height: 24px;
   font-weight: 400;
-  color: #d1d1d1;
+  color: var(--grey-2);
   display: inline-block;
   border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
   border-width: 1px;

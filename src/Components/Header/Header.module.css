@@ -82,7 +82,7 @@
 
 .link {
   text-decoration: none;
-  color: #d1d1d1;
+  color: var(--grey-2);
   display: inline-block;
   font-weight: 300;
   padding: 10px 0 10px 0;
@@ -92,11 +92,11 @@
 }
 
 .link:hover {
-  color: #ffffff;
+  color: var(--white);
 }
 
 .linkActive {
-  color: #ffffff;
+  color: var(--white);
 }
 
 .spoiler {
@@ -169,14 +169,14 @@
   display: inline;
   padding-top: 3px;
   cursor: pointer;
-  color: #b0b0b2;
+  color: var(--grey-1);
   transition: color 0.4s ease-in-out;
   text-decoration: none;
   font-weight: 400;
 }
 
 .menuElement:hover {
-  color: #ffffff;
+  color: var(--white);
   transition: color 0.3s ease-in-out;
 }
 
@@ -203,8 +203,8 @@
   padding: 0;
   outline: none;
   background-color: transparent;
-  color: #d1d1d1;
-  border: 1px solid white;
+  color: var(--grey-2);
+  border: 1px solid var(--white);
   position: relative;
   border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
   border-width: 1px;
@@ -229,21 +229,21 @@
 .burgerLine1 {
   width: 25px;
   height: 1px;
-  background-color: #ffffff;
+  background-color: var(--white);
   transition: width 0.3s ease, transform 0.3s ease;
 }
 
 .burgerLine2 {
   width: 20px;
   height: 1px;
-  background-color: #ffffff;
+  background-color: var(--white);
   transition: width 0.3s ease, transform 0.3s ease;
 }
 
 .burgerLine3 {
   width: 15px;
   height: 1px;
-  background-color: #ffffff;
+  background-color: var(--white);
   transition: width 0.3s ease, transform 0.3s ease;
 }
 
@@ -295,8 +295,8 @@
   padding: 0;
   outline: none;
   background-color: transparent;
-  color: #d1d1d1;
-  border: 1px solid white;
+  color: var(--grey-2);
+  border: 1px solid var(--white);
   position: relative;
   border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
   border-width: 1px;
@@ -526,8 +526,8 @@
     padding: 0;
     outline: none;
     background-color: transparent;
-    color: #d1d1d1;
-    border: 1px solid white;
+    color: var(--grey-2);
+    border: 1px solid var(--white);
     position: relative;
     border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
     border-width: 1px;

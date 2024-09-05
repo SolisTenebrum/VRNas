@@ -19,7 +19,7 @@
 .card {
   max-width: 379px;
   height: 417px;
-  background-color: #252532;
+  background-color: var(--black-50);
   border-image: linear-gradient(90deg, #585858 0%, #7e7e7e13 100%) 1;
   border-width: 1px;
   border-style: solid;
@@ -123,7 +123,7 @@
   letter-spacing: 1.5px;
   padding: 0;
   background-color: #262628;
-  color: #d1d1d1;
+  color: var(--grey-2);
   position: relative;
   border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
   border-width: 1px;
@@ -154,7 +154,7 @@
 .paginationButton:hover {
   transition: opacity 0.3s ease, color 0.3s ease;
   background-color: transparent;
-  color: white;
+  color: var(--white);
   opacity: 1;
 }
 

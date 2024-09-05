@@ -47,7 +47,7 @@
 .button {
   font-size: 20px;
   font-weight: 500;
-  color: #ffffff;
+  color: var(--white);
   border: none;
   padding: 0;
   padding-bottom: 12px;
@@ -85,7 +85,7 @@
   font-size: 16px;
   line-height: 28px;
   font-weight: 400;
-  color: #d1d1d1;
+  color: var(--grey-2);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.7s ease;
@@ -192,7 +192,7 @@
 
 .background {
   position: absolute;
-  background-color: #252532;
+  background-color: var(--black-50);
   width: 70%;
   height: 76%;
   z-index: -2;

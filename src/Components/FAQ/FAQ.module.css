@@ -95,7 +95,7 @@
   font-size: 16px;
   line-height: 28px;
   font-weight: 300;
-  color: #d1d1d1;
+  color: var(--grey-2);
   max-width: 764px;
   text-align: center;
 }
@@ -117,7 +117,7 @@
   padding: 12px 24px 12px 24px;
   outline: none;
   background-color: #262628;
-  color: #d1d1d1;
+  color: var(--grey-2);
   position: relative;
   border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
   border-width: 1px;
@@ -162,7 +162,7 @@
   border-image: linear-gradient(90deg, #585858 0%, #7e7e7e13 100%) 1;
   border-width: 1px;
   border-style: solid;
-  background-color: #252532;
+  background-color: var(--black-50);
   padding: 24px 24px 24px 24px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -190,7 +190,7 @@
 .faqCardTitle {
   font-size: 20px;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--white);
   border: none;
   padding: 0;
   background: none;
@@ -218,7 +218,7 @@
   font-size: 16px;
   line-height: 28px;
   font-weight: 400;
-  color: #d1d1d1;
+  color: var(--grey-2);
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, opacity 0.3s ease-in-out;
@@ -293,7 +293,7 @@
     border-image: linear-gradient(90deg, #585858 0%, #7e7e7e13 100%) 1;
     border-width: 1px;
     border-style: solid;
-    background-color: #252532;
+    background-color: var(--black-50);
     padding: 20px 20px 20px 20px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;

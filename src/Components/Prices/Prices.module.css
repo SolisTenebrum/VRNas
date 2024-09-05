@@ -30,7 +30,7 @@
   font-size: 16px;
   line-height: 28px;
   font-weight: 300;
-  color: #d1d1d1;
+  color: var(--grey-2);
   max-width: 750px;
   text-align: center;
 }
@@ -42,7 +42,7 @@
 }
 
 .pricingCard {
-  background-color: #252532;
+  background-color: var(--black-50);
   box-sizing: border-box;
   border-image: linear-gradient(90deg, #585858 0%, #7e7e7e13 100%) 1;
   border-width: 1px;
@@ -56,13 +56,13 @@
 }
 
 .pricingCard:hover .cardButton::before {
-  color: #ffffff;
+  color: var(--white);
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
 }
 
 .pricingCard:hover .cardButton {
-  color: #ffffff;
+  color: var(--white);
 }
 
 .cardContent {
@@ -106,7 +106,7 @@
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 28px;
-  color: #b0b0b2;
+  color: var(--grey-1);
   max-width: 265px;
 }
 
@@ -148,7 +148,7 @@
   padding: 0;
   outline: none;
   background-color: #262628;
-  color: #d1d1d1;
+  color: var(--grey-2);
   position: relative;
   border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
   border-width: 1px;
@@ -211,7 +211,7 @@
     margin-bottom: 16px;
     font-size: 16px;
     line-height: 28px;
-    color: #b0b0b2;
+    color: var(--grey-1);
     max-width: 100%;
   }
 

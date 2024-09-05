@@ -15,12 +15,12 @@
 }
 
 .content {
-  border: 1px solid #b0b0b2;
+  border: 1px solid var(--grey-1);
   border-image: linear-gradient(90deg, #585858 0%, #7e7e7e13 100%) 1;
   display: flex;
   column-gap: 50px;
   justify-content: center;
-  background-color: #252532;
+  background-color: var(--black-50);
   padding: 42px 64px 53px 64px;
 }
 
@@ -48,7 +48,7 @@
   margin: 0;
   font-size: 14px;
   line-height: 28px;
-  color: #b0b0b2;
+  color: var(--grey-1);
 }
 
 @media screen and (max-width: 992px) {

@@ -68,7 +68,7 @@
 .path {
   font-size: 16px;
   font-weight: 300;
-  color: #d1d1d1;
+  color: var(--grey-2);
   line-height: 28px;
   margin: 0;
   display: flex;
@@ -76,7 +76,7 @@
 
 .pathSpan {
   font-weight: 600;
-  color: #ffffff;
+  color: var(--white);
   line-height: auto;
 }
 

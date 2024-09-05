@@ -38,14 +38,14 @@
 }
 
 .pathLink {
-  color: #ffffff;
+  color: var(--white);
   text-decoration: none;
 }
 
 .pathSpan {
   font-size: 16px;
   font-weight: 400;
-  color: #d1d1d1;
+  color: var(--grey-2);
 }
 
 .arrow {
@@ -117,7 +117,7 @@
   font-size: 16px;
   line-height: 28px;
   font-weight: 300;
-  color: #d1d1d1;
+  color: var(--grey-2);
 }
 
 .articleImagesContainer {

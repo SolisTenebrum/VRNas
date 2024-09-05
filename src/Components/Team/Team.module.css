@@ -58,8 +58,8 @@
   padding: 0;
   outline: none;
   background-color: #262628;
-  color: #d1d1d1;
-  border: 1px solid white;
+  color: var(--grey-2);
+  border: 1px solid var(--white);
   position: relative;
   border-image: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%) 1;
   border-width: 1px;
@@ -180,7 +180,7 @@
   font-size: 16px;
   line-height: 28px;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--white);
   text-align: center;
 }
 
@@ -189,7 +189,7 @@
   font-size: 12px;
   line-height: 20px;
   font-weight: 400;
-  color: #b0b0b2;
+  color: var(--grey-1);
   text-align: center;
 }
 

@@ -1,10 +1,7 @@
 @import url('../vendor/normalize.css');
 @import url('../vendor/fonts.css');
 
-#root {
-  margin: 0 auto;
-  overflow-x: clip;
-
+:root {
   /* variables */
   --black-100: #18181b;
   --black-50: #252532;
@@ -16,16 +13,21 @@
   --blue: #19b5f1;
 }
 
+#root {
+  margin: 0 auto;
+  overflow-x: clip;
+}
+
 html {
   scrollbar-width: thin;
-  scrollbar-color: #e95ce9 transparent;
+  scrollbar-color: var(--purple) transparent;
   border-radius: 20px;
 }
 
 body {
-  background-color: #18181b;
+  background-color: var(--black-100);
   font-family: 'ChakraPetch', sans-serif;
-  color: #ffffff;
+  color: var(--white);
 }
 
 h1,
@@ -182,7 +184,7 @@ a {
 .gradient-text {
   margin-bottom: 12px;
   display: inline-block;
-  background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
+  background: var(--linear);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
