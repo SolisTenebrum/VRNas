@@ -75,7 +75,7 @@ const Testimonials = () => {
           <motion.p
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, easings: 'ease', delay: 0.5 }}
+            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.5 }}
             viewport={{ once: true, amount: 1 }}
             className={cn(styles.subtitle, 'gradient-text')}
           >
@@ -84,7 +84,7 @@ const Testimonials = () => {
           <motion.h2
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, easings: 'ease', delay: 0.5 }}
+            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.5 }}
             viewport={{ once: true, amount: 1 }}
             className={styles.title}
           >

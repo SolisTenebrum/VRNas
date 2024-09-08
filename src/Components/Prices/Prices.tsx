@@ -40,7 +40,7 @@ const Prices = () => {
             <motion.p
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, easings: 'ease' }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.5 }}
               className={cn(styles.subtitle, 'gradient-text')}
             >
@@ -49,7 +49,7 @@ const Prices = () => {
             <motion.h2
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+              transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className={styles.title}
             >
@@ -58,7 +58,7 @@ const Prices = () => {
             <motion.p
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+              transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className={styles.text}
             >
@@ -73,7 +73,7 @@ const Prices = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.8, y: 50 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.3, easings: 'ease', delay: index * 0.1 }}
+                transition={{ duration: 0.3, ease: 'easeOut', delay: index * 0.1 }}
                 viewport={{ once: true, amount: 0.5 }}
                 key={index}
               >

@@ -11,7 +11,7 @@ const Statistics = ({ variant }: { variant: string }) => {
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, easings: 'ease', delay: 0.2 * index }}
+            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 * index }}
             viewport={{ once: true, amount: 0.5 }}
             className={styles.column}
             key={index}

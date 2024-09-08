@@ -19,7 +19,7 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
       <motion.span
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, easings: 'ease' }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
         viewport={{ once: true, amount: 0.5 }}
         className={styles.articleSpan}
       >
@@ -28,7 +28,7 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
       <motion.h2
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+        transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
         viewport={{ once: true, amount: 0.5 }}
         className={styles.articleTitle}
       >
@@ -37,7 +37,7 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
       <motion.h3
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, easings: 'ease', delay: 0.4 }}
+        transition={{ duration: 0.7, ease: 'easeOut', delay: 0.4 }}
         viewport={{ once: true, amount: 0.5 }}
         className={styles.articleSubtitle}
       >
@@ -46,7 +46,7 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
       <motion.div
         initial={{ opacity: 0, scale: 1.2, y: 100 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+        transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
         viewport={{ once: true, amount: 0.5 }}
         className={styles.articleMainImageContainer}
       >
@@ -56,7 +56,7 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
         <motion.p
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, easings: 'ease' }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
           viewport={{ once: true, amount: 0.5 }}
           className={styles.articleText}
           key={index}
@@ -67,7 +67,7 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
       <motion.div
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7, easings: 'ease' }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
         viewport={{ once: true, amount: 0.5 }}
         className={styles.articleImagesContainer}
       >
@@ -79,7 +79,7 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
         <motion.p
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, easings: 'ease' }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
           viewport={{ once: true, amount: 0.5 }}
           className={styles.articleText}
           key={index}
@@ -90,7 +90,7 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
       <motion.h4
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, easings: 'ease' }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
         viewport={{ once: true, amount: 0.5 }}
         className={styles.postTagsTitle}
       >
@@ -99,7 +99,7 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
       <motion.p
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, easings: 'ease' }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
         viewport={{ once: true, amount: 0.5 }}
         className={styles.postTags}
       >
@@ -108,7 +108,7 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
       <motion.h4
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, easings: 'ease' }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
         viewport={{ once: true, amount: 0.5 }}
         className={styles.shareTitle}
       >
@@ -117,7 +117,7 @@ const Article = ({ category, title, author, date, mainImage, paragraphs, article
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, easings: 'ease' }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
         viewport={{ once: true, amount: 0.5 }}
         className={styles.shareContainer}
       >
@@ -163,7 +163,7 @@ const ArticlePage = () => {
           <motion.div
             initial={{ opacity: 0, y: -100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, easings: 'ease' }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.5 }}
             className={styles.path}
           >
@@ -187,7 +187,7 @@ const ArticlePage = () => {
               <motion.div
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7, easings: 'ease' }}
+                transition={{ duration: 0.7, ease: 'easeOut' }}
                 viewport={{ once: true, amount: 0.5 }}
                 className={styles.recentArticles}
               >
@@ -209,7 +209,7 @@ const ArticlePage = () => {
               <motion.div
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7, easings: 'ease' }}
+                transition={{ duration: 0.7, ease: 'easeOut' }}
                 viewport={{ once: true, amount: 0.5 }}
                 className={styles.popularHashTags}
               >

@@ -18,7 +18,7 @@ const ContactForm = () => {
         <motion.div
           initial={{ opacity: 0, scale: 1.2, y: 100 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.7, easings: 'ease' }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
           viewport={{ once: true, amount: 0.5 }}
           className={styles.imageContainer}
         >
@@ -43,7 +43,7 @@ const ContactForm = () => {
             <motion.p
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, easings: 'ease' }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.5 }}
               className={cn(styles.subtitle, 'gradient-text')}
             >
@@ -52,7 +52,7 @@ const ContactForm = () => {
             <motion.h2
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+              transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className={styles.title}
             >
@@ -61,7 +61,7 @@ const ContactForm = () => {
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+              transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className={styles.text}
             >
@@ -73,7 +73,7 @@ const ContactForm = () => {
           <motion.form
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, easings: 'ease', delay: 0.2 }}
+            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
             className={styles.form}
           >
@@ -85,7 +85,7 @@ const ContactForm = () => {
             <motion.button
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, easings: 'ease', delay: 0.4 }}
+              transition={{ duration: 0.4, ease: 'easeOut', delay: 0.4 }}
               viewport={{ once: true, amount: 0.9 }}
               className={styles.button}
               type="submit"

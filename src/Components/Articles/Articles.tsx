@@ -23,7 +23,7 @@ const Articles = ({ variant }: { variant: string }) => {
             <motion.p
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, easings: 'ease' }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.5 }}
               className={cn(styles.subtitle, 'gradient-text')}
             >
@@ -32,7 +32,7 @@ const Articles = ({ variant }: { variant: string }) => {
             <motion.h2
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+              transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className={styles.title}
             >
@@ -43,7 +43,7 @@ const Articles = ({ variant }: { variant: string }) => {
             style={{ alignSelf: 'end' }}
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
           >
             <Link to="/blog#blog" className={styles.button}>
@@ -67,7 +67,7 @@ const Articles = ({ variant }: { variant: string }) => {
               <motion.h4
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7, easings: 'ease' }}
+                transition={{ duration: 0.7, ease: 'easeOut' }}
                 viewport={{ once: true, amount: 0.5 }}
                 className={styles.subsubtitle}
               >
@@ -76,7 +76,7 @@ const Articles = ({ variant }: { variant: string }) => {
               <motion.ul
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7, easings: 'ease' }}
+                transition={{ duration: 0.7, ease: 'easeOut' }}
                 viewport={{ once: true, amount: 0.5 }}
                 className={styles.articlesContainer}
               >
@@ -105,7 +105,7 @@ const Articles = ({ variant }: { variant: string }) => {
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
           >
             <Link to="/blog#blog" className={cn(styles.button, styles.buttonMobile)}>

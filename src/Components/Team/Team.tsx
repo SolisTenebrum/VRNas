@@ -51,7 +51,7 @@ const Team = ({ variant }: { variant: string }) => {
             <motion.p
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, easings: 'ease' }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.5 }}
               className={cn(styles.subtitle, 'gradient-text')}
             >
@@ -60,7 +60,7 @@ const Team = ({ variant }: { variant: string }) => {
             <motion.h2
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+              transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className={styles.title}
             >
@@ -71,7 +71,7 @@ const Team = ({ variant }: { variant: string }) => {
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+              transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
             >
               <Link to="/our-team" className={styles.button}>
@@ -86,7 +86,7 @@ const Team = ({ variant }: { variant: string }) => {
               <motion.div
                 initial={{ opacity: 0, scale: 0, y: 100 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.4, easings: 'ease', delay: index * 0.1 }}
+                transition={{ duration: 0.4, ease: 'easeOut', delay: index * 0.1 }}
                 viewport={{ once: true, amount: 0.2 }}
                 key={index}
               >
@@ -99,7 +99,7 @@ const Team = ({ variant }: { variant: string }) => {
           <MotionLink
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, easings: 'ease', delay: 0.1 }}
+            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
             viewport={{ once: true, amount: 0.6 }}
             to="/our-team"
             className={cn(styles.button, styles.buttonMobile)}

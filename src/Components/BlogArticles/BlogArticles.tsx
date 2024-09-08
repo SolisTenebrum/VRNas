@@ -18,7 +18,7 @@ const BlogArticleCard = ({
     <motion.div
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7, easings: 'ease', delay: 0.2, type: 'spring' }}
+      transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2, type: 'spring' }}
       viewport={{ once: true, amount: 0.1 }}
       className={styles.card}
     >
@@ -91,7 +91,7 @@ const BlogArticles = () => {
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, easings: 'ease', delay: 0.2 }}
+        transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
         viewport={{ once: true, amount: 0.2 }}
         className={styles.pagination}
       >

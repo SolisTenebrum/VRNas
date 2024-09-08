@@ -29,7 +29,7 @@ const Choose = ({ variant }: { variant: string }) => {
             <motion.p
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, easings: 'ease' }}
+              transition={{ duration: 0.4, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.5 }}
               className={cn(styles.subtitle, 'gradient-text')}
             >
@@ -38,7 +38,7 @@ const Choose = ({ variant }: { variant: string }) => {
             <motion.h2
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, easings: 'ease', delay: 0.2 }}
+              transition={{ duration: 0.4, ease: 'easeOut', delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className={styles.title}
             >
@@ -50,7 +50,7 @@ const Choose = ({ variant }: { variant: string }) => {
                   <motion.div
                     initial={{ opacity: 0, x: 100, y: 50 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
-                    transition={{ duration: 0.5, easings: 'ease', delay: 0.3 * index }}
+                    transition={{ duration: 0.5, ease: 'easeOut', delay: 0.3 * index }}
                     viewport={{ once: true, amount: 0.5 }}
                     className={styles.spoilerItem}
                     key={index}

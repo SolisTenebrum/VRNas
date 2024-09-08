@@ -19,7 +19,7 @@ const Pricing = ({ variant }: { variant: string }) => {
           <motion.p
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, easings: 'ease' }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.5 }}
             className={cn(styles.subtitle, 'gradient-text')}
           >
@@ -28,7 +28,7 @@ const Pricing = ({ variant }: { variant: string }) => {
           <motion.h2
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
             className={cn(styles.title, variant === 'detail-service-page' ? styles.title_detailservice : '')}
           >
@@ -37,7 +37,7 @@ const Pricing = ({ variant }: { variant: string }) => {
           <motion.p
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, easings: 'ease', delay: 0.5 }}
+            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.5 }}
             viewport={{ once: true, amount: 0.5 }}
             className={cn(styles.text, variant === 'detail-service-page' ? styles.text_detailservice : '')}
           >
@@ -48,7 +48,7 @@ const Pricing = ({ variant }: { variant: string }) => {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, easings: 'ease', delay: 0.3 }}
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.3 }}
           viewport={{ once: true, amount: 0.2 }}
         >
           <div className={styles.content}>
@@ -74,7 +74,7 @@ const Pricing = ({ variant }: { variant: string }) => {
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+              transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
               viewport={{ once: true, amount: 0.2 }}
               className={styles.priceContainer}
             >

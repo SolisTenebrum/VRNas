@@ -20,7 +20,7 @@ const Hero = () => {
             <motion.h1
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, easings: 'ease' }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.5 }}
               className={styles.title}
             >
@@ -29,7 +29,7 @@ const Hero = () => {
             <motion.p
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+              transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className={styles.text}
             >
@@ -38,7 +38,7 @@ const Hero = () => {
             <motion.a
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, easings: 'ease', delay: 0.3 }}
+              transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
               viewport={{ once: true, amount: 0.5 }}
               href="#about"
               onClick={handleScroll}
@@ -51,7 +51,7 @@ const Hero = () => {
             <motion.div
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, easings: 'ease', delay: 0.3 }}
+              transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
               viewport={{ once: true, amount: 0.5 }}
               className={styles.clients}
             >
@@ -73,7 +73,7 @@ const Hero = () => {
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7, easings: 'ease', delay: 0.3 }}
+              transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
               viewport={{ once: true, amount: 0.5 }}
               className={styles.video}
             >
@@ -85,7 +85,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, easings: 'ease', delay: 0.3 }}
+            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
             viewport={{ once: true, amount: 0.5 }}
             className={styles.vrPersonContainer}
           >

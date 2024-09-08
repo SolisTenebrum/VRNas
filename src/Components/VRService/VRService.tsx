@@ -13,7 +13,7 @@ const ServiceText = ({ subtitle, title, text, listTitle, listItems }: IServiceTe
       <motion.p
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, easings: 'ease' }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
         viewport={{ once: true, amount: 0.5 }}
         className={cn(styles.subtitle, 'gradient-text')}
       >
@@ -22,7 +22,7 @@ const ServiceText = ({ subtitle, title, text, listTitle, listItems }: IServiceTe
       <motion.h2
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+        transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
         viewport={{ once: true, amount: 0.5 }}
         className={styles.title}
       >
@@ -32,7 +32,7 @@ const ServiceText = ({ subtitle, title, text, listTitle, listItems }: IServiceTe
         <motion.p
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
           viewport={{ once: true, amount: 0.5 }}
           className={styles.text}
           key={index}
@@ -43,7 +43,7 @@ const ServiceText = ({ subtitle, title, text, listTitle, listItems }: IServiceTe
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+        transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
         viewport={{ once: true, amount: 0.5 }}
         className={styles.listContainer}
       >
@@ -60,7 +60,7 @@ const ServiceText = ({ subtitle, title, text, listTitle, listItems }: IServiceTe
         <motion.p
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
           viewport={{ once: true, amount: 0.5 }}
           className={styles.text}
           key={index}
@@ -71,7 +71,7 @@ const ServiceText = ({ subtitle, title, text, listTitle, listItems }: IServiceTe
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, easings: 'ease', delay: 0.2 }}
+        transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
         viewport={{ once: true, amount: 0.5 }}
       >
         <NavLink to="/contact-us" className={styles.button}>
@@ -163,7 +163,7 @@ const VRService = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, easings: 'ease' }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
         viewport={{ once: true }}
         className={styles.container}
       >

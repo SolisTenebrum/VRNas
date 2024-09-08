@@ -55,7 +55,7 @@ const PageTitle = ({ variant }: { variant: string }) => {
         <motion.div
           initial={{ opacity: 0, scale: 0, x: 20 }}
           whileInView={{ opacity: 1, scale: 1, x: 0 }}
-          transition={{ duration: 0.7, easings: 'ease' }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
           viewport={{ once: true, amount: 0.5 }}
           className={styles.divider}
         />
